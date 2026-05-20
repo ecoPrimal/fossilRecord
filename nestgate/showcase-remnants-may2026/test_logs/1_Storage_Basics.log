@@ -1,0 +1,58 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║          NestGate Demo 1.1: Storage Basics                ║
+║                                                            ║
+║  This demo shows fundamental storage operations:          ║
+║  • Creating datasets                                      ║
+║  • Storing data                                           ║
+║  • Retrieving data                                        ║
+║  • Listing datasets and objects                           ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+
+[0;34m==>[0m Checking NestGate availability...
+[0;32m✓[0m NestGate is running at http://127.0.0.1:8080
+
+[0;34m==>[0m Step 1: Creating dataset 'demo-storage-basics'...
+[0;32m✓[0m Dataset created successfully
+
+[0;34m==>[0m Step 2: Storing data in dataset...
+[1;33m→[0m Storing: hello.txt
+[0;32m✓[0m Stored hello.txt
+[1;33m→[0m Storing: config.json
+[0;32m✓[0m Stored config.json
+[1;33m→[0m Storing: data.txt (multi-line)
+[0;32m✓[0m Stored data.txt
+
+[0;34m==>[0m Step 3: Retrieving stored data...
+[1;33m→[0m Retrieving: hello.txt
+Content: 
+[0;32m✓[0m Retrieved hello.txt
+
+[1;33m→[0m Retrieving: config.json
+[0;32m✓[0m Retrieved config.json
+
+[0;34m==>[0m Step 4: Listing all datasets...
+[0;32m✓[0m Listed datasets
+
+[0;34m==>[0m Step 5: Listing objects in dataset...
+[0;32m✓[0m Listed objects
+
+[0;34m==>[0m Step 6: Showing storage metrics...
+
+
+[0;34m==>[0m Demo complete!
+
+The dataset 'demo-storage-basics' has been created with 3 objects.
+
+
+[1;33m→[0m Dataset preserved for your experimentation
+[1;33m→[0m Clean up later with: curl -X DELETE http://127.0.0.1:8080/api/v1/datasets/demo-storage-basics
+
+[0;32m✓[0m Demo 1.1 complete!
+
+Next: Run demo 1.2 (Data Services)
+  cd ../02_data_services && ./demo.sh
+
+PASS: Completed in 0s

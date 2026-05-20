@@ -1,0 +1,185 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║      NestGate Demo 1.5: ZFS Advanced Features             ║
+║                                                            ║
+║  Enterprise-grade storage features:                       ║
+║  • Snapshots (time travel!)                               ║
+║  • Compression (free space!)                              ║
+║  • Deduplication (efficiency!)                            ║
+║  • Copy-on-Write (safety!)                                ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+
+[0;34m==>[0m Checking NestGate availability...
+[0;32m✓[0m NestGate is running
+
+[0;34m==>[0m Checking ZFS availability...
+[0;32m✓[0m ZFS is available: The ZFS modules cannot be auto-loaded.
+unknown
+
+[0;34m==>[0m Part 1: Snapshots (Time Travel for Data!)
+[0;36m→[0m Creating dataset...
+[0;36m→[0m Adding initial data...
+[0;32m✓[0m Data stored
+
+[0;35m🎯[0m Creating snapshot 'before-changes'
+[0;36m→[0m API: POST /api/v1/datasets/demo-zfs-advanced/snapshots
+[0;32m✓[0m Snapshot created
+
+[0;36m→[0m Modifying data...
+[0;32m✓[0m Data modified
+
+[0;36m→[0m In a real ZFS setup, you could now:
+  • List snapshots
+  • Rollback to 'before-changes'
+  • Compare snapshot differences
+  • Clone snapshots for testing
+
+[0;34m==>[0m Part 2: Compression (Free Space!)
+[0;35m🎯[0m Testing compression with repeating data
+[0;36m→[0m Creating highly compressible data...
+[0;32m✓[0m Generated 44000 bytes of compressible data
+
+[0;36m→[0m Storing data with compression...
+[0;32m✓[0m Data stored
+
+[0;36m→[0m In a real ZFS setup with compression enabled:
+  • Logical size: 44000 bytes
+  • Physical size: ~2-5KB (estimated)
+  • Compression ratio: ~20:1
+  • Performance impact: Minimal (LZ4 is fast!)
+
+[0;35m🎯[0m Compression Algorithms Available:
+  • LZ4 (recommended): Fast, 2-2.5x ratio
+  • GZIP: Slower, 3-4x ratio
+  • ZStandard: Balanced, 2.5-3x ratio
+
+[0;34m==>[0m Part 3: Deduplication (Store Once, Reference Many)
+[0;35m🎯[0m Testing deduplication with duplicate data
+[0;36m→[0m Storing duplicate files...
+[0;32m✓[0m 5 files stored (identical content)
+
+[0;36m→[0m Without deduplication:
+  • 5 files × 60 bytes = 300 bytes stored
+[0;36m→[0m With deduplication:
+  • Physical storage: 60 bytes (1 copy)
+  • Logical storage: 300 bytes (5 references)
+  • Dedup ratio: 5.0x
+  • Space saved: 240 bytes (80%)
+
+[0;35m🎯[0m Deduplication Best For:
+  ✓ VM images (90% identical)
+  ✓ Backup storage
+  ✓ User documents (many duplicates)
+  ✗ Unique data (no benefit)
+  ✗ High write workloads (overhead)
+
+[0;34m==>[0m Part 4: Copy-on-Write (Data Safety)
+[0;35m🎯[0m Understanding Copy-on-Write (COW)
+
+Traditional Filesystem:
+  1. Read old data
+  2. Overwrite with new data ← DANGER!
+  3. If crash here → corruption
+
+ZFS Copy-on-Write:
+  1. Write new data to new location
+  2. Update pointer ← Atomic!
+  3. Free old data
+  → Never corrupts, always consistent
+
+[0;36m→[0m COW Benefits:
+  ✓ Atomic operations (all or nothing)
+  ✓ No fsck needed (ever!)
+  ✓ Snapshots are nearly free
+  ✓ Data integrity guaranteed
+
+[0;32m✓[0m NestGate leverages COW for safe operations
+
+[0;34m==>[0m Part 5: Real-World Usage Examples
+[0;35m🎯[0m Example 1: Safe Software Updates
+    # Before update
+    curl -X POST ${NESTGATE_URL}/api/v1/datasets/app/snapshots \
+      -d '{"name": "before-update"}'
+    
+    # Do update
+    ./update.sh
+    
+    # If problems:
+    curl -X POST ${NESTGATE_URL}/api/v1/datasets/app/rollback \
+      -d '{"snapshot": "before-update"}'
+
+[0;35m🎯[0m Example 2: Efficient Backups
+    # Daily snapshots (instant, free!)
+    0 0 * * * curl -X POST ${NESTGATE_URL}/api/v1/datasets/data/snapshots \
+      -d '{"name": "daily-'$(date +%Y%m%d)'"}'
+    
+    # Keep 30 days, delete old
+    # Only changed blocks use space!
+
+[0;35m🎯[0m Example 3: Testing Environments
+    # Production data
+    curl -X POST ${NESTGATE_URL}/api/v1/datasets/production/snapshots \
+      -d '{"name": "latest"}'
+    
+    # Clone for testing (instant, cheap!)
+    curl -X POST ${NESTGATE_URL}/api/v1/datasets/production/clone \
+      -d '{"snapshot": "latest", "target": "test"}'
+    
+    # Test destructively, no risk to production!
+
+[0;34m==>[0m ZFS Features Summary
+You've learned about ZFS enterprise features:
+
+  ✓ Snapshots - Instant point-in-time copies
+  ✓ Compression - Transparent space savings
+  ✓ Deduplication - Eliminate duplicate data
+  ✓ Copy-on-Write - Guaranteed data integrity
+
+Key Benefits:
+  • Enterprise-grade data protection
+  • Efficient space utilization
+  • Zero-cost snapshots and clones
+  • Built-in data integrity
+
+Why It Matters:
+  These features make NestGate production-ready for:
+  • Critical data storage
+  • Database backends
+  • VM image storage
+  • Backup infrastructure
+
+
+[0;36m→[0m Dataset preserved for experimentation
+
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║           🎉 LEVEL 1 COMPLETE! 🎉                         ║
+║                                                            ║
+║  Congratulations! You've mastered Isolated Instance       ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+You completed all 5 Level 1 demos:
+  ✓ Storage Basics
+  ✓ Data Services API
+  ✓ Capability Discovery
+  ✓ Health Monitoring
+  ✓ ZFS Advanced Features
+
+You now understand:
+  • NestGate's core capabilities
+  • REST API operations
+  • Zero-knowledge architecture
+  • Production monitoring
+  • Enterprise storage features
+
+Ready for Level 2?
+  cd ../../02_ecosystem_integration
+  cat README.md
+
+Or run all Level 1 demos again:
+  cd .. && ./run_all_isolated.sh
+
+PASS: Completed in 0s

@@ -1,0 +1,106 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║        NestGate Demo 1.4: Health Monitoring               ║
+║                                                            ║
+║  Learn how to monitor NestGate in production:             ║
+║  • Health checks                                          ║
+║  • System metrics                                         ║
+║  • Storage monitoring                                     ║
+║  • Real-time observability                                ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+
+[0;34m==>[0m Checking NestGate availability...
+[0;32m✓[0m NestGate is running
+
+[0;34m==>[0m Part 1: Basic Health Check
+[0;36m→[0m Checking service health...
+OK
+[1;33m⚠[0m Service status unclear
+[0;36m→[0m Health checks are fast and lightweight (~10ms)
+
+[0;34m==>[0m Part 2: Detailed System Status
+[0;36m→[0m Fetching comprehensive system status...
+[0;36m→[0m Detailed status includes:
+  • Storage backend information
+  • API performance metrics
+  • System resource usage
+
+[0;34m==>[0m Part 3: Storage Metrics
+[0;36m→[0m Collecting storage metrics...
+
+[0;34m==>[0m Part 4: System Resource Monitoring
+[0;36m→[0m Checking system resources...
+
+[1;33m📊[0m CPU Usage: 22.9%
+[1;33m📊[0m Memory Usage: 54.6%
+[1;33m📊[0m Disk Usage: 61%
+
+[0;34m==>[0m Part 5: Real-Time Monitoring Demo
+[0;36m→[0m Monitoring metrics for 15 seconds...
+
+Time  | Health | CPU   | Memory
+------|--------|-------|--------
+05s   | OKOK   | 21.9% | 55%
+10s   | OKOK   | 14.9% | 55%
+15s   | OKOK   | 15.1% | 55%
+
+[0;32m✓[0m Monitoring demo complete
+
+[0;34m==>[0m Part 6: Production Monitoring Recommendations
+[0;36m→[0m For production, consider setting up:
+
+  1. Prometheus - Time-series metrics database
+     • Scrape /metrics endpoint every 15s
+     • Store 30 days of data
+
+  2. Grafana - Visualization and dashboards
+     • Create NestGate dashboard
+     • Set up alert panels
+
+  3. Alert Manager - Alert routing
+     • High error rate alerts
+     • High latency alerts
+     • Disk space alerts
+
+  4. Logging - ELK/Loki stack
+     • Centralized log aggregation
+     • Log-based alerts
+
+[0;36m→[0m Example Prometheus config:
+    
+    scrape_configs:
+      - job_name: 'nestgate'
+        static_configs:
+          - targets: ['localhost:8080']
+        metrics_path: '/metrics'
+        scrape_interval: 15s
+
+[0;34m==>[0m Monitoring Summary
+You've learned about:
+  ✓ Basic health checks (/health)
+  ✓ Detailed status endpoints
+  ✓ Storage metrics
+  ✓ System resource monitoring
+  ✓ Real-time monitoring patterns
+  ✓ Production monitoring stack
+
+Key Insight: Monitor everything! You can't fix what you can't measure.
+
+Typical monitoring intervals:
+  • Health checks: Every 5-10 seconds
+  • Metrics scraping: Every 15-30 seconds
+  • Log aggregation: Real-time streaming
+  • Alerts: Evaluated every 1-5 minutes
+
+[0;32m✓[0m Demo 1.4 complete!
+
+Next: Run demo 1.5 (ZFS Advanced)
+  cd ../05_zfs_advanced && ./demo.sh
+
+Or learn more:
+  • Monitoring Guide: ../../../docs/MONITORING_GUIDE.md
+  • Production Deployment: ../../../docs/DEPLOYMENT_GUIDE.md
+
+PASS: Completed in 11s

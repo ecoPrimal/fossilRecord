@@ -1,0 +1,121 @@
+╔══════════════════════════════════════════════════════════════╗
+║  ToadStool Universal GPU Benchmark - Local Suite            ║
+╚══════════════════════════════════════════════════════════════╝
+
+═══ System Information ═══
+
+Hostname: pop-os
+CPU: 12th Gen Intel(R) Core(TM) i9-12900K
+Cores: 24 (24 logical)
+RAM: 31Gi
+
+NVIDIA GPU:
+NVIDIA GeForce RTX 2070 SUPER, 8192 MiB, 580.82.09
+
+═══════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────┐
+│ CPU Baseline                                                │
+└─────────────────────────────────────────────────────────────┘
+
+╔════════════════════════════════════════════════════════════╗
+║       Matrix Multiplication Benchmark                     ║
+╚════════════════════════════════════════════════════════════╝
+
+Detecting GPUs...
+Available backends: [Cuda, WebGpu]
+
+Running CPU-only benchmark...
+  Completed 5/5 iterations...
+
+CPU Results:
+  Average time: 154.66ms
+  Performance: 111.08 GFLOPS
+
+═══════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────┐
+│ cuda Backend                                            │  
+└─────────────────────────────────────────────────────────────┘
+
+╔════════════════════════════════════════════════════════════╗
+║       Matrix Multiplication Benchmark                     ║
+╚════════════════════════════════════════════════════════════╝
+
+Detecting GPUs...
+Available backends: [Cuda, WebGpu]
+
+Selected backend: Cuda
+Matrix size: 2048x2048
+Iterations: 5
+
+Generating matrices...
+Warming up...
+Running benchmark...
+  Completed 5/5 iterations...
+Results:
+  Average time: 153.19ms
+  Min time: 147.28ms
+  Max time: 164.51ms
+  Performance: 112.15 GFLOPS
+  Throughput: 7 matrices/sec
+  Power: 60W
+  Efficiency: 1.86 GFLOPS/W
+
+✓ Results saved to results/local/cuda-matrix.json
+
+═══════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────┐
+│ webgpu Backend                                            │
+└─────────────────────────────────────────────────────────────┘
+
+╔════════════════════════════════════════════════════════════╗
+║       Matrix Multiplication Benchmark                     ║
+╚════════════════════════════════════════════════════════════╝
+
+Detecting GPUs...
+Available backends: [Cuda, WebGpu]
+
+Selected backend: WebGpu
+Matrix size: 2048x2048
+Iterations: 5
+
+Generating matrices...
+Warming up...
+Running benchmark...
+  Completed 5/5 iterations...
+Results:
+  Average time: 186.66ms
+  Min time: 146.75ms
+  Max time: 252.81ms
+  Performance: 92.04 GFLOPS
+  Throughput: 5 matrices/sec
+
+✓ Results saved to results/local/webgpu-matrix.json
+
+═══════════════════════════════════════════════════════════════
+
+╔══════════════════════════════════════════════════════════════╗
+║  Summary                                                     ║
+╚══════════════════════════════════════════════════════════════╝
+
+Results saved to:
+results/local/cuda-matrix.json
+results/local/webgpu-matrix.json
+
+Performance Comparison:
+
+Backend          Avg Time       GFLOPS   Throughput    Power (W)
+--------        ---------      -------   ----------    ---------
+Cuda              153.19ms      112.15        6.53/s 60.290000000000006
+WebGpu            186.66ms       92.04        5.36/s          N/A
+
+✅ Local benchmark suite complete!
+
+Next steps:
+  1. Run on other towers: scp this script to Northgate, Southgate, etc.
+  2. Compare cross-tower performance
+  3. Test with RX 6700 when it arrives
+  4. Run distributed workloads across mesh
+

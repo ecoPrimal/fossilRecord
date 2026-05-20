@@ -1,0 +1,465 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║      NestGate Demo 3.1: Mesh Formation                    ║
+║                                                            ║
+║  Distributed nodes forming a coordinated mesh             ║
+║  • Zero-configuration discovery                           ║
+║  • Gossip protocol                                        ║
+║  • Full mesh topology                                     ║
+║  • Health monitoring                                      ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+
+[0;34m==>[0m Part 1: Node Startup Sequence
+[0;35m🌐[0m Watching nodes start and discover each other
+
+[0;36m→[0m Starting Node A (first node)...
+
+═══════════════════════════════════════════════════════════
+Node A Starting...
+═══════════════════════════════════════════════════════════
+
+NestGate Federation Node
+  Node ID: node-a
+  Listen: 0.0.0.0:8080
+  Gossip Port: 9080
+  Data Directory: /var/nestgate/node-a
+  
+Initializing:
+  ✓ Loading configuration
+  ✓ Initializing storage backend (ZFS)
+  ✓ Starting HTTP server
+  ✓ Starting gossip service
+  
+Advertising Capabilities:
+  ✓ storage: 100 GB available
+  ✓ snapshots: ZFS backend ready
+  ✓ replication: Factor 3 configured
+  ✓ compute: 8 CPU cores, 32 GB RAM
+  
+Node Status: STANDALONE
+  No peers discovered yet
+  Waiting for other nodes...
+  mDNS advertising enabled
+  
+Node A ready! ✓
+
+
+[0;36m→[0m Starting Node B (joins mesh)...
+
+═══════════════════════════════════════════════════════════
+Node B Starting...
+═══════════════════════════════════════════════════════════
+
+NestGate Federation Node
+  Node ID: node-b
+  Listen: 0.0.0.0:8081
+  Gossip Port: 9081
+  
+Initializing: ✓
+
+Discovery Phase:
+  Scanning network for peers...
+  → Found peer: node-a at 192.168.1.10:8080
+  
+Connecting to Peers:
+  → node-a (192.168.1.10:8080)
+    Handshake: Initiating...
+    Exchange: Node IDs, capabilities
+    Verification: Compatible ✓
+    Handshake: SUCCESS ✓
+    
+Gossip Synchronization:
+  ← Receiving cluster state from node-a
+  ← Receiving data catalog
+  ← Receiving configuration
+  Sync complete: 234ms ✓
+  
+Mesh Status:
+  Total Nodes: 2
+  Connected Peers: 1 (node-a)
+  Topology: Partial mesh
+  Gossip: Active
+  
+Node B ready! ✓
+
+
+[0;36m→[0m Starting Node C (completes basic mesh)...
+
+═══════════════════════════════════════════════════════════
+Node C Starting...
+═══════════════════════════════════════════════════════════
+
+NestGate Federation Node
+  Node ID: node-c
+  Listen: 0.0.0.0:8082
+  Gossip Port: 9082
+  
+Initializing: ✓
+
+Discovery Phase:
+  Scanning network for peers...
+  → Found peer: node-a at 192.168.1.10:8080
+  → Found peer: node-b at 192.168.1.11:8081
+  
+Connecting to All Peers:
+  → node-a: Handshake SUCCESS ✓
+  → node-b: Handshake SUCCESS ✓
+  
+Gossip Synchronization:
+  ← Receiving state from node-a
+  ← Receiving state from node-b
+  Resolving conflicts: None
+  Sync complete: 189ms ✓
+  
+Mesh Status:
+  Total Nodes: 3
+  Connected Peers: 2 (node-a, node-b)
+  Topology: Full mesh (3 nodes)
+  All nodes fully connected ✓
+  
+Node C ready! ✓
+
+[0;32m✓[0m 3-node mesh formed automatically!
+
+[0;34m==>[0m Part 2: Mesh Status & Topology
+[0;35m🌐[0m Querying cluster status from any node
+
+[0;36m→[0m Checking mesh status...
+
+═══════════════════════════════════════════════════════════
+Cluster Status (from node-a)
+═══════════════════════════════════════════════════════════
+
+Mesh Information:
+  Mesh ID: mesh_abc123def456
+  Topology: Full mesh
+  Formation Time: 2024-12-17T14:45:00Z
+  Age: 45 seconds
+  
+Nodes Summary:
+  Total: 3
+  Healthy: 3
+  Suspect: 0
+  Down: 0
+  
+Individual Nodes:
+  
+  ┌─ node-a (192.168.1.10:8080) ─────────────────┐
+  │ Status: LEADER                                │
+  │ Health: Healthy ✓                             │
+  │ Uptime: 45s                                   │
+  │ Connected Peers: 2/2 (node-b, node-c)        │
+  │ Storage: 100 GB (95% available)              │
+  │ CPU: 2% utilization                           │
+  │ Memory: 245 MB / 32 GB                        │
+  │ Last Heartbeat: 0.1s ago                      │
+  └───────────────────────────────────────────────┘
+  
+  ┌─ node-b (192.168.1.11:8081) ─────────────────┐
+  │ Status: FOLLOWER                              │
+  │ Health: Healthy ✓                             │
+  │ Uptime: 30s                                   │
+  │ Connected Peers: 2/2 (node-a, node-c)        │
+  │ Storage: 100 GB (98% available)              │
+  │ CPU: 1% utilization                           │
+  │ Memory: 198 MB / 32 GB                        │
+  │ Last Heartbeat: 0.2s ago                      │
+  └───────────────────────────────────────────────┘
+  
+  ┌─ node-c (192.168.1.12:8082) ─────────────────┐
+  │ Status: FOLLOWER                              │
+  │ Health: Healthy ✓                             │
+  │ Uptime: 15s                                   │
+  │ Connected Peers: 2/2 (node-a, node-b)        │
+  │ Storage: 100 GB (100% available)             │
+  │ CPU: 1% utilization                           │
+  │ Memory: 187 MB / 32 GB                        │
+  │ Last Heartbeat: 0.1s ago                      │
+  └───────────────────────────────────────────────┘
+
+Gossip Protocol Stats:
+  Messages/second: 12
+  Convergence time: 1.2s
+  Network overhead: 0.3%
+  State version: 42
+
+═══════════════════════════════════════════════════════════
+
+[0;32m✓[0m Full mesh topology confirmed!
+
+[0;34m==>[0m Part 3: Gossip Protocol in Action
+[0;35m🌐[0m Watching state propagation across the mesh
+
+[0;36m→[0m Observing gossip messages...
+
+═══════════════════════════════════════════════════════════
+Gossip Message Stream
+═══════════════════════════════════════════════════════════
+
+[14:45:00.123] node-a → node-b: HEARTBEAT
+  Sequence: 1234
+  State: healthy
+  Connections: 2
+  Load: 2% CPU, 5% storage
+  
+[14:45:00.456] node-b → node-c: HEARTBEAT
+  Sequence: 567
+  State: healthy
+  Connections: 2
+  Load: 1% CPU, 2% storage
+  
+[14:45:00.789] node-c → node-a: HEARTBEAT
+  Sequence: 890
+  State: healthy
+  Connections: 2
+  Load: 1% CPU, 0% storage
+
+─────────────────────────────────────────────────────────
+
+[14:45:01.123] node-a → ALL: STATE_UPDATE
+  Event: New data available
+  Type: DATASET_CREATED
+  Path: /datasets/ml-training-data
+  Size: 2.4 GB
+  Timestamp: 2024-12-17T14:45:01.120Z
+  
+[14:45:01.234] node-b: ← Received STATE_UPDATE from node-a
+  Processing... ✓
+  Updated local catalog
+  
+[14:45:01.345] node-c: ← Received STATE_UPDATE from node-a
+  Processing... ✓
+  Updated local catalog
+  
+  ✓ State converged across all nodes (122ms)
+
+─────────────────────────────────────────────────────────
+
+[14:45:02.456] node-b → ALL: CAPACITY_UPDATE
+  Storage: 100 GB → 97.6 GB (new data)
+  Available: 97%
+  
+[14:45:02.567] node-a: ← Received CAPACITY_UPDATE
+  Updated capacity map ✓
+  
+[14:45:02.678] node-c: ← Received CAPACITY_UPDATE
+  Updated capacity map ✓
+  
+  ✓ All nodes have consistent view
+
+═══════════════════════════════════════════════════════════
+
+Gossip Statistics (last 60 seconds):
+  Total messages: 720
+  Heartbeats: 648 (90%)
+  State updates: 45 (6.25%)
+  Capacity updates: 27 (3.75%)
+  
+  Average latency: 0.8ms
+  Max latency: 3.2ms
+  Lost messages: 0
+  
+  Convergence time (average): 0.9s
+
+[0;32m✓[0m Gossip protocol working efficiently!
+
+[0;34m==>[0m Part 4: Dynamic Node Addition
+[0;35m🌐[0m Adding a 4th node to running mesh
+
+[0;36m→[0m Starting Node D...
+
+═══════════════════════════════════════════════════════════
+Node D Joining Mesh
+═══════════════════════════════════════════════════════════
+
+NestGate Federation Node
+  Node ID: node-d
+  Listen: 0.0.0.0:8083
+  
+Discovery Phase:
+  Scanning network...
+  → Found existing mesh!
+  → Discovered nodes:
+    • node-a (192.168.1.10:8080) - Leader
+    • node-b (192.168.1.11:8081) - Follower
+    • node-c (192.168.1.12:8082) - Follower
+  
+Joining Mesh:
+  Connecting to node-a (leader)...
+    Handshake: SUCCESS ✓
+    Authorization: APPROVED ✓
+    
+  Connecting to node-b...
+    Handshake: SUCCESS ✓
+    
+  Connecting to node-c...
+    Handshake: SUCCESS ✓
+  
+State Synchronization:
+  Phase 1: Cluster Metadata
+    ← Receiving from node-a... ✓ (45ms)
+    Mesh ID, topology, member list
+    
+  Phase 2: Data Catalog
+    ← Receiving from node-a... ✓ (234ms)
+    Dataset list: 12 datasets, 45.7 GB total
+    
+  Phase 3: Configuration
+    ← Receiving from node-a... ✓ (12ms)
+    Replication factor: 3
+    Gossip interval: 5s
+    Health check: 30s
+    
+  Sync complete: 291ms total ✓
+
+Announcing Presence:
+  Broadcasting JOIN event to all nodes...
+  → node-a: Acknowledged ✓
+  → node-b: Acknowledged ✓
+  → node-c: Acknowledged ✓
+  
+Mesh Updated:
+  Total nodes: 3 → 4
+  Topology: Full mesh (4 nodes)
+  All connections established ✓
+  
+Node D ready! ✓
+
+─────────────────────────────────────────────────────────
+
+Updated Cluster Status:
+  Mesh ID: mesh_abc123def456
+  Total Nodes: 4
+  Healthy: 4
+  Topology: Full mesh
+  
+  node-a ←→ node-b ←→ node-c ←→ node-d
+     ↕        ↕        ↕        ↕
+  [All nodes fully interconnected]
+
+═══════════════════════════════════════════════════════════
+
+[0;32m✓[0m Node added seamlessly - mesh reformed automatically!
+
+[0;34m==>[0m Part 5: Continuous Health Monitoring
+[0;35m🌐[0m Watching cluster health in real-time
+
+[0;36m→[0m Health monitoring active...
+
+═══════════════════════════════════════════════════════════
+Health Monitor (5-second intervals)
+═══════════════════════════════════════════════════════════
+
+[14:46:00] Health Check Round 1
+  node-a: ✓ Healthy (latency: 1.2ms, load: 2%)
+  node-b: ✓ Healthy (latency: 1.5ms, load: 1%)
+  node-c: ✓ Healthy (latency: 1.3ms, load: 1%)
+  node-d: ✓ Healthy (latency: 1.4ms, load: 1%)
+  
+  All nodes healthy ✓
+
+─────────────────────────────────────────────────────────
+
+[14:46:05] Health Check Round 2
+  node-a: ✓ Healthy (latency: 1.1ms, load: 2%)
+  node-b: ✓ Healthy (latency: 1.6ms, load: 3%)
+  node-c: ⚠ Slow response (latency: 45ms, load: 15%)
+  node-d: ✓ Healthy (latency: 1.3ms, load: 1%)
+  
+  Warning: node-c responding slowly
+  Possible CPU spike or network congestion
+
+─────────────────────────────────────────────────────────
+
+[14:46:10] Health Check Round 3
+  node-a: ✓ Healthy (latency: 1.2ms, load: 2%)
+  node-b: ✓ Healthy (latency: 1.4ms, load: 2%)
+  node-c: ✗ TIMEOUT (no response after 5000ms)
+  node-d: ✓ Healthy (latency: 1.5ms, load: 1%)
+  
+  🚨 ALERT: node-c not responding
+  
+  Failure Detection Protocol:
+    1. Mark node-c as SUSPECT
+    2. Request indirect probes from other nodes
+    3. Wait for confirmation (15s)
+
+─────────────────────────────────────────────────────────
+
+[14:46:15] Health Check Round 4
+  node-a: ✓ Healthy (latency: 1.1ms)
+  node-b: ✓ Healthy (latency: 1.5ms)
+  node-c: ✗ TIMEOUT (confirmed by 2/3 nodes)
+  node-d: ✓ Healthy (latency: 1.4ms)
+  
+  Failure Confirmed: node-c is DOWN
+  
+  Mesh Adaptation:
+    • Removing node-c from active topology
+    • Redirecting traffic away from node-c
+    • Data on node-c still accessible via replicas
+    • Clients experience no downtime ✓
+  
+  Updated Status:
+    Total nodes: 4
+    Healthy: 3
+    Down: 1 (node-c)
+
+─────────────────────────────────────────────────────────
+
+[14:46:25] Health Check Round 5
+  node-a: ✓ Healthy (latency: 1.2ms)
+  node-b: ✓ Healthy (latency: 1.3ms)
+  node-c: ✓ RECOVERED! (latency: 2.1ms)
+  node-d: ✓ Healthy (latency: 1.5ms)
+  
+  🎉 node-c has recovered!
+  
+  Rejoining Mesh:
+    • Re-establishing connections
+    • Synchronizing missed state
+    • Rejoining active topology
+    
+  Mesh Restored:
+    All 4 nodes healthy ✓
+    Full mesh topology ✓
+
+═══════════════════════════════════════════════════════════
+
+[0;32m✓[0m Health monitoring and auto-recovery working!
+
+[0;34m==>[0m Demo Summary
+You've seen NestGate mesh formation:
+
+  ✓ Zero-Configuration - Nodes find each other automatically
+  ✓ Gossip Protocol - Peer-to-peer state sharing
+  ✓ Full Mesh - All nodes interconnected
+  ✓ Dynamic Membership - Add/remove nodes seamlessly
+  ✓ Health Monitoring - Continuous failure detection
+  ✓ Auto-Recovery - Nodes rejoin automatically
+
+Key Benefits:
+  • No single point of failure (decentralized)
+  • Fast convergence (<2 seconds typically)
+  • Low overhead (<1% network bandwidth)
+  • Automatic coordination (no manual config)
+  • Resilient to failures (self-healing)
+
+Use Cases:
+  • Multi-datacenter deployment
+  • High availability clusters
+  • Geographic distribution
+  • Edge computing networks
+
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║  Next: Demo 3.2 - Distributed Storage                     ║
+║                                                            ║
+║  cd ../02_distributed_storage                             ║
+║  ./demo.sh                                                ║
+║                                                            ║
+║  Learn: Data distribution across mesh nodes               ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝

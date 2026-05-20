@@ -1,0 +1,112 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║         NestGate Demo 1.2: Data Services API              ║
+║                                                            ║
+║  This demo shows advanced REST API operations:            ║
+║  • CRUD (Create, Read, Update, Delete)                    ║
+║  • Metadata management                                    ║
+║  • Batch operations                                       ║
+║  • Health & status endpoints                              ║
+║  • Query capabilities                                     ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+
+[0;34m==>[0m Checking NestGate availability...
+[0;32m✓[0m NestGate is running at http://127.0.0.1:8080
+
+[0;34m==>[0m Part 1: CRUD Operations (Create, Read, Update, Delete)
+[1;33m→[0m Creating dataset: demo-data-services
+[0;36mAPI:[0m POST /api/v1/datasets
+[0;32m✓[0m Dataset created
+
+[1;33m→[0m CREATE: Adding user record
+[0;36mAPI:[0m POST /api/v1/datasets/demo-data-services/objects/user-alice
+[0;32m✓[0m User created
+
+[1;33m→[0m READ: Retrieving user record
+[0;36mAPI:[0m GET /api/v1/datasets/demo-data-services/objects/user-alice
+[0;32m✓[0m User retrieved
+
+[1;33m→[0m UPDATE: Promoting user to superadmin
+[0;36mAPI:[0m PUT /api/v1/datasets/demo-data-services/objects/user-alice
+[0;32m✓[0m User updated
+
+[1;33m→[0m Verifying update
+[0;32m✓[0m Update verified
+
+[1;33m→[0m DELETE will be shown in cleanup phase
+
+[0;34m==>[0m Part 2: Metadata Operations
+[1;33m→[0m Storing file with metadata tags
+[0;36mAPI:[0m PUT /api/v1/datasets/demo-data-services/objects/photo1.jpg (with metadata)
+[0;32m✓[0m Photo stored with metadata
+
+[1;33m→[0m Storing more photos with different tags
+[0;32m✓[0m Additional photos stored
+
+[1;33m→[0m Querying photos by tag: nature
+[0;36mAPI:[0m GET /api/v1/datasets/demo-data-services/objects?tags=nature
+
+
+[0;34m==>[0m Part 3: Batch Operations
+[1;33m→[0m Batch uploading 5 log files
+[0;36mAPI:[0m POST /api/v1/datasets/demo-data-services/batch
+[0;32m✓[0m 5 log files uploaded in parallel
+
+[1;33m→[0m Listing all objects in dataset
+[0;36mAPI:[0m GET /api/v1/datasets/demo-data-services/objects
+
+
+[0;34m==>[0m Part 4: Health & Status Endpoints
+[1;33m→[0m Checking service health
+[0;36mAPI:[0m GET /health
+[0;32m✓[0m Health check complete
+
+[1;33m→[0m Checking detailed status
+[0;36mAPI:[0m GET /api/v1/status
+
+[1;33m→[0m Checking storage metrics
+[0;36mAPI:[0m GET /api/v1/metrics/storage
+
+
+[0;34m==>[0m Part 5: Advanced Querying (Future Features)
+[1;33m→[0m These features demonstrate planned capabilities:
+
+  • Filter by date: GET /api/v1/datasets/demo-data-services/objects?since=2025-12-17
+  • Pagination: GET /api/v1/datasets/demo-data-services/objects?limit=10&offset=20
+  • Search: GET /api/v1/datasets/demo-data-services/objects?search=sunset
+  • Sort: GET /api/v1/datasets/demo-data-services/objects?sort=created&order=desc
+
+[1;33m→[0m Try them if NestGate implements these endpoints!
+
+[0;34m==>[0m Demo Summary
+You've seen:
+  ✓ CRUD operations (Create, Read, Update, Delete)
+  ✓ Metadata tagging and storage
+  ✓ Batch operations (parallel uploads)
+  ✓ Health and status endpoints
+  ✓ Advanced query concepts
+
+Objects created in 'demo-data-services':
+
+
+[0;34m==>[0m Cleanup
+
+
+[1;33m→[0m Dataset preserved for experimentation
+
+Explore the API yourself:
+  • List objects: curl http://127.0.0.1:8080/api/v1/datasets/demo-data-services/objects
+  • Get object: curl http://127.0.0.1:8080/api/v1/datasets/demo-data-services/objects/user-alice
+  • Delete when ready: curl -X DELETE http://127.0.0.1:8080/api/v1/datasets/demo-data-services
+
+
+[0;32m✓[0m Demo 1.2 complete!
+
+Next: Run demo 1.3 (Capability Discovery)
+  cd ../03_capability_discovery && ./demo.sh
+
+Or read API reference: ../../../docs/API_REFERENCE.md
+
+PASS: Completed in 1s

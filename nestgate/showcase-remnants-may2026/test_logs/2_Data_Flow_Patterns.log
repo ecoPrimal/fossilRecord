@@ -1,0 +1,488 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║      NestGate Demo 2.4: Data Flow Patterns                ║
+║                                                            ║
+║  Common integration patterns for distributed systems      ║
+║  • Producer/Consumer                                      ║
+║  • Request/Response                                       ║
+║  • Event-Driven                                           ║
+║  • Batch Processing                                       ║
+║  • Stream Processing                                      ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+
+[0;34m==>[0m Pattern 1: Producer/Consumer
+[0;35m🔄[0m Decoupled data generation and consumption
+
+[0;36m→[0m Example: Log Aggregation System
+
+Producer/Consumer Pattern
+════════════════════════════════════════════════════════
+
+Setup:
+  Producer: Web application generating logs
+  Buffer: NestGate storage
+  Consumer: Log analyzer processing logs
+  
+Flow:
+  Web App → NestGate → Log Analyzer → Metrics/Alerts
+
+────────────────────────────────────────────────────────
+
+Time: 14:30:00 | Producer: Writing logs...
+  ✓ 1,247 log entries written to nestgate://logs/app.log
+  ✓ Buffered in NestGate (consumer offline)
+
+Time: 14:30:30 | Producer: Writing logs...
+  ✓ 1,398 log entries written
+  ✓ Total buffered: 2,645 entries
+
+Time: 14:31:00 | Consumer: Starting...
+  → Connected to NestGate
+  → Reading buffered logs (2,645 entries)
+  → Processing at 500 entries/sec
+  
+Time: 14:31:05 | Consumer: Processing...
+  ✓ Parsed 2,645 log entries
+  ✓ Extracted 45 errors
+  ✓ Extracted 234 warnings
+  ✓ Published metrics to Prometheus
+  ✓ Sent 3 alerts for critical errors
+
+────────────────────────────────────────────────────────
+
+Benefits:
+  ✓ Decoupling: Producer/consumer run independently
+  ✓ Buffering: Data preserved during consumer downtime
+  ✓ Scalability: Multiple consumers can read same data
+  ✓ Reliability: No data loss even if consumer fails
+
+Use Cases:
+  • Log aggregation
+  • Metrics collection
+  • Event processing
+  • Data pipelines
+
+════════════════════════════════════════════════════════
+
+[0;32m✓[0m Producer/Consumer pattern demonstrated!
+
+[0;34m==>[0m Pattern 2: Request/Response
+[0;35m🔄[0m Synchronous data exchange
+
+[0;36m→[0m Example: ML Model Serving
+
+Request/Response Pattern
+════════════════════════════════════════════════════════
+
+Setup:
+  Client: Sends inference request
+  Storage: NestGate (stores models)
+  Compute: ToadStool (runs inference)
+  
+Flow:
+  Client → Request → Load Model → Inference → Response
+
+────────────────────────────────────────────────────────
+
+Request Received:
+  Timestamp: 2024-12-17T14:32:15.123Z
+  Model: resnet50.pth
+  Input: image_cat_001.jpg
+  Request ID: req_abc123
+
+Processing:
+  [0.000s] Step 1: Load model from NestGate
+            Path: nestgate://models/resnet50.pth
+            Size: 98 MB
+            Status: ✓ Loaded (12ms)
+            
+  [0.012s] Step 2: Load input image
+            Path: image_cat_001.jpg
+            Size: 2.3 MB
+            Status: ✓ Loaded (3ms)
+            
+  [0.015s] Step 3: Run inference (ToadStool)
+            Model: ResNet-50
+            Input shape: [1, 3, 224, 224]
+            Status: ✓ Complete (28ms)
+            
+  [0.043s] Step 4: Format response
+            Top-3 predictions ready
+            Status: ✓ Done (2ms)
+
+Response Sent:
+  Request ID: req_abc123
+  Status: SUCCESS
+  Latency: 45ms
+  Predictions:
+    1. cat (95.3% confidence)
+    2. dog (2.8% confidence)
+    3. bird (1.1% confidence)
+
+────────────────────────────────────────────────────────
+
+Benefits:
+  ✓ Immediate feedback: Results returned synchronously
+  ✓ Simple: Easy to understand and implement
+  ✓ Reliable: Clear success/failure status
+  ✓ Measurable: Latency tracking built-in
+
+Use Cases:
+  • API endpoints
+  • Model inference
+  • Data queries
+  • RPC calls
+
+════════════════════════════════════════════════════════
+
+[0;32m✓[0m Request/Response pattern demonstrated!
+
+[0;34m==>[0m Pattern 3: Event-Driven
+[0;35m🔄[0m Asynchronous event propagation
+
+[0;36m→[0m Example: Data Pipeline Automation
+
+Event-Driven Pattern
+════════════════════════════════════════════════════════
+
+Setup:
+  Publisher: NestGate (emits events)
+  Subscribers: Multiple services react to events
+  
+Flow:
+  Data Arrives → Event Published → Subscribers Notified
+
+────────────────────────────────────────────────────────
+
+Event Published:
+  Type: data.created
+  Source: nestgate
+  Path: /raw-data/dataset-2024-12.csv
+  Size: 2.4 GB
+  Timestamp: 2024-12-17T14:35:00Z
+  Event ID: evt_xyz789
+
+Subscriber 1: Songbird (Orchestration)
+  Status: Event received (3ms latency)
+  Action: Trigger workflow "data-processing-pipeline"
+  ✓ Workflow started: wf_proc_001
+  ✓ Steps: validate → clean → transform → load
+  ✓ ETA: 15 minutes
+
+Subscriber 2: BearDog (Security)
+  Status: Event received (5ms latency)
+  Action: Create encrypted backup
+  ✓ Backup started: backup_sec_002
+  ✓ Encryption: AES-256-GCM
+  ✓ Destination: s3://backup/2024/12/17/
+  ✓ ETA: 8 minutes
+
+Subscriber 3: Notification Service
+  Status: Event received (2ms latency)
+  Action: Send notification
+  ✓ Email sent to: data-team@company.com
+  ✓ Slack message posted: #data-pipeline
+  ✓ Dashboard updated: /datasets/new
+
+Subscriber 4: Audit Logger
+  Status: Event received (1ms latency)
+  Action: Log event to audit trail
+  ✓ Entry created in audit log
+  ✓ Compliance record updated
+  ✓ Retention policy applied
+
+────────────────────────────────────────────────────────
+
+Benefits:
+  ✓ Loose coupling: Publisher doesn't know subscribers
+  ✓ Scalability: Add subscribers without changing publisher
+  ✓ Flexibility: Different actions for same event
+  ✓ Asynchronous: Non-blocking operations
+
+Use Cases:
+  • Pipeline automation
+  • Monitoring alerts
+  • Audit logging
+  • System integration
+
+════════════════════════════════════════════════════════
+
+[0;32m✓[0m Event-Driven pattern demonstrated!
+
+[0;34m==>[0m Pattern 4: Batch Processing
+[0;35m🔄[0m Scheduled large-scale data processing
+
+[0;36m→[0m Example: Nightly ETL Job
+
+Batch Processing Pattern
+════════════════════════════════════════════════════════
+
+Setup:
+  Schedule: Daily at 2:00 AM
+  Source: NestGate production data
+  Processing: ToadStool ETL scripts
+  Destination: Data warehouse
+  
+Flow:
+  Extract → Transform → Load → Verify → Cleanup
+
+────────────────────────────────────────────────────────
+
+Job Started: 2024-12-17 02:00:00
+
+Stage 1: Extract [02:00:00 - 02:03:45]
+  Source: nestgate://production/transactions
+  Filter: date = 2024-12-16
+  Rows: 2,847,392
+  Size: 4.2 GB
+  Output: nestgate://staging/raw-transactions
+  Status: ✓ Complete (3m 45s)
+
+Stage 2: Transform [02:03:45 - 02:18:23]
+  Input: nestgate://staging/raw-transactions
+  Service: ToadStool
+  Script: transform-data.py
+  
+  Operations:
+    ✓ Clean nulls (12,456 rows affected)
+    ✓ Normalize values (all columns)
+    ✓ Enrich metadata (external API calls)
+    ✓ Validate business rules (99.8% pass rate)
+  
+  Output: nestgate://staging/clean-transactions
+  Rows: 2,834,936 (12,456 removed)
+  Status: ✓ Complete (14m 38s)
+
+Stage 3: Load [02:18:23 - 02:24:12]
+  Source: nestgate://staging/clean-transactions
+  Destination: postgres://warehouse/transactions
+  Mode: Append
+  Batch size: 10,000 rows
+  
+  Progress:
+    Batch 1-100: ████████████████████████████ 100%
+    Batch 101-200: ████████████████████████████ 100%
+    Batch 201-283: ████████████████████████████ 100%
+  
+  Rows loaded: 2,834,936
+  Status: ✓ Complete (5m 49s)
+
+Stage 4: Verify [02:24:12 - 02:25:34]
+  Checks:
+    ✓ Row count matches (2,834,936 = 2,834,936)
+    ✓ No duplicates found
+    ✓ Data quality rules passed (100%)
+    ✓ Referential integrity maintained
+  
+  Status: ✓ All checks passed (1m 22s)
+
+Stage 5: Cleanup [02:25:34 - 02:26:45]
+  Actions:
+    ✓ Deleted: nestgate://staging/*
+    ✓ Created snapshot: snap_prod_20241217
+    ✓ Updated metadata catalog
+    ✓ Archived logs
+  
+  Status: ✓ Complete (1m 11s)
+
+────────────────────────────────────────────────────────
+
+Job Complete: 2024-12-17 02:26:45
+  Total duration: 26m 45s
+  Records processed: 2,847,392 → 2,834,936
+  Success rate: 99.6%
+  Next run: 2024-12-18 02:00:00
+  
+Notifications:
+  ✓ Email sent to: data-team@company.com
+  ✓ Dashboard updated: /etl/status
+  ✓ Metrics published to monitoring
+
+════════════════════════════════════════════════════════
+
+[0;32m✓[0m Batch Processing pattern demonstrated!
+
+[0;34m==>[0m Pattern 5: Stream Processing
+[0;35m🔄[0m Real-time continuous data processing
+
+[0;36m→[0m Example: IoT Sensor Analytics
+
+Stream Processing Pattern
+════════════════════════════════════════════════════════
+
+Setup:
+  Source: IoT sensors (1000 events/sec)
+  Storage: NestGate streams
+  Processing: Real-time analytics
+  Output: Alerts + Dashboard
+  
+Flow:
+  Sensors → Parse → Filter → Aggregate → Detect → Alert
+
+────────────────────────────────────────────────────────
+
+Stream Started: 14:40:00
+
+Window 1: [14:40:00 - 14:40:05] 5-second window
+  
+  Incoming events: 5,234 events
+  Parse rate: 1,046 events/sec
+  
+  Parsed events:
+    Sensor readings: 5,234
+    Valid: 5,189 (99.1%)
+    Invalid: 45 (0.9% - format errors)
+  
+  Filtered events (temperature > 80°F):
+    Count: 234 events (4.5%)
+    Sensors affected: 18 unique sensors
+  
+  Aggregated (5-sec average):
+    Average temperature: 76.3°F
+    Max temperature: 94.2°F
+    Min temperature: 68.1°F
+    High temp sensors: 18
+
+Window 2: [14:40:05 - 14:40:10] 5-second window
+  
+  Incoming events: 5,456 events
+  Parse rate: 1,091 events/sec
+  
+  Filtered events (temperature > 80°F):
+    Count: 312 events (5.7%)
+    Sensors affected: 24 unique sensors
+  
+  Aggregated (5-sec average):
+    Average temperature: 78.9°F  ⚠ Trending up
+    Max temperature: 96.8°F      ⚠ Above threshold!
+    Min temperature: 67.8°F
+    High temp sensors: 24        ⚠ Increasing
+
+Window 3: [14:40:10 - 14:40:15] 5-second window
+  
+  Incoming events: 5,123 events
+  
+  Filtered events (temperature > 80°F):
+    Count: 428 events (8.4%)  ⚠ Rising fast!
+    Sensors affected: 31 unique sensors
+  
+  Aggregated (5-sec average):
+    Average temperature: 82.4°F  🚨 Above 80°F!
+    Max temperature: 98.3°F      🚨 Critical!
+    
+  🚨 ALERT TRIGGERED 🚨
+    Condition: Average temp > 85°F for 3 consecutive windows
+    Severity: URGENT
+    Action: Notify operations team
+    
+  Alert sent:
+    ✓ SMS to: +1-555-ONCALL
+    ✓ Email to: ops-team@company.com
+    ✓ PagerDuty incident created: #INC-2847
+    ✓ Dashboard updated (red status)
+
+────────────────────────────────────────────────────────
+
+Stream Statistics (last 60 seconds):
+  Total events: 62,456
+  Average rate: 1,041 events/sec
+  Processing latency: 23ms (p99)
+  Alerts triggered: 3
+  
+Storage:
+  Raw events: nestgate://timeseries/sensors (batched)
+  Aggregates: nestgate://timeseries/aggregates
+  Batch size: 1,000 events
+  Flush interval: 10 seconds
+  Compression: Enabled (3.2x ratio)
+
+════════════════════════════════════════════════════════
+
+[0;32m✓[0m Stream Processing pattern demonstrated!
+
+[0;34m==>[0m Pattern Comparison
+
+Pattern Selection Guide
+════════════════════════════════════════════════════════
+
+Pattern              | Latency | Throughput | Complexity | Use When
+────────────────────────────────────────────────────────────────────
+Producer/Consumer    | Medium  | High       | Low        | Decouple services
+Request/Response     | Low     | Medium     | Low        | Need immediate result
+Event-Driven         | High    | High       | Medium     | Async workflows
+Batch Processing     | High    | Very High  | Medium     | Large datasets
+Stream Processing    | Very Low| Very High  | High       | Real-time data
+
+────────────────────────────────────────────────────────
+
+Pattern Combinations:
+  • Request/Response + Event-Driven
+    → Immediate ack, async processing
+    
+  • Producer/Consumer + Batch Processing
+    → Buffer real-time, process in batches
+    
+  • Event-Driven + Stream Processing
+    → Events trigger real-time analysis
+    
+  • All patterns together
+    → Lambda architecture (real-time + batch)
+
+════════════════════════════════════════════════════════
+
+
+[0;34m==>[0m Demo Summary
+You've learned 5 essential data flow patterns:
+
+  ✓ Producer/Consumer - Decoupled data flow
+  ✓ Request/Response - Synchronous exchange
+  ✓ Event-Driven - Asynchronous propagation
+  ✓ Batch Processing - Scheduled large-scale
+  ✓ Stream Processing - Real-time continuous
+
+Key Takeaways:
+  • Choose pattern based on requirements
+  • Combine patterns for complex systems
+  • NestGate enables all patterns
+  • Patterns are building blocks
+
+Apply These Patterns To:
+  • Data pipelines (ETL, ELT)
+  • Event processing (real-time, batch)
+  • Microservices (decoupling)
+  • Analytics (streaming, batch)
+  • Any distributed system
+
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║           🎊 LEVEL 2 COMPLETE! 🎊                         ║
+║                                                            ║
+║  Congratulations! You've mastered Ecosystem Integration   ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+You completed all 4 Level 2 demos:
+  ✓ BearDog Crypto Integration
+  ✓ Songbird Orchestration
+  ✓ ToadStool Storage Integration
+  ✓ Data Flow Patterns
+
+You now understand:
+  • Cross-primal integration
+  • Service discovery
+  • Workflow orchestration
+  • Compute + storage
+  • Data flow patterns
+
+Ready for Level 3?
+  cd ../../03_federation
+  cat README.md
+
+Level 3 covers:
+  • Multi-node NestGate clusters
+  • Distributed consensus
+  • Data replication
+  • Network resilience
+
