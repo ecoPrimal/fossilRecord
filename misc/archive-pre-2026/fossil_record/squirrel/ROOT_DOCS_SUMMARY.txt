@@ -1,0 +1,28 @@
+# Root Documentation - December 11, 2025
+
+## PRIMARY ENTRY POINTS (Read in order):
+1. 00_READ_ME_FIRST.md        - 30-second orientation
+2. 00_START_HERE.md            - 5-minute quick start  
+3. README.md                   - Complete project overview
+4. STATUS.md                   - Current status (B+ 89/100)
+
+## NAVIGATION:
+- ROOT_DOCS_INDEX.md           - Complete documentation index
+- DOCUMENTATION_MASTER_INDEX.md - Master documentation catalog
+
+## ESSENTIAL GUIDES:
+- DEPLOYMENT_CHECKLIST.md      - Production deployment
+- LLVM_COV_INSTRUCTIONS.md     - Test coverage measurement
+- PLUGIN_METADATA_MIGRATION_GUIDE.md - Migration guide (2-3 hours)
+- AI_EVOLUTION_QUICK_START.md  - AI development guide
+
+## ARCHIVES:
+- docs/archive/session-dec-11-2025-final/ - Latest audit (14 docs)
+
+## STATUS:
+- Root docs: 32 files (cleaned from 46)
+- Organization: Clear and maintainable
+- Entry points: Well defined
+- Archives: Properly organized
+
+Total comprehensive documentation: ~250 pages across all directories

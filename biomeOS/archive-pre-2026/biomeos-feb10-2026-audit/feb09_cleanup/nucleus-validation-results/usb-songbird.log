@@ -1,0 +1,499 @@
+2026-01-31T13:08:17.448111Z  INFO songbird: 🚀 Songbird v0.1.0 - Server Mode
+2026-01-31T13:08:17.448153Z  INFO songbird:    Mode: Server (foreground)
+2026-01-31T13:08:17.448160Z  INFO songbird:    Port: 8080
+2026-01-31T13:08:17.448164Z  INFO songbird:    Process ID: 4075971
+2026-01-31T13:08:17.448208Z DEBUG songbird_orchestrator::process_manager: Attempting to acquire instance lock: /home/eastgate/.local/share/songbird/songbird-usb_nucleus-usb_nucleus1.pid
+2026-01-31T13:08:17.448215Z DEBUG songbird_orchestrator::process_manager:    Node Identity: usb_nucleus-usb_nucleus1
+2026-01-31T13:08:17.448269Z  INFO songbird_orchestrator::process_manager: ✅ Instance lock acquired (PID: 4075971)
+2026-01-31T13:08:17.448276Z  INFO songbird_orchestrator::process_manager:    Node Identity: usb_nucleus-usb_nucleus1
+2026-01-31T13:08:17.448279Z  INFO songbird_orchestrator::process_manager:    PID file: /home/eastgate/.local/share/songbird/songbird-usb_nucleus-usb_nucleus1.pid
+2026-01-31T13:08:17.448283Z  INFO songbird:    Instance Lock: ✅ Acquired (PID file active)
+2026-01-31T13:08:17.448288Z  INFO songbird:    Family ID: usb_nucleus
+2026-01-31T13:08:17.448291Z  INFO songbird:    Node ID: usb_nucleus1
+2026-01-31T13:08:17.448294Z  INFO songbird: 📋 Loading configuration...
+2026-01-31T13:08:17.448297Z  INFO songbird:    Config source: Environment variables
+2026-01-31T13:08:17.448320Z  INFO songbird:    Configuration: ✅ Loaded
+2026-01-31T13:08:17.448323Z  INFO songbird: 🔧 Starting orchestrator components...
+2026-01-31T13:08:17.448327Z  INFO songbird_orchestrator::app::startup: 🔧 Initializing orchestrator components...
+2026-01-31T13:08:17.448337Z  INFO songbird_orchestrator::app::core: 🔒 Songbird Orchestrator - Secure by Default
+2026-01-31T13:08:17.448341Z  INFO songbird_orchestrator::app::core:    TLS: ✅ Enabled (auto + SANs) (standard)
+2026-01-31T13:08:17.448344Z  INFO songbird_orchestrator::app::core:    Discovery: ✅ Enabled (anonymous secure)
+2026-01-31T13:08:17.448347Z  INFO songbird_orchestrator::app::core:    Federation: ✅ Enabled (trust: progressive escalation)
+2026-01-31T13:08:17.448350Z  INFO songbird_orchestrator::app::core:    Trust Model: Zero-trust with progressive escalation
+2026-01-31T13:08:17.448353Z  INFO songbird_orchestrator::app::core:    Initial Trust: anonymous → Escalate on demand
+2026-01-31T13:08:17.448356Z  INFO songbird_orchestrator::app::core:    🌐 Songbird handles complexity, security automatic!
+2026-01-31T13:08:17.448362Z  INFO songbird_orchestrator::app::initialization: 🔧 Initializing orchestrator components...
+2026-01-31T13:08:17.448369Z  INFO songbird_orchestrator::app::initialization:    ✅ Federated service registry
+2026-01-31T13:08:17.448372Z  INFO songbird_orchestrator::app::initialization:    ✅ Universal service registry
+2026-01-31T13:08:17.448379Z  INFO songbird_orchestrator::app::initialization:    ✅ Observability manager
+2026-01-31T13:08:17.448384Z  INFO songbird_orchestrator::app::initialization:    ✅ Trust escalation manager initialized
+2026-01-31T13:08:17.448387Z  INFO songbird_orchestrator::app::initialization:       Timeouts: Anonymous=3600s, Capability=86400s, Identity=604800s, Hardware=nevers
+2026-01-31T13:08:17.448392Z  INFO songbird_orchestrator::app::initialization:    ✅ Progressive trust connection manager
+2026-01-31T13:08:17.448395Z  INFO songbird_orchestrator::app::initialization:       Trust Levels: None(0), Limited(1), Elevated(2), Highest(3)
+2026-01-31T13:08:17.448398Z  INFO songbird_orchestrator::app::initialization:       Philosophy: Same family = hear the song, NOT enter the nest
+2026-01-31T13:08:17.448411Z  INFO songbird_orchestrator::app::initialization:    ✅ Federation state and registry
+2026-01-31T13:08:17.448486Z DEBUG songbird_orchestrator::node_identity: 💾 Saved node identity to: /home/eastgate/.local/share/songbird/node_identity-usb_nucleus1.json
+2026-01-31T13:08:17.448494Z  INFO songbird_orchestrator::node_identity: 🆔 Generated new node identity: d515f772-77f8-5915-b1ec-7bed057664a6
+2026-01-31T13:08:17.448498Z  INFO songbird_orchestrator::app::initialization:    ✅ Stable node identity: usb_nucleus1 (d515f772-77f8-5915-b1ec-7bed057664a6)
+2026-01-31T13:08:17.448507Z  INFO songbird_orchestrator::app::initialization:    ✅ Discovery listener created (port 2300, self-filtering: d515f772-77f8-5915-b1ec-7bed057664a6)
+2026-01-31T13:08:17.448511Z  INFO songbird_orchestrator::app::initialization:       Configuration pending: Will add BirdSong + stats in start(), then Arc wrap
+2026-01-31T13:08:17.448515Z  INFO songbird_orchestrator::app::initialization: ✅ All core components initialized
+2026-01-31T13:08:17.448519Z  INFO songbird_orchestrator::app::federation_setup: 🏠 Running in standalone mode (federation disabled)
+2026-01-31T13:08:17.448527Z  INFO songbird_orchestrator::app::security_setup: 🔐 Security provider: beardog (via SONGBIRD_SECURITY_PROVIDER)
+2026-01-31T13:08:17.448546Z  INFO songbird_orchestrator::app::core: 🚀 Starting Songbird Orchestrator
+2026-01-31T13:08:17.448550Z  INFO songbird_orchestrator::app::core:    Mode: Production-ready with secure defaults
+2026-01-31T13:08:17.448554Z  INFO songbird_orchestrator::app::core:    Auto-discovery: Secure anonymous capability exchange
+2026-01-31T13:08:17.448556Z  INFO songbird_orchestrator::app::core:    Federation: Zero-trust progressive escalation
+2026-01-31T13:08:17.448559Z  INFO songbird_orchestrator::app::core:    All connections: Encrypted by default (TLS failsafe)
+2026-01-31T13:08:17.448562Z  INFO songbird_orchestrator::app::core: 🔐 Provisioning JWT secret from security provider (BearDog)...
+2026-01-31T13:08:17.448567Z  INFO songbird_orchestrator::auth::capability_discovery: 🔍 Discovering security provider (BearDog) via capability-based discovery...
+2026-01-31T13:08:17.448586Z DEBUG songbird_orchestrator::auth::capability_discovery:    ⏭️  Not found: /tmp/beardog-nat0.sock
+2026-01-31T13:08:17.448596Z DEBUG songbird_orchestrator::auth::capability_discovery:    ⏭️  Not found: /tmp/beardog-default-default.sock
+2026-01-31T13:08:17.448605Z DEBUG songbird_orchestrator::auth::capability_discovery:    ⏭️  Not found: /run/user/1000/beardog.sock
+2026-01-31T13:08:17.448612Z DEBUG songbird_orchestrator::auth::capability_discovery:    ⏭️  Not found: /var/run/beardog.sock
+2026-01-31T13:08:17.448683Z  INFO songbird_orchestrator::auth::capability_discovery:    ✅ Found BearDog socket at: /tmp/beardog-usb-stun.sock
+2026-01-31T13:08:17.448694Z  INFO songbird_orchestrator::auth::beardog_jwt_client: 🔐 Fetching JWT secret from BearDog at: /tmp/beardog-usb-stun.sock
+2026-01-31T13:08:17.448699Z  INFO songbird_orchestrator::auth::beardog_jwt_client:    Purpose: songbird_authentication
+2026-01-31T13:08:17.448728Z  WARN songbird_orchestrator::auth::beardog_jwt_client: ⚠️ BearDog JWT fetch failed: Failed to connect to BearDog at /tmp/beardog-usb-stun.sock
+2026-01-31T13:08:17.448734Z  WARN songbird_orchestrator::auth::beardog_jwt_client:    Falling back to secure random generation...
+2026-01-31T13:08:17.448738Z  WARN songbird_orchestrator::auth::beardog_jwt_client: ⚠️ Generating fallback JWT secret (BearDog unavailable)
+2026-01-31T13:08:17.448742Z  WARN songbird_orchestrator::auth::beardog_jwt_client:    This is cryptographically secure but not coordinated with NUCLEUS
+2026-01-31T13:08:17.448760Z  INFO songbird_orchestrator::auth::beardog_jwt_client: ✅ Secure random JWT secret generated
+2026-01-31T13:08:17.448765Z  INFO songbird_orchestrator::auth::beardog_jwt_client:    Length: 88 characters (64 bytes, 512 bits)
+2026-01-31T13:08:17.448769Z  INFO songbird_orchestrator::app::core: ✅ JWT secret provisioned (88 bytes, Pure Rust delegation!)
+2026-01-31T13:08:17.448773Z  INFO songbird_orchestrator::app::security_setup: 🔐 Security provider: beardog (via SONGBIRD_SECURITY_PROVIDER)
+2026-01-31T13:08:17.448779Z  INFO songbird_orchestrator::app::core: 🔐 Security provider configured: beardog
+2026-01-31T13:08:17.448785Z DEBUG songbird_universal::adapters::security: 🌐 Protocol detected: HTTP (FALLBACK - network only)
+2026-01-31T13:08:17.448803Z DEBUG songbird_universal::adapters::security: ✅ SecurityAdapter initialized: endpoint=beardog
+2026-01-31T13:08:17.448814Z  INFO songbird_http_client::client: 🎛️  Creating Songbird HTTP client with Adaptive strategy
+2026-01-31T13:08:17.448827Z DEBUG songbird_http_client::crypto::socket_discovery:    Checking XDG: /run/user/1000/biomeos/neural-api-usb_nucleus.sock
+2026-01-31T13:08:17.448835Z DEBUG songbird_http_client::crypto::socket_discovery:    ❌ XDG socket not found
+2026-01-31T13:08:17.448840Z  WARN songbird_http_client::crypto::socket_discovery: ⚠️  Using legacy /tmp socket: /tmp/neural-api-nat0.sock
+2026-01-31T13:08:17.448844Z  WARN songbird_http_client::crypto::socket_discovery:    Consider setting $NEURAL_API_SOCKET or XDG_RUNTIME_DIR
+2026-01-31T13:08:17.448847Z  INFO songbird_http_client::crypto::beardog_provider: 🌐 BearDog provider: NEURAL API mode (capability.call) → /tmp/neural-api-nat0.sock
+2026-01-31T13:08:17.448874Z DEBUG songbird_orchestrator::security_client::client: Querying security provider identity using protocol-agnostic adapter
+2026-01-31T13:08:17.448879Z DEBUG songbird_universal::adapters::security: Getting identity from security provider: beardog
+2026-01-31T13:08:17.448883Z DEBUG songbird_universal::adapters::security: 🌐 Using HTTP for identity (FALLBACK protocol)
+2026-01-31T13:08:17.448905Z  WARN songbird_universal::adapters::security: Failed to reach security provider for identity: Failed to connect to Songbird IPC: "/tmp/songbird-usb_nucleus.sock"
+2026-01-31T13:08:17.448916Z  WARN songbird_orchestrator::app::core: ⚠️  Could not query security identity: Failed to connect to security provider
+2026-01-31T13:08:17.448921Z  WARN songbird_orchestrator::app::core:    Continuing without encryption tags
+2026-01-31T13:08:17.448954Z  INFO songbird_observability::observability: Starting observability manager
+2026-01-31T13:08:17.448962Z DEBUG songbird_observability::observability: Starting metrics collection
+2026-01-31T13:08:17.448966Z DEBUG songbird_observability::observability: Starting health monitoring
+2026-01-31T13:08:17.448969Z  INFO songbird_observability::observability: Observability manager started successfully
+2026-01-31T13:08:17.448973Z  INFO songbird_orchestrator::app::core: 🌐 Starting HTTP server...
+2026-01-31T13:08:17.449744Z  INFO songbird_orchestrator::app::http_server: 🦅 Using sovereign socket binding for port 8080
+2026-01-31T13:08:17.449761Z  INFO songbird_orchestrator::network::sovereign_socket: 🦅 Attempting sovereign bind on port 8080
+2026-01-31T13:08:17.449783Z DEBUG songbird_orchestrator::network::sovereign_socket: ✅ Socket configured with sovereign settings
+2026-01-31T13:08:17.449789Z DEBUG songbird_orchestrator::network::sovereign_socket:    SO_REUSEADDR: enabled (quick restart)
+2026-01-31T13:08:17.449793Z DEBUG songbird_orchestrator::network::sovereign_socket:    SO_REUSEPORT: DISABLED (singleton enforcement)
+2026-01-31T13:08:17.449797Z DEBUG songbird_orchestrator::network::sovereign_socket:    Non-blocking: enabled
+2026-01-31T13:08:17.449801Z DEBUG songbird_orchestrator::network::sovereign_socket:    Buffer sizes: 1024KB
+2026-01-31T13:08:17.449805Z DEBUG songbird_orchestrator::network::sovereign_socket:    Note: TCP_NODELAY and keep-alive set per-connection
+2026-01-31T13:08:17.449815Z  INFO songbird_orchestrator::network::sovereign_socket: ✅ Sovereign socket bound to 0.0.0.0:8080
+2026-01-31T13:08:17.449825Z DEBUG songbird_orchestrator::network::sovereign_socket: ✅ Socket listening (backlog: 128)
+2026-01-31T13:08:17.449837Z  INFO songbird_orchestrator::network::sovereign_socket: ✅ Sovereign bind successful: 0.0.0.0:8080 (IPv4 wildcard)
+2026-01-31T13:08:17.449843Z  INFO songbird_orchestrator::app::http_server: ✅ Sovereign bind successful: 0.0.0.0:8080
+2026-01-31T13:08:17.449848Z  INFO songbird_orchestrator::app::http_server: ✅ Bound to configured port 8080
+2026-01-31T13:08:17.449854Z  INFO songbird_orchestrator::app::http_server: 🔐 TLS enabled - configuring HTTPS server (fail-secure by default)
+2026-01-31T13:08:17.449914Z  WARN songbird_tls::socket_discovery: Falling back to default BearDog socket path: /tmp/beardog-nat0.sock
+2026-01-31T13:08:17.449938Z  WARN songbird_tls::socket_discovery: Falling back to default Neural API socket path: /tmp/neural-api-nat0.sock
+2026-01-31T13:08:17.449990Z  WARN songbird_orchestrator::app::http_server: ⚠️  HTTPS server failed to start: Failed to create BearDog crypto client: Crypto error: Could not discover BearDog or Neural API socket. Tried:
+- BearDog: /tmp/beardog-nat0.sock (not found)
+- Neural API: /tmp/neural-api-nat0.sock (not found)
+- Legacy paths: /var/run/neural-api/socket, /var/run/beardog/crypto.sock (not found)
+
+Set one of: BEARDOG_SOCKET, NEURAL_API_SOCKET, or XDG_RUNTIME_DIR + FAMILY_ID
+2026-01-31T13:08:17.450011Z  WARN songbird_orchestrator::app::http_server:    Most likely cause: BearDog crypto provider not available
+2026-01-31T13:08:17.450016Z  WARN songbird_orchestrator::app::http_server:    DEGRADING TO PLAIN HTTP (insecure, but functional)
+2026-01-31T13:08:17.450020Z  WARN songbird_orchestrator::app::http_server:    To resolve: Start BearDog or set SONGBIRD_TLS_ENABLED=false
+2026-01-31T13:08:17.450024Z  INFO songbird_orchestrator::app::http_server: 🦅 Using sovereign socket binding for port 8080
+2026-01-31T13:08:17.450028Z  INFO songbird_orchestrator::network::sovereign_socket: 🦅 Attempting sovereign bind on port 8080
+2026-01-31T13:08:17.450041Z DEBUG songbird_orchestrator::network::sovereign_socket: ✅ Socket configured with sovereign settings
+2026-01-31T13:08:17.450047Z DEBUG songbird_orchestrator::network::sovereign_socket:    SO_REUSEADDR: enabled (quick restart)
+2026-01-31T13:08:17.450051Z DEBUG songbird_orchestrator::network::sovereign_socket:    SO_REUSEPORT: DISABLED (singleton enforcement)
+2026-01-31T13:08:17.450055Z DEBUG songbird_orchestrator::network::sovereign_socket:    Non-blocking: enabled
+2026-01-31T13:08:17.450059Z DEBUG songbird_orchestrator::network::sovereign_socket:    Buffer sizes: 1024KB
+2026-01-31T13:08:17.450063Z DEBUG songbird_orchestrator::network::sovereign_socket:    Note: TCP_NODELAY and keep-alive set per-connection
+2026-01-31T13:08:17.450070Z  INFO songbird_orchestrator::network::sovereign_socket: ✅ Sovereign socket bound to 0.0.0.0:8080
+2026-01-31T13:08:17.450076Z DEBUG songbird_orchestrator::network::sovereign_socket: ✅ Socket listening (backlog: 128)
+2026-01-31T13:08:17.450086Z  INFO songbird_orchestrator::network::sovereign_socket: ✅ Sovereign bind successful: 0.0.0.0:8080 (IPv4 wildcard)
+2026-01-31T13:08:17.450091Z  INFO songbird_orchestrator::app::http_server: ✅ Sovereign bind successful: 0.0.0.0:8080
+2026-01-31T13:08:17.450096Z  INFO songbird_orchestrator::app::http_server: 🌐 HTTP server (fallback) listening on 0.0.0.0:8080
+2026-01-31T13:08:17.450116Z  INFO songbird_orchestrator::app::core: ✅ HTTP server started on port 8080
+2026-01-31T13:08:17.450122Z  INFO songbird_orchestrator::app::core: 🎧 Starting IPC server...
+2026-01-31T13:08:17.450126Z  INFO songbird_orchestrator::app::core: 🎧 Starting Unix Socket IPC server (v3.20.0 - Service Registry Mode)
+2026-01-31T13:08:17.450149Z  INFO songbird_orchestrator::app::core:    Family ID: default
+2026-01-31T13:08:17.450159Z  INFO songbird_orchestrator::app::core:    Protocol: JSON-RPC 2.0
+2026-01-31T13:08:17.450167Z  INFO songbird_orchestrator::app::core: 🔐 HTTP Handler: Using BearDog crypto at /tmp/beardog-usb_nucleus.sock
+2026-01-31T13:08:17.450172Z  INFO songbird_http_client::beardog_client::core: 🌐 BearDog client: NEURAL API mode (production/orchestration)
+2026-01-31T13:08:17.450192Z  INFO songbird_orchestrator::ipc::pure_rust_server::server: 📍 Using socket path (TRUE PRIMAL self-knowledge): /run/user/1000/biomeos/songbird.sock
+2026-01-31T13:08:17.450221Z  INFO songbird_orchestrator::ipc::pure_rust_server::server: 🔌 Starting pure Rust Unix socket JSON-RPC server...
+2026-01-31T13:08:17.450248Z  INFO songbird_orchestrator::ipc::pure_rust_server::server:    Socket path: /run/user/1000/biomeos/songbird.sock
+2026-01-31T13:08:17.450304Z  INFO songbird_orchestrator::ipc::pure_rust_server::server: ✅ Unix socket JSON-RPC server listening: /run/user/1000/biomeos/songbird.sock
+2026-01-31T13:08:17.450321Z  INFO songbird_orchestrator::ipc::pure_rust_server::server:    Protocol: JSON-RPC 2.0 (pure Rust)
+2026-01-31T13:08:17.450326Z  INFO songbird_orchestrator::ipc::pure_rust_server::server:    APIs: 14 (3 P2P + 4 registry + 4 graph + 3 Squirrel)
+2026-01-31T13:08:17.450330Z  INFO songbird_orchestrator::ipc::pure_rust_server::server:    Status: READY ✅ (atomic flag set)
+2026-01-31T13:08:17.461334Z  INFO songbird_orchestrator::app::core: ✅ Unix Socket IPC server started successfully
+2026-01-31T13:08:17.461360Z  INFO songbird_orchestrator::app::core:    APIs: 11 total
+2026-01-31T13:08:17.461362Z  INFO songbird_orchestrator::app::core:    - Service Registry: register_service, discover_by_capability, get_service_health, health_check
+2026-01-31T13:08:17.461365Z  INFO songbird_orchestrator::app::core:    - P2P Discovery: discover_by_family, create_genetic_tunnel, announce_capabilities
+2026-01-31T13:08:17.461367Z  INFO songbird_orchestrator::app::core:    - Graph Intelligence: graph.validate, graph.check_availability, graph.suggest_alternatives, coordination.validate_pattern
+2026-01-31T13:08:17.461369Z  INFO songbird_orchestrator::app::core:    🌱 Primals can now register and discover each other!
+2026-01-31T13:08:17.461381Z  INFO songbird_orchestrator::app::core: ✅ IPC server started
+2026-01-31T13:08:17.461384Z  INFO songbird_orchestrator::app::core: 🌍 Starting Universal IPC Broker...
+2026-01-31T13:08:17.461386Z  INFO songbird_orchestrator::ipc::universal_broker: 🌍 Starting Universal IPC Broker (service-based architecture)
+2026-01-31T13:08:17.461389Z  INFO songbird_orchestrator::ipc::universal_broker:    Runtime discovery: ⚠️  DISABLED (testing mode)
+2026-01-31T13:08:17.461391Z  INFO songbird_orchestrator::ipc::universal_broker: 🌍 Initializing Universal IPC Broker
+2026-01-31T13:08:17.461396Z DEBUG songbird_universal_ipc::ipc: Attempting to initialize Universal IPC
+2026-01-31T13:08:17.461398Z DEBUG songbird_universal_ipc::ipc:   Platform: linux
+2026-01-31T13:08:17.461401Z DEBUG songbird_universal_ipc::ipc:   Architecture: x86_64
+2026-01-31T13:08:17.461403Z DEBUG songbird_universal_ipc::ipc: Creating UniversalIPC instance
+2026-01-31T13:08:17.461405Z  INFO songbird_universal_ipc::ipc: Universal IPC initialized for platform: linux
+2026-01-31T13:08:17.461407Z  INFO songbird_universal_ipc::ipc: ✅ Universal IPC initialized successfully
+2026-01-31T13:08:17.461421Z DEBUG songbird_universal_ipc::platform::unix: Creating Unix socket endpoint for 'songbird': /run/user/1000/biomeos/songbird.sock (XDG-compliant)
+2026-01-31T13:08:17.461597Z  WARN songbird_universal_ipc::platform::unix: Socket file already exists, removing: /run/user/1000/biomeos/songbird.sock
+2026-01-31T13:08:17.461625Z  INFO songbird_universal_ipc::platform::unix: Unix socket endpoint: /run/user/1000/biomeos/songbird.sock (XDG-compliant, no hardcoding)
+2026-01-31T13:08:17.461636Z  INFO songbird_universal_ipc::registry: Registered service 'songbird' with 4 capabilities
+2026-01-31T13:08:17.461640Z DEBUG songbird_universal_ipc::registry: Service capabilities: ["ipc", "discovery", "registry", "stun"]
+2026-01-31T13:08:17.461644Z  INFO songbird_orchestrator::ipc::universal_broker: ✅ Songbird registered at endpoint: /primal/songbird
+2026-01-31T13:08:17.461647Z  INFO songbird_orchestrator::ipc::universal_broker: ⚠️  No discovery listener provided, discovery.peers will return empty
+2026-01-31T13:08:17.461655Z  INFO songbird_universal_ipc::handlers::http_rendezvous_client: ✅ HTTP Rendezvous Client initialized (production)
+2026-01-31T13:08:17.461658Z  INFO songbird_universal_ipc::handlers::udp_peer_connector: ✅ UDP Peer Connector initialized (production)
+2026-01-31T13:08:17.461661Z  INFO songbird_orchestrator::ipc::universal_broker: ✅ Universal IPC Broker initialized
+2026-01-31T13:08:17.461663Z  INFO songbird_orchestrator::ipc::universal_broker:    Endpoint: /primal/songbird
+2026-01-31T13:08:17.461665Z  INFO songbird_orchestrator::ipc::universal_broker:    Protocol: JSON-RPC 2.0
+2026-01-31T13:08:17.461675Z  INFO songbird_orchestrator::ipc::universal_broker:    Methods: ipc.*, http.*, stun.*, discovery.*, rendezvous.*, peer.*
+2026-01-31T13:08:17.461678Z  INFO songbird_orchestrator::ipc::universal_broker: ✅ Universal IPC Broker created successfully
+2026-01-31T13:08:17.461713Z  INFO songbird_orchestrator::ipc::universal_broker: 🚀 Starting Universal IPC Broker
+2026-01-31T13:08:17.461721Z  INFO songbird_orchestrator::ipc::universal_broker:    Listening on: /primal/songbird
+2026-01-31T13:08:17.461726Z  INFO songbird_orchestrator::ipc::universal_broker:    Waiting for primal connections...
+2026-01-31T13:08:17.461729Z DEBUG songbird_universal_ipc::tower_atomic: Starting Tower Atomic server on /primal/songbird
+2026-01-31T13:08:17.461733Z DEBUG songbird_universal_ipc::platform::unix: Creating Unix listener on: /run/user/1000/biomeos/songbird.sock
+2026-01-31T13:08:17.461767Z  INFO songbird_universal_ipc::platform::unix: Unix listener created: /run/user/1000/biomeos/songbird.sock
+2026-01-31T13:08:17.563281Z  INFO songbird_orchestrator::ipc::universal_broker: ✅ Universal IPC Broker started in background
+2026-01-31T13:08:17.563367Z  INFO songbird_orchestrator::ipc::universal_broker:    Other primals can now connect to /primal/songbird
+2026-01-31T13:08:17.563380Z  INFO songbird_orchestrator::ipc::universal_broker:    Methods: ipc.*, http.*, stun.*, discovery.*, rendezvous.*, peer.*
+2026-01-31T13:08:17.563389Z  INFO songbird_orchestrator::ipc::universal_broker:    NOTE: Service layer handles platform abstraction internally
+2026-01-31T13:08:17.563398Z  INFO songbird_orchestrator::app::core: ✅ Universal IPC Broker started
+2026-01-31T13:08:17.563408Z  INFO songbird_orchestrator::app::core: 🚀 Starting tarpc server...
+2026-01-31T13:08:17.563416Z  INFO songbird_orchestrator::app::core: 🔒 Using IPC (Unix sockets) for primal-to-primal communication
+2026-01-31T13:08:17.563425Z  INFO songbird_orchestrator::app::core: ✅ tarpc server started
+2026-01-31T13:08:17.563433Z  INFO songbird_orchestrator::app::core: 🌐 Starting anonymous discovery with actual HTTPS port 8080...
+2026-01-31T13:08:17.563579Z  INFO songbird_orchestrator::node_identity: 🆔 Loaded existing node identity: d515f772-77f8-5915-b1ec-7bed057664a6
+2026-01-31T13:08:17.563597Z  INFO songbird_orchestrator::node_identity: 🔍 Detecting network interfaces (platform-agnostic)...
+2026-01-31T13:08:17.564305Z  WARN netlink_packet_route::link::buffer_tool: Specified IFLA_INET6_CONF NLA attribute holds more(most likely new kernel) data which is unknown to netlink-packet-route crate, expecting 236, got 240
+2026-01-31T13:08:17.564681Z  WARN netlink_packet_route::link::buffer_tool: Specified IFLA_INET6_CONF NLA attribute holds more(most likely new kernel) data which is unknown to netlink-packet-route crate, expecting 236, got 240
+2026-01-31T13:08:17.565008Z  WARN netlink_packet_route::link::buffer_tool: Specified IFLA_INET6_CONF NLA attribute holds more(most likely new kernel) data which is unknown to netlink-packet-route crate, expecting 236, got 240
+2026-01-31T13:08:17.565375Z  WARN netlink_packet_route::link::buffer_tool: Specified IFLA_INET6_CONF NLA attribute holds more(most likely new kernel) data which is unknown to netlink-packet-route crate, expecting 236, got 240
+2026-01-31T13:08:17.569691Z  WARN netlink_packet_route::link::buffer_tool: Specified IFLA_INET6_CONF NLA attribute holds more(most likely new kernel) data which is unknown to netlink-packet-route crate, expecting 236, got 240
+2026-01-31T13:08:17.577099Z  WARN netlink_packet_route::link::buffer_tool: Specified IFLA_INET6_CONF NLA attribute holds more(most likely new kernel) data which is unknown to netlink-packet-route crate, expecting 236, got 240
+2026-01-31T13:08:17.581911Z  WARN netlink_packet_route::link::buffer_tool: Specified IFLA_INET6_CONF NLA attribute holds more(most likely new kernel) data which is unknown to netlink-packet-route crate, expecting 236, got 240
+2026-01-31T13:08:17.583828Z  INFO songbird_orchestrator::node_identity:   ✅ br-6c5cc4da47b2 (other) - 192.168.122.1:8080 [preference: 50]
+2026-01-31T13:08:17.583862Z DEBUG songbird_orchestrator::node_identity: Skipping enp5s0 (no IP addresses)
+2026-01-31T13:08:17.583866Z  INFO songbird_orchestrator::node_identity:   ✅ eno1 (ethernet) - 192.168.1.144:8080 [preference: 100]
+2026-01-31T13:08:17.583871Z  INFO songbird_orchestrator::node_identity:   ✅ eno1 (ethernet) - [2600:1700:b0b0:5b90:78c4:c78b:6a93:2441]:8080 [preference: 100]
+2026-01-31T13:08:17.583875Z  INFO songbird_orchestrator::node_identity:   ✅ eno1 (ethernet) - [2600:1700:b0b0:5b90::27]:8080 [preference: 100]
+2026-01-31T13:08:17.583879Z  INFO songbird_orchestrator::node_identity:   ✅ eno1 (ethernet) - [2600:1700:b0b0:5b90:c729:7c5b:c5ce:940c]:8080 [preference: 100]
+2026-01-31T13:08:17.583883Z  INFO songbird_orchestrator::node_identity:   ✅ eno1 (ethernet) - [2600:1700:b0b0:5b90:8f11:631e:f8f1:f27b]:8080 [preference: 100]
+2026-01-31T13:08:17.583886Z  INFO songbird_orchestrator::node_identity:   ✅ eno1 (ethernet) - [fe80::c529:2071:bedc:1de0]:8080 [preference: 100]
+2026-01-31T13:08:17.583891Z  INFO songbird_orchestrator::node_identity:   ✅ wlp0s20f3 (wifi) - 192.168.1.242:8080 [preference: 80]
+2026-01-31T13:08:17.583895Z  INFO songbird_orchestrator::node_identity:   ✅ wlp0s20f3 (wifi) - [2600:1700:b0b0:5b90:f48f:299b:288e:da96]:8080 [preference: 80]
+2026-01-31T13:08:17.583898Z  INFO songbird_orchestrator::node_identity:   ✅ wlp0s20f3 (wifi) - [2600:1700:b0b0:5b90::38]:8080 [preference: 80]
+2026-01-31T13:08:17.583902Z  INFO songbird_orchestrator::node_identity:   ✅ wlp0s20f3 (wifi) - [2600:1700:b0b0:5b90:b0ae:85bf:df17:ccb5]:8080 [preference: 80]
+2026-01-31T13:08:17.583906Z  INFO songbird_orchestrator::node_identity:   ✅ wlp0s20f3 (wifi) - [2600:1700:b0b0:5b90:f823:a7b3:bc27:c80b]:8080 [preference: 80]
+2026-01-31T13:08:17.583909Z  INFO songbird_orchestrator::node_identity:   ✅ wlp0s20f3 (wifi) - [fe80::df5a:6c90:8f8d:f3c1]:8080 [preference: 80]
+2026-01-31T13:08:17.583917Z  INFO songbird_orchestrator::node_identity:   ✅ virbr0 (other) - 192.168.122.1:8080 [preference: 50]
+2026-01-31T13:08:17.583922Z  INFO songbird_orchestrator::node_identity:   ✅ docker0 (other) - 172.17.0.1:8080 [preference: 50]
+2026-01-31T13:08:17.583926Z  INFO songbird_orchestrator::node_identity: 🔍 Detected 15 network endpoints (platform-agnostic!)
+2026-01-31T13:08:17.583964Z  INFO songbird_orchestrator::app::core: 🌐 Discovery broadcast addresses: [224.0.0.251:2300, 192.168.1.255:2300, 192.168.0.255:2300, 10.0.0.255:2300]
+2026-01-31T13:08:17.583970Z  INFO songbird_orchestrator::app::discovery_startup: 🌐 Starting anonymous discovery system...
+2026-01-31T13:08:17.583975Z  INFO songbird_orchestrator::app::security_setup: 🔐 Security provider: beardog (via SONGBIRD_SECURITY_PROVIDER)
+2026-01-31T13:08:17.583978Z  INFO songbird_orchestrator::app::discovery_startup: 🔐 Fetching identity attestations from security provider: beardog
+2026-01-31T13:08:17.583982Z DEBUG songbird_universal::adapters::security: 🌐 Protocol detected: HTTP (FALLBACK - network only)
+2026-01-31T13:08:17.583996Z DEBUG songbird_universal::adapters::security: ✅ SecurityAdapter initialized: endpoint=beardog
+2026-01-31T13:08:17.584001Z  INFO songbird_http_client::client: 🎛️  Creating Songbird HTTP client with Adaptive strategy
+2026-01-31T13:08:17.584009Z DEBUG songbird_http_client::crypto::socket_discovery:    Checking XDG: /run/user/1000/biomeos/neural-api-usb_nucleus.sock
+2026-01-31T13:08:17.584014Z DEBUG songbird_http_client::crypto::socket_discovery:    ❌ XDG socket not found
+2026-01-31T13:08:17.584018Z  WARN songbird_http_client::crypto::socket_discovery: ⚠️  Using legacy /tmp socket: /tmp/neural-api-nat0.sock
+2026-01-31T13:08:17.584021Z  WARN songbird_http_client::crypto::socket_discovery:    Consider setting $NEURAL_API_SOCKET or XDG_RUNTIME_DIR
+2026-01-31T13:08:17.584024Z  INFO songbird_http_client::crypto::beardog_provider: 🌐 BearDog provider: NEURAL API mode (capability.call) → /tmp/neural-api-nat0.sock
+2026-01-31T13:08:17.584036Z DEBUG songbird_orchestrator::security_client::client: Querying security provider identity using protocol-agnostic adapter
+2026-01-31T13:08:17.584041Z DEBUG songbird_universal::adapters::security: Getting identity from security provider: beardog
+2026-01-31T13:08:17.584045Z DEBUG songbird_universal::adapters::security: 🌐 Using HTTP for identity (FALLBACK protocol)
+2026-01-31T13:08:17.584060Z  WARN songbird_universal::adapters::security: Failed to reach security provider for identity: Failed to connect to Songbird IPC: "/tmp/songbird-usb_nucleus.sock"
+2026-01-31T13:08:17.584067Z  WARN songbird_orchestrator::app::discovery_startup: ⚠️  Could not get identity from security provider: Failed to connect to security provider
+2026-01-31T13:08:17.584071Z  WARN songbird_orchestrator::app::discovery_startup:    Discovery will continue without genetic lineage attestations
+2026-01-31T13:08:17.584080Z  INFO songbird_orchestrator::app::discovery_startup: 📡 BirdSong disabled (no genetic identity)
+2026-01-31T13:08:17.584086Z  WARN songbird_orchestrator::self_knowledge: ⚠️  No identity tags configured. Set SONGBIRD_FAMILY_ID or SONGBIRD_TAGS
+2026-01-31T13:08:17.584089Z  WARN songbird_orchestrator::self_knowledge:    Example: SONGBIRD_FAMILY_ID=nat0
+2026-01-31T13:08:17.584091Z  WARN songbird_orchestrator::self_knowledge:    Peers without tags may be rejected by security providers!
+2026-01-31T13:08:17.584106Z  INFO songbird_orchestrator::app::discovery_startup: ✅ Discovery broadcaster started
+2026-01-31T13:08:17.584109Z  INFO songbird_orchestrator::app::discovery_startup: 🔧 Configuring discovery listener (BirdSong, stats, then Arc wrap)...
+2026-01-31T13:08:17.584112Z  INFO songbird_orchestrator::app::discovery_startup:    📊 Wiring discovery statistics
+2026-01-31T13:08:17.584115Z  INFO songbird_orchestrator::app::discovery_startup:    ✅ Configuration complete, wrapped in Arc
+2026-01-31T13:08:17.584118Z  INFO songbird_orchestrator::app::discovery_startup:    Self-filtering: enabled for node_id d515f772-77f8-5915-b1ec-7bed057664a6
+2026-01-31T13:08:17.584122Z  INFO songbird_orchestrator::app::discovery_startup: ✅ Discovery listener started (SAME instance used by bridge)
+2026-01-31T13:08:17.584125Z  INFO songbird_orchestrator::app::discovery_startup: ✅ Anonymous discovery started (UDP port 2300, advertising HTTPS port 8080)
+2026-01-31T13:08:17.584129Z  INFO songbird_orchestrator::app::core: ✅ Anonymous discovery started (UDP port 2300, advertising HTTPS port 8080)
+2026-01-31T13:08:17.584142Z  INFO songbird_orchestrator::app::security_setup: 🔐 Security provider: beardog (via SONGBIRD_SECURITY_PROVIDER)
+2026-01-31T13:08:17.584177Z  INFO songbird_orchestrator::app::discovery_bridge: ✅ Discovery → Federation bridge task spawned
+2026-01-31T13:08:17.584184Z  INFO songbird_orchestrator::app::core: ✅ Trust escalation cleanup task started
+2026-01-31T13:08:17.584187Z  INFO songbird_orchestrator::app::core: 🐕 Initializing security provider security integration...
+2026-01-31T13:08:17.584190Z  INFO songbird_orchestrator::app::core: ✅ security provider security integration initialized successfully
+2026-01-31T13:08:17.584193Z  INFO songbird_orchestrator::app::health: 🏥 Health monitoring initialized (checks via handle_command)
+2026-01-31T13:08:17.584197Z  INFO songbird_orchestrator::app::core: ✅ Session TTL cleanup task spawned
+2026-01-31T13:08:17.584190Z  INFO songbird_discovery::anonymous::broadcaster: 🌐 Starting anonymous discovery broadcaster
+2026-01-31T13:08:17.584224Z  INFO songbird_discovery::anonymous::broadcaster:    Version: 3.0
+2026-01-31T13:08:17.584205Z  INFO songbird_orchestrator::app::core: ✅ Service registry cleanup task started
+2026-01-31T13:08:17.584230Z  INFO songbird_discovery::anonymous::broadcaster:    Node ID: d515f772-77f8-5915-b1ec-7bed057664a6
+2026-01-31T13:08:17.584238Z  INFO songbird_orchestrator::app::core: 🔒 Using IPC (Unix sockets) for primal-to-primal communication
+2026-01-31T13:08:17.584216Z  INFO songbird_discovery::anonymous::listener: 👂 Starting anonymous discovery listener on port 2300
+2026-01-31T13:08:17.584257Z  INFO songbird_discovery::anonymous::listener:    Joining multicast group: 224.0.0.251
+2026-01-31T13:08:17.584244Z  INFO songbird_orchestrator::app::core: 🔍 Verifying external connectivity...
+2026-01-31T13:08:17.584295Z  INFO songbird_orchestrator::network::connectivity_test: 🔍 Running comprehensive connectivity test to 192.168.1.144:8080
+2026-01-31T13:08:17.584299Z DEBUG songbird_orchestrator::network::connectivity_test: Testing TCP connectivity to 192.168.1.144:8080
+2026-01-31T13:08:17.584306Z  INFO songbird_discovery::anonymous::listener: ✅ Joined multicast group: 224.0.0.251
+2026-01-31T13:08:17.584303Z  INFO songbird_orchestrator::app::discovery_bridge: 🌉 Discovery → Federation bridge started (10s interval) [Trust Evaluation: ACTIVE]
+2026-01-31T13:08:17.584324Z  INFO songbird_discovery::anonymous::listener: ✅ Anonymous discovery listener started (multicast-enabled)
+2026-01-31T13:08:17.584242Z  INFO songbird_discovery::anonymous::broadcaster:    Node Name: usb_nucleus1
+2026-01-31T13:08:17.584363Z  INFO songbird_discovery::anonymous::broadcaster:    Endpoints: 14 transport paths
+2026-01-31T13:08:17.584371Z  INFO songbird_discovery::anonymous::broadcaster:      1. ethernet (192.168.1.144:8080, preference 100)
+2026-01-31T13:08:17.584380Z  INFO songbird_discovery::anonymous::broadcaster:      2. ethernet ([2600:1700:b0b0:5b90:78c4:c78b:6a93:2441]:8080, preference 100)
+2026-01-31T13:08:17.584384Z  INFO songbird_discovery::anonymous::broadcaster:      3. ethernet ([2600:1700:b0b0:5b90::27]:8080, preference 100)
+2026-01-31T13:08:17.584389Z  INFO songbird_discovery::anonymous::broadcaster:      4. ethernet ([2600:1700:b0b0:5b90:c729:7c5b:c5ce:940c]:8080, preference 100)
+2026-01-31T13:08:17.584393Z  INFO songbird_discovery::anonymous::broadcaster:      5. ethernet ([2600:1700:b0b0:5b90:8f11:631e:f8f1:f27b]:8080, preference 100)
+2026-01-31T13:08:17.584397Z  INFO songbird_discovery::anonymous::broadcaster:      6. ethernet ([fe80::c529:2071:bedc:1de0]:8080, preference 100)
+2026-01-31T13:08:17.584401Z  INFO songbird_discovery::anonymous::broadcaster:      7. wifi (192.168.1.242:8080, preference 80)
+2026-01-31T13:08:17.584405Z  INFO songbird_discovery::anonymous::broadcaster:      8. wifi ([2600:1700:b0b0:5b90:f48f:299b:288e:da96]:8080, preference 80)
+2026-01-31T13:08:17.584410Z  INFO songbird_discovery::anonymous::broadcaster:      9. wifi ([2600:1700:b0b0:5b90::38]:8080, preference 80)
+2026-01-31T13:08:17.584414Z  INFO songbird_discovery::anonymous::broadcaster:      10. wifi ([2600:1700:b0b0:5b90:b0ae:85bf:df17:ccb5]:8080, preference 80)
+2026-01-31T13:08:17.584418Z  INFO songbird_discovery::anonymous::broadcaster:      11. wifi ([2600:1700:b0b0:5b90:f823:a7b3:bc27:c80b]:8080, preference 80)
+2026-01-31T13:08:17.584422Z  INFO songbird_discovery::anonymous::broadcaster:      12. wifi ([fe80::df5a:6c90:8f8d:f3c1]:8080, preference 80)
+2026-01-31T13:08:17.584426Z  INFO songbird_discovery::anonymous::broadcaster:      13. other (192.168.122.1:8080, preference 50)
+2026-01-31T13:08:17.584430Z  INFO songbird_discovery::anonymous::broadcaster:      14. other (172.17.0.1:8080, preference 50)
+2026-01-31T13:08:17.584434Z  INFO songbird_discovery::anonymous::broadcaster:    Capabilities: ["orchestration", "federation", "secure_http", "http.request", "http.get", "http.post", "tls.1.3"]
+2026-01-31T13:08:17.584331Z  INFO songbird_orchestrator::app::core: 🧹 Session TTL cleanup task started (interval: 5min, TTL: 10min)
+2026-01-31T13:08:17.584441Z  INFO songbird_discovery::anonymous::broadcaster:    Protocols: ["https", "tarpc"]
+2026-01-31T13:08:17.584463Z  INFO songbird_orchestrator::network::connectivity_test: ✅ TCP connection to 192.168.1.144:8080 succeeded (0ms)
+2026-01-31T13:08:17.584467Z  INFO songbird_discovery::anonymous::broadcaster:    Multicast/broadcast addresses: [224.0.0.251:2300, 192.168.1.255:2300, 192.168.0.255:2300, 10.0.0.255:2300]
+2026-01-31T13:08:17.584469Z DEBUG songbird_orchestrator::service_registry: Cleanup: No stale services found
+2026-01-31T13:08:17.584475Z  INFO songbird_discovery::anonymous::broadcaster:    Identity Tags: None (peers won't see our family)
+2026-01-31T13:08:17.584506Z  INFO songbird_discovery::anonymous::broadcaster:    Interval: 30s
+2026-01-31T13:08:17.584533Z  INFO songbird_discovery::anonymous::broadcaster: ✅ Anonymous discovery broadcaster started (multicast-enabled)
+2026-01-31T13:08:17.584475Z DEBUG songbird_orchestrator::app::discovery_bridge: 🔄 Bridge poll tick (checking for discovered peers...)
+2026-01-31T13:08:17.584480Z DEBUG songbird_orchestrator::network::connectivity_test: Testing HTTPS connectivity to 192.168.1.144:8080
+2026-01-31T13:08:17.584565Z  INFO songbird_orchestrator::primal_discovery: 🔍 Discovering Crypto provider (capability-based discovery)...
+2026-01-31T13:08:17.584586Z DEBUG songbird_orchestrator::primal_discovery:    ⏭️  Not found: /tmp/crypto.sock
+2026-01-31T13:08:17.584593Z DEBUG songbird_orchestrator::primal_discovery:    ⏭️  Not found: /tmp/beardog-crypto.sock
+2026-01-31T13:08:17.584598Z DEBUG songbird_orchestrator::primal_discovery:    ⏭️  Not found: /tmp/beardog-nat0.sock
+2026-01-31T13:08:17.584658Z DEBUG songbird_orchestrator::primal_discovery:    Found potential socket: /tmp/beardog-usb-stun.sock
+2026-01-31T13:08:17.584665Z  INFO songbird_orchestrator::primal_discovery:    ✅ Found Crypto provider via scanning: /tmp/beardog-usb-stun.sock
+2026-01-31T13:08:17.584669Z  INFO songbird_http_client::client: 🎛️  Creating Songbird HTTP client with Adaptive strategy
+2026-01-31T13:08:17.584677Z DEBUG songbird_http_client::crypto::socket_discovery:    Checking XDG: /run/user/1000/biomeos/neural-api-usb_nucleus.sock
+2026-01-31T13:08:17.584683Z DEBUG songbird_http_client::crypto::socket_discovery:    ❌ XDG socket not found
+2026-01-31T13:08:17.584686Z  WARN songbird_http_client::crypto::socket_discovery: ⚠️  Using legacy /tmp socket: /tmp/neural-api-nat0.sock
+2026-01-31T13:08:17.584689Z  WARN songbird_http_client::crypto::socket_discovery:    Consider setting $NEURAL_API_SOCKET or XDG_RUNTIME_DIR
+2026-01-31T13:08:17.584692Z  INFO songbird_http_client::crypto::beardog_provider: 🌐 BearDog provider: NEURAL API mode (capability.call) → /tmp/neural-api-nat0.sock
+2026-01-31T13:08:17.584708Z  INFO songbird_http_client::client: 🌐 HTTP GET https://192.168.1.144:8080/health
+2026-01-31T13:08:17.584714Z  INFO songbird_http_client::client: 🔌 Connection details:
+2026-01-31T13:08:17.584717Z  INFO songbird_http_client::client:    URL: https://192.168.1.144:8080/health
+2026-01-31T13:08:17.584720Z  INFO songbird_http_client::client:    Scheme: https
+2026-01-31T13:08:17.584723Z  INFO songbird_http_client::client:    Host: 192.168.1.144
+2026-01-31T13:08:17.584726Z  INFO songbird_http_client::client:    Port: 8080 (explicit)
+2026-01-31T13:08:17.584729Z  WARN songbird_http_client::client: ⚠️  Non-standard HTTPS port: 8080 (expected 443)
+2026-01-31T13:08:17.584734Z DEBUG songbird_http_client::connection::https: 🔒 Performing TLS handshake with 192.168.1.144
+2026-01-31T13:08:17.584738Z  INFO songbird_http_client::connection::https: 🔄 Progressive fallback enabled: Modern → Standard → Minimal
+2026-01-31T13:08:17.584787Z  INFO songbird_http_client::connection::https: ✅ TCP connection established:
+2026-01-31T13:08:17.584790Z  INFO songbird_http_client::connection::https:    Local: 192.168.1.144:52112
+2026-01-31T13:08:17.584793Z  INFO songbird_http_client::connection::https:    Remote: 192.168.1.144:8080 (expected: 192.168.1.144:8080)
+2026-01-31T13:08:17.584799Z  INFO songbird_http_client::tls::handshake_refactored::core: 🎛️  Creating TLS handshake with Modern strategy
+2026-01-31T13:08:17.584810Z  INFO songbird_http_client::tls::handshake_refactored::handshake_flow: 🤝 [TLS STEP 0] Starting TLS 1.3 handshake with 192.168.1.144
+2026-01-31T13:08:17.584834Z  WARN songbird_http_client::connection::https: ⚠️  TLS handshake failed with Modern strategy after 37.008µs: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.584850Z  INFO songbird_http_client::connection::https: 🔄 Retry attempt 2/3 with Standard strategy (FRESH TCP connection)
+2026-01-31T13:08:17.584901Z  INFO songbird_http_client::connection::https: ✅ TCP connection established:
+2026-01-31T13:08:17.584904Z  INFO songbird_http_client::connection::https:    Local: 192.168.1.144:52120
+2026-01-31T13:08:17.584906Z  INFO songbird_http_client::connection::https:    Remote: 192.168.1.144:8080 (expected: 192.168.1.144:8080)
+2026-01-31T13:08:17.584910Z  INFO songbird_http_client::tls::handshake_refactored::core: 🎛️  Creating TLS handshake with Standard strategy
+2026-01-31T13:08:17.584913Z  INFO songbird_http_client::tls::handshake_refactored::handshake_flow: 🤝 [TLS STEP 0] Starting TLS 1.3 handshake with 192.168.1.144
+2026-01-31T13:08:17.584926Z  WARN songbird_http_client::connection::https: ⚠️  TLS handshake failed with Standard strategy after 16.667µs: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.584938Z  INFO songbird_http_client::connection::https: 🔄 Retry attempt 3/3 with Minimal strategy (FRESH TCP connection)
+2026-01-31T13:08:17.584976Z  INFO songbird_http_client::connection::https: ✅ TCP connection established:
+2026-01-31T13:08:17.584979Z  INFO songbird_http_client::connection::https:    Local: 192.168.1.144:52132
+2026-01-31T13:08:17.584982Z  INFO songbird_http_client::connection::https:    Remote: 192.168.1.144:8080 (expected: 192.168.1.144:8080)
+2026-01-31T13:08:17.584986Z  INFO songbird_http_client::tls::handshake_refactored::core: 🎛️  Creating TLS handshake with Minimal strategy
+2026-01-31T13:08:17.584988Z  INFO songbird_http_client::tls::handshake_refactored::handshake_flow: 🤝 [TLS STEP 0] Starting TLS 1.3 handshake with 192.168.1.144
+2026-01-31T13:08:17.585010Z  WARN songbird_http_client::connection::https: ⚠️  TLS handshake failed with Minimal strategy after 24.707µs: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.585023Z ERROR songbird_http_client::connection::https: ❌ TLS handshake failed: All 3 attempt(s) exhausted
+2026-01-31T13:08:17.585026Z ERROR songbird_http_client::connection::https:    Last error: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.585032Z  WARN songbird_orchestrator::network::connectivity_test: ❌ HTTPS connection to 192.168.1.144:8080 failed: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.585045Z  WARN songbird_orchestrator::app::core: ⚠️  External connectivity test failed for https://192.168.1.144:8080
+2026-01-31T13:08:17.585048Z  WARN songbird_orchestrator::app::core:    This may prevent federation with other towers
+2026-01-31T13:08:17.585051Z  INFO songbird_orchestrator::network::connectivity_test: 🔍 Diagnosing connectivity issues to 192.168.1.144:8080
+2026-01-31T13:08:17.585054Z DEBUG songbird_orchestrator::network::connectivity_test: Testing TCP connectivity to 192.168.1.144:8080
+2026-01-31T13:08:17.585164Z  INFO songbird_orchestrator::network::connectivity_test: ✅ TCP connection to 192.168.1.144:8080 succeeded (0ms)
+2026-01-31T13:08:17.585182Z DEBUG songbird_orchestrator::network::connectivity_test: Testing HTTPS connectivity to 192.168.1.144:8080
+2026-01-31T13:08:17.585185Z  INFO songbird_orchestrator::primal_discovery: 🔍 Discovering Crypto provider (capability-based discovery)...
+2026-01-31T13:08:17.585192Z DEBUG songbird_orchestrator::primal_discovery:    ⏭️  Not found: /tmp/crypto.sock
+2026-01-31T13:08:17.585196Z DEBUG songbird_orchestrator::primal_discovery:    ⏭️  Not found: /tmp/beardog-crypto.sock
+2026-01-31T13:08:17.585199Z DEBUG songbird_orchestrator::primal_discovery:    ⏭️  Not found: /tmp/beardog-nat0.sock
+2026-01-31T13:08:17.585260Z DEBUG songbird_orchestrator::primal_discovery:    Found potential socket: /tmp/beardog-usb-stun.sock
+2026-01-31T13:08:17.585265Z  INFO songbird_orchestrator::primal_discovery:    ✅ Found Crypto provider via scanning: /tmp/beardog-usb-stun.sock
+2026-01-31T13:08:17.585272Z  INFO songbird_http_client::client: 🎛️  Creating Songbird HTTP client with Adaptive strategy
+2026-01-31T13:08:17.585282Z DEBUG songbird_http_client::crypto::socket_discovery:    Checking XDG: /run/user/1000/biomeos/neural-api-usb_nucleus.sock
+2026-01-31T13:08:17.585288Z DEBUG songbird_http_client::crypto::socket_discovery:    ❌ XDG socket not found
+2026-01-31T13:08:17.585293Z  WARN songbird_http_client::crypto::socket_discovery: ⚠️  Using legacy /tmp socket: /tmp/neural-api-nat0.sock
+2026-01-31T13:08:17.585296Z  WARN songbird_http_client::crypto::socket_discovery:    Consider setting $NEURAL_API_SOCKET or XDG_RUNTIME_DIR
+2026-01-31T13:08:17.585299Z  INFO songbird_http_client::crypto::beardog_provider: 🌐 BearDog provider: NEURAL API mode (capability.call) → /tmp/neural-api-nat0.sock
+2026-01-31T13:08:17.585311Z  INFO songbird_http_client::client: 🌐 HTTP GET https://192.168.1.144:8080/health
+2026-01-31T13:08:17.585315Z  INFO songbird_http_client::client: 🔌 Connection details:
+2026-01-31T13:08:17.585317Z  INFO songbird_http_client::client:    URL: https://192.168.1.144:8080/health
+2026-01-31T13:08:17.585320Z  INFO songbird_http_client::client:    Scheme: https
+2026-01-31T13:08:17.585322Z  INFO songbird_http_client::client:    Host: 192.168.1.144
+2026-01-31T13:08:17.585325Z  INFO songbird_http_client::client:    Port: 8080 (explicit)
+2026-01-31T13:08:17.585328Z  WARN songbird_http_client::client: ⚠️  Non-standard HTTPS port: 8080 (expected 443)
+2026-01-31T13:08:17.585332Z DEBUG songbird_http_client::connection::https: 🔒 Performing TLS handshake with 192.168.1.144
+2026-01-31T13:08:17.585337Z  INFO songbird_http_client::connection::https: 🔄 Progressive fallback enabled: Modern → Standard → Minimal
+2026-01-31T13:08:17.585415Z  INFO songbird_http_client::connection::https: ✅ TCP connection established:
+2026-01-31T13:08:17.585418Z  INFO songbird_http_client::connection::https:    Local: 192.168.1.144:52152
+2026-01-31T13:08:17.585421Z  INFO songbird_http_client::connection::https:    Remote: 192.168.1.144:8080 (expected: 192.168.1.144:8080)
+2026-01-31T13:08:17.585431Z  INFO songbird_http_client::tls::handshake_refactored::core: 🎛️  Creating TLS handshake with Modern strategy
+2026-01-31T13:08:17.585434Z  INFO songbird_http_client::tls::handshake_refactored::handshake_flow: 🤝 [TLS STEP 0] Starting TLS 1.3 handshake with 192.168.1.144
+2026-01-31T13:08:17.585449Z  WARN songbird_http_client::connection::https: ⚠️  TLS handshake failed with Modern strategy after 17.771µs: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.585461Z  INFO songbird_http_client::connection::https: 🔄 Retry attempt 2/3 with Standard strategy (FRESH TCP connection)
+2026-01-31T13:08:17.585524Z DEBUG songbird_discovery::anonymous::broadcaster: 📋 No identity tags to broadcast
+2026-01-31T13:08:17.585603Z  INFO songbird_http_client::connection::https: ✅ TCP connection established:
+2026-01-31T13:08:17.585606Z  INFO songbird_http_client::connection::https:    Local: 192.168.1.144:52160
+2026-01-31T13:08:17.585609Z  INFO songbird_http_client::connection::https:    Remote: 192.168.1.144:8080 (expected: 192.168.1.144:8080)
+2026-01-31T13:08:17.585612Z  INFO songbird_http_client::tls::handshake_refactored::core: 🎛️  Creating TLS handshake with Standard strategy
+2026-01-31T13:08:17.585614Z  INFO songbird_http_client::tls::handshake_refactored::handshake_flow: 🤝 [TLS STEP 0] Starting TLS 1.3 handshake with 192.168.1.144
+2026-01-31T13:08:17.585625Z  WARN songbird_http_client::connection::https: ⚠️  TLS handshake failed with Standard strategy after 13.644µs: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.585635Z  INFO songbird_http_client::connection::https: 🔄 Retry attempt 3/3 with Minimal strategy (FRESH TCP connection)
+2026-01-31T13:08:17.585635Z DEBUG songbird_discovery::anonymous::broadcaster: Multicast 2078 bytes to 224.0.0.251:2300
+2026-01-31T13:08:17.585681Z DEBUG songbird_discovery::anonymous::listener: 📭 Skipping own broadcast (self-discovery filtered: d515f772-77f8-5915-b1ec-7bed057664a6)
+2026-01-31T13:08:17.585688Z DEBUG songbird_discovery::anonymous::broadcaster: Multicast 2078 bytes to 192.168.1.255:2300
+2026-01-31T13:08:17.585729Z DEBUG songbird_discovery::anonymous::broadcaster: Multicast 2078 bytes to 192.168.0.255:2300
+2026-01-31T13:08:17.585734Z DEBUG songbird_discovery::anonymous::listener: 📭 Skipping own broadcast (self-discovery filtered: d515f772-77f8-5915-b1ec-7bed057664a6)
+2026-01-31T13:08:17.585747Z DEBUG songbird_discovery::anonymous::broadcaster: Multicast 2078 bytes to 10.0.0.255:2300
+2026-01-31T13:08:17.585753Z DEBUG songbird_discovery::anonymous::broadcaster: 📡 Broadcast discovery message (session: 2c01313a1f4281e9c09ed153fcbe539e00c4e9132cf5c41f9630449b86861004)
+2026-01-31T13:08:17.585764Z  INFO songbird_http_client::connection::https: ✅ TCP connection established:
+2026-01-31T13:08:17.585768Z  INFO songbird_http_client::connection::https:    Local: 192.168.1.144:52168
+2026-01-31T13:08:17.585770Z  INFO songbird_http_client::connection::https:    Remote: 192.168.1.144:8080 (expected: 192.168.1.144:8080)
+2026-01-31T13:08:17.585773Z  INFO songbird_http_client::tls::handshake_refactored::core: 🎛️  Creating TLS handshake with Minimal strategy
+2026-01-31T13:08:17.585776Z  INFO songbird_http_client::tls::handshake_refactored::handshake_flow: 🤝 [TLS STEP 0] Starting TLS 1.3 handshake with 192.168.1.144
+2026-01-31T13:08:17.585812Z  WARN songbird_http_client::connection::https: ⚠️  TLS handshake failed with Minimal strategy after 38.824µs: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.585823Z ERROR songbird_http_client::connection::https: ❌ TLS handshake failed: All 3 attempt(s) exhausted
+2026-01-31T13:08:17.585826Z ERROR songbird_http_client::connection::https:    Last error: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.585832Z  WARN songbird_orchestrator::network::connectivity_test: ❌ HTTPS connection to 192.168.1.144:8080 failed: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.585843Z  WARN songbird_orchestrator::app::core:    ✅ TCP connectivity working
+2026-01-31T13:08:17.585846Z  WARN songbird_orchestrator::app::core:    ❌ HTTPS handshake failed
+2026-01-31T13:08:17.585848Z  WARN songbird_orchestrator::app::core:      🔍 Possible causes:
+2026-01-31T13:08:17.585851Z  WARN songbird_orchestrator::app::core:         - TLS certificate issues
+2026-01-31T13:08:17.585853Z  WARN songbird_orchestrator::app::core:         - Protocol mismatch (HTTP vs HTTPS)
+2026-01-31T13:08:17.585856Z  WARN songbird_orchestrator::app::core:      💡 Check server logs for TLS errors
+2026-01-31T13:08:17.585858Z  WARN songbird_orchestrator::app::core: 🔧 Attempting auto-remediation...
+2026-01-31T13:08:17.585861Z  INFO songbird_orchestrator::network::connectivity_test: 🔧 Attempting auto-remediation for connectivity to 192.168.1.144:8080
+2026-01-31T13:08:17.589277Z  WARN songbird_orchestrator::network::connectivity_test: ⚠️  Insufficient network admin capabilities for auto-remediation
+2026-01-31T13:08:17.589290Z  WARN songbird_orchestrator::app::core:    ❌ Songbird lacks CAP_NET_ADMIN capability
+2026-01-31T13:08:17.589294Z  WARN songbird_orchestrator::app::core:    
+2026-01-31T13:08:17.589296Z  WARN songbird_orchestrator::app::core:    🦅 SELF-SOVEREIGN SOLUTION:
+2026-01-31T13:08:17.589299Z  WARN songbird_orchestrator::app::core:       Run the network sovereignty setup (one-time):
+2026-01-31T13:08:17.589302Z  WARN songbird_orchestrator::app::core:       sudo ./setup-network-sovereignty.sh
+2026-01-31T13:08:17.589308Z  WARN songbird_orchestrator::app::core:    
+2026-01-31T13:08:17.589311Z  WARN songbird_orchestrator::app::core:       This grants Songbird:
+2026-01-31T13:08:17.589313Z  WARN songbird_orchestrator::app::core:       • CAP_NET_ADMIN: Manage its own firewall rules
+2026-01-31T13:08:17.589316Z  WARN songbird_orchestrator::app::core:       • CAP_NET_BIND_SERVICE: Bind to any port
+2026-01-31T13:08:17.589319Z  WARN songbird_orchestrator::app::core:    
+2026-01-31T13:08:17.589321Z  WARN songbird_orchestrator::app::core:       After setup, Songbird will:
+2026-01-31T13:08:17.589324Z  WARN songbird_orchestrator::app::core:       • Auto-configure firewall on new deployments
+2026-01-31T13:08:17.589327Z  WARN songbird_orchestrator::app::core:       • Work without sudo or manual intervention
+2026-01-31T13:08:17.589330Z  WARN songbird_orchestrator::app::core:       • Remain sovereign and self-managing
+2026-01-31T13:08:17.589332Z  WARN songbird_orchestrator::app::core:    
+2026-01-31T13:08:17.589335Z  WARN songbird_orchestrator::app::core:    📝 Manual Alternative (not recommended):
+2026-01-31T13:08:17.589338Z  WARN songbird_orchestrator::app::core:       sudo iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+2026-01-31T13:08:17.589340Z  WARN songbird_orchestrator::app::core:       sudo iptables -I INPUT -p udp --dport 2300 -j ACCEPT
+2026-01-31T13:08:17.589344Z  WARN songbird_orchestrator::app::core: 🔍 Re-testing connectivity after remediation...
+2026-01-31T13:08:17.589347Z  INFO songbird_orchestrator::network::connectivity_test: 🔍 Running comprehensive connectivity test to 192.168.1.144:8080
+2026-01-31T13:08:17.589350Z DEBUG songbird_orchestrator::network::connectivity_test: Testing TCP connectivity to 192.168.1.144:8080
+2026-01-31T13:08:17.589393Z  INFO songbird_orchestrator::network::connectivity_test: ✅ TCP connection to 192.168.1.144:8080 succeeded (0ms)
+2026-01-31T13:08:17.589405Z DEBUG songbird_orchestrator::network::connectivity_test: Testing HTTPS connectivity to 192.168.1.144:8080
+2026-01-31T13:08:17.589409Z  INFO songbird_orchestrator::primal_discovery: 🔍 Discovering Crypto provider (capability-based discovery)...
+2026-01-31T13:08:17.589418Z DEBUG songbird_orchestrator::primal_discovery:    ⏭️  Not found: /tmp/crypto.sock
+2026-01-31T13:08:17.589421Z DEBUG songbird_orchestrator::primal_discovery:    ⏭️  Not found: /tmp/beardog-crypto.sock
+2026-01-31T13:08:17.589425Z DEBUG songbird_orchestrator::primal_discovery:    ⏭️  Not found: /tmp/beardog-nat0.sock
+2026-01-31T13:08:17.589475Z DEBUG songbird_orchestrator::primal_discovery:    Found potential socket: /tmp/beardog-usb-stun.sock
+2026-01-31T13:08:17.589481Z  INFO songbird_orchestrator::primal_discovery:    ✅ Found Crypto provider via scanning: /tmp/beardog-usb-stun.sock
+2026-01-31T13:08:17.589485Z  INFO songbird_http_client::client: 🎛️  Creating Songbird HTTP client with Adaptive strategy
+2026-01-31T13:08:17.589492Z DEBUG songbird_http_client::crypto::socket_discovery:    Checking XDG: /run/user/1000/biomeos/neural-api-usb_nucleus.sock
+2026-01-31T13:08:17.589498Z DEBUG songbird_http_client::crypto::socket_discovery:    ❌ XDG socket not found
+2026-01-31T13:08:17.589502Z  WARN songbird_http_client::crypto::socket_discovery: ⚠️  Using legacy /tmp socket: /tmp/neural-api-nat0.sock
+2026-01-31T13:08:17.589504Z  WARN songbird_http_client::crypto::socket_discovery:    Consider setting $NEURAL_API_SOCKET or XDG_RUNTIME_DIR
+2026-01-31T13:08:17.589508Z  INFO songbird_http_client::crypto::beardog_provider: 🌐 BearDog provider: NEURAL API mode (capability.call) → /tmp/neural-api-nat0.sock
+2026-01-31T13:08:17.589519Z  INFO songbird_http_client::client: 🌐 HTTP GET https://192.168.1.144:8080/health
+2026-01-31T13:08:17.589524Z  INFO songbird_http_client::client: 🔌 Connection details:
+2026-01-31T13:08:17.589526Z  INFO songbird_http_client::client:    URL: https://192.168.1.144:8080/health
+2026-01-31T13:08:17.589529Z  INFO songbird_http_client::client:    Scheme: https
+2026-01-31T13:08:17.589532Z  INFO songbird_http_client::client:    Host: 192.168.1.144
+2026-01-31T13:08:17.589537Z  INFO songbird_http_client::client:    Port: 8080 (explicit)
+2026-01-31T13:08:17.589541Z  WARN songbird_http_client::client: ⚠️  Non-standard HTTPS port: 8080 (expected 443)
+2026-01-31T13:08:17.589545Z DEBUG songbird_http_client::connection::https: 🔒 Performing TLS handshake with 192.168.1.144
+2026-01-31T13:08:17.589548Z  INFO songbird_http_client::connection::https: 🔄 Progressive fallback enabled: Modern → Standard → Minimal
+2026-01-31T13:08:17.589597Z  INFO songbird_http_client::connection::https: ✅ TCP connection established:
+2026-01-31T13:08:17.589601Z  INFO songbird_http_client::connection::https:    Local: 192.168.1.144:52186
+2026-01-31T13:08:17.589604Z  INFO songbird_http_client::connection::https:    Remote: 192.168.1.144:8080 (expected: 192.168.1.144:8080)
+2026-01-31T13:08:17.589608Z  INFO songbird_http_client::tls::handshake_refactored::core: 🎛️  Creating TLS handshake with Modern strategy
+2026-01-31T13:08:17.589611Z  INFO songbird_http_client::tls::handshake_refactored::handshake_flow: 🤝 [TLS STEP 0] Starting TLS 1.3 handshake with 192.168.1.144
+2026-01-31T13:08:17.589632Z  WARN songbird_http_client::connection::https: ⚠️  TLS handshake failed with Modern strategy after 24.348µs: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.589646Z  INFO songbird_http_client::connection::https: 🔄 Retry attempt 2/3 with Standard strategy (FRESH TCP connection)
+2026-01-31T13:08:17.589706Z  INFO songbird_http_client::connection::https: ✅ TCP connection established:
+2026-01-31T13:08:17.589710Z  INFO songbird_http_client::connection::https:    Local: 192.168.1.144:52190
+2026-01-31T13:08:17.589713Z  INFO songbird_http_client::connection::https:    Remote: 192.168.1.144:8080 (expected: 192.168.1.144:8080)
+2026-01-31T13:08:17.589717Z  INFO songbird_http_client::tls::handshake_refactored::core: 🎛️  Creating TLS handshake with Standard strategy
+2026-01-31T13:08:17.589720Z  INFO songbird_http_client::tls::handshake_refactored::handshake_flow: 🤝 [TLS STEP 0] Starting TLS 1.3 handshake with 192.168.1.144
+2026-01-31T13:08:17.589743Z  WARN songbird_http_client::connection::https: ⚠️  TLS handshake failed with Standard strategy after 25.94µs: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.589757Z  INFO songbird_http_client::connection::https: 🔄 Retry attempt 3/3 with Minimal strategy (FRESH TCP connection)
+2026-01-31T13:08:17.589808Z  INFO songbird_http_client::connection::https: ✅ TCP connection established:
+2026-01-31T13:08:17.589812Z  INFO songbird_http_client::connection::https:    Local: 192.168.1.144:52200
+2026-01-31T13:08:17.589814Z  INFO songbird_http_client::connection::https:    Remote: 192.168.1.144:8080 (expected: 192.168.1.144:8080)
+2026-01-31T13:08:17.589819Z  INFO songbird_http_client::tls::handshake_refactored::core: 🎛️  Creating TLS handshake with Minimal strategy
+2026-01-31T13:08:17.589822Z  INFO songbird_http_client::tls::handshake_refactored::handshake_flow: 🤝 [TLS STEP 0] Starting TLS 1.3 handshake with 192.168.1.144
+2026-01-31T13:08:17.589842Z  WARN songbird_http_client::connection::https: ⚠️  TLS handshake failed with Minimal strategy after 23.337µs: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.589856Z ERROR songbird_http_client::connection::https: ❌ TLS handshake failed: All 3 attempt(s) exhausted
+2026-01-31T13:08:17.589860Z ERROR songbird_http_client::connection::https:    Last error: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.589865Z  WARN songbird_orchestrator::network::connectivity_test: ❌ HTTPS connection to 192.168.1.144:8080 failed: BearDog RPC error: Failed to connect to BearDog at /tmp/neural-api-nat0.sock: No such file or directory (os error 2)
+2026-01-31T13:08:17.589878Z  WARN songbird_orchestrator::app::core: ⚠️  Connectivity still failing after auto-remediation
+2026-01-31T13:08:17.589881Z  WARN songbird_orchestrator::app::core:    Manual intervention may be required
+2026-01-31T13:08:17.589885Z  WARN songbird_orchestrator::app::core: 
+2026-01-31T13:08:17.589887Z  WARN songbird_orchestrator::app::core: ╔═══════════════════════════════════════════════════════════════════╗
+2026-01-31T13:08:17.589892Z  WARN songbird_orchestrator::app::core: ║ ⚠️  EXTERNAL CONNECTIVITY ISSUE DETECTED                          ║
+2026-01-31T13:08:17.589897Z  WARN songbird_orchestrator::app::core: ╚═══════════════════════════════════════════════════════════════════╝
+2026-01-31T13:08:17.589901Z  WARN songbird_orchestrator::app::core: 
+2026-01-31T13:08:17.589904Z  WARN songbird_orchestrator::app::core: Local connections work, but external connections may be blocked.
+2026-01-31T13:08:17.589907Z  WARN songbird_orchestrator::app::core: 
+2026-01-31T13:08:17.589910Z  WARN songbird_orchestrator::app::core: Common Causes:
+2026-01-31T13:08:17.589913Z  WARN songbird_orchestrator::app::core:   • Firewall rules (iptables, ufw, firewalld)
+2026-01-31T13:08:17.589916Z  WARN songbird_orchestrator::app::core:   • Network isolation (VLANs, separate subnets)
+2026-01-31T13:08:17.589919Z  WARN songbird_orchestrator::app::core:   • Router/switch port filtering
+2026-01-31T13:08:17.589922Z  WARN songbird_orchestrator::app::core: 
+2026-01-31T13:08:17.589925Z  WARN songbird_orchestrator::app::core: Quick Fixes:
+2026-01-31T13:08:17.589928Z  WARN songbird_orchestrator::app::core:   1. Allow port 8080 in firewall:
+2026-01-31T13:08:17.589932Z  WARN songbird_orchestrator::app::core:      sudo iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+2026-01-31T13:08:17.589935Z  WARN songbird_orchestrator::app::core:      sudo iptables -I INPUT -p udp --dport 2300 -j ACCEPT
+2026-01-31T13:08:17.589938Z  WARN songbird_orchestrator::app::core: 
+2026-01-31T13:08:17.589941Z  WARN songbird_orchestrator::app::core:   2. Save iptables rules (persist across reboots):
+2026-01-31T13:08:17.589944Z  WARN songbird_orchestrator::app::core:      sudo iptables-save > /etc/iptables/rules.v4
+2026-01-31T13:08:17.589947Z  WARN songbird_orchestrator::app::core: 
+2026-01-31T13:08:17.589950Z  WARN songbird_orchestrator::app::core:   3. Or disable firewall temporarily (testing only):
+2026-01-31T13:08:17.589953Z  WARN songbird_orchestrator::app::core:      sudo ufw disable
+2026-01-31T13:08:17.589956Z  WARN songbird_orchestrator::app::core: 
+2026-01-31T13:08:17.589959Z  WARN songbird_orchestrator::app::core: If issues persist, check network routing and VLANs.
+2026-01-31T13:08:17.589962Z  WARN songbird_orchestrator::app::core: ╚═══════════════════════════════════════════════════════════════════╝
+2026-01-31T13:08:17.589968Z  INFO songbird_orchestrator::app::core: ✅ Songbird Orchestrator started successfully
+2026-01-31T13:08:17.589972Z  INFO songbird_orchestrator::app::startup: ✅ Orchestrator components started
+2026-01-31T13:08:17.589976Z  INFO songbird:    Orchestrator: ✅ Started
+2026-01-31T13:08:17.589980Z  INFO songbird: ✅ Songbird ready!
+2026-01-31T13:08:17.589983Z  INFO songbird:    Unix Socket IPC: /tmp/songbird-*.sock (see logs for actual path)
+2026-01-31T13:08:17.589986Z  INFO songbird:    Protocol: JSON-RPC 2.0 over Unix sockets
+2026-01-31T13:08:17.589989Z  INFO songbird:    HTTP/TLS: Handled by external gateway component
+2026-01-31T13:08:17.589993Z  INFO songbird: 
+2026-01-31T13:08:17.589995Z  INFO songbird: 💡 Press Ctrl+C to stop gracefully

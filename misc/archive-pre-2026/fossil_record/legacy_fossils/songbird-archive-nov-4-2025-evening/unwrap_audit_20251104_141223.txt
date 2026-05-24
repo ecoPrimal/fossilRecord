@@ -1,0 +1,197 @@
+==========================================
+UNWRAP/EXPECT AUDIT REPORT
+Date: Tue Nov  4 02:12:23 PM EST 2025
+==========================================
+
+📊 SUMMARY STATISTICS
+==========================================
+Files with unwrap/expect: 41
+Total .unwrap() calls: 121
+Total .expect() calls: 78
+TOTAL: 199
+
+📁 BY CRATE
+==========================================
+songbird-canonical:               39 calls
+songbird-config:                   1 calls
+songbird-discovery:               22 calls
+songbird-network-federation:       2 calls
+songbird-observability:           13 calls
+songbird-orchestrator:            28 calls
+songbird-registry:                14 calls
+songbird-test-utils:              12 calls
+songbird-types:                   10 calls
+songbird-universal:               58 calls
+
+🔥 TOP 10 FILES (by count)
+==========================================
+ 22 calls - crates/songbird-discovery/src/discovery/factory.rs
+ 18 calls - crates/songbird-universal/src/adapters/ai.rs
+ 14 calls - crates/songbird-canonical/src/metadata_tests.rs
+ 13 calls - crates/songbird-observability/src/observability/dashboard.rs
+ 11 calls - crates/songbird-universal/src/sovereignty/router_comprehensive_tests.rs
+ 11 calls - crates/songbird-universal/src/adapters/storage.rs
+  9 calls - crates/songbird-registry/src/types/event.rs
+  8 calls - crates/songbird-universal/src/adapters/compute.rs
+  8 calls - crates/songbird-orchestrator/src/server/federation_api.rs
+  7 calls - crates/songbird-test-utils/src/mocks/capability_mocks.rs
+
+📍 DETAILED LISTING (by file)
+==========================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRATE: songbird-canonical
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  📄 validation_tests.rs (2 calls)
+      Line 89: let json_str = serde_json::to_string(&result).unwrap();
+      Line 97: let val_result: ValidationResult = serde_json::from_str(json).unwrap();
+
+  📄 config/performance_tests.rs (2 calls)
+      Line 24: let json = serde_json::to_string(&config).expect("Serialization failed");
+      Line 26: serde_json::from_str(&json).expect("Deserialization failed");
+
+  📄 config/ai_first_tests.rs (4 calls)
+      Line 25: let json = serde_json::to_string(&config).expect("Serialization failed");
+      Line 26: let deserialized: AIFirstConfig = serde_json::from_str(&json).expect("Deserialization failed");
+      Line 209: let json = serde_json::to_string(&strategy).expect("Serialization failed");
+      Line 211: serde_json::from_str(&json).expect("Deserialization failed");
+
+  📄 config/orchestration_tests.rs (4 calls)
+      Line 23: let json = serde_json::to_string(&config).expect("Serialization failed");
+      Line 25: serde_json::from_str(&json).expect("Deserialization failed");
+      Line 139: let json = serde_json::to_string(&strategy).expect("Serialization failed");
+      Line 141: serde_json::from_str(&json).expect("Deserialization failed");
+
+  📄 config/environment_tests.rs (4 calls)
+      Line 25: let json = serde_json::to_string(&config).expect("Serialization failed");
+      Line 27: serde_json::from_str(&json).expect("Deserialization failed");
+      Line 63: let json = serde_json::to_string(&env).expect("Serialization failed");
+      Line 311: assert_eq!(config.audit_log_path.unwrap(), "/var/log/audit.log");
+
+  📄 config/adapters_tests.rs (6 calls)
+      Line 25: let json = serde_json::to_string(&config).expect("Serialization failed");
+      Line 27: serde_json::from_str(&json).expect("Deserialization failed");
+      Line 64: assert_eq!(config.endpoint.unwrap(), "http://security-service:8080");
+      Line 137: let json = serde_json::to_string(&config).expect("Serialization failed");
+      Line 276: let json = serde_json::to_string(&config).expect("Serialization failed");
+      Line 278: serde_json::from_str(&json).expect("Deserialization failed");
+
+  📄 discovery_tests.rs (2 calls)
+      Line 57: let json = serde_json::to_string(&service).expect("Serialization failed");
+      Line 58: let deserialized: ServiceInfo = serde_json::from_str(&json).expect("Deserialization failed");
+
+  📄 responses_tests.rs (1 calls)
+      Line 29: assert_eq!(response.human_context.unwrap(), "This is a test");
+
+  📄 metadata_tests.rs (14 calls)
+      Line 59: let json = serde_json::to_string(&metadata).expect("Serialization failed");
+      Line 61: serde_json::from_str(&json).expect("Deserialization failed");
+      Line 113: assert!(context.reasoning.unwrap().contains("performance"));
+      Line 139: let json = serde_json::to_string(&context).expect("Serialization failed");
+      Line 141: serde_json::from_str(&json).expect("Deserialization failed");
+      Line 176: let json = serde_json::to_string(&level).expect("Serialization failed");
+      Line 177: let deserialized: RiskLevel = serde_json::from_str(&json).expect("Deserialization failed");
+      Line 223: let json = serde_json::to_string(&capability).expect("Serialization failed");
+      Line 225: serde_json::from_str(&json).expect("Deserialization failed");
+      Line 296: assert!((metrics.overall_quality.unwrap() - expected).abs() < 0.001);
+      Line 305: assert!((metrics.overall_quality.unwrap() - expected).abs() < 0.001);
+      Line 332: assert!((metrics.overall_quality.unwrap() - expected).abs() < 0.001);
+      Line 339: let json = serde_json::to_string(&metrics).expect("Serialization failed");
+      Line 340: let deserialized: QualityMetrics = serde_json::from_str(&json).expect("Deserialization failed");
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRATE: songbird-cli
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRATE: songbird-config
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  📄 canonical/network.rs (1 calls)
+      Line 70: let serialized = serde_json::to_string(&peer_type).expect(
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRATE: songbird-discovery
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  📄 discovery/factory.rs (22 calls)
+      Line 408: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 416: let mut adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 424: let mut adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 432: let mut adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 440: let mut adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 441: adapter.enable_kubernetes_discovery().await.unwrap();
+      Line 442: adapter.enable_consul_discovery().await.unwrap();
+      Line 443: adapter.enable_container_discovery().await.unwrap();
+      Line 477: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 486: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 493: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 496: assert!(!result.unwrap());
+      Line 501: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 508: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 533: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 540: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 547: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 620: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 627: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      Line 634: let adapter = UniversalServiceDiscoveryAdapter::new().await.unwrap();
+      ... and 2 more
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRATE: songbird-network-federation
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  📄 service_registry.rs (1 calls)
+      Line 275: assert_eq!(found.unwrap().service_name, "Test Service");
+
+  📄 state.rs (1 calls)
+      Line 288: let node = nodes.get("test-node").unwrap();
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRATE: songbird-observability
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  📄 observability/dashboard.rs (13 calls)
+      Line 281: let resp = response.unwrap();
+      Line 286: .unwrap()
+      Line 288: .unwrap()
+      Line 298: let resp = response.unwrap();
+      Line 303: .unwrap()
+      Line 305: .unwrap()
+      Line 315: let resp = response.unwrap();
+      Line 320: .unwrap()
+      Line 322: .unwrap()
+      Line 332: let resp = response.unwrap();
+      Line 337: .unwrap()
+      Line 339: .unwrap()
+      Line 349: let resp = response.unwrap();
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRATE: songbird-orchestrator
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  📄 server/federation_api.rs (8 calls)
+      Line 265: .oneshot(Request::builder().uri("/status").body(Body::empty()).unwrap())
+      Line 267: .unwrap();
+      Line 293: .oneshot(Request::builder().uri("/nodes").body(Body::empty()).unwrap())
+      Line 295: .unwrap();
+      Line 311: let req = request.unwrap();
+      Line 326: let req = request.unwrap();
+      Line 340: assert!(json.unwrap().contains("acknowledged"));
+      Line 446: let req = request.unwrap();
+
+  📄 core/registry.rs (2 calls)
+      Line 274: let json = serde_json::to_string(&service).unwrap();
+      Line 275: let deserialized: ServiceInfo = serde_json::from_str(&json).unwrap();
+
+  📄 core/mod.rs (6 calls)
+      Line 353: let json = serde_json::to_string(&config).unwrap();
+      Line 354: let deserialized: PerformanceConfig = serde_json::from_str(&json).unwrap();

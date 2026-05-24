@@ -1,0 +1,32 @@
+    Finished `release` profile [optimized] target(s) in 0.16s
+     Running `target/release/unwrap-migrator --analyze --verbose`
+╔═══════════════════════════════════════════════════════════════╗
+║                🚀 NestGate Unwrap Migrator v0.3.0             ║
+║                                                               ║
+║  Safe automated migration from panic patterns to robust       ║
+║  error handling. Built for development teams.                 ║
+╚═══════════════════════════════════════════════════════════════╝
+
+[2m2025-11-01T15:32:31.280613Z[0m [32m INFO[0m 🚀 Starting NestGate Unwrap Migration Tool v0.3.0
+[2m2025-11-01T15:32:31.280619Z[0m [32m INFO[0m 📁 Target path: ./
+[2m2025-11-01T15:32:31.280620Z[0m [32m INFO[0m 🎯 Confidence threshold: 80%
+[2m2025-11-01T15:32:31.280621Z[0m [32m INFO[0m ⚡ Priority filter: medium
+[2m2025-11-01T15:32:31.280621Z[0m [32m INFO[0m 🔍 Operation mode: analyze
+[2m2025-11-01T15:32:31.280625Z[0m [32m INFO[0m 🔍 Running pattern analysis...
+[2m2025-11-01T15:32:32.589549Z[0m [32m INFO[0m 📊 Analysis Results:
+[2m2025-11-01T15:32:32.589563Z[0m [32m INFO[0m    📁 Files scanned: 1502
+[2m2025-11-01T15:32:32.589603Z[0m [32m INFO[0m    🎯 Total patterns found: 1385
+[2m2025-11-01T15:32:32.589606Z[0m [32m INFO[0m    ⚠️  Unwrap calls: 1228
+[2m2025-11-01T15:32:32.589607Z[0m [32m INFO[0m    📝 Expect calls: 118
+[2m2025-11-01T15:32:32.589608Z[0m [32m INFO[0m    💥 Panic calls: 13
+[2m2025-11-01T15:32:32.589609Z[0m [32m INFO[0m    📋 TODO calls: 18
+[2m2025-11-01T15:32:32.589610Z[0m [32m INFO[0m    🚫 Unimplemented calls: 8
+[2m2025-11-01T15:32:32.589612Z[0m [32m INFO[0m 🎯 Risk Assessment: 🟠 HIGH
+[2m2025-11-01T15:32:32.589613Z[0m [32m INFO[0m 💡 Recommendations:
+[2m2025-11-01T15:32:32.589614Z[0m [32m INFO[0m    🔧 Replace .unwrap() with proper error handling
+[2m2025-11-01T15:32:32.589615Z[0m [32m INFO[0m    📝 Review .expect() calls for better error messages
+[2m2025-11-01T15:32:32.589616Z[0m [32m INFO[0m    💥 Replace panic!() with Result-based error handling
+[2m2025-11-01T15:32:32.589617Z[0m [32m INFO[0m    📋 Implement TODO items or convert to compile-time warnings
+[2m2025-11-01T15:32:32.589618Z[0m [32m INFO[0m    🎯 Run with --fix --confidence 80 to apply safe fixes
+[2m2025-11-01T15:32:32.589619Z[0m [32m INFO[0m    📊 Run with --report to get detailed analysis
+[2m2025-11-01T15:32:32.589621Z[0m [32m INFO[0m ✅ Operation completed successfully!

@@ -1,0 +1,43 @@
+NESTGATE ROOT DOCUMENTATION - CLEAN & ORGANIZED
+================================================
+
+ESSENTIAL (8 files) - Read These First:
+  00_READ_ME_FIRST.md                  ⭐ START HERE
+  00_START_HERE.md                     - Orientation
+  00_DOCUMENTATION_INDEX.md            - Navigation
+  README.md                            - Overview
+  CURRENT_STATUS.md                    - Metrics
+  STATUS_CARD.md                       - Quick ref
+  NEXT_SESSION_QUICK_START.md          - Next steps
+  START_HERE_DEC_2_2025.md             - Session start
+
+CURRENT AUDIT (4 files) - Dec 2, 2025:
+  COMPREHENSIVE_AUDIT_REPORT_DEC_2_2025.md (65+ pages)
+  AUDIT_EXECUTIVE_SUMMARY_DEC_2_2025.md
+  AUDIT_FINDINGS_QUICK_REFERENCE.md
+  IMMEDIATE_ACTIONS_CHECKLIST.md
+
+SESSION SUMMARIES (3 files):
+  COMPREHENSIVE_SESSION_SUMMARY_DEC_2_2025.md
+  ROOT_DOCS_CLEANED_DEC_2_2025.md
+  (Plus 6 detailed reports in docs/session-reports/dec-2-2025/)
+
+GUIDES (8 files):
+  ARCHITECTURE_OVERVIEW.md
+  DEPLOYMENT_GUIDE.md
+  DEPLOYMENT_GUIDE_QUICK_START.md
+  CONFIGURATION_GUIDE.md
+  OPERATIONS_RUNBOOK.md
+  QUICK_REFERENCE.md
+  CONTRIBUTING.md
+  CHANGELOG.md
+
+ORGANIZED LOCATIONS:
+  docs/session-reports/dec-2-2025/  - 6 detailed session reports
+  archive/session_dec_2_2025/       - 17 old documents (Dec 1 + older Dec 2)
+  specs/                             - 24 specifications
+  docs/                              - 100+ detailed docs
+
+TOTAL ROOT: ~22 markdown files (was 30+)
+STATUS: ✅ CLEAN & ORGANIZED
+ACCURACY: ✅ All show B+ (87/100)

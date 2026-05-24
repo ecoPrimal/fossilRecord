@@ -1,0 +1,74 @@
+warning: field `jsonrpc` is never read
+  --> showcase/05-albatross-multiplex/benchmark/src/jsonrpc_baseline.rs:41:5
+   |
+40 | struct JsonRpcResponse {
+   |        --------------- field in this struct
+41 |     jsonrpc: String,
+   |     ^^^^^^^
+   |
+   = note: `JsonRpcResponse` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` on by default
+
+warning: fields `name` and `concurrent_connections` are never read
+  --> showcase/05-albatross-multiplex/benchmark/src/common.rs:10:9
+   |
+ 9 | pub struct BenchmarkConfig {
+   |            --------------- fields in this struct
+10 |     pub name: String,
+   |         ^^^^
+...
+13 |     pub concurrent_connections: usize,
+   |         ^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `BenchmarkConfig` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: `albatross-benchmark` (bin "bench-jsonrpc") generated 2 warnings
+    Finished `release` profile [optimized] target(s) in 0.11s
+     Running `/home/eastgate/Development/ecoPrimals/songbird/target/release/bench-jsonrpc -t 'https://192.168.1.134:8081' -n 5000 -w 50`
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                  📡 JSON-RPC BASELINE BENCHMARK                    ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+Configuration:
+  Target:       https://192.168.1.134:8081
+  Requests:     5000
+  Warmup:       50
+
+Warming up...
+✅ Warmup complete
+
+🚀 Starting benchmark...
+
+  Progress: 1000/5000 (20.0%)
+  Progress: 2000/5000 (40.0%)
+  Progress: 3000/5000 (60.0%)
+  Progress: 4000/5000 (80.0%)
+
+══════════════════════════════════════════════════════════════════════
+  JSON-RPC BENCHMARK RESULTS
+══════════════════════════════════════════════════════════════════════
+
+Request Statistics:
+  Total Requests:     5000
+  Successful:         5000 (100.0%)
+  Failed:             0
+  Total Duration:     1.39s
+
+Throughput:
+  Requests/Second:    3585 req/s
+
+Latency Percentiles (microseconds):
+  Min:                194μs
+  p50 (median):       258μs
+  p75:                328μs
+  p90:                347μs
+  p95:                361μs
+  p99:                401μs
+  Max:                1171μs
+  Mean:               278μs
+  Std Dev:            57μs
+
+══════════════════════════════════════════════════════════════════════
+📊 Results saved to: results_jsonrpc.json
+

@@ -1,0 +1,1727 @@
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:207:9
+    |
+207 |         self.primal_registry
+    |         ^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:219:9
+    |
+219 |         self.primal_registry.as_ref().and_then(|registry| registry.get_primal(primal_name))
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:224:38
+    |
+224 |         if let Some(registry) = &mut self.primal_registry {
+    |                                      ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:234:9
+    |
+234 |         self.primal_registry
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: `songbird-config` (lib) generated 4 warnings
+warning: associated functions `create_from_environment`, `detect_kubernetes_environment`, `detect_consul_environment`, `detect_container_environment`, `create_consul_universal`, and `create_container_universal` are never used
+   --> crates/songbird-discovery/src/discovery/factory.rs:70:14
+    |
+ 38 | impl UniversalDiscoveryFactory {
+    | ------------------------------ associated functions in this implementation
+...
+ 70 |     async fn create_from_environment() -> Result<UniversalServiceDiscoveryAdapter> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^
+...
+ 97 |     async fn detect_kubernetes_environment() -> bool {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+108 |     async fn detect_consul_environment() -> bool {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+116 |     async fn detect_container_environment() -> bool {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+130 |     async fn create_consul_universal() -> Result<UniversalServiceDiscoveryAdapter> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^
+...
+137 |     async fn create_container_universal() -> Result<UniversalServiceDiscoveryAdapter> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` on by default
+
+warning: `songbird-discovery` (lib) generated 1 warning
+warning: `songbird-discovery` (lib test) generated 1 warning (1 duplicate)
+warning: unexpected `cfg` condition value: `integration-tests-disabled`
+   --> crates/songbird-universal/src/adapters/compute/tests.rs:379:21
+    |
+379 |     #[cfg(all(test, feature = "integration-tests-disabled"))]
+    |                     ^^^^^^^^^^----------------------------
+    |                               |
+    |                               help: there is a expected value with a similar name: `"federation-tests-disabled"`
+    |
+    = note: expected values for `feature` are: `default`, `federation-tests-disabled`, and `tests-incomplete`
+    = help: consider adding `integration-tests-disabled` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+    = note: `#[warn(unexpected_cfgs)]` on by default
+
+warning: use of deprecated constant `config::constants::tests::test_get_bind_address`: Use songbird_config::canonical::constants instead
+   --> crates/songbird-config/src/config/constants.rs:731:5
+    |
+731 | /     fn test_get_bind_address() {
+732 | |         let addr = super::get_bind_address();
+733 | |         assert!(!addr.is_empty());
+734 | |     }
+    | |_____^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:207:9
+    |
+207 |         self.primal_registry
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: comparison is useless due to type limits
+   --> crates/songbird-config/src/canonical/constants.rs:862:17
+    |
+862 |         assert!(end <= 65535);
+    |                 ^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_comparisons)]` on by default
+
+warning: `songbird-universal` (lib test) generated 1 warning
+warning: `songbird-config` (lib test) generated 6 warnings (3 duplicates)
+   Compiling songbird-cli v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-cli)
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+  --> crates/songbird-orchestrator/src/lib.rs:95:26
+   |
+95 | pub use songbird_config::SongbirdConfig;
+   |                          ^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated function `songbird_config::hardcoded_elimination::replace::connection_timeout`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-cli/src/cli/discovery.rs:98:70
+   |
+98 |             songbird_config::config::hardcoded_elimination::replace::connection_timeout();
+   |                                                                      ^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated function `songbird_config::hardcoded_elimination::replace::health_check_timeout`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-cli/src/cli/ui.rs:348:66
+    |
+348 |         songbird_config::config::hardcoded_elimination::replace::health_check_timeout()
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `songbird_config::SongbirdConfig`
+   --> crates/songbird-orchestrator/src/cli/mod.rs:245:9
+    |
+245 |     use songbird_config::SongbirdConfig;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+warning: unused imports: `ResourceRequirements` and `TaskBuilder`
+   --> crates/songbird-orchestrator/src/core/routing/analyzer.rs:143:39
+    |
+143 |     use crate::core::routing::types::{ResourceRequirements, TaskBuilder};
+    |                                       ^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^
+
+warning: unused import: `crate::core::routing::types::TaskBuilder`
+   --> crates/songbird-orchestrator/src/core/routing/router.rs:353:9
+    |
+353 |     use crate::core::routing::types::TaskBuilder;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::core::routing::types::TaskBuilder`
+   --> crates/songbird-orchestrator/src/server/compute_api.rs:335:9
+    |
+335 |     use crate::core::routing::types::TaskBuilder;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+   --> crates/songbird-orchestrator/src/cli/mod.rs:245:26
+    |
+245 |     use songbird_config::SongbirdConfig;
+    |                          ^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+   --> crates/songbird-orchestrator/src/cli/mod.rs:280:46
+    |
+280 |         let legacy_config = songbird_config::SongbirdConfig::from(config);
+    |                                              ^^^^^^^^^^^^^^
+
+warning: `songbird-orchestrator` (lib) generated 1 warning
+warning: `songbird-cli` (lib test) generated 2 warnings
+warning: `songbird-orchestrator` (lib test) generated 7 warnings (1 duplicate) (run `cargo fix --lib -p songbird-orchestrator --tests` to apply 4 suggestions)
+   Compiling songbird-orchestrator v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-orchestrator)
+warning: `songbird-cli` (lib) generated 2 warnings (2 duplicates)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.77s
+     Running unittests src/lib.rs (target/debug/deps/songbird_canonical-53f340455af96fb9)
+
+running 260 tests
+test config::adapters_tests::test_adapter_settings_custom_timeout ... ok
+test config::adapters_tests::test_adapter_settings_default ... ok
+test config::adapters_tests::test_adapter_config_all_disabled ... ok
+test config::adapters_tests::test_adapter_settings_failover_disabled ... ok
+test config::adapters_tests::test_circuit_breaker_default ... ok
+test config::adapters_tests::test_circuit_breaker_disabled ... ok
+test config::adapters_tests::test_circuit_breaker_custom_thresholds ... ok
+test config::adapters_tests::test_adapter_settings_max_concurrent ... ok
+test config::adapters_tests::test_circuit_breaker_timeout ... ok
+test config::adapters_tests::test_circuit_breaker_serialization ... ok
+test config::adapters_tests::test_compute_adapter_config_default ... ok
+test config::adapters_tests::test_compute_adapter_config_disabled ... ok
+test config::adapters_tests::test_compute_adapter_config_discovery_modes ... ok
+test config::adapters_tests::test_compute_provider_config_default ... ok
+test config::adapters_tests::test_compute_provider_config_with_endpoint ... ok
+test config::adapters_tests::test_full_adapter_config_integration ... ok
+test config::adapters_tests::test_security_adapter_config_custom_timeout ... ok
+test config::adapters_tests::test_security_adapter_config_default ... ok
+test config::adapters_tests::test_security_adapter_config_retry_count ... ok
+test config::adapters_tests::test_security_adapter_config_with_endpoint ... ok
+test config::adapters_tests::test_security_provider_config_default ... ok
+test config::adapters_tests::test_security_provider_config_priority ... ok
+test config::adapters_tests::test_storage_adapter_config_default ... ok
+test config::adapters_tests::test_storage_provider_config_default ... ok
+test config::adapters_tests::test_universal_adapter_config_default ... ok
+test config::adapters_tests::test_storage_adapter_config_serialization ... ok
+test config::adapters_tests::test_universal_adapter_config_clone ... ok
+test config::ai_first_tests::test_ai_first_config_all_disabled ... ok
+test config::ai_first_tests::test_ai_first_config_clone ... ok
+test config::ai_first_tests::test_ai_first_config_default ... ok
+test config::ai_first_tests::test_ai_first_config_full_custom ... ok
+test config::ai_first_tests::test_ai_first_config_conservative_settings ... ok
+test config::ai_first_tests::test_classification_strategy_serialization ... ok
+test config::ai_first_tests::test_ai_first_config_serialization ... ok
+test config::ai_first_tests::test_confidence_scoring_default ... ok
+test config::ai_first_tests::test_confidence_scoring_ml_disabled ... ok
+test config::ai_first_tests::test_human_collaboration_response_timeout ... ok
+test config::adapters_tests::test_universal_adapter_config_serialization ... ok
+test config::ai_first_tests::test_streaming_interface_buffer_size ... ok
+test config::ai_first_tests::test_confidence_scoring_disabled ... ok
+test config::ai_first_tests::test_classification_strategy_variants ... ok
+test config::ai_first_tests::test_human_collaboration_custom_escalation ... ok
+test config::ai_first_tests::test_confidence_scoring_custom_thresholds ... ok
+test config::ai_first_tests::test_human_collaboration_with_approval ... ok
+test config::environment_tests::test_environment_security_config_cors_origins ... ok
+test config::ai_first_tests::test_streaming_interface_heartbeat ... ok
+test config::ai_first_tests::test_workload_classification_custom_interval ... ok
+test config::ai_first_tests::test_streaming_interface_custom_streams ... ok
+test config::ai_first_tests::test_workload_classification_default ... ok
+test config::ai_first_tests::test_workload_classification_multiple_strategies ... ok
+test config::environment_tests::test_environment_security_config_auth_disabled ... ok
+test config::environment_tests::test_environment_config_production_preset ... ok
+test config::environment_tests::test_environment_security_config_default ... ok
+test config::environment_tests::test_environment_security_config_auth_methods ... ok
+test config::environment_tests::test_environment_security_config_audit_path ... ok
+test config::environment_tests::test_environment_serialization ... ok
+test config::ai_first_tests::test_streaming_interface_default ... ok
+test config::environment_tests::test_environment_config_serialization ... ok
+test config::environment_tests::test_environment_variants ... ok
+test config::environment_tests::test_environment_config_clone ... ok
+test config::environment_tests::test_logging_config_default ... ok
+test config::environment_tests::test_environment_config_development_preset ... ok
+test config::environment_tests::test_logging_config_file_limits ... ok
+test config::environment_tests::test_environment_config_default ... ok
+test config::ai_first_tests::test_human_collaboration_default ... ok
+test config::environment_tests::test_logging_config_file_rotation ... ok
+test config::environment_tests::test_logging_config_formats ... ok
+test config::environment_tests::test_logging_config_log_levels ... ok
+test config::environment_tests::test_network_config_default ... ok
+test config::environment_tests::test_network_config_max_connections ... ok
+test config::environment_tests::test_network_config_timeouts ... ok
+test config::environment_tests::test_network_config_with_tls ... ok
+test config::environment_tests::test_observability_config_custom_intervals ... ok
+test config::environment_tests::test_observability_config_custom_tags ... ok
+test config::environment_tests::test_observability_config_default ... ok
+test config::environment_tests::test_observability_config_metrics_disabled ... ok
+test config::environment_tests::test_observability_config_sampling_rate ... ok
+test config::environment_tests::test_port_config_custom_ports ... ok
+test config::environment_tests::test_port_config_default ... ok
+test config::environment_tests::test_port_config_dynamic_range ... ok
+test config::orchestration_tests::test_health_config_custom_intervals ... ok
+test config::orchestration_tests::test_health_config_custom_thresholds ... ok
+test config::orchestration_tests::test_health_config_default ... ok
+test config::orchestration_tests::test_health_config_disabled ... ok
+test config::orchestration_tests::test_load_balancing_config_custom_retries ... ok
+test config::orchestration_tests::test_load_balancing_config_default ... ok
+test config::orchestration_tests::test_load_balancing_config_strategies ... ok
+test config::orchestration_tests::test_load_balancing_strategy_serialization ... ok
+test config::orchestration_tests::test_load_balancing_strategy_variants ... ok
+test config::orchestration_tests::test_orchestration_config_clone ... ok
+test config::orchestration_tests::test_orchestration_config_default ... ok
+test config::orchestration_tests::test_orchestration_config_minimal ... ok
+test config::orchestration_tests::test_orchestration_config_production_preset ... ok
+test config::orchestration_tests::test_scaling_config_check_interval ... ok
+test config::orchestration_tests::test_scaling_config_custom_instances ... ok
+test config::orchestration_tests::test_orchestration_config_serialization ... ok
+test config::orchestration_tests::test_scaling_config_custom_thresholds ... ok
+test config::orchestration_tests::test_scaling_config_default ... ok
+test config::orchestration_tests::test_scaling_config_enabled ... ok
+test config::orchestration_tests::test_service_discovery_config_custom ... ok
+test config::orchestration_tests::test_service_discovery_config_default ... ok
+test config::orchestration_tests::test_service_discovery_config_disabled ... ok
+test config::performance_tests::test_latency_config_caching_disabled ... ok
+test config::performance_tests::test_latency_config_connection_pooling_disabled ... ok
+test config::performance_tests::test_latency_config_custom_cache_ttl ... ok
+test config::performance_tests::test_latency_config_custom_keep_alive ... ok
+test config::performance_tests::test_latency_config_custom_pool_size ... ok
+test config::performance_tests::test_latency_config_default ... ok
+test config::performance_tests::test_latency_config_pipelining_disabled ... ok
+test config::performance_tests::test_memory_config_custom_limit ... ok
+test config::performance_tests::test_memory_config_custom_pool_size ... ok
+test config::performance_tests::test_memory_config_default ... ok
+test config::performance_tests::test_memory_config_no_limit ... ok
+test config::performance_tests::test_memory_config_pooling_disabled ... ok
+test config::performance_tests::test_memory_config_profiling_enabled ... ok
+test config::performance_tests::test_memory_config_zero_copy_disabled ... ok
+test config::performance_tests::test_performance_config_balanced_preset ... ok
+test config::performance_tests::test_performance_config_clone ... ok
+test config::performance_tests::test_performance_config_conservative_preset ... ok
+test config::performance_tests::test_performance_config_default ... ok
+test config::performance_tests::test_performance_config_high_performance_preset ... ok
+test config::performance_tests::test_performance_config_zero_cost_disabled ... ok
+test config::performance_tests::test_throughput_config_async_disabled ... ok
+test config::performance_tests::test_performance_config_serialization ... ok
+test config::performance_tests::test_throughput_config_batching_disabled ... ok
+test config::performance_tests::test_throughput_config_custom_batch_size ... ok
+test config::performance_tests::test_throughput_config_custom_queue_capacity ... ok
+test config::performance_tests::test_throughput_config_custom_workers ... ok
+test config::performance_tests::test_throughput_config_default ... ok
+test discovery_tests::test_service_info_clone ... ok
+test discovery_tests::test_service_info_debug_format ... ok
+test discovery_tests::test_service_info_different_ports ... ok
+test discovery_tests::test_service_info_empty_metadata_initially ... ok
+test discovery_tests::test_service_info_equality ... ok
+test discovery_tests::test_service_info_high_port_numbers ... ok
+test discovery_tests::test_service_info_localhost_variations ... ok
+test discovery_tests::test_service_info_metadata_override ... ok
+test discovery_tests::test_service_info_multiple_metadata ... ok
+test discovery_tests::test_service_info_new ... ok
+test discovery_tests::test_service_info_with_metadata ... ok
+test discovery_tests::test_service_info_serialization ... ok
+test errors::errors_tests::tests::test_error_context_builder_pattern ... ok
+test errors::errors_tests::tests::test_error_context_clone ... ok
+test errors::errors_tests::tests::test_error_context_combined_operations ... ok
+test errors::errors_tests::tests::test_error_context_context_getter ... ok
+test errors::errors_tests::tests::test_error_context_creation ... ok
+test errors::errors_tests::tests::test_error_context_debug ... ok
+test errors::errors_tests::tests::test_error_context_display ... ok
+test errors::errors_tests::tests::test_error_context_display_no_suggestions ... ok
+test errors::errors_tests::tests::test_error_context_empty_strings ... ok
+test errors::errors_tests::tests::test_error_context_long_message ... ok
+test errors::errors_tests::tests::test_error_context_many_suggestions ... ok
+test errors::errors_tests::tests::test_error_context_message_getter ... ok
+test errors::errors_tests::tests::test_error_context_special_characters ... ok
+test errors::errors_tests::tests::test_error_context_suggestions_getter ... ok
+test errors::errors_tests::tests::test_error_context_unicode ... ok
+test errors::errors_tests::tests::test_error_context_with_multiple_suggestions ... ok
+test errors::errors_tests::tests::test_error_context_with_suggestion ... ok
+test errors::errors_tests::tests::test_success_result ... ok
+test errors::errors_tests::tests::test_success_result_complex_type ... ok
+test errors::errors_tests::tests::test_success_result_string ... ok
+test errors::errors_tests::tests::test_unit_success ... ok
+test errors::errors_tests::tests::test_unit_success_multiple_calls ... ok
+test metadata_tests::test_ai_response_metadata_clone ... ok
+test metadata_tests::test_ai_response_metadata_default ... ok
+test metadata_tests::test_ai_response_metadata_with_automation_capability ... ok
+test metadata_tests::test_ai_response_metadata_serialization ... ok
+test metadata_tests::test_ai_response_metadata_with_custom_field ... ok
+test metadata_tests::test_ai_response_metadata_with_multiple_capabilities ... ok
+test metadata_tests::test_automation_capability_confidence_clamping ... ok
+test metadata_tests::test_automation_capability_equality ... ok
+test metadata_tests::test_automation_capability_new ... ok
+test metadata_tests::test_automation_capability_serialization ... ok
+test metadata_tests::test_automation_capability_with_prerequisite ... ok
+test metadata_tests::test_decision_context_default ... ok
+test metadata_tests::test_decision_context_risk_levels ... ok
+test metadata_tests::test_decision_context_with_alternatives ... ok
+test metadata_tests::test_decision_context_with_factors ... ok
+test metadata_tests::test_decision_context_serialization ... ok
+test metadata_tests::test_decision_context_with_reasoning ... ok
+test metadata_tests::test_high_risk_decision_context ... ok
+test metadata_tests::test_low_confidence_automation_capability ... ok
+test metadata_tests::test_full_ai_response_metadata_integration ... ok
+test metadata_tests::test_quality_metrics_calculate_overall_manual ... ok
+test metadata_tests::test_quality_metrics_overall_calculation ... ok
+test metadata_tests::test_quality_metrics_partial_calculation ... ok
+test metadata_tests::test_quality_metrics_with_accuracy ... ok
+test metadata_tests::test_quality_metrics_default ... ok
+test metadata_tests::test_quality_metrics_serialization ... ok
+test metadata_tests::test_quality_metrics_with_timeliness ... ok
+test metadata_tests::test_quality_metrics_with_completeness ... ok
+test metadata_tests::test_risk_level_equality ... ok
+test metadata_tests::test_quality_metrics_with_relevance ... ok
+test metadata_tests::test_risk_level_serialization ... ok
+test metadata_tests::test_quality_metrics_clamping ... ok
+test metadata_tests::test_risk_level_variants ... ok
+test migration_tests::test_canonical_migrator_new ... ok
+test migration_tests::test_canonical_migrator_default ... ok
+test migration_tests::test_analyze_codebase ... ok
+test migration_tests::test_change_type_equality ... ok
+test migration_tests::test_compilation_status_equality ... ok
+test migration_tests::test_change_type_variants ... ok
+test migration_tests::test_compilation_status_variants ... ok
+test migration_tests::test_complex_config_migration ... ok
+test migration_tests::test_full_migration_workflow ... ok
+test migration_tests::test_migrate_file_config_field_changes ... ok
+test migration_tests::test_migrate_file_error_pattern_change ... ok
+test migration_tests::test_migrate_file_no_changes ... ok
+test migration_tests::test_migrate_file_multiple_changes ... ok
+test migration_tests::test_migration_change_creation ... ok
+test migration_tests::test_migrate_file_ok_unit_change ... ok
+test migration_tests::test_migrate_file_return_type_change ... ok
+test migration_tests::test_migration_change_without_line_number ... ok
+test migration_tests::test_migration_report_with_patterns ... ok
+test migration_tests::test_migration_report_with_suggestions ... ok
+test migration_tests::test_migration_result_creation ... ok
+test migration_tests::test_suggested_change_creation ... ok
+test migration_tests::test_migration_report_creation ... ok
+test migration_tests::test_migration_report_complete_workflow ... ok
+test performance_tests::test_initialize_performance_monitoring_idempotent ... ok
+test migration_tests::test_migration_result_with_changes ... ok
+test performance_tests::test_initialize_performance_monitoring_multiple_calls ... ok
+test providers_tests::test_provider_factory_default ... ok
+test providers_tests::test_provider_factory_multiple_instances ... ok
+test providers_tests::test_provider_factory_new ... ok
+test providers_tests::test_provider_traits_available ... ok
+test responses::responses_tests::tests::test_response_performance_default ... ok
+test migration_tests::test_suggested_change_priority_ranges ... ok
+test responses::responses_tests::tests::test_songbird_response_success ... ok
+test responses::responses_tests::tests::test_songbird_response_clone ... ok
+test migration_tests::test_suggested_change_without_replacement ... ok
+test responses::responses_tests::tests::test_songbird_response_with_confidence ... ok
+test responses::responses_tests::tests::test_songbird_response_with_human_context ... ok
+test types::types_tests::tests::test_endpoint_clone ... ok
+test types::types_tests::tests::test_endpoint_creation ... ok
+test performance_tests::test_initialize_performance_monitoring ... ok
+test types::types_tests::tests::test_endpoint_equality ... ok
+test types::types_tests::tests::test_endpoint_to_url_with_path ... ok
+test types::types_tests::tests::test_service_id_clone ... ok
+test types::types_tests::tests::test_endpoint_with_path ... ok
+test types::types_tests::tests::test_endpoint_to_url_without_path ... ok
+test types::types_tests::tests::test_service_id_creation ... ok
+test types::types_tests::tests::test_service_id_equality ... ok
+test types::types_tests::tests::test_service_id_from_str ... ok
+test types::types_tests::tests::test_service_id_from_string ... ok
+test validation::validation_tests::tests::test_validation_result_clone ... ok
+test validation::validation_tests::tests::test_validation_result_debug ... ok
+test validation::validation_tests::tests::test_validation_result_deserialization ... ok
+test validation::validation_tests::tests::test_validation_result_empty_errors ... ok
+test validation::validation_tests::tests::test_validation_result_empty_string_error ... ok
+test validation::validation_tests::tests::test_validation_result_failure ... ok
+test validation::validation_tests::tests::test_validation_result_large_error_list ... ok
+test validation::validation_tests::tests::test_validation_result_multiple_errors ... ok
+test validation::validation_tests::tests::test_validation_result_special_characters ... ok
+test validation::validation_tests::tests::test_validation_result_serialization ... ok
+test validation::validation_tests::tests::test_validation_result_success ... ok
+test validation::validation_tests::tests::test_validation_result_unicode_errors ... ok
+test validation::validation_tests::tests::test_validation_result_very_long_error ... ok
+test validation::validation_tests::tests::test_validation_result_with_both_errors_and_warnings ... ok
+test validation::validation_tests::tests::test_validation_result_with_warnings ... ok
+
+test result: ok. 260 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/debug/deps/songbird_cli-065d5e6f284ea673)
+
+running 53 tests
+test cli::core::cli::tests::test_output_format_default ... ok
+test cli::core::types::tests::test_cli_config_clone ... ok
+test cli::core::types::tests::test_cli_config_debug ... ok
+test cli::core::types::tests::test_cli_config_default_values ... ok
+test cli::core::types::tests::test_cli_config_with_values ... ok
+test cli::core::types::tests::test_cli_config_serialization ... ok
+test cli::core::types::tests::test_cli_result_clone ... ok
+test cli::core::types::tests::test_cli_result_debug ... ok
+test cli::core::types::tests::test_cli_result_error ... ok
+test cli::core::types::tests::test_cli_result_serialization ... ok
+test cli::core::types::tests::test_cli_result_success ... ok
+test cli::core::types::tests::test_cli_result_with_different_types ... ok
+test cli::core::types::tests::test_command_context_clone ... ok
+test cli::core::types::tests::test_progress_indicator_boundary_values ... ok
+test cli::core::types::tests::test_command_context_creation ... ok
+test cli::core::types::tests::test_progress_indicator_creation ... ok
+test cli::core::types::tests::test_progress_indicator_no_eta ... ok
+test cli::types::tests::test_cli_args_clone ... ok
+test cli::types::tests::test_cli_args_parse_from_env_defaults ... ok
+test cli::core::types::tests::test_progress_indicator_clone ... ok
+test cli::types::tests::test_cli_args_parse_from_env_with_config ... ok
+test cli::types::tests::test_cli_args_parse_from_env_with_quiet ... ok
+test cli::types::tests::test_cli_args_parse_from_env_with_verbose ... ok
+test cli::types::tests::test_config_action_edit ... ok
+test cli::types::tests::test_config_action_export ... ok
+test cli::types::tests::test_config_action_reset ... ok
+test cli::types::tests::test_config_action_show ... ok
+test cli::types::tests::test_config_action_validate ... ok
+test cli::types::tests::test_deployment_type_all_variants ... ok
+test cli::types::tests::test_deployment_type_debug ... ok
+test cli::types::tests::test_deployment_type_default ... ok
+test cli::types::tests::test_deployment_type_equality ... ok
+test cli::types::tests::test_deployment_type_serialization ... ok
+test cli::types::tests::test_export_format_default ... ok
+test cli::core::cli::tests::test_cli_parsing ... ok
+test cli::types::tests::test_export_format_variants ... ok
+test cli::types::tests::test_output_format_serialization ... ok
+test errors::tests::test_cli_error_config_with_all_fields ... ok
+test errors::tests::test_cli_error_command_display ... ok
+test errors::tests::test_cli_error_config_display ... ok
+test errors::tests::test_cli_error_from_serde_error ... ok
+test errors::tests::test_cli_error_network_with_interface ... ok
+test errors::tests::test_cli_error_to_songbird_error_command ... ok
+test errors::tests::test_cli_error_to_songbird_error_user_cancelled ... ok
+test errors::tests::test_cli_error_user_cancelled ... ok
+test cli::types::tests::test_output_format_default ... ok
+test errors::tests::test_cli_error_to_songbird_error_config ... ok
+test cli::types::tests::test_output_format_equality ... ok
+test errors::tests::test_cli_error_from_io_error ... ok
+test errors::tests::test_cli_error_to_songbird_error_network ... ok
+test cli::types::tests::test_output_format_all_variants ... ok
+test errors::tests::test_cli_error_network_display ... ok
+test cli::types::tests::test_output_format_debug ... ok
+
+test result: ok. 53 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/gaming_demo.rs (target/debug/deps/gaming_demo-eb324e54c5a8212e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/songbird.rs (target/debug/deps/songbird_cli-7f298b678c7a3fca)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/test_runner.rs (target/debug/deps/test_runner-625d2827a7f9dc18)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/songbird_compute_bridge-88b33f7a8c0d5328)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/songbird_config-a7ba656005b6ba2f)
+
+running 118 tests
+test canonical::constants::tests::test_environment_detection ... ok
+test canonical::constants::tests::test_get_bind_address ... ok
+test canonical::constants::tests::test_port_range ... ok
+test canonical::constants::tests::test_directory_configuration ... ok
+test canonical::constants::tests::test_primal_endpoint_generation ... ok
+test canonical::discovery::tests::test_capability_discovery_config_default ... ok
+test canonical::discovery::tests::test_discovery_config_common_ports ... ok
+test canonical::discovery::tests::test_discovery_config_default ... ok
+test canonical::discovery::tests::test_capability_discovery_config_serialization ... ok
+test canonical::discovery::tests::test_network_discovery_config_default ... ok
+test canonical::discovery::tests::test_service_discovery_config_custom ... ok
+test canonical::discovery::tests::test_discovery_config_serialization ... ok
+test canonical::discovery::tests::test_network_discovery_config_custom_ports ... ok
+test canonical::discovery::tests::test_service_discovery_config_default ... ok
+test canonical::environment::tests::test_environment_display ... ok
+test canonical::environment::tests::test_environment_from_str ... ok
+test canonical::load_balancing::tests::test_all_strategy_display_formats ... ok
+test canonical::environment::tests::test_environment_variants ... ok
+test canonical::load_balancing::tests::test_custom_serialization ... ok
+test canonical::load_balancing::tests::test_combined_characteristics ... ok
+test canonical::load_balancing::tests::test_custom_strategy_display ... ok
+test canonical::load_balancing::tests::test_custom_strategy_equality ... ok
+test canonical::load_balancing::tests::test_default_strategy ... ok
+test canonical::load_balancing::tests::test_is_adaptive_negative ... ok
+test canonical::load_balancing::tests::test_is_adaptive_positive ... ok
+test canonical::load_balancing::tests::test_requires_weights_non_weighted ... ok
+test canonical::load_balancing::tests::test_load_balancing_strategy_display ... ok
+test canonical::load_balancing::tests::test_requires_weights_all_weighted ... ok
+test canonical::load_balancing::tests::test_strategy_characteristics ... ok
+test canonical::load_balancing::tests::test_serialization_round_trip ... ok
+test canonical::load_balancing::tests::test_strategy_clone ... ok
+test canonical::load_balancing::tests::test_strategy_debug_format ... ok
+test canonical::load_balancing::tests::test_strategy_equality ... ok
+test canonical::load_balancing::tests::test_supports_affinity_negative ... ok
+test canonical::load_balancing::tests::test_supports_affinity_positive ... ok
+test canonical::load_balancing::tests::test_weighted_empty_weights ... ok
+test canonical::load_balancing::tests::test_weighted_strategies_display ... ok
+test canonical::load_balancing::tests::test_weighted_serialization ... ok
+test canonical::load_balancing::tests::test_weighted_strategy_equality ... ok
+test canonical::network::core::tests::test_peer_type_default ... ok
+test canonical::network::core::tests::test_peer_type_serialization ... ok
+test canonical::network::tests::test_backward_compatibility_imports ... ok
+test canonical::network::tests::test_config_creation ... ok
+test canonical::network::core::tests::test_peer_type_display ... ok
+test canonical::performance::tests::test_cache_config_default ... ok
+test canonical::performance::tests::test_benchmark_config_default ... ok
+test canonical::performance::tests::test_cache_config_serialization ... ok
+test canonical::performance::tests::test_metrics_config_default ... ok
+test canonical::performance::tests::test_object_pool_sizes_default ... ok
+test canonical::primals::tests::test_defaults ... ok
+test canonical::primals::tests::test_primal_type_display ... ok
+test canonical::primals::tests::test_primal_type_parsing ... ok
+test canonical::primals::tests::test_service_category_display ... ok
+test canonical::resilience::tests::test_circuit_breaker_config_default ... ok
+test canonical::resilience::tests::test_circuit_breaker_states ... ok
+test canonical::resilience::tests::test_disabled_configs ... ok
+test canonical::resilience::tests::test_retry_config_default ... ok
+test canonical::performance::tests::test_performance_config_thread_pool_size ... ok
+test canonical::network::core::tests::test_peer_type_from_str ... ok
+test canonical::performance::tests::test_performance_config_default ... ok
+test defaults::endpoints::tests::test_bind_socket_addr ... ok
+test defaults::endpoints::tests::test_metrics_url ... ok
+test defaults::endpoints::tests::test_cors_origins ... ok
+test defaults::hosts::tests::test_bind_address ... ok
+test defaults::hosts::tests::test_default_host ... ok
+test defaults::hosts::tests::test_environment ... ok
+test canonical::resilience::tests::test_retry_delay_calculation ... ok
+test defaults::hosts::tests::test_service_host ... ok
+test defaults::ports::tests::test_default_ports ... ok
+test defaults::ports::tests::test_service_port ... ok
+test defaults::timeouts::tests::test_cache_expiry ... ok
+test defaults::timeouts::tests::test_discovery_timeout ... ok
+test capability_endpoints::tests::test_capability_type_parsing ... ok
+test defaults::timeouts::tests::test_heartbeat_interval ... ok
+test defaults::timeouts::tests::test_long_timeout ... ok
+test defaults::timeouts::tests::test_operation_timeout ... ok
+test defaults::endpoints::tests::test_dashboard_url ... ok
+test config::constants::tests::test_get_bind_address ... ok
+test capability_endpoints::tests::test_env_var_names ... ok
+test defaults::endpoints::tests::test_orchestrator_endpoint ... ok
+test defaults::endpoints::tests::test_service_endpoint ... ok
+test defaults::hosts::tests::test_discovery_host ... ok
+test defaults::endpoints::tests::test_discovery_endpoint ... ok
+test discoverable_endpoint::tests::test_parse_hostname ... ok
+test discoverable_endpoint::tests::test_parse_host_port ... ok
+test defaults::endpoints::tests::test_websocket_url ... ok
+test defaults::timeouts::tests::test_request_timeout ... ok
+test defaults::timeouts::tests::test_standard_timeout ... ok
+test discoverable_endpoint::tests::test_endpoint_to_url ... ok
+test lib_tests::tests::test_performance_config_clone ... ok
+test lib_tests::tests::test_performance_config_custom_values ... ok
+test capability_endpoints::tests::test_capability_not_found ... ok
+test lib_tests::tests::test_performance_config_default ... ok
+test lib_tests::tests::test_performance_config_debug_trait ... ok
+test lib_tests::tests::test_performance_config_deserialization ... ok
+test lib_tests::tests::test_performance_config_large_values ... ok
+test discoverable_endpoint::tests::test_parse_url ... ok
+test lib_tests::tests::test_performance_config_empty_json ... ok
+test lib_tests::tests::test_performance_config_multiple_clones ... ok
+test lib_tests::tests::test_performance_config_partial ... ok
+test lib_tests::tests::test_performance_config_all_none ... ok
+test lib_tests::tests::test_performance_config_round_trip_serialization ... ok
+test lib_tests::tests::test_performance_config_small_values ... ok
+test lib_tests::tests::test_performance_config_serialization ... ok
+test lib_tests::tests::test_performance_config_typical_development ... ok
+test lib_tests::tests::test_performance_config_typical_production ... ok
+test lib_tests::tests::test_performance_config_with_complex_custom_params ... ok
+test lib_tests::tests::test_performance_config_all_some ... ok
+test capability_endpoints::tests::test_capability_from_environment ... ok
+test lib_tests::tests::test_performance_config_zero_copy_disabled ... ok
+test zero_touch::infant_config::tests::test_no_hardcoded_primal_names ... ignored, Self-referential test - use hardcoding scanner script instead
+test zero_touch::infant_config::tests::test_no_hardcoded_vendor_names ... ignored, Requires zero_touch_config.rs file which doesn't exist - use hardcoding scanner script
+test lib_tests::tests::test_performance_config_with_custom_params ... ok
+test lib_tests::tests::test_performance_config_zero_copy_enabled ... ok
+test zero_touch::infant_config::tests::test_self_identity_discovery ... ok
+test zero_touch::infant_config::tests::test_zero_touch_config_requires_service_port ... ok
+test capability_endpoints::tests::test_cache_functionality ... ok
+test capability_endpoints::tests::test_multiple_endpoints ... ok
+
+test result: ok. 116 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/songbird_discovery-116e61c315cefd16)
+
+running 50 tests
+test conversion::conversion_comprehensive_tests::tests::test_conversion_with_complex_endpoint ... ok
+test conversion::conversion_comprehensive_tests::tests::test_conversion_preserves_metadata ... ok
+test conversion::conversion_comprehensive_tests::tests::test_conversion_with_different_primal_types ... ok
+test conversion::conversion_comprehensive_tests::tests::test_conversion_with_numeric_host ... ok
+test conversion::conversion_comprehensive_tests::tests::test_conversion_with_empty_metadata ... ok
+test conversion::conversion_comprehensive_tests::tests::test_conversion_with_special_characters ... ok
+test conversion::conversion_comprehensive_tests::tests::test_discovery_service_has_timestamps ... ok
+test conversion::conversion_comprehensive_tests::tests::test_discovery_service_has_unique_ids ... ok
+test conversion::conversion_comprehensive_tests::tests::test_discovery_service_has_valid_endpoints ... ok
+test conversion::conversion_comprehensive_tests::tests::test_discovery_to_universal_conversion ... ok
+test conversion::conversion_comprehensive_tests::tests::test_multiple_services_conversion ... ok
+test conversion::conversion_comprehensive_tests::tests::test_parse_endpoint_edge_cases ... ok
+test conversion::conversion_comprehensive_tests::tests::test_parse_endpoint_http_url ... ok
+test conversion::conversion_comprehensive_tests::tests::test_parse_endpoint_https_url ... ok
+test conversion::conversion_comprehensive_tests::tests::test_parse_endpoint_ipv4 ... ok
+test conversion::conversion_comprehensive_tests::tests::test_parse_endpoint_localhost ... ok
+test conversion::conversion_comprehensive_tests::tests::test_parse_endpoint_no_port_defaults_8080 ... ok
+test conversion::conversion_comprehensive_tests::tests::test_parse_endpoint_with_invalid_port_defaults ... ok
+test conversion::conversion_comprehensive_tests::tests::test_conversion_batch_processing ... ok
+test conversion::conversion_comprehensive_tests::tests::test_parse_endpoint_with_path ... ok
+test conversion::conversion_comprehensive_tests::tests::test_parse_endpoint_with_port ... ok
+test conversion::conversion_comprehensive_tests::tests::test_round_trip_conversion ... ok
+test conversion::conversion_comprehensive_tests::tests::test_universal_to_discovery_conversion ... ok
+test conversion::tests::test_minimal_service_info ... ok
+test conversion::tests::test_parse_endpoint ... ok
+test discovery::core::tests::test_canonical_discovery_config_clone ... ok
+test discovery::core::tests::test_canonical_discovery_config_consul ... ok
+test discovery::core::tests::test_canonical_discovery_config_default ... ok
+test discovery::core::tests::test_canonical_discovery_config_kubernetes ... ok
+test discovery::core::tests::test_canonical_discovery_config_static ... ok
+test discovery::core::tests::test_canonical_discovery_config_serialization ... ok
+test discovery::core::tests::test_compute_resources ... ok
+test discovery::core::tests::test_dataset_info ... ok
+test discovery::core::tests::test_federation_stats ... ok
+test discovery::core::tests::test_interaction_result_failure ... ok
+test discovery::core::tests::test_interaction_result_success ... ok
+test discovery::core::tests::test_local_node ... ok
+test discovery::core::tests::test_network_measurement ... ok
+test discovery::core::tests::test_service_instance_builder_pattern ... ok
+test discovery::core::tests::test_service_instance_clone ... ok
+test discovery::core::tests::test_service_instance_has_capability ... ok
+test discovery::core::tests::test_service_instance_is_healthy ... ok
+test discovery::core::tests::test_service_instance_new ... ok
+test discovery::core::tests::test_service_instance_with_capability ... ok
+test discovery::core::tests::test_service_instance_serialization ... ok
+test discovery::core::tests::test_service_instance_with_health_status ... ok
+test discovery::core::tests::test_service_instance_with_metadata ... ok
+test discovery::core::tests::test_storage_info ... ok
+test discovery::core::tests::test_trust_level_all_variants ... ok
+test discovery::core::tests::test_trust_level_serialization ... ok
+
+test result: ok. 50 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/songbird_execution_agent-1f90f467ab134393)
+
+running 26 tests
+test executor::tests::test_parse_command ... ok
+test security::tests::test_auth_disabled ... ok
+test security::tests::test_auth_invalid_token ... ok
+test security::tests::test_auth_missing_token ... ok
+test security::tests::test_validate_dangerous_command ... ok
+test security::tests::test_auth_valid_token ... ok
+test security::tests::test_validate_empty_command ... ok
+test security::tests::test_validate_safe_command ... ok
+test job_manager::tests::test_job_stats ... ok
+test job_manager::tests::test_job_limit ... ok
+test job_manager::tests::test_add_and_get_job ... ok
+test job_manager::tests::test_complete_job ... ok
+test security_beardog::tests::test_dangerous_command_denial ... ok
+test security_beardog::tests::test_safe_command_approval ... ok
+test security_beardog::tests::test_sovereignty_enforcement ... ok
+test security_beardog::tests::test_sovereignty_levels ... ok
+test types::tests::test_execution_status_display ... ok
+test server::tests::test_health_check ... ok
+test types::tests::test_execution_request_builder ... ok
+test security_sovereign::tests::test_auth_enforcement ... ok
+test security_sovereign::tests::test_sovereign_security_always_works ... ok
+test tests::test_default_config ... ok
+test security_sovereign::tests::test_dangerous_command_blocked ... ok
+test executor::tests::test_execute_simple_command ... ok
+test executor::tests::test_execute_with_env ... ok
+test executor::tests::test_execute_failing_command ... ok
+
+test result: ok. 26 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/agent.rs (target/debug/deps/agent-5d4c36796707ea55)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/songbird_network_federation-90a3ab04d1b7249c)
+
+running 5 tests
+test service_registry::tests::test_register_local_service ... ok
+test state::tests::test_node_registration ... ok
+test service_registry::tests::test_find_by_type ... ok
+test state::tests::test_federation_state_creation ... ok
+test state::tests::test_heartbeat_update ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/songbird_observability-dbc2a0aa2f1b8c8e)
+
+running 66 tests
+test health::types_tests::tests::test_health_check_result_clone ... ok
+test health::types_tests::tests::test_health_check_result_creation ... ok
+test health::types_tests::tests::test_health_check_result_debug_output ... ok
+test health::types_tests::tests::test_health_check_result_slow_response ... ok
+test health::types_tests::tests::test_health_check_result_fast_response ... ok
+test health::types_tests::tests::test_health_check_result_with_long_message ... ok
+test health::types_tests::tests::test_health_state_all_variants ... ok
+test health::types_tests::tests::test_health_state_critical ... ok
+test health::types_tests::tests::test_health_state_degraded ... ok
+test health::types_tests::tests::test_health_state_healthy ... ok
+test health::types_tests::tests::test_health_state_maintenance ... ok
+test health::types_tests::tests::test_health_state_unhealthy ... ok
+test health::types_tests::tests::test_health_state_unknown ... ok
+test health::types_tests::tests::test_health_status_all_variants ... ok
+test health::types_tests::tests::test_health_status_clone ... ok
+test health::types_tests::tests::test_health_status_debug_output ... ok
+test health::types_tests::tests::test_health_status_degraded ... ok
+test health::types_tests::tests::test_health_status_details_clone ... ok
+test health::types_tests::tests::test_health_status_details_creation ... ok
+test health::types_tests::tests::test_health_status_details_with_failures ... ok
+test health::types_tests::tests::test_health_status_equality ... ok
+test health::types_tests::tests::test_health_status_healthy ... ok
+test health::types_tests::tests::test_health_status_details_with_metadata ... ok
+test health::types_tests::tests::test_health_status_unhealthy ... ok
+test health::types_tests::tests::test_multiple_health_check_results ... ok
+test observability::dashboard::tests::test_dashboard_debug ... ok
+test observability::dashboard::tests::test_dashboard_stop_without_start ... ok
+test observability::dashboard::tests::test_dashboard_double_start ... ok
+test observability::dashboard::tests::test_dashboard_from_network_config ... ok
+test observability::dashboard::tests::test_dashboard_double_stop ... ok
+test observability::dashboard::tests::test_dashboard_creation ... ok
+test observability::dashboard::tests::test_dashboard_start_stop ... ok
+test observability::dashboard::tests::test_is_running_initial_state ... ok
+test observability::dashboard::tests::test_port_assignment ... ok
+test observability::dashboard::tests::test_serve_not_found ... ok
+test observability::dashboard::tests::test_serve_dashboard ... ok
+test observability::dashboard::tests::test_serve_status ... ok
+test observability::dashboard::tests::test_serve_health ... ok
+test observability::dashboard::tests::test_serve_metrics ... ok
+test observability::health::tests::test_health_monitor_creation ... ok
+test observability::health::tests::test_health_status_update ... ok
+test observability::metrics::tests::test_application_metrics_serialization ... ok
+test observability::metrics::tests::test_collect_all_metrics ... ok
+test observability::metrics::tests::test_collection_count_increments ... ok
+test observability::health::tests::test_service_registration ... ok
+test observability::metrics::tests::test_export_prometheus_without_prior_collection ... ok
+test observability::metrics::tests::test_get_current_metrics_alias ... ok
+test observability::metrics::tests::test_concurrent_collections ... ok
+test observability::metrics::tests::test_export_prometheus_format ... ok
+test observability::metrics::tests::test_last_collection_time ... ok
+test observability::metrics::tests::test_get_current_snapshot_after_collection ... ok
+test observability::metrics::tests::test_get_current_snapshot_without_prior_collection ... ok
+test observability::metrics::tests::test_metrics_collector_debug ... ok
+test observability::metrics::tests::test_metrics_collector_default ... ok
+test observability::metrics::tests::test_metrics_collector_new ... ok
+test observability::metrics::tests::test_metrics_snapshot_contains_timestamp ... ok
+test observability::metrics::tests::test_metrics_snapshot_clone ... ok
+test observability::metrics::tests::test_metrics_snapshot_application_metrics ... ok
+test observability::metrics::tests::test_metrics_snapshot_debug ... ok
+test observability::metrics::tests::test_metrics_snapshot_serialization ... ok
+test observability::metrics::tests::test_prometheus_export_format_correctness ... ok
+test observability::metrics::tests::test_metrics_snapshot_system_metrics ... ok
+test observability::tests::test_event_subscription ... ok
+test observability::tests::test_health_monitoring ... ok
+test observability::tests::test_observability_manager_creation ... ok
+test observability::tests::test_metrics_collection ... ok
+
+test result: ok. 66 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/songbird_orchestrator-eaf1f78293011d67)
+
+running 171 tests
+test cli::config::config_tests::tests::test_cli_config_colored_output_default_true ... ok
+test cli::config::config_tests::tests::test_cli_config_clone ... ok
+test cli::config::config_tests::tests::test_cli_config_change_config_path ... ok
+test cli::config::config_tests::tests::test_cli_config_colored_output_toggle ... ok
+test cli::config::config_tests::tests::test_cli_config_default ... ok
+test cli::config::config_tests::tests::test_cli_config_multiple_operations ... ok
+test cli::config::config_tests::tests::test_cli_config_new ... ok
+test cli::config::config_tests::tests::test_cli_config_no_config_path ... ok
+test cli::config::config_tests::tests::test_cli_config_debug_output ... ok
+test cli::config::config_tests::tests::test_cli_config_set_colored_output ... ok
+test cli::config::config_tests::tests::test_cli_config_set_verbose ... ok
+test cli::config::config_tests::tests::test_cli_config_set_config_path ... ok
+test cli::config::config_tests::tests::test_cli_config_unset_verbose ... ok
+test cli::config::config_tests::tests::test_cli_config_verbose_toggle ... ok
+test cli::tests::test_cli_config_creation ... ok
+test cli::tests::test_cli_config_defaults ... ok
+test cli::tests::test_cli_config_setters ... ok
+test cli::tests::test_orchestrator_creation ... ok
+test core::load_balancer::tests::test_load_balancer_health_check ... ok
+test core::load_balancer::tests::test_load_balancing_strategy_clone ... ok
+test core::load_balancer::tests::test_load_balancer_initialize ... ok
+test core::load_balancer::tests::test_load_balancer_stop ... ok
+test core::load_balancer::tests::test_load_balancer_debug_format ... ok
+test core::performance::tests::test_performance_metrics_clone ... ok
+test core::load_balancer::tests::test_load_balancing_strategy_equality ... ok
+test core::performance::tests::test_performance_monitor_full_lifecycle ... ok
+test core::load_balancer::tests::test_load_balancer_health_check_message_format ... ok
+test core::performance::tests::test_performance_monitor_get_metrics ... ok
+test core::load_balancer::tests::test_load_balancing_strategy_serialization ... ok
+test core::performance::tests::test_performance_monitor_new ... ok
+test core::performance::tests::test_performance_monitor_health_check ... ok
+test core::performance::tests::test_performance_monitor_initialize ... ok
+test core::load_balancer::tests::test_load_balancer_new_with_custom_strategy ... ok
+test core::performance::tests::test_performance_metrics_serialization ... ok
+test core::load_balancer::tests::test_load_balancer_new ... ok
+test core::performance::tests::test_performance_metrics_debug_format ... ok
+test core::load_balancer::tests::test_load_balancing_config_with_different_strategies ... ok
+test core::load_balancer::tests::test_load_balancer_full_lifecycle ... ok
+test core::load_balancer::tests::test_load_balancing_strategy_all_variants ... ok
+test core::load_balancer::tests::test_load_balancer_start ... ok
+test core::performance::tests::test_performance_monitor_stop ... ok
+test core::routing::analyzer::tests::test_high_cpu_is_heavy ... ok
+test core::routing::analyzer::tests::test_high_memory_is_heavy ... ok
+test core::performance::tests::test_performance_monitor_start ... ok
+test core::routing::analyzer::tests::test_long_duration_is_heavy ... ok
+test core::routing::analyzer::tests::test_low_resource_task_is_lightweight ... ok
+test core::registry::tests::test_register_provider ... ok
+test core::registry::tests::test_list_providers ... ok
+test core::registry::tests::test_find_providers_with_capability ... ok
+test core::routing::analyzer::tests::test_moderate_cpu_is_moderate ... ok
+test core::routing::analyzer::tests::test_moderate_memory_is_moderate ... ok
+test core::registry::tests::test_heartbeat_updates ... ok
+test core::routing::analyzer::tests::test_simple_task_is_lightweight ... ok
+test core::registry::tests::test_duplicate_registration_fails ... ok
+test core::routing::router::tests::test_determine_capability_type_ai ... ok
+test core::routing::router::tests::test_determine_capability_type_ml ... ok
+test core::routing::router::tests::test_determine_capability_type_gpu ... ok
+test core::routing::router::tests::test_determine_capability_type_storage ... ok
+test core::routing::router::tests::test_determine_capability_type_security ... ok
+test core::registry::tests::test_unregister_provider ... ok
+test core::routing::analyzer::tests::test_gpu_task_is_heavy ... ok
+test core::routing::types::tests::test_task_builder ... ok
+test core::routing::types::tests::test_simple_task ... ok
+test core::scaling::tests::test_auto_scaler_new ... ok
+test core::scaling::tests::test_auto_scaler_debug_format ... ok
+test core::scaling::tests::test_auto_scaler_scale_down ... ok
+test core::routing::analyzer::tests::test_moderate_duration_is_moderate ... ok
+test core::scaling::tests::test_auto_scaler_scale_down_min_limit ... ok
+test core::scaling::tests::test_auto_scaler_scale_up ... ok
+test core::scaling::tests::test_auto_scaler_scale_up_max_limit ... ok
+test core::scaling::tests::test_auto_scaler_health_check ... ok
+test core::scaling::tests::test_auto_scaler_stop ... ok
+test core::scaling::tests::test_auto_scaler_start ... ok
+test core::scaling::tests::test_auto_scaler_with_custom_config ... ok
+test core::scaling::tests::test_scaling_policy_clone ... ok
+test core::scaling::tests::test_auto_scaler_initialize ... ok
+test core::tests::test_component_health_construction ... ok
+test core::tests::test_component_health_with_message ... ok
+test core::scaling::tests::test_scaling_policy_serialization ... ok
+test core::scaling::tests::test_auto_scaler_full_lifecycle ... ok
+test core::tests::test_consolidated_orchestrator_config_clone ... ok
+test core::tests::test_consolidated_orchestrator_config_default ... ok
+test core::tests::test_consolidated_orchestrator_full_lifecycle ... ok
+test core::tests::test_consolidated_orchestrator_health_check_components ... ok
+test core::tests::test_consolidated_orchestrator_config_serialization ... ok
+test core::scaling::tests::test_auto_scaler_multiple_scale_operations ... ok
+test core::tests::test_consolidated_orchestrator_health_check ... ok
+test core::tests::test_deployment_strategy_all_variants ... ok
+test core::tests::test_consolidated_orchestrator_initialize ... ok
+test core::tests::test_deployment_strategy_equality ... ok
+test core::tests::test_consolidated_orchestrator_new ... ok
+test core::tests::test_health_status_all_variants ... ok
+test core::tests::test_health_status_equality ... ok
+test core::tests::test_consolidated_orchestrator_stop ... ok
+test core::tests::test_load_balancing_config_custom ... ok
+test core::tests::test_load_balancing_config_default ... ok
+test core::tests::test_registry_config_custom ... ok
+test core::tests::test_registry_config_default ... ok
+test core::tests::test_scaling_config_custom ... ok
+test core::tests::test_orchestrator_health_construction ... ok
+test core::tests::test_orchestrator_config_debug_format ... ok
+test core::tests::test_scaling_config_thresholds_valid ... ok
+test core::tests::test_scaling_config_default ... ok
+test core::tests::test_zero_touch_config_default ... ok
+test core::tests::test_zero_touch_config_custom ... ok
+test core::tests::test_zero_touch_config_serialization ... ok
+test integration::tests::test_timeout_configuration ... ok
+test integration::tests::test_integration_manager_creation ... ok
+test core::tests::test_consolidated_orchestrator_start ... ok
+test core::tests::test_performance_config_custom_thresholds ... ok
+test core::tests::test_performance_config_default ... ok
+test core::tests::test_consolidated_orchestrator_new_with_custom_config ... ok
+test server::compute_api::tests::test_api_error_display ... ok
+test core::tests::test_performance_config_serialization ... ok
+test server::deployment_api::tests::test_calculate_max_concurrent ... ok
+test server::deployment_api::tests::test_detect_network_type ... ok
+test server::compute_api::tests::test_get_task_status_not_found ... ok
+test server::deployment_api::tests::test_deployment_state_creation ... ok
+test server::execution_api::tests::test_api_error_debug ... ok
+test server::execution_api::tests::test_api_error_execution_display ... ok
+test server::events::tests::test_event_creation ... ok
+test server::execution_api::tests::test_api_error_is_error_trait ... ok
+test server::execution_api::tests::test_api_error_invalid_request_display ... ok
+test server::execution_api::tests::test_api_error_into_response_invalid_request ... ok
+test server::execution_api::tests::test_api_error_into_response_execution ... ok
+test server::compute_api::tests::test_submit_heavy_task ... ok
+test server::events::tests::test_broadcast ... ok
+test server::events::tests::test_unsubscribe ... ok
+test server::execution_api::tests::test_broadcast_request_creation ... ok
+test server::compute_api::tests::test_submit_lightweight_task ... ok
+test server::execution_api::tests::test_broadcast_request_clone ... ok
+test server::events::tests::test_subscription ... ok
+test server::execution_api::tests::test_broadcast_request_empty_tower_ids ... ok
+test server::execution_api::tests::test_broadcast_request_default_options ... ok
+test server::execution_api::tests::test_broadcast_request_many_towers ... ok
+test server::execution_api::tests::test_broadcast_request_serialization ... ok
+test server::execution_api::tests::test_single_tower_request_clone ... ok
+test server::execution_api::tests::test_single_tower_request_creation ... ok
+test server::execution_api::tests::test_execution_routes_creation ... ok
+test server::federation_api::tests::test_federation_app_state_clone ... ignored
+test server::federation_api::tests::test_federation_app_state_creation ... ignored
+test server::execution_api::tests::test_single_tower_request_serialization ... ok
+test server::federation_api::tests::test_federation_app_state_debug ... ok
+test server::federation_api::tests::test_heartbeat_request_debug ... ok
+test server::federation_api::tests::test_federation_routes_construction ... ok
+test server::federation_api::tests::test_get_federation_status_with_nodes ... ok
+test server::federation_api::tests::test_get_federation_status_empty ... ok
+test server::federation_api::tests::test_heartbeat_request_deserialization ... ok
+test server::federation_api::tests::test_heartbeat_response_debug ... ok
+test server::federation_api::tests::test_federation_nodes_endpoint_empty ... ok
+test server::federation_api::tests::test_heartbeat_request_optional_fields ... ok
+test server::federation_api::tests::test_federation_status_endpoint ... ok
+test server::jsonrpc_api::tests::test_jsonrpc_error_codes ... ok
+test server::federation_api::tests::test_heartbeat_with_metrics ... ok
+test server::federation_api::tests::test_service_registry_operations ... ok
+test server::jsonrpc_api::tests::test_jsonrpc_error_creation ... ok
+test server::federation_api::tests::test_heartbeat_response_serialization ... ok
+test server::federation_api::tests::test_multiple_nodes_listing ... ok
+test server::jsonrpc_api::tests::test_jsonrpc_request_deserialization ... ok
+test server::jsonrpc_api::tests::test_jsonrpc_response_serialization ... ok
+test server::protocol_api::tests::test_negotiation_id_generation ... ok
+test server::protocol_api::tests::test_default_available_protocols ... ok
+test server::federation_api::tests::test_federation_status_uptime ... ok
+test core::execution::client::tests::test_execution_client_creation ... ok
+test core::execution::broadcast::tests::test_broadcast_executor_creation ... ok
+test core::execution::broadcast::tests::test_register_tower ... ok
+test server::execution_api::tests::test_execution_api_state_creation ... ok
+test core::execution::manager::tests::test_register_tower ... ok
+test server::execution_api::tests::test_execution_api_state_default ... ok
+test core::execution::manager::tests::test_execution_manager_creation ... ok
+test server::execution_api::tests::test_execution_api_state_clone ... ok
+
+test result: ok. 169 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.54s
+
+     Running unittests src/main.rs (target/debug/deps/songbird_orchestrator-1a6af15ff63aa5d4)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/songbird_registry-655addd55c881e6a)
+
+running 30 tests
+test registry::query::tests::test_query_builder ... ok
+test types::capability::tests::test_capability_compatibility ... ok
+test registry::traits::tests::test_composable_compatibility ... ok
+test registry::core::tests::test_registry_search_by_name ... ok
+test registry::core::tests::test_registry_unregister ... ok
+test registry::core::tests::test_registry_duplicate ... ok
+test registry::core::tests::test_registry_register ... ok
+test registry::core::tests::test_registry_list ... ok
+test registry::core::tests::test_registry_get ... ok
+test types::capability::tests::test_capability_creation ... ok
+test types::event::tests::test_error_event_message ... ok
+test types::event::tests::test_error_event_with_plugin_id ... ok
+test types::event::tests::test_error_event_without_plugin_id ... ok
+test types::event::tests::test_event_context_chaining ... ok
+test types::event::tests::test_event_creation ... ok
+test types::event::tests::test_event_deserialization ... ok
+test types::event::tests::test_event_serialization ... ok
+test types::event::tests::test_event_timestamp ... ok
+test types::event::tests::test_event_with_context ... ok
+test types::event::tests::test_health_changed_event ... ok
+test types::event::tests::test_health_status_variants ... ok
+test types::event::tests::test_plugin_registered_event ... ok
+test types::event::tests::test_plugin_scaled_event ... ok
+test types::event::tests::test_plugin_scaled_from_to_values ... ok
+test types::event::tests::test_plugin_unregistered_event ... ok
+test types::health::tests::test_health_status_degraded ... ok
+test types::health::tests::test_health_status_healthy ... ok
+test types::health::tests::test_health_status_unhealthy ... ok
+test types::plugin::tests::test_plugin_builder ... ok
+test types::plugin::tests::test_plugin_id_creation ... ok
+
+test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/songbird_deploy-0cafa3621dd5cb4b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/songbird_squirrel-ec3ba0f2c04b6eea)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/songbird_test_utils-4cf895e94d587fb9)
+
+running 67 tests
+test fixtures::services::tests::test_ai_service ... ok
+test fixtures::services::tests::test_security_service ... ok
+test fixtures::services::tests::test_compute_service ... ok
+test fixtures::services::tests::test_service_builder ... ok
+test fixtures::services::tests::test_storage_service ... ok
+test mocks::beardog::tests::test_beardog_default_trait ... ok
+test mocks::beardog::tests::test_beardog_server_lifecycle ... ok
+test mocks::beardog::tests::test_auth_result_variants ... ok
+test mocks::beardog::tests::test_mock_beardog_auth ... ok
+test mocks::beardog::tests::test_mock_beardog_scenarios ... ok
+test mocks::capability_mocks::tests::test_capability_metrics_clone ... ok
+test mocks::beardog::tests::test_health_status_management ... ok
+test mocks::beardog::tests::test_security_metrics_default ... ok
+test mocks::capability_mocks::tests::test_capability_metrics_default ... ok
+test fixtures::orchestrator::tests::test_healthy_environment ... ok
+test fixtures::orchestrator::tests::test_orchestrator_environment_creation ... ok
+test fixtures::orchestrator::tests::test_high_load_environment ... ok
+test mocks::capability_mocks::tests::test_capability_port_ranges ... ok
+test mocks::capability_mocks::tests::test_capability_metrics_serialization ... ok
+test mocks::capability_mocks::tests::test_capability_type_all_descriptions ... ok
+test mocks::capability_mocks::tests::test_capability_type_clone ... ok
+test mocks::capability_mocks::tests::test_capability_type_custom ... ok
+test mocks::capability_mocks::tests::test_capability_type_description ... ok
+test mocks::capability_mocks::tests::test_capability_type_equality ... ok
+test mocks::capability_mocks::tests::test_capability_type_deserialization ... ok
+test mocks::capability_mocks::tests::test_capability_type_serialization ... ok
+test mocks::capability_mocks::tests::test_mock_server_creation ... ok
+test mocks::capability_mocks::tests::test_environment_builder ... ok
+test mocks::capability_mocks::tests::test_environment_builder_all_capabilities ... ok
+test mocks::capability_mocks::tests::test_mock_server_custom_responses ... ok
+test mocks::nestgate::tests::test_nestgate_default_trait ... ok
+test mocks::capability_mocks::tests::test_environment_port_access ... ok
+test mocks::capability_mocks::tests::test_mock_server_health_status ... ok
+test mocks::capability_mocks::tests::test_mock_server_endpoint_format ... ok
+test mocks::nestgate::tests::test_mock_nestgate_scenarios ... ok
+test mocks::capability_mocks::tests::test_mock_server_lifecycle ... ok
+test mocks::nestgate::tests::test_nestgate_server_lifecycle ... ok
+test mocks::nestgate::tests::test_mock_nestgate_metrics ... ok
+test mocks::capability_mocks::tests::test_mock_server_metrics_management ... ok
+test mocks::nestgate::tests::test_mock_nestgate_storage ... ok
+test mocks::nestgate::tests::test_object_retrieval ... ok
+test mocks::nestgate::tests::test_storage_usage_percentage ... ok
+test mocks::squirrel::tests::test_ai_metrics_default ... ok
+test mocks::nestgate::tests::test_storage_metrics_default ... ok
+test mocks::squirrel::tests::test_squirrel_default_trait ... ok
+test mocks::squirrel::tests::test_health_status_changes ... ok
+test mocks::squirrel::tests::test_inference_with_different_models ... ok
+test mocks::squirrel::tests::test_mock_squirrel_inference ... ok
+test mocks::squirrel::tests::test_mock_squirrel_scenarios ... ok
+test mocks::toadstool::tests::test_compute_metrics_default ... ok
+test mocks::toadstool::tests::test_container_management ... ok
+test mocks::toadstool::tests::test_health_status_transitions ... ok
+test mocks::toadstool::tests::test_mock_toadstool_creation ... ok
+test mocks::squirrel::tests::test_squirrel_server_lifecycle ... ok
+test network_fixtures::tests::test_bind_address_default ... ok
+test network_fixtures::tests::test_endpoint_url_format ... ok
+test mocks::toadstool::tests::test_mock_toadstool_scenarios ... ok
+test mocks::toadstool::tests::test_mock_toadstool_metrics_modification ... ok
+test network_fixtures::tests::test_port_is_valid ... ok
+test mocks::toadstool::tests::test_toadstool_server_lifecycle ... ok
+test network_fixtures::tests::test_service_url_format ... ok
+test network_fixtures::tests::test_websocket_url_format ... ok
+test service_fixtures::tests::test_service_endpoint_format ... ok
+test service_fixtures::tests::test_health_endpoint_format ... ok
+test mocks::toadstool::tests::test_toadstool_default_trait ... ok
+test service_fixtures::tests::test_service_name_with_index ... ok
+test service_fixtures::tests::test_service_name_without_index ... ok
+
+test result: ok. 67 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/songbird_types-52a415fff3c78c0e)
+
+running 165 tests
+test config::ai_first::tests::test_ai_first_config_clone ... ok
+test config::ai_first::tests::test_ai_first_config_debug ... ok
+test config::ai_first::tests::test_ai_first_config_deserialization ... ok
+test config::ai_first::tests::test_ai_first_config_serialization ... ok
+test config::ai_first::tests::test_custom_ai_first_config ... ok
+test config::ai_first::tests::test_default_ai_first_config ... ok
+test config::ai_first::tests::test_partial_ai_first_config ... ok
+test config::environment::tests::test_canonical_environment_config_default ... ok
+test config::environment::tests::test_deployment_mode_custom ... ok
+test config::environment::tests::test_capability_endpoints_default ... ok
+test config::environment::tests::test_deployment_mode_from_string ... ok
+test config::environment::tests::test_deprecation_warnings_config_default ... ok
+test config::environment::tests::test_get_all_endpoints_empty ... ok
+test config::environment::tests::test_get_all_endpoints_with_values ... ok
+test config::environment::tests::test_capability_endpoints_from_env ... ok
+test config::environment::tests::test_get_bind_address_development ... ok
+test config::environment::tests::test_get_bind_address_production ... ok
+test config::environment::tests::test_get_capability_endpoint_compute ... ok
+test config::environment::tests::test_get_capability_endpoint_custom ... ok
+test config::environment::tests::test_get_capability_endpoint_none ... ok
+test config::environment::tests::test_get_capability_endpoint_storage ... ok
+test config::environment::tests::test_health_check_config_default ... ok
+test config::environment::tests::test_is_development ... ok
+test config::environment::tests::test_is_production ... ok
+test config::environment::tests::test_legacy_compatibility_config_default ... ok
+test config::environment::tests::test_memory_pool_config_default ... ok
+test config::environment::tests::test_memory_pool_config_sizes_valid ... ok
+test config::environment::tests::test_network_binding_config_default ... ok
+test config::environment::tests::test_port_range_default ... ok
+test config::environment::tests::test_resource_limits_default ... ok
+test config::environment::tests::test_port_range_serialization ... ok
+test config::environment::tests::test_resource_limits_from_env ... ok
+test config::environment::tests::test_service_discovery_config_default ... ok
+test config::health::tests::test_custom_health_config ... ok
+test config::health::tests::test_default_health_config ... ok
+test config::health::tests::test_health_check_config_alias ... ok
+test config::health::tests::test_health_config_clone ... ok
+test config::health::tests::test_health_config_debug ... ok
+test config::health::tests::test_health_config_intervals_valid ... ok
+test config::environment::tests::test_serialization_canonical_config ... ok
+test config::health::tests::test_health_config_various_intervals ... ok
+test config::migration::tests::test_migration_report ... ok
+test config::migration::tests::test_basic_migration ... ok
+test config::orchestration::tests::test_custom_federation_config ... ok
+test config::orchestration::tests::test_default_federation_config ... ok
+test config::orchestration::tests::test_default_orchestration_config ... ok
+test config::orchestration::tests::test_federation_config_clone ... ok
+test config::orchestration::tests::test_federation_config_debug ... ok
+test config::orchestration::tests::test_federation_disabled_scenario ... ok
+test config::orchestration::tests::test_federation_intervals_valid ... ok
+test config::orchestration::tests::test_federation_protocols ... ok
+test config::orchestration::tests::test_max_nodes_reasonable ... ok
+test config::orchestration::tests::test_orchestration_config_clone ... ok
+test config::storage::tests::test_custom_storage_config ... ok
+test config::storage::tests::test_default_storage_config ... ok
+test config::storage::tests::test_storage_config_clone ... ok
+test config::storage::tests::test_storage_config_debug ... ok
+test config::storage::tests::test_storage_config_deserialization ... ok
+test config::storage::tests::test_storage_config_serialization ... ok
+test config::system::tests::test_custom_system_config ... ok
+test config::system::tests::test_default_system_config ... ok
+test config::system::tests::test_system_config_clone ... ok
+test config::system::tests::test_system_config_debug ... ok
+test config::system::tests::test_system_config_deserialization ... ok
+test config::system::tests::test_system_config_environments ... ok
+test config::system::tests::test_system_config_serialization ... ok
+test config::system::tests::test_version_not_empty ... ok
+test constants::tests::test_constants_are_reasonable ... ok
+test constants::tests::test_default_port ... ok
+test constants::tests::test_default_retry_attempts ... ok
+test constants::tests::test_default_timeout_secs ... ok
+test constants::tests::test_max_concurrent_connections ... ok
+test error_helpers::tests::test_option_elimination ... ok
+test error_helpers::tests::test_safe_env_defaults ... ok
+test error_helpers::tests::test_safe_parse_duration ... ok
+test error_helpers::tests::test_safe_parse_port ... ok
+test error_helpers::tests::test_service_not_found ... ok
+test error_helpers::tests::test_unwrap_elimination_result ... ok
+test errors::tests::test_error_context_and_suggestions ... ok
+test errors::tests::test_security_error_creation ... ok
+test errors::tests::test_error_serialization ... ok
+test errors::tests::test_service_error_with_recovery ... ok
+test errors::tests::test_songbird_error_variants ... ok
+test memory_optimized::tests::test_host_optimization ... ok
+test memory_optimized::tests::test_optimized_capabilities ... ok
+test memory_optimized::tests::test_optimized_endpoint ... ok
+test memory_optimized::tests::test_optimized_primal_id ... ok
+test primal::tests::test_primal_config ... ok
+test primal::tests::test_primal_id_creation ... ok
+test primal::tests::test_primal_response ... ok
+test primal::tests::test_primal_type_display ... ok
+test response::tests::test_ai_first_response ... ok
+test response::tests::test_error_response ... ok
+test response::tests::test_paginated_response ... ok
+test response::tests::test_response_conversion ... ok
+test response::tests::test_successful_response ... ok
+test service::tests::test_allowed_values_any ... ok
+test service::tests::test_allowed_values_default ... ok
+test service::tests::test_allowed_values_pattern ... ok
+test service::tests::test_allowed_values_range ... ok
+test service::tests::test_allowed_values_specific ... ok
+test service::tests::test_canonical_service_config_creation ... ok
+test service::tests::test_canonical_service_config_default ... ok
+test service::tests::test_canonical_service_config_parameter_creation ... ok
+test service::tests::test_canonical_service_info_builder_chaining ... ok
+test service::tests::test_canonical_service_info_default ... ok
+test service::tests::test_canonical_service_info_new ... ok
+test service::tests::test_canonical_service_info_serialization ... ok
+test service::tests::test_canonical_service_info_with_capability ... ok
+test service::tests::test_canonical_service_info_with_dependency ... ok
+test service::tests::test_canonical_service_info_with_description ... ok
+test service::tests::test_canonical_service_info_with_endpoint ... ok
+test service::tests::test_canonical_service_info_with_metadata ... ok
+test service::tests::test_canonical_service_info_with_multiple_capabilities ... ok
+test service::tests::test_canonical_service_info_with_multiple_dependencies ... ok
+test service::tests::test_canonical_service_info_with_multiple_endpoints ... ok
+test service::tests::test_canonical_service_info_with_multiple_metadata ... ok
+test service::tests::test_canonical_service_status_default ... ok
+test service::tests::test_canonical_service_status_serialization ... ok
+test service::tests::test_canonical_service_status_variants ... ok
+test service::tests::test_canonical_service_type_as_str_ai ... ok
+test service::tests::test_canonical_service_type_as_str_auth ... ok
+test service::tests::test_canonical_service_type_as_str_cache ... ok
+test service::tests::test_canonical_service_type_as_str_compute ... ok
+test service::tests::test_canonical_service_type_as_str_custom ... ok
+test service::tests::test_canonical_service_type_as_str_database ... ok
+test service::tests::test_canonical_service_type_as_str_grpc ... ok
+test service::tests::test_canonical_service_type_as_str_message_queue ... ok
+test service::tests::test_canonical_service_type_as_str_monitoring ... ok
+test service::tests::test_canonical_service_type_as_str_storage ... ok
+test service::tests::test_canonical_service_type_as_str_web ... ok
+test service::tests::test_canonical_service_type_equality ... ok
+test service::tests::test_canonical_service_type_default ... ok
+test service::tests::test_canonical_service_type_serialization ... ok
+test service::tests::test_service_metrics_creation ... ok
+test service::tests::test_service_metrics_default ... ok
+test traits::tests::test_detailed_health_info_creation ... ok
+test service::tests::test_service_metrics_serialization ... ok
+test traits::tests::test_health_status_creation ... ok
+test traits::tests::test_health_status_default ... ok
+test traits::tests::test_detailed_health_info_serialization ... ok
+test traits::tests::test_metric_value_creation ... ok
+test traits::tests::test_service_instance_status_default ... ok
+test traits::tests::test_service_instance_status_display ... ok
+test traits::tests::test_service_instance_status_equality ... ok
+test traits::tests::test_metric_value_serialization ... ok
+test types::canonical::tests::test_canonical_address ... ok
+test types::canonical::tests::test_canonical_node_type ... ok
+test types::canonical::tests::test_canonical_request ... ok
+test traits::tests::test_service_instance_status_serialization ... ok
+test types::canonical::tests::test_canonical_endpoint ... ok
+test zero_copy::tests::test_shareable_trait ... ok
+test types::hooks::tests::test_allows_continue ... ok
+test zero_copy::tests::test_smart_cow ... ok
+test types::hooks::tests::test_hook_error_handling_default ... ok
+test types::hooks::tests::test_retries_on_error ... ok
+test types::hooks::tests::test_stops_on_error ... ok
+test types::severity::tests::test_error_severity_ordering ... ok
+test types::severity::tests::test_error_severity_is_critical ... ok
+test zero_copy::tests::test_utility_functions ... ok
+test zero_copy::tests::test_shared_creation ... ok
+test types::severity::tests::test_error_severity_priority ... ok
+test types::severity::tests::test_error_severity_requires_immediate_attention ... ok
+test types::severity::tests::test_warning_severity_ordering ... ok
+test types::canonical::tests::test_canonical_response ... ok
+
+test result: ok. 165 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/songbird_universal-65da9bed3a12e6f8)
+
+running 434 tests
+test adapters::ai::tests::health::test_ai_health_clone ... ok
+test adapters::ai::tests::health::test_ai_degraded ... ok
+test adapters::ai::tests::health::test_ai_health_equality ... ok
+test adapters::ai::tests::health::test_ai_health_deserialization ... ok
+test adapters::ai::tests::health::test_ai_health_serialization ... ok
+test adapters::ai::tests::health::test_ai_overloaded ... ok
+test adapters::ai::tests::health::test_health_status_degraded_gpu ... ok
+test adapters::ai::tests::health::test_health_status_degraded_latency ... ok
+test adapters::ai::tests::health::test_health_status_overloaded_high_gpu ... ok
+test adapters::ai::tests::health::test_health_status_overloaded_high_latency ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_calculations ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_clone ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_debug_format ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_deserialization ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_edge_case_2000ms ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_edge_case_98_percent ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_high_gpu_boundary ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_high_latency_boundary ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_max_values ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_perfect_conditions ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_zero_values ... ok
+test adapters::ai::tests::metrics::test_ai_metrics_serialization ... ok
+test adapters::ai::tests::model_types::test_model_type_all_variants ... ok
+test adapters::ai::tests::model_types::test_model_type_clone ... ok
+test adapters::ai::tests::model_types::test_model_type_debug ... ok
+test adapters::ai::tests::model_types::test_model_type_deserialization ... ok
+test adapters::ai::tests::model_types::test_model_type_equality ... ok
+test adapters::ai::tests::model_types::test_model_type_serialization ... ok
+test adapters::compute::tests::tests::test_compute_metrics_all_zero ... ok
+test adapters::compute::tests::tests::test_compute_metrics_calculations ... ok
+test adapters::compute::tests::tests::test_compute_metrics_perfect_conditions ... ok
+test adapters::compute::tests::tests::test_health_status_boundary_95_cpu ... ok
+test adapters::compute::tests::tests::test_health_status_boundary_95_memory ... ok
+test adapters::compute::tests::tests::test_compute_metrics_serialization ... ok
+test adapters::compute::tests::tests::test_health_status_degraded_cpu ... ok
+test adapters::compute::tests::tests::test_health_status_degraded_memory ... ok
+test adapters::compute::tests::tests::test_health_status_equality ... ok
+test adapters::compute::tests::tests::test_health_status_serialization ... ok
+test adapters::compute::tests::tests::test_health_status_unhealthy_cpu ... ok
+test adapters::compute::tests::tests::test_health_status_unhealthy_memory ... ok
+test adapters::compute::tests::tests::test_high_load_cpu_boundary ... ok
+test adapters::compute::tests::tests::test_high_load_detection ... ok
+test adapters::compute::tests::tests::test_high_load_memory_boundary ... ok
+test adapters::compute::tests::tests::test_high_load_queued_jobs_boundary ... ok
+test adapters::compute::tests::tests::test_memory_usage_zero_total ... ok
+test adapters::security::tests::test_adapter_endpoint_with_trailing_slash ... ok
+test adapters::security::tests::test_auth_result_all_variants_unique ... ok
+test adapters::security::tests::test_auth_result_clone ... ok
+test adapters::security::tests::test_auth_result_debug ... ok
+test adapters::security::tests::test_auth_result_deserialization ... ok
+test adapters::security::tests::test_auth_result_equality ... ok
+test adapters::security::tests::test_auth_result_expired_variant ... ok
+test adapters::security::tests::test_auth_result_invalid_variant ... ok
+test adapters::security::tests::test_auth_result_roundtrip_serialization ... ok
+test adapters::security::tests::test_auth_result_serialization ... ok
+test adapters::security::tests::test_auth_result_variants ... ok
+test adapters::security::tests::test_security_health_boundary_cases ... ok
+test adapters::security::tests::test_security_health_clone ... ok
+test adapters::security::tests::test_security_health_copy_trait ... ok
+test adapters::security::tests::test_security_health_critical_high_blocked_ips ... ok
+test adapters::security::tests::test_security_health_critical_high_failed_attempts ... ok
+test adapters::security::tests::test_security_health_critical_low_score ... ok
+test adapters::security::tests::test_security_health_debug ... ok
+test adapters::security::tests::test_security_health_deserialization ... ok
+test adapters::security::tests::test_security_health_equality ... ok
+test adapters::security::tests::test_security_health_roundtrip_serialization ... ok
+test adapters::security::tests::test_security_health_serialization ... ok
+test adapters::security::tests::test_security_health_warning_moderate_score ... ok
+test adapters::security::tests::test_security_metrics_boundary_score_0_5_with_no_attack ... ok
+test adapters::security::tests::test_security_metrics_calculations ... ok
+test adapters::security::tests::test_security_metrics_clone ... ok
+test adapters::security::tests::test_security_metrics_combined_attack_conditions ... ok
+test adapters::security::tests::test_security_metrics_critical_due_to_score_only ... ok
+test adapters::security::tests::test_security_metrics_debug ... ok
+test adapters::security::tests::test_security_metrics_deserialization ... ok
+test adapters::security::tests::test_security_metrics_edge_case_exactly_101_failed_attempts ... ok
+test adapters::security::tests::test_security_metrics_edge_case_exactly_50_blocked_ips ... ok
+test adapters::security::tests::test_security_metrics_edge_case_exactly_50_failed_attempts ... ok
+test adapters::security::tests::test_security_metrics_edge_case_exactly_51_blocked_ips ... ok
+test adapters::security::tests::test_security_metrics_edge_case_exactly_51_failed_attempts ... ok
+test adapters::security::tests::test_security_metrics_edge_case_score_below_0_7 ... ok
+test adapters::security::tests::test_security_metrics_edge_case_score_exactly_0_7 ... ok
+test adapters::security::tests::test_security_metrics_max_values ... ok
+test adapters::security::tests::test_security_metrics_roundtrip_serialization ... ok
+test adapters::security::tests::test_security_metrics_serialization ... ok
+test adapters::security::tests::test_security_metrics_warning_score_0_69_with_50_attempts ... ok
+test adapters::security::tests::test_security_metrics_warning_with_high_score_but_elevated_attempts ... ok
+test adapters::security::tests::test_security_metrics_with_negative_score ... ok
+test adapters::security::tests::test_security_metrics_with_score_above_1 ... ok
+test adapters::security::tests::test_security_metrics_zero_values ... ok
+test adapters::security::tests::test_security_under_attack ... ok
+test adapters::security::tests::test_security_warning ... ok
+test adapters::security::tests::test_adapter_chained_timeout_configuration ... ok
+test adapters::compute::tests::tests::test_adapter_creation ... ok
+test adapters::ai::tests::adapter::test_adapter_chained_timeout ... ok
+test adapters::ai::tests::adapter::test_adapter_debug_format ... ok
+test adapters::security::tests::test_adapter_with_timeout ... ok
+test adapters::security::tests::test_adapter_endpoint_access ... ok
+test adapters::storage::tests::health::test_health_status_boundary_500ms_write ... ok
+test adapters::storage::tests::health::test_health_status_boundary_95_usage ... ok
+test adapters::storage::tests::health::test_health_status_critical_high_usage ... ok
+test adapters::storage::tests::health::test_health_status_critical_high_write_latency ... ok
+test adapters::storage::tests::health::test_health_status_warning_high_latency ... ok
+test adapters::storage::tests::health::test_health_status_warning_high_usage ... ok
+test adapters::storage::tests::health::test_storage_health_clone ... ok
+test adapters::storage::tests::health::test_storage_health_debug ... ok
+test adapters::storage::tests::health::test_storage_health_deserialization ... ok
+test adapters::storage::tests::health::test_storage_health_equality ... ok
+test adapters::storage::tests::health::test_storage_health_serialization ... ok
+test adapters::storage::tests::health::test_storage_nearly_full ... ok
+test adapters::storage::tests::health::test_storage_warning ... ok
+test adapters::storage::tests::metrics::test_high_read_latency_boundary ... ok
+test adapters::storage::tests::metrics::test_high_write_latency_boundary ... ok
+test adapters::storage::tests::metrics::test_nearly_full_boundary ... ok
+test adapters::storage::tests::metrics::test_storage_100_percent_full ... ok
+test adapters::storage::tests::metrics::test_storage_metrics_all_zero ... ok
+test adapters::storage::tests::metrics::test_storage_metrics_calculations ... ok
+test adapters::storage::tests::metrics::test_storage_metrics_clone ... ok
+test adapters::storage::tests::metrics::test_storage_metrics_debug ... ok
+test adapters::storage::tests::metrics::test_storage_metrics_deserialization ... ok
+test adapters::storage::tests::metrics::test_storage_metrics_edge_case_85_percent ... ok
+test adapters::storage::tests::metrics::test_storage_metrics_edge_case_86_percent ... ok
+test adapters::storage::tests::metrics::test_storage_metrics_max_values ... ok
+test adapters::storage::tests::metrics::test_storage_metrics_perfect_conditions ... ok
+test adapters::storage::tests::metrics::test_storage_metrics_serialization ... ok
+test adapters::storage::tests::metrics::test_storage_usage_zero_capacity ... ok
+test adapters::test_helpers::tests::test_assert_deserializes_from ... ok
+test adapters::test_helpers::tests::test_assert_roundtrip ... ok
+test adapters::test_helpers::tests::test_assert_serializes_containing ... ok
+test adapters::test_helpers::tests::test_assert_serializes_to ... ok
+test capabilities::adapter::tests::test_capability_provider_search_deduplication ... ok
+test capabilities::adapter::tests::test_config_discovery_timeout ... ok
+test capabilities::adapter::tests::test_disconnect_from_nonexistent_primal ... ok
+test capabilities::adapter::tests::test_discover_capability_providers_from_env_multiple ... ok
+test capabilities::adapter::tests::test_discover_capability_providers_network_disabled ... ok
+test capabilities::adapter::tests::test_endpoint_extraction_variations ... ok
+test capabilities::adapter::tests::test_extract_primal_name_from_endpoint ... ok
+test capabilities::adapter::tests::test_find_capability_providers_empty ... ok
+test capabilities::adapter::tests::test_find_capability_providers_from_env ... ok
+test capabilities::adapter::tests::test_get_active_connections_empty ... ok
+test capabilities::adapter::tests::test_infer_capability_providers_ai ... ok
+test capabilities::adapter::tests::test_infer_capability_providers_compute ... ok
+test capabilities::adapter::tests::test_infer_capability_providers_security ... ok
+test capabilities::adapter::tests::test_infer_capability_providers_storage ... ok
+test capabilities::adapter::tests::test_infer_primal_type_from_name ... ok
+test capabilities::adapter::tests::test_new_adapter_creation ... ok
+test capabilities::adapter::tests::test_primal_provides_capability ... ok
+test capabilities::adapter::tests::test_primal_provides_capability_edge_cases ... ok
+test capabilities::adapter::tests::test_primal_type_inference_patterns ... ok
+test capabilities::adapter::tests::test_update_connection_health_empty ... ok
+test capabilities::tests::test_adapter_creation ... ok
+test capabilities::tests::test_capability_equality ... ok
+test capabilities::tests::test_capability_error_capability_unavailable ... ok
+test capabilities::tests::test_capability_error_network ... ok
+test capabilities::tests::test_capability_error_parse ... ok
+test capabilities::tests::test_capability_error_primal_not_found ... ok
+test capabilities::tests::test_capability_inequality ... ok
+test capabilities::tests::test_capability_registry_default ... ok
+test capabilities::tests::test_capability_structure ... ok
+test capabilities::tests::test_capability_with_custom_qos ... ok
+test capabilities::tests::test_capability_with_parameters ... ok
+test capabilities::tests::test_connection_health_equality ... ok
+test capabilities::tests::test_connection_health_variants ... ok
+test capabilities::tests::test_discovery_config_custom ... ok
+test capabilities::tests::test_discovery_config_default ... ok
+test capabilities::tests::test_find_capability_providers_empty ... ok
+test capabilities::tests::test_get_active_connections_empty ... ok
+test capabilities::tests::test_get_best_primal_for_capability_none ... ok
+test capabilities::tests::test_primal_connection_structure ... ok
+test capabilities::tests::test_primal_type_equality ... ok
+test capabilities::tests::test_primal_type_variants ... ok
+test capabilities::tests::test_qos_metrics_default ... ok
+test capabilities::tests::test_qos_metrics_equality ... ok
+test capabilities::tests::test_resource_metrics_default ... ok
+test capabilities::tests::test_resource_metrics_equality ... ok
+test circuit_breaker::tests::test_circuit_breaker_starts_closed ... ok
+test adapters::security::tests::test_adapter_very_long_timeout ... ok
+test adapters::compute::tests::tests::test_adapter_default_timeout ... ok
+test circuit_breaker::tests::test_circuit_opens_after_failures ... ok
+test adapters::security::tests::test_adapter_builder_pattern_immutability ... ok
+test circuit_breaker::tests::test_reset ... ok
+test circuit_breaker::tests::test_success_in_closed_resets_failures ... ok
+test discovery::tests::test_discover_all_primals_with_no_mechanisms ... ok
+test discovery::tests::test_discovered_primal_clone ... ok
+test discovery::tests::test_discovered_primal_different_health_states ... ok
+test discovery::tests::test_discovered_primal_structure ... ok
+test discovery::tests::test_discovered_primal_with_capabilities ... ok
+test discovery::tests::test_discovered_primal_with_metadata ... ok
+test discovery::tests::test_discovered_primal_with_multiple_capabilities ... ok
+test discovery::tests::test_discovery_config_clone ... ok
+test discovery::tests::test_discovery_config_custom ... ok
+test discovery::tests::test_discovery_config_default ... ok
+test discovery::tests::test_discovery_config_with_custom_timeout ... ok
+test discovery::tests::test_discovery_config_with_very_long_timeout ... ok
+test discovery::tests::test_discovery_config_with_very_short_timeout ... ok
+test adapters::storage::tests::adapter::test_adapter_chained_timeout ... ok
+test discovery::tests::test_discovery_error_as_error_trait ... ok
+test discovery::tests::test_discovery_creation ... ok
+test discovery::tests::test_discovery_error_configuration ... ok
+test discovery::tests::test_discovery_error_display_network ... ok
+test discovery::tests::test_discovery_error_display_timeout ... ok
+test discovery::tests::test_discovery_error_display_unreachable ... ok
+test discovery::tests::test_discovery_error_network ... ok
+test discovery::tests::test_discovery_error_unreachable ... ok
+test discovery::tests::test_discovery_mechanisms_all_disabled ... ok
+test discovery::tests::test_discovery_mechanisms_all_enabled ... ok
+test discovery::tests::test_discovery_mechanisms_clone ... ok
+test discovery::tests::test_discovery_mechanisms_selective ... ok
+test discovery::tests::test_discovery_method_all_variants ... ok
+test discovery::tests::test_discovery_method_equality ... ok
+test discovery::tests::test_discovery_method_variants ... ok
+test discovery::tests::test_find_primals_with_capability_empty ... ok
+test discovery::tests::test_get_discovered_primals_empty ... ok
+test discovery::tests::test_primal_health_all_states ... ok
+test discovery::tests::test_primal_health_equality ... ok
+test discovery::tests::test_primal_health_variants ... ok
+test discovery::tests::test_primal_type_creation ... ok
+test discovery::tests::test_discovery_error_timeout ... ok
+test adapters::security::tests::test_adapter_timeout_configuration ... ok
+test federated_capability_adapter::tests::test_adapter_new_has_no_federation ... ok
+test circuit_breaker::tests::test_circuit_closes_after_successes ... ok
+test federated_capability_adapter::tests::test_federated_adapter_default ... ok
+test adapters::security::tests::test_adapter_default_timeout ... ok
+test federated_capability_adapter::tests::test_federated_adapter_without_federation ... ok
+test circuit_breaker::tests::test_circuit_half_open_after_timeout ... ok
+test circuit_breaker::tests::test_half_open_reopens_on_failure ... ok
+test adapters::ai::tests::adapter::test_adapter_custom_timeout ... ok
+test adapters::compute::tests::tests::test_adapter_debug_format ... ok
+test adapters::ai::tests::adapter::test_adapter_endpoint_access ... ok
+test federated_capability_adapter::tests::test_find_capability_providers_empty_local ... ok
+test federated_capability_adapter::tests::test_find_capability_providers_multiple_local ... ok
+test adapters::security::tests::test_adapter_endpoint_with_path ... ok
+test load_balancer::tests::test_all_endpoints_unavailable ... ok
+test load_balancer::tests::test_empty_endpoints ... ok
+test load_balancer::tests::test_endpoint_recovery ... ok
+test load_balancer::tests::test_health_based_selection ... ok
+test load_balancer::tests::test_health_score_update ... ok
+test load_balancer::tests::test_least_loaded_selection ... ok
+test load_balancer::tests::test_mark_endpoint_unavailable ... ok
+test load_balancer::tests::test_round_robin_load_balancing ... ok
+test adapters::ai::tests::adapter::test_adapter_with_timeout ... ok
+test adapters::ai::tests::adapter::test_adapter_creation ... ok
+test adapters::security::tests::test_adapter_zero_timeout ... ok
+test adapters::compute::tests::tests::test_adapter_endpoint_access ... ok
+test sovereignty::adapter::tests::test_adapter_stats_structure ... ok
+test adapters::storage::tests::adapter::test_adapter_debug_format ... ok
+test adapters::security::tests::test_adapter_creation ... ok
+test adapters::compute::tests::tests::test_adapter_with_timeout ... ok
+test federated_capability_adapter::tests::test_federated_adapter_with_federation ... ok
+test adapters::ai::tests::adapter::test_adapter_default_timeout ... ok
+test adapters::storage::tests::adapter::test_adapter_with_timeout ... ok
+test adapters::storage::tests::adapter::test_adapter_endpoint_access ... ok
+test adapters::storage::tests::adapter::test_adapter_default_timeout ... ok
+test federated_capability_adapter::tests::test_federated_adapter_clone ... ok
+test federated_capability_adapter::tests::test_federation_client_with_port ... ok
+test federated_capability_adapter::tests::test_federation_client_construction ... ok
+test adapters::storage::tests::adapter::test_adapter_creation ... ok
+test federated_capability_adapter::tests::test_federation_client_new ... ok
+test sovereignty::adapter::tests::test_adapter_creation_with_config ... ok
+test federated_capability_adapter::tests::test_adapter_builder_pattern ... ok
+test federated_capability_adapter::tests::test_federation_client_with_trailing_slash ... ok
+test sovereignty::adapter::tests::test_determine_compliance_level_boundary_50 ... ok
+test sovereignty::adapter::tests::test_determine_compliance_level_mostly_compliant ... ok
+test sovereignty::federation::tests::test_coordinate_request ... ok
+test sovereignty::federation::tests::test_coordinate_request_preserves_id ... ok
+test sovereignty::federation::tests::test_federation_manager_creation ... ok
+test sovereignty::federation::tests::test_federation_manager_default ... ok
+test sovereignty::federation::tests::test_get_capabilities_returns_reference ... ok
+test sovereignty::federation::tests::test_register_capability ... ok
+test sovereignty::federation::tests::test_register_multiple_capabilities ... ok
+test sovereignty::network_optimizer::tests::test_assess_path_security_level_high ... ok
+test sovereignty::network_optimizer::tests::test_assess_path_security_level_maximum ... ok
+test sovereignty::network_optimizer::tests::test_assess_path_security_level_medium ... ok
+test sovereignty::network_optimizer::tests::test_assess_path_security_level_minimal ... ok
+test sovereignty::network_optimizer::tests::test_calculate_combined_path_score ... ok
+test sovereignty::network_optimizer::tests::test_calculate_combined_path_score_equal_weights ... ok
+test sovereignty::network_optimizer::tests::test_count_enabled_strategies_all ... ok
+test sovereignty::network_optimizer::tests::test_count_enabled_strategies_none ... ok
+test sovereignty::network_optimizer::tests::test_count_enabled_strategies_partial ... ok
+test sovereignty::network_optimizer::tests::test_default_trait ... ok
+test sovereignty::adapter::tests::test_determine_compliance_level_boundary_90 ... ok
+test sovereignty::network_optimizer::tests::test_get_optimization_stats ... ok
+test sovereignty::network_optimizer::tests::test_enhance_security ... ok
+test sovereignty::network_optimizer::tests::test_network_effects_optimizer_new ... ok
+test sovereignty::network_optimizer::tests::test_network_effects_optimizer_with_config ... ok
+test sovereignty::network_optimizer::tests::test_optimization_config_default ... ok
+test sovereignty::network_optimizer::tests::test_optimization_stats_strategies_count ... ok
+test sovereignty::network_optimizer::tests::test_optimize_for_cost ... ok
+test sovereignty::network_optimizer::tests::test_optimize_for_latency ... ok
+test sovereignty::network_optimizer::tests::test_optimize_for_network_effects_empty ... ok
+test sovereignty::network_optimizer::tests::test_optimize_for_network_effects_single_path ... ok
+test sovereignty::network_optimizer::tests::test_optimize_for_throughput ... ok
+test sovereignty::network_optimizer::tests::test_optimize_segment_for_network_effects ... ok
+test sovereignty::router_comprehensive_tests::test_different_service_types ... ok
+test sovereignty::router_comprehensive_tests::test_each_service_gets_candidate_path ... ok
+test sovereignty::router_comprehensive_tests::test_find_sovereignty_aware_paths_empty_services ... ok
+test sovereignty::router_comprehensive_tests::test_find_sovereignty_aware_paths_multiple_services ... ok
+test sovereignty::router_comprehensive_tests::test_find_sovereignty_aware_paths_single_service ... ok
+test sovereignty::router_comprehensive_tests::test_find_sovereignty_aware_paths_sorted_by_score ... ok
+test sovereignty::router_comprehensive_tests::test_high_sovereignty_preference_filters_paths ... ok
+test sovereignty::router_comprehensive_tests::test_large_number_of_services ... ok
+test sovereignty::router_comprehensive_tests::test_path_finding_completes_quickly ... ok
+test sovereignty::router_comprehensive_tests::test_path_segments_have_security_capabilities ... ok
+test sovereignty::router_comprehensive_tests::test_path_segments_reference_services ... ok
+test sovereignty::router_comprehensive_tests::test_paths_have_valid_scores ... ok
+test sovereignty::router_comprehensive_tests::test_sovereignty_level_scores_are_consistent ... ok
+test sovereignty::router_comprehensive_tests::test_sovereignty_preferences_clone ... ok
+test sovereignty::router_comprehensive_tests::test_sovereignty_preferences_default ... ok
+test sovereignty::router_comprehensive_tests::test_sovereignty_preferences_with_all_security_capabilities ... ok
+test sovereignty::router_comprehensive_tests::test_sovereignty_router_new ... ok
+test sovereignty::router_comprehensive_tests::test_sovereignty_router_with_preferences ... ok
+test sovereignty::router_comprehensive_tests::test_sovereignty_router_default ... ok
+test sovereignty::router_comprehensive_tests::test_sovereignty_weight_boundary_values ... ok
+test sovereignty::router_comprehensive_tests::test_sovereignty_weight_affects_combined_score ... ok
+test sovereignty::types::tests::test_decision_factor_creation ... ok
+test sovereignty::types::tests::test_federation_capability_creation ... ok
+test sovereignty::types::tests::test_performance_characteristics_creation ... ok
+test sovereignty::types::tests::test_routing_decision_metadata_creation ... ok
+test sovereignty::types::tests::test_expected_network_effect_creation ... ok
+test sovereignty::types::tests::test_routing_path_creation ... ok
+test sovereignty::types::tests::test_security_assessment_creation ... ok
+test sovereignty::types::tests::test_security_capability_equality ... ok
+test sovereignty::types::tests::test_security_level_equality ... ok
+test sovereignty::types::tests::test_sovereignty_adapter_config_custom ... ok
+test sovereignty::types::tests::test_sovereignty_adapter_config_default ... ok
+test sovereignty::types::tests::test_sovereignty_assessment_creation ... ok
+test sovereignty::types::tests::test_sovereignty_aware_routing_decision_creation ... ok
+test sovereignty::types::tests::test_sovereignty_level_scores ... ok
+test sovereignty::types::tests::test_sovereignty_risk_creation ... ok
+test types::capability::tests::test_capability_requirement_creation ... ok
+test types::capability::tests::test_discovered_capability_creation ... ok
+test types::capability::tests::test_discovered_capability_with_empty_qos ... ok
+test types::capability::tests::test_discovery_filters_default ... ok
+test types::capability::tests::test_discovery_filters_with_criteria ... ok
+test types::capability::tests::test_health_status_all_variants ... ok
+test types::capability::tests::test_health_status_eq ... ok
+test types::capability::tests::test_health_status_default ... ok
+test types::capability::tests::test_health_status_variants ... ok
+test types::capability::tests::test_primal_capability_creation ... ok
+test types::capability::tests::test_primal_type_clone ... ok
+test types::capability::tests::test_primal_type_creation ... ok
+test types::capability::tests::test_primal_type_default ... ok
+test types::capability::tests::test_primal_type_clone_independence ... ok
+test types::capability::tests::test_primal_type_display ... ok
+test types::capability::tests::test_primal_type_empty_string ... ok
+test types::capability::tests::test_primal_type_equality ... ok
+test types::capability::tests::test_primal_type_from_string ... ok
+test types::capability::tests::test_primal_type_very_long_name ... ok
+test types::capability::tests::test_primal_type_unicode_name ... ok
+test types::capability::tests::test_primal_type_with_special_characters ... ok
+test types::capability::tests::test_qos_metrics_all_none ... ok
+test types::capability::tests::test_qos_metrics_default ... ok
+test types::capability::tests::test_qos_metrics_partial_eq ... ok
+test types::capability::tests::test_qos_metrics_boundary_values ... ok
+test types::capability::tests::test_qos_metrics_with_values ... ok
+test types::capability::tests::test_security_level_clone_and_equality ... ok
+test types::capability::tests::test_security_level_default ... ok
+test types::capability::tests::test_security_level_ordering ... ok
+test federated_capability_adapter::tests::test_federation_client_https ... ok
+test types::config::tests::test_circuit_breaker_config_clone ... ok
+test types::capability::tests::test_service_capability_creation ... ok
+test types::capability::tests::test_security_level_variants ... ok
+test types::config::tests::test_circuit_breaker_config_custom ... ok
+test types::config::tests::test_circuit_breaker_config_default ... ok
+test types::config::tests::test_feature_flags_clone ... ok
+test types::config::tests::test_health_check_config_clone ... ok
+test types::config::tests::test_health_check_config_default ... ok
+test types::config::tests::test_load_balancing_config_clone ... ok
+test types::config::tests::test_load_balancing_config_custom ... ok
+test types::config::tests::test_feature_flags_creation ... ok
+test types::config::tests::test_health_check_config_custom ... ok
+test types::config::tests::test_load_balancing_config_default ... ok
+test types::config::tests::test_load_balancing_strategy_variants ... ok
+test types::config::tests::test_retry_config_custom ... ok
+test types::config::tests::test_retry_config_default ... ok
+test types::config::tests::test_security_config_creation ... ok
+test types::config::tests::test_retry_config_clone ... ok
+test types::service::tests::test_registered_service_with_heartbeat ... ok
+test types::service::tests::test_resource_spec_creation ... ok
+test types::config::tests::test_load_balancing_strategy_default ... ok
+test types::service::tests::test_registered_service_creation ... ok
+test sovereignty::adapter::tests::test_determine_compliance_level_fully_compliant ... ok
+test types::service::tests::test_resource_spec_optional_fields ... ok
+test types::service::tests::test_service_endpoint_default ... ok
+test types::service::tests::test_service_endpoint_equality ... ok
+test types::service::tests::test_service_event_creation ... ok
+test types::service::tests::test_service_endpoint_custom ... ok
+test types::service::tests::test_service_health_creation ... ok
+test types::service::tests::test_service_identification_creation ... ok
+test types::service::tests::test_service_info_creation ... ok
+test types::service::tests::test_service_health_with_qos ... ok
+test types::service::tests::test_service_info_clone ... ok
+test unified_adapter::tests::test_capability_registry_default ... ok
+test federated_capability_adapter::tests::test_adapter_multiple_with_federation_calls ... ok
+test sovereignty::adapter::tests::test_adapter_debug_trait ... ok
+test sovereignty::adapter::tests::test_determine_compliance_level_partially_compliant ... ok
+test unified_adapter::tests::test_error_types_are_send_and_sync ... ok
+test sovereignty::adapter::tests::test_adapter_creation_default ... ok
+test sovereignty::adapter::tests::test_adapter_config_custom_settings ... ok
+test federated_capability_adapter::tests::test_find_capability_providers_preserves_local_on_federation_failure ... ok
+test sovereignty::adapter::tests::test_determine_compliance_level_non_compliant ... ok
+test sovereignty::adapter::tests::test_get_config ... ok
+test unified_adapter::tests::test_health_status_equality ... ok
+test unified_adapter::tests::test_registry_stats_creation ... ok
+test unified_adapter::tests::test_registry_stats_serialization ... ok
+test sovereignty::adapter::tests::test_update_config ... ok
+test sovereignty::adapter::tests::test_get_stats_with_disabled_features ... ok
+test unified_adapter::tests::test_service_connection_creation ... ok
+test unified_adapter::tests::test_unified_adapter_config_default ... ok
+test sovereignty::adapter::tests::test_determine_compliance_level_boundary_70 ... ok
+test unified_adapter::tests::test_universal_adapter_error_display ... ok
+test sovereignty::adapter::tests::test_get_stats ... ok
+test unified_adapter::tests::test_get_registry_stats_empty ... ok
+test sovereignty::adapter::tests::test_generate_basic_paths_empty_services ... ok
+test sovereignty::adapter::tests::test_select_best_path_single_path ... ok
+test sovereignty::adapter::tests::test_select_best_path_empty_list ... ok
+test unified_adapter::tests::test_concurrent_registry_access ... ok
+test unified_adapter::tests::test_concurrent_write_operations ... ok
+test sovereignty::adapter::tests::test_config_preference_weight_boundary ... ok
+test sovereignty::adapter::tests::test_config_timeout_very_short ... ok
+test unified_adapter::tests::test_capability_registry_indexing ... ok
+test unified_adapter::tests::test_adapter_is_clonable ... ok
+test unified_adapter::tests::test_route_request_no_providers ... ok
+test unified_adapter::tests::test_route_request_missing_capability_type ... ok
+test sovereignty::adapter::tests::test_select_best_path_multiple_paths ... ok
+test unified_adapter::tests::test_unified_adapter_creation ... ok
+test unified_adapter::tests::test_find_capability_providers_empty_registry ... ok
+test unified_adapter::tests::test_find_capability_providers_multiple ... ok
+test unified_adapter::tests::test_find_capability_providers_with_data ... ok
+test unified_adapter::tests::test_adapter_with_custom_config ... ok
+test unified_adapter::tests::test_get_registry_stats_with_services ... ok
+test unified_adapter::tests::test_discover_services_empty_endpoints ... ok
+test adapters::security::tests::test_adapter_with_various_endpoints ... ok
+test sovereignty::adapter::tests::test_multiple_adapters_independent ... ok
+
+test result: ok. 434 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.98s
+

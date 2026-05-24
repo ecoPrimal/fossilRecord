@@ -1,0 +1,107 @@
+2026-01-31T13:08:15.395149Z  INFO 🔍 Discovering self-knowledge from environment...
+2026-01-31T13:08:15.395206Z  INFO 🔍 Discovering primal self-knowledge...
+2026-01-31T13:08:15.395216Z  WARN No PRIMAL_NAME set, using default 'beardog'
+2026-01-31T13:08:15.395234Z  INFO ╔════════════════════════════════════════════════════════════════════╗
+2026-01-31T13:08:15.395239Z  INFO ║                                                                    ║
+2026-01-31T13:08:15.395244Z  INFO ║         🐻 beardog v0.9.0                                        ║
+2026-01-31T13:08:15.395256Z  INFO ║                                                                    ║
+2026-01-31T13:08:15.395261Z  INFO ║              Security & Cryptography Primal                       ║
+2026-01-31T13:08:15.395265Z  INFO ║                                                                    ║
+2026-01-31T13:08:15.395270Z  INFO ╚════════════════════════════════════════════════════════════════════╝
+
+2026-01-31T13:08:15.395274Z  INFO 🎯 Self-Knowledge:
+2026-01-31T13:08:15.395278Z  INFO    Name: beardog
+2026-01-31T13:08:15.395283Z  INFO    Version: 0.9.0
+2026-01-31T13:08:15.395287Z  INFO    Mode: server (daemon: false)
+2026-01-31T13:08:15.395291Z  INFO    Capabilities: 3 discovered
+2026-01-31T13:08:15.395296Z  INFO       • SecureTunneling
+2026-01-31T13:08:15.395300Z  INFO       • GeneticLineage
+2026-01-31T13:08:15.395304Z  INFO       • Cryptography
+2026-01-31T13:08:15.395308Z  INFO 
+2026-01-31T13:08:15.395312Z  INFO 🔐 Initializing HSM Manager...
+2026-01-31T13:08:15.395317Z  INFO    HSM Mode: software
+2026-01-31T13:08:15.395324Z  INFO 🔐 Auto-initializing HSM Manager (mode: software)
+2026-01-31T13:08:15.395344Z  INFO 🔐 Initializing Rust Software HSM
+2026-01-31T13:08:15.395351Z  INFO Creating pure Rust crypto provider
+2026-01-31T13:08:15.395356Z  INFO Creating memory protector with config: MemoryProtectionConfig { enable_protection: true, clear_on_drop: true }
+2026-01-31T13:08:15.395533Z  INFO ✅ Persistent audit storage initialized: "audit.log"
+2026-01-31T13:08:15.395572Z  INFO ✅ Rust Software HSM initialized successfully with Universal Crypto Provider
+2026-01-31T13:08:15.395580Z  INFO ✅ Software HSM initialized successfully
+2026-01-31T13:08:15.395584Z  INFO 🎯 HSM Manager auto-initialization complete
+2026-01-31T13:08:15.395589Z  INFO ✅ HSM Manager initialized successfully
+
+2026-01-31T13:08:15.395594Z  INFO 🧬 Initializing Genetic Engine...
+2026-01-31T13:08:15.395598Z  INFO Initializing ecosystem genetic engine
+2026-01-31T13:08:15.395617Z  INFO ✅ Genetic Engine initialized
+
+2026-01-31T13:08:15.395623Z  INFO 👨‍👩‍👧‍👦 Family lineage seed detected
+2026-01-31T13:08:15.395628Z  INFO    Family ID: home
+2026-01-31T13:08:15.395632Z  INFO    Genetic siblings will auto-trust this family
+
+2026-01-31T13:08:15.395637Z  INFO 🛡️  Creating BTSP Provider...
+2026-01-31T13:08:15.395641Z  INFO 🐻 Initializing BearDog BTSP Provider with BirdSong genetics
+2026-01-31T13:08:15.395649Z  INFO 🔑 Generating software key: birdsong_master
+2026-01-31T13:08:15.395892Z  INFO ✅ Software key generated successfully: birdsong_master
+2026-01-31T13:08:15.395900Z  INFO 🐻🎵 Initializing BirdSongManager
+2026-01-31T13:08:15.395904Z  INFO 🧬 Initializing LineageChainManager
+2026-01-31T13:08:15.395909Z  INFO 🔐 Initializing LineageProofManager
+2026-01-31T13:08:15.395913Z  INFO 🔑 Initializing LineageKeyDerivation
+2026-01-31T13:08:15.395918Z  INFO 🎵 Initializing BirdSongEncryption
+2026-01-31T13:08:15.395922Z  INFO ✅ BirdSongManager initialized
+2026-01-31T13:08:15.395926Z  INFO ✅ BearDog BTSP Provider initialized with BirdSong genetics
+2026-01-31T13:08:15.395933Z  INFO ✅ BTSP Provider created
+
+2026-01-31T13:08:15.395937Z  INFO 🔌 Configuring Unix Socket IPC...
+2026-01-31T13:08:15.395969Z  INFO    Socket: /run/user/1000/biomeos/beardog.sock
+2026-01-31T13:08:15.395976Z  INFO    Source: /run/user/1000/biomeos/beardog.sock (XDG Runtime Directory - Tier 4)
+2026-01-31T13:08:15.395981Z  INFO    Family: usb_nucleus
+2026-01-31T13:08:15.395986Z  INFO    Node: usb_nucleus1
+2026-01-31T13:08:15.395990Z  INFO    PID: 4075898
+2026-01-31T13:08:15.396014Z  INFO 
+🔌 Creating Unix Socket IPC Server...
+2026-01-31T13:08:15.396024Z  INFO 🆔 Identity: family=usb_nucleus, node=usb_nucleus1
+2026-01-31T13:08:15.396039Z  INFO ✅ Unix Socket IPC Server created
+
+2026-01-31T13:08:15.396044Z  INFO 🚀 Starting Unix Socket Server...
+2026-01-31T13:08:15.396052Z  INFO    Waiting for socket readiness (atomic check)...
+2026-01-31T13:08:15.396093Z  INFO 🔌 Starting Unix socket IPC server: /run/user/1000/biomeos/beardog.sock
+2026-01-31T13:08:15.396154Z  INFO    Platform: Unix (filesystem)
+2026-01-31T13:08:15.396206Z  INFO 🐧 Unix socket path (filesystem): /run/user/1000/biomeos/beardog.sock
+2026-01-31T13:08:15.396286Z  INFO ✅ Unix socket bound: /run/user/1000/biomeos/beardog.sock
+2026-01-31T13:08:15.396302Z  INFO ✅ Unix socket IPC server listening: /run/user/1000/biomeos/beardog.sock
+2026-01-31T13:08:15.396310Z  INFO    Status: READY ✅ (atomic flag set)
+2026-01-31T13:08:15.398199Z  INFO ✅ Unix Socket Server started and ready
+2026-01-31T13:08:15.398210Z  INFO    ✨ Lock-free concurrent readiness verified!
+
+2026-01-31T13:08:15.398214Z  INFO 🌐 Registering with Discovery Service...
+2026-01-31T13:08:15.398224Z  INFO ℹ️  No Neural API socket found (checked env vars and 2 default paths)
+2026-01-31T13:08:15.398260Z  WARN ⚠️  No discovery service available (Neural API or Songbird): Connection error: Cannot connect to Songbird at /primal/songbird: No such file or directory (os error 2)
+2026-01-31T13:08:15.398267Z  WARN ⚠️  Discovery registration skipped (non-fatal): Connection error: Cannot connect to Songbird at /primal/songbird: No such file or directory (os error 2)
+2026-01-31T13:08:15.398271Z  WARN    BearDog will run without discovery service integration
+2026-01-31T13:08:15.398275Z  WARN    This is OK for standalone operation or development
+
+2026-01-31T13:08:15.398280Z  INFO ╔════════════════════════════════════════════════════════════════════╗
+2026-01-31T13:08:15.398285Z  INFO ║                                                                    ║
+2026-01-31T13:08:15.398289Z  INFO ║                  🎉 BearDog Server Ready! 🎉                      ║
+2026-01-31T13:08:15.398293Z  INFO ║                                                                    ║
+2026-01-31T13:08:15.398297Z  INFO ╚════════════════════════════════════════════════════════════════════╝
+
+2026-01-31T13:08:15.398301Z  INFO 📡 Endpoints:
+2026-01-31T13:08:15.398305Z  INFO    • Unix Socket: /run/user/1000/biomeos/beardog.sock
+2026-01-31T13:08:15.398309Z  INFO    • Protocol: JSON-RPC 2.0
+2026-01-31T13:08:15.398313Z  INFO    • Transport: Unix domain sockets
+2026-01-31T13:08:15.398316Z  INFO 
+🛡️  BTSP Capabilities:
+2026-01-31T13:08:15.398320Z  INFO    • contact_exchange
+2026-01-31T13:08:15.398324Z  INFO    • tunnel_establish
+2026-01-31T13:08:15.398327Z  INFO    • tunnel_encrypt / tunnel_decrypt
+2026-01-31T13:08:15.398331Z  INFO    • tunnel_status / tunnel_close
+2026-01-31T13:08:15.398334Z  INFO 
+⚡ Architecture:
+2026-01-31T13:08:15.398338Z  INFO    • 100% Pure Rust
+2026-01-31T13:08:15.398341Z  INFO    • Modern async/await (tokio)
+2026-01-31T13:08:15.398345Z  INFO    • Lock-free atomics (parking_lot)
+2026-01-31T13:08:15.398349Z  INFO    • Zero unsafe code
+2026-01-31T13:08:15.398352Z  INFO 
+🎯 Press Ctrl+C to shutdown gracefully...
+

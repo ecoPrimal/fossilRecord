@@ -1,0 +1,71 @@
+[2m2026-01-31T13:08:22.249463Z[0m [32m INFO[0m 🔍 Discovering self-knowledge from environment...
+[2m2026-01-31T13:08:22.249806Z[0m [32m INFO[0m 🔍 Discovering primal self-knowledge...
+[2m2026-01-31T13:08:22.249881Z[0m [33m WARN[0m No PRIMAL_NAME set, using default 'beardog'
+[2m2026-01-31T13:08:22.250035Z[0m [32m INFO[0m ╔════════════════════════════════════════════════════════════════════╗
+[2m2026-01-31T13:08:22.250078Z[0m [32m INFO[0m ║                                                                    ║
+[2m2026-01-31T13:08:22.250099Z[0m [32m INFO[0m ║         🐻 beardog v0.9.0                                        ║
+[2m2026-01-31T13:08:22.250183Z[0m [32m INFO[0m ║                                                                    ║
+[2m2026-01-31T13:08:22.250204Z[0m [32m INFO[0m ║              Security & Cryptography Primal                       ║
+[2m2026-01-31T13:08:22.250225Z[0m [32m INFO[0m ║                                                                    ║
+[2m2026-01-31T13:08:22.250241Z[0m [32m INFO[0m ╚════════════════════════════════════════════════════════════════════╝
+
+[2m2026-01-31T13:08:22.250259Z[0m [32m INFO[0m 🎯 Self-Knowledge:
+[2m2026-01-31T13:08:22.250274Z[0m [32m INFO[0m    Name: beardog
+[2m2026-01-31T13:08:22.250289Z[0m [32m INFO[0m    Version: 0.9.0
+[2m2026-01-31T13:08:22.250305Z[0m [32m INFO[0m    Mode: server (daemon: false)
+[2m2026-01-31T13:08:22.250324Z[0m [32m INFO[0m    Capabilities: 3 discovered
+[2m2026-01-31T13:08:22.250345Z[0m [32m INFO[0m       • SecureTunneling
+[2m2026-01-31T13:08:22.250364Z[0m [32m INFO[0m       • GeneticLineage
+[2m2026-01-31T13:08:22.250378Z[0m [32m INFO[0m       • Cryptography
+[2m2026-01-31T13:08:22.250398Z[0m [32m INFO[0m 
+[2m2026-01-31T13:08:22.250421Z[0m [32m INFO[0m 🔐 Initializing HSM Manager...
+[2m2026-01-31T13:08:22.250449Z[0m [32m INFO[0m    HSM Mode: software
+[2m2026-01-31T13:08:22.250488Z[0m [32m INFO[0m 🔐 Auto-initializing HSM Manager (mode: software)
+[2m2026-01-31T13:08:22.250533Z[0m [32m INFO[0m 🔐 Initializing Rust Software HSM
+[2m2026-01-31T13:08:22.250556Z[0m [32m INFO[0m Creating pure Rust crypto provider
+[2m2026-01-31T13:08:22.250579Z[0m [32m INFO[0m Creating memory protector with config: MemoryProtectionConfig { enable_protection: true, clear_on_drop: true }
+[2m2026-01-31T13:08:22.253089Z[0m [32m INFO[0m ✅ Persistent audit storage initialized: "audit.log"
+[2m2026-01-31T13:08:22.253802Z[0m [32m INFO[0m ✅ Rust Software HSM initialized successfully with Universal Crypto Provider
+[2m2026-01-31T13:08:22.253907Z[0m [32m INFO[0m ✅ Software HSM initialized successfully
+[2m2026-01-31T13:08:22.253933Z[0m [32m INFO[0m 🎯 HSM Manager auto-initialization complete
+[2m2026-01-31T13:08:22.253964Z[0m [32m INFO[0m ✅ HSM Manager initialized successfully
+
+[2m2026-01-31T13:08:22.253982Z[0m [32m INFO[0m 🧬 Initializing Genetic Engine...
+[2m2026-01-31T13:08:22.254006Z[0m [32m INFO[0m Initializing ecosystem genetic engine
+[2m2026-01-31T13:08:22.254058Z[0m [32m INFO[0m ✅ Genetic Engine initialized
+
+[2m2026-01-31T13:08:22.254084Z[0m [32m INFO[0m 👨‍👩‍👧‍👦 Family lineage seed detected
+[2m2026-01-31T13:08:22.254111Z[0m [32m INFO[0m    Family ID: data
+[2m2026-01-31T13:08:22.254129Z[0m [32m INFO[0m    Genetic siblings will auto-trust this family
+
+[2m2026-01-31T13:08:22.254149Z[0m [32m INFO[0m 🛡️  Creating BTSP Provider...
+[2m2026-01-31T13:08:22.254169Z[0m [32m INFO[0m 🐻 Initializing BearDog BTSP Provider with BirdSong genetics
+[2m2026-01-31T13:08:22.254250Z[0m [32m INFO[0m 🔑 Generating software key: birdsong_master
+[2m2026-01-31T13:08:22.255977Z[0m [32m INFO[0m ✅ Software key generated successfully: birdsong_master
+[2m2026-01-31T13:08:22.256101Z[0m [32m INFO[0m 🐻🎵 Initializing BirdSongManager
+[2m2026-01-31T13:08:22.256134Z[0m [32m INFO[0m 🧬 Initializing LineageChainManager
+[2m2026-01-31T13:08:22.256157Z[0m [32m INFO[0m 🔐 Initializing LineageProofManager
+[2m2026-01-31T13:08:22.256177Z[0m [32m INFO[0m 🔑 Initializing LineageKeyDerivation
+[2m2026-01-31T13:08:22.256197Z[0m [32m INFO[0m 🎵 Initializing BirdSongEncryption
+[2m2026-01-31T13:08:22.256215Z[0m [32m INFO[0m ✅ BirdSongManager initialized
+[2m2026-01-31T13:08:22.256232Z[0m [32m INFO[0m ✅ BearDog BTSP Provider initialized with BirdSong genetics
+[2m2026-01-31T13:08:22.256358Z[0m [32m INFO[0m ✅ BTSP Provider created
+
+[2m2026-01-31T13:08:22.256393Z[0m [32m INFO[0m 🔌 Configuring Unix Socket IPC...
+[2m2026-01-31T13:08:22.256510Z[0m [32m INFO[0m    Socket: /tmp/beardog-pixel_nucleus-pixel_nucleus1.sock
+[2m2026-01-31T13:08:22.256565Z[0m [32m INFO[0m    Source: /tmp/beardog-pixel_nucleus-pixel_nucleus1.sock (fallback to /tmp - Tier 5)
+[2m2026-01-31T13:08:22.256589Z[0m [32m INFO[0m    Family: pixel_nucleus
+[2m2026-01-31T13:08:22.256608Z[0m [32m INFO[0m    Node: pixel_nucleus1
+[2m2026-01-31T13:08:22.256629Z[0m [32m INFO[0m    PID: 22681
+[2m2026-01-31T13:08:22.256757Z[0m [32m INFO[0m 
+🔌 Creating Unix Socket IPC Server...
+[2m2026-01-31T13:08:22.256807Z[0m [32m INFO[0m 🆔 Identity: family=pixel_nucleus, node=pixel_nucleus1
+[2m2026-01-31T13:08:22.256888Z[0m [32m INFO[0m ✅ Unix Socket IPC Server created
+
+[2m2026-01-31T13:08:22.256914Z[0m [32m INFO[0m 🚀 Starting Unix Socket Server...
+[2m2026-01-31T13:08:22.257094Z[0m [32m INFO[0m    Waiting for socket readiness (atomic check)...
+[2m2026-01-31T13:08:22.257203Z[0m [32m INFO[0m 🔌 Starting Unix socket IPC server: /tmp/beardog-pixel_nucleus-pixel_nucleus1.sock
+[2m2026-01-31T13:08:22.257278Z[0m [32m INFO[0m    Platform: Unix (filesystem)
+[2m2026-01-31T13:08:22.257301Z[0m [33m WARN[0m XDG_RUNTIME_DIR not set, using current directory fallback
+[2m2026-01-31T13:08:22.257428Z[0m [32m INFO[0m 🐧 Unix socket path (filesystem): /data/local/tmp/beardog/biomeos/beardog.sock
+[2m2026-01-31T13:08:22.257912Z[0m [31mERROR[0m Unix socket server error: Failed to bind socket on Unix (filesystem): /data/local/tmp/beardog/biomeos/beardog.sock

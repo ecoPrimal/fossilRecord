@@ -1,0 +1,19 @@
+╔══════════════════════════════════════════════════════╗
+║  🐻 beardog genomeBin v0.9.0
+╚══════════════════════════════════════════════════════╝
+[INFO] BearDog Sovereign Crypto Orchestrator
+[INFO] Supported Architectures: x86_64 aarch64
+
+[INFO] Detected architecture: x86_64
+[SUCCESS] Architecture mapped: x86_64
+[INFO] Detected platform: Linux
+[INFO] Installation directory: /home/eastgate/.local/beardog
+[INFO] Existing installation detected: beardog 0.9.0
+[INFO] Backing up existing installation...
+[SUCCESS] Backup created: /home/eastgate/.local/beardog.backup
+[SUCCESS] Installation directory ready
+[INFO] Using temporary directory: /tmp/tmp.auMuQZy0D2
+[INFO] Extracting x86_64 binaries...
+[ERROR] Failed to extract archive
+[INFO] Rolling back to previous installation...
+[SUCCESS] Rollback complete

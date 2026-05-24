@@ -1,0 +1,15 @@
+╔══════════════════════════════════════════════════════╗
+║  🦀 biomeos genomeBin v5.1.0
+╚══════════════════════════════════════════════════════╝
+[INFO] Biomeos Discovery & Federation Orchestrator
+[INFO] Supported Architectures: x86_64 aarch64
+
+[INFO] Detected architecture: aarch64
+[SUCCESS] Architecture mapped: aarch64
+[INFO] Detected platform: Android (mDNS + BirdSong)
+[INFO] Installation directory: /data/local/tmp/biomeos
+[SUCCESS] Installation directory ready
+[INFO] Using temporary directory: /data/local/tmp/tmp.dUn9xKWcb2
+[INFO] Extracting aarch64 binaries...
+[ERROR] Failed to extract archive
+[WARN] Partial installation may exist at: /data/local/tmp/biomeos

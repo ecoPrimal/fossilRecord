@@ -1,0 +1,160 @@
+╔══════════════════════════════════════════════════════════════════╗
+║     🌐 CROSS-TOWER BENCHMARK SUITE 🌐                           ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Eastgate (local):   192.168.1.144
+Strandgate (remote): 192.168.1.134
+
+[0;34m[0/7][0m Running pre-flight checks...
+
+[0;32m✓[0m Strandgate reachable
+[0;32m✓[0m Network latency: 0.199ms
+[0;32m✓[0m Songbird running on Strandgate
+[1;33m⚠[0m  No tarpc servers found on Strandgate
+   Run: ./deploy_tarpc_to_strandgate.sh
+
+
+
+╔══════════════════════════════════════════════════════════════════╗
+║  [1/7] HTTP Single Connection: Eastgate → Strandgate            ║
+╚══════════════════════════════════════════════════════════════════╝
+
+  Progress: 3000/5000 (60.0%)
+  Progress: 4000/5000 (80.0%)
+
+══════════════════════════════════════════════════════════════════════
+  HTTP BENCHMARK RESULTS
+══════════════════════════════════════════════════════════════════════
+
+Request Statistics:
+  Total Requests:     5000
+  Successful:         5000 (100.0%)
+  Failed:             0
+  Total Duration:     1.07s
+
+Throughput:
+  Requests/Second:    4665 req/s
+
+Latency Percentiles (microseconds):
+  Min:                167μs
+  p50 (median):       215μs
+  p75:                223μs
+  p90:                234μs
+  p95:                247μs
+  p99:                292μs
+  Max:                432μs
+  Mean:               214μs
+  Std Dev:            22μs
+
+══════════════════════════════════════════════════════════════════════
+📊 Results saved to: results_http.json
+
+
+╔══════════════════════════════════════════════════════════════════╗
+║  [2/7] JSON-RPC Single: Eastgate → Strandgate                   ║
+╚══════════════════════════════════════════════════════════════════╝
+
+  Progress: 3000/5000 (60.0%)
+  Progress: 4000/5000 (80.0%)
+
+══════════════════════════════════════════════════════════════════════
+  JSON-RPC BENCHMARK RESULTS
+══════════════════════════════════════════════════════════════════════
+
+Request Statistics:
+  Total Requests:     5000
+  Successful:         5000 (100.0%)
+  Failed:             0
+  Total Duration:     1.39s
+
+Throughput:
+  Requests/Second:    3585 req/s
+
+Latency Percentiles (microseconds):
+  Min:                194μs
+  p50 (median):       258μs
+  p75:                328μs
+  p90:                347μs
+  p95:                361μs
+  p99:                401μs
+  Max:                1171μs
+  Mean:               278μs
+  Std Dev:            57μs
+
+══════════════════════════════════════════════════════════════════════
+📊 Results saved to: results_jsonrpc.json
+
+
+[1;33m⚠[0m  Skipping tarpc single (no servers)
+
+[1;33m⚠[0m  Skipping tarpc multiplex (need 3 servers)
+
+╔══════════════════════════════════════════════════════════════════╗
+║  [5/7] Bidirectional Test (requires setup on Strandgate)        ║
+╚══════════════════════════════════════════════════════════════════╝
+
+[1;33mℹ[0m  This requires tarpc servers running on both towers
+[1;33mℹ[0m  Run manually if desired (see CROSS_TOWER_BENCHMARKS.md)
+
+╔══════════════════════════════════════════════════════════════════╗
+║  [6/7] Real Orchestration: Songbird → Toadstool on Strandgate   ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Testing Toadstool on Strandgate...
+[0;32m✓[0m Toadstool responding
+Running 10 orchestrated tasks...
+  Task 1: 19ms
+  Task 2: 20ms
+  Task 3: 20ms
+  Task 4: 19ms
+  Task 5: 20ms
+  Task 6: 19ms
+  Task 7: 20ms
+  Task 8: 20ms
+  Task 9: 19ms
+  Task 10: 18ms
+
+╔══════════════════════════════════════════════════════════════════╗
+║  [7/7] Network Latency Distribution Analysis                    ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Measuring network latency distribution (100 samples)...
+64 bytes from 192.168.1.134: icmp_seq=100 ttl=64 time=0.172 ms
+
+--- 192.168.1.134 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 101394ms
+rtt min/avg/max/mdev = 0.161/0.195/0.498/0.035 ms
+
+╔══════════════════════════════════════════════════════════════════╗
+║              📊 GENERATING COMPARISON REPORT 📊                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Cross-Tower Benchmark Results
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Protocol Performance (Localhost vs Network):
+
+Protocol        Localhost       Network         Ratio          
+───────────────────────────────────────────────────────────────
+
+Multiplex Scaling Efficiency:
+
+
+Key Insight:
+
+
+╔══════════════════════════════════════════════════════════════════╗
+║              ✨ BENCHMARKS COMPLETE ✨                            ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Results saved to: ../results/cross-tower/
+
+Files:
+  ../results/cross-tower/results_http_cross_tower.json (385)
+  ../results/cross-tower/results_jsonrpc_cross_tower.json (392)
+
+To view full report:
+  cd ../results/cross-tower && cat *.log
+
+🌐 Cross-tower benchmarking complete!
+

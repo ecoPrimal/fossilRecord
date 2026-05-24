@@ -1,0 +1,56 @@
+    Finished `release` profile [optimized] target(s) in 0.12s
+     Running `target/release/unwrap-migrator code/crates --fix --advanced --confidence 90 --verbose`
+╔═══════════════════════════════════════════════════════════════╗
+║                🚀 NestGate Unwrap Migrator v0.3.0             ║
+║                                                               ║
+║  Safe automated migration from panic patterns to robust       ║
+║  error handling. Built for development teams.                 ║
+╚═══════════════════════════════════════════════════════════════╝
+
+[2m2025-11-01T15:32:53.860222Z[0m [32m INFO[0m 🚀 Starting NestGate Unwrap Migration Tool v0.3.0
+[2m2025-11-01T15:32:53.860228Z[0m [32m INFO[0m 📁 Target path: code/crates
+[2m2025-11-01T15:32:53.860229Z[0m [32m INFO[0m 🎯 Confidence threshold: 90%
+[2m2025-11-01T15:32:53.860229Z[0m [32m INFO[0m ⚡ Priority filter: medium
+[2m2025-11-01T15:32:53.860230Z[0m [32m INFO[0m 🔍 Operation mode: fix
+[2m2025-11-01T15:32:53.860236Z[0m [32m INFO[0m 🔧 Running automated fixes...
+[2m2025-11-01T15:32:53.860239Z[0m [32m INFO[0m 🎯 Using advanced pattern migrator
+[2m2025-11-01T15:32:53.862410Z[0m [32m INFO[0m 🔥 Starting advanced panic pattern migration for: code/crates
+[2m2025-11-01T15:32:53.869317Z[0m [32m INFO[0m 📁 Found 1452 Rust files to analyze
+[2m2025-11-01T15:32:53.978617Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-canonical/src/error.rs
+[2m2025-11-01T15:32:54.052349Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/unified_canonical_config.rs
+[2m2025-11-01T15:32:54.354092Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/universal_traits/security.rs
+[2m2025-11-01T15:32:54.365147Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/config/production_manager.rs
+[2m2025-11-01T15:32:54.365876Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/config/consolidated_canonical_config.rs
+[2m2025-11-01T15:32:54.379051Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/config/unified_loader.rs
+[2m2025-11-01T15:32:54.384748Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/config/canonical_master/domains/network/api.rs
+[2m2025-11-01T15:32:54.487887Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/config/canonical_master/phase2c_types.rs
+[2m2025-11-01T15:32:54.490867Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/config/vendor_agnostic.rs
+[2m2025-11-01T15:32:54.636859Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/universal_security_client/tests.rs
+[2m2025-11-01T15:32:54.670070Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/security/tests/modern_auth_tests.rs
+[2m2025-11-01T15:32:54.816560Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/cache/mod.rs
+[2m2025-11-01T15:32:54.834637Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/cache/multi_tier.rs
+[2m2025-11-01T15:32:54.914430Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/cert/validator.rs
+[2m2025-11-01T15:32:54.918702Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/cert/manager.rs
+[2m2025-11-01T15:32:54.951948Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/error/enhanced_ergonomics.rs
+[2m2025-11-01T15:32:54.953779Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/error/comprehensive_tests.rs
+[2m2025-11-01T15:32:55.096879Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/optimized/memory_optimization.rs
+[2m2025-11-01T15:32:55.171059Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/universal_storage/zero_cost_storage_backend.rs
+[2m2025-11-01T15:32:55.233700Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/src/universal_storage/backends/filesystem/tests.rs
+[2m2025-11-01T15:32:55.301965Z[0m [32m INFO[0m ✅ Migrated file: code/crates/nestgate-core/tests/error_coverage_tests.rs
+[2m2025-11-01T15:32:55.898898Z[0m [32m INFO[0m 📊 ADVANCED PANIC MIGRATION SUMMARY
+[2m2025-11-01T15:32:55.898906Z[0m [32m INFO[0m =====================================
+[2m2025-11-01T15:32:55.898908Z[0m [32m INFO[0m 📁 Files scanned: 1452
+[2m2025-11-01T15:32:55.898908Z[0m [32m INFO[0m 🔥 Panic patterns found: 50
+[2m2025-11-01T15:32:55.898909Z[0m [32m INFO[0m ✅ Migrations applied: 50
+[2m2025-11-01T15:32:55.898910Z[0m [32m INFO[0m 📈 Patterns by type:
+[2m2025-11-01T15:32:55.898910Z[0m [32m INFO[0m   Unwrap: 31
+[2m2025-11-01T15:32:55.898911Z[0m [32m INFO[0m   Expect: 19
+[2m2025-11-01T15:32:55.898912Z[0m [32m INFO[0m 🏷️ Error categories:
+[2m2025-11-01T15:32:55.898912Z[0m [32m INFO[0m   Generic: 31
+[2m2025-11-01T15:32:55.898914Z[0m [32m INFO[0m   Configuration: 19
+[2m2025-11-01T15:32:55.898915Z[0m [32m INFO[0m ✅ Advanced migration completed:
+[2m2025-11-01T15:32:55.898915Z[0m [32m INFO[0m    📁 Files processed: 1452
+[2m2025-11-01T15:32:55.898916Z[0m [32m INFO[0m    🎯 Patterns fixed: 50
+[2m2025-11-01T15:32:55.898917Z[0m [32m INFO[0m    📊 Success rate: 100.0%
+[2m2025-11-01T15:32:55.898930Z[0m [32m INFO[0m 💡 Tip: Run with --analyze to verify changes
+[2m2025-11-01T15:32:55.898931Z[0m [32m INFO[0m ✅ Operation completed successfully!

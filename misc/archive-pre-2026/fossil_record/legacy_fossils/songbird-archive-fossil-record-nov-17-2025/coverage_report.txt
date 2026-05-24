@@ -1,0 +1,638 @@
+info: cargo-llvm-cov currently setting cfg(coverage); you can opt-out it by passing --no-cfg-coverage
+   Compiling reqwest v0.11.27
+   Compiling tokio-serde v0.8.0
+   Compiling axum v0.7.9
+   Compiling tarpc v0.34.0
+   Compiling songbird-types v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types)
+   Compiling songbird-config v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-config)
+   Compiling songbird-execution-agent v0.2.1 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-execution-agent)
+warning: unnecessary braces around method argument
+   --> crates/songbird-config/src/canonical/network/core.rs:315:28
+    |
+315 |                 .unwrap_or({ std::net::IpAddr::V4(std::net::Ipv4Addr::UNSPECIFIED) }),
+    |                            ^^                                                     ^^
+    |
+    = note: `#[warn(unused_braces)]` on by default
+help: remove these braces
+    |
+315 -                 .unwrap_or({ std::net::IpAddr::V4(std::net::Ipv4Addr::UNSPECIFIED) }),
+315 +                 .unwrap_or(std::net::IpAddr::V4(std::net::Ipv4Addr::UNSPECIFIED)),
+    |
+
+warning: unused imports: `AgentConfig` and `ResourceLimits`
+   --> crates/songbird-execution-agent/src/server.rs:216:17
+    |
+216 |     use crate::{AgentConfig, ResourceLimits};
+    |                 ^^^^^^^^^^^  ^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+warning: use of deprecated module `unified::observability`: Use `canonical::observability` module instead. All types consolidated. Migration: `unified::observability::UnifiedObservabilityConfig` → `canonical::observability::UnifiedObservabilityConfig`
+  --> crates/songbird-config/src/unified/mod.rs:11:9
+   |
+11 | pub use observability::*;
+   |         ^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated struct `config::SongbirdConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/src/zero_touch/mod.rs:56:24
+   |
+56 |     pub config: Option<SongbirdConfig>,
+   |                        ^^^^^^^^^^^^^^
+
+warning: use of deprecated struct `config::SongbirdConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/src/zero_touch/mod.rs:75:22
+   |
+75 |         let config = SongbirdConfig::default();
+   |                      ^^^^^^^^^^^^^^
+
+warning: use of deprecated function `config::constants::get_temp_dir`: Use songbird_config::canonical::constants instead
+   --> crates/songbird-config/src/config/paths.rs:298:49
+    |
+298 |         PathBuf::from(crate::config::constants::get_temp_dir())
+    |                                                 ^^^^^^^^^^^^
+
+warning: unused variable: `request`
+   --> crates/songbird-execution-agent/src/security_sovereign.rs:218:30
+    |
+218 |     async fn validate(&self, request: &SecurityRequest) -> SongbirdResult<SecurityDecision> {
+    |                              ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_request`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: field `config` is never read
+  --> crates/songbird-execution-agent/src/security_sovereign.rs:45:5
+   |
+37 | pub struct SovereignSecurityValidator {
+   |            -------------------------- field in this struct
+...
+45 |     config: SecurityConfig,
+   |     ^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: field `endpoint` is never read
+   --> crates/songbird-execution-agent/src/security_sovereign.rs:201:5
+    |
+200 | struct BearDogIntegration {
+    |        ------------------ field in this struct
+201 |     endpoint: String,
+    |     ^^^^^^^^
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:187:12
+    |
+187 |         if self.primal_registry.is_none() {
+    |            ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:188:13
+    |
+188 |             self.primal_registry = Some(crate::canonical::primals::PrimalRegistry::default());
+    |             ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:191:38
+    |
+191 |         if let Some(registry) = &mut self.primal_registry {
+    |                                      ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:206:9
+    |
+206 |         self.primal_registry
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:218:9
+    |
+218 |         self.primal_registry.as_ref().and_then(|registry| registry.get_primal(primal_name))
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:223:38
+    |
+223 |         if let Some(registry) = &mut self.primal_registry {
+    |                                      ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:233:9
+    |
+233 |         self.primal_registry
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: `songbird-execution-agent` (lib test) generated 4 warnings (run `cargo fix --lib -p songbird-execution-agent --tests` to apply 1 suggestion)
+   Compiling songbird-universal v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-universal)
+   Compiling songbird-canonical v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-canonical)
+   Compiling songbird-observability v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-observability)
+warning: unused import: `Duration`
+ --> crates/songbird-universal/src/circuit_breaker.rs:7:17
+  |
+7 | use std::time::{Duration, Instant};
+  |                 ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: `songbird-config` (lib) generated 12 warnings (run `cargo fix --lib -p songbird-config` to apply 1 suggestion)
+   Compiling songbird-test-utils v0.2.1 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-test-utils)
+   Compiling songbird-discovery v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-discovery)
+warning: `songbird-universal` (lib) generated 1 warning (run `cargo fix --lib -p songbird-universal` to apply 1 suggestion)
+warning: unexpected `cfg` condition value: `integration-tests-disabled`
+   --> crates/songbird-universal/src/adapters/compute/tests.rs:379:21
+    |
+379 |     #[cfg(all(test, feature = "integration-tests-disabled"))]
+    |                     ^^^^^^^^^^----------------------------
+    |                               |
+    |                               help: there is a expected value with a similar name: `"federation-tests-disabled"`
+    |
+    = note: expected values for `feature` are: `default`, `federation-tests-disabled`, and `tests-incomplete`
+    = help: consider adding `integration-tests-disabled` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+    = note: `#[warn(unexpected_cfgs)]` on by default
+
+warning: unused import: `SongbirdResult`
+   --> crates/songbird-types/src/service.rs:244:28
+    |
+244 | use crate::{SongbirdError, SongbirdResult};
+    |                            ^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+warning: use of deprecated constant `config::constants::tests::test_get_bind_address`: Use songbird_config::canonical::constants instead
+   --> crates/songbird-config/src/config/constants.rs:731:5
+    |
+731 | /     fn test_get_bind_address() {
+732 | |         let addr = super::get_bind_address();
+733 | |         assert!(!addr.is_empty());
+734 | |     }
+    | |_____^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated module `unified::observability`: Use `canonical::observability` module instead. All types consolidated. Migration: `unified::observability::UnifiedObservabilityConfig` → `canonical::observability::UnifiedObservabilityConfig`
+  --> crates/songbird-config/src/unified/mod.rs:11:9
+   |
+11 | pub use observability::*;
+   |         ^^^^^^^^^^^^^
+
+warning: associated functions `create_from_environment`, `detect_kubernetes_environment`, `detect_consul_environment`, `detect_container_environment`, `create_consul_universal`, and `create_container_universal` are never used
+   --> crates/songbird-discovery/src/discovery/factory.rs:70:14
+    |
+ 38 | impl UniversalDiscoveryFactory {
+    | ------------------------------ associated functions in this implementation
+...
+ 70 |     async fn create_from_environment() -> Result<UniversalServiceDiscoveryAdapter> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^
+...
+ 97 |     async fn detect_kubernetes_environment() -> bool {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+108 |     async fn detect_consul_environment() -> bool {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+116 |     async fn detect_container_environment() -> bool {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+130 |     async fn create_consul_universal() -> Result<UniversalServiceDiscoveryAdapter> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^
+...
+137 |     async fn create_container_universal() -> Result<UniversalServiceDiscoveryAdapter> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` on by default
+
+   Compiling songbird-network-federation v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-network-federation)
+   Compiling songbird-registry v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-registry)
+warning: `songbird-discovery` (lib) generated 1 warning
+warning: `songbird-discovery` (lib test) generated 1 warning (1 duplicate)
+   Compiling songbird-orchestrator v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-orchestrator)
+   Compiling songbird-cli v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-cli)
+warning: use of deprecated function `songbird_config::hardcoded_elimination::replace::connection_timeout`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-cli/src/cli/discovery.rs:98:70
+   |
+98 |             songbird_config::config::hardcoded_elimination::replace::connection_timeout();
+   |                                                                      ^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated function `songbird_config::hardcoded_elimination::replace::health_check_timeout`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-cli/src/cli/ui.rs:348:66
+    |
+348 |         songbird_config::config::hardcoded_elimination::replace::health_check_timeout()
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `thiserror::Error`
+  --> crates/songbird-orchestrator/src/server/tarpc_server.rs:25:5
+   |
+25 | use thiserror::Error;
+   |     ^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: comparison is useless due to type limits
+   --> crates/songbird-config/src/canonical/constants.rs:862:17
+    |
+862 |         assert!(end <= 65535);
+    |                 ^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_comparisons)]` on by default
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+  --> crates/songbird-orchestrator/src/lib.rs:95:26
+   |
+95 | pub use songbird_config::SongbirdConfig;
+   |                          ^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: unused import: `songbird_config::SongbirdConfig`
+   --> crates/songbird-orchestrator/src/cli/mod.rs:245:9
+    |
+245 |     use songbird_config::SongbirdConfig;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+warning: unused imports: `ResourceRequirements` and `TaskBuilder`
+   --> crates/songbird-orchestrator/src/core/routing/analyzer.rs:143:39
+    |
+143 |     use crate::core::routing::types::{ResourceRequirements, TaskBuilder};
+    |                                       ^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^
+
+warning: unused import: `crate::core::routing::types::TaskBuilder`
+   --> crates/songbird-orchestrator/src/core/routing/router.rs:353:9
+    |
+353 |     use crate::core::routing::types::TaskBuilder;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::core::routing::types::TaskBuilder`
+   --> crates/songbird-orchestrator/src/server/compute_api.rs:335:9
+    |
+335 |     use crate::core::routing::types::TaskBuilder;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `thiserror::Error`
+  --> crates/songbird-orchestrator/src/server/tarpc_server.rs:25:5
+   |
+25 | use thiserror::Error;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+   --> crates/songbird-orchestrator/src/cli/mod.rs:245:26
+    |
+245 |     use songbird_config::SongbirdConfig;
+    |                          ^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+   --> crates/songbird-orchestrator/src/cli/mod.rs:280:46
+    |
+280 |         let legacy_config = songbird_config::SongbirdConfig::from(config);
+    |                                              ^^^^^^^^^^^^^^
+
+warning: `songbird-universal` (lib test) generated 1 warning
+warning: `songbird-config` (lib test) generated 14 warnings (11 duplicates)
+warning: `songbird-cli` (lib test) generated 2 warnings
+warning: `songbird-types` (lib test) generated 1 warning (run `cargo fix --lib -p songbird-types --tests` to apply 1 suggestion)
+warning: `songbird-orchestrator` (lib) generated 2 warnings (run `cargo fix --lib -p songbird-orchestrator` to apply 1 suggestion)
+warning: `songbird-orchestrator` (lib test) generated 8 warnings (1 duplicate) (run `cargo fix --lib -p songbird-orchestrator --tests` to apply 5 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 33.11s
+     Running unittests src/lib.rs (target/llvm-cov-target/debug/deps/songbird_canonical-e9effd872fea065e)
+
+running 260 tests
+test config::adapters_tests::test_adapter_settings_default ... ok
+test config::adapters_tests::test_adapter_settings_max_concurrent ... ok
+test config::adapters_tests::test_adapter_settings_custom_timeout ... ok
+test config::adapters_tests::test_adapter_settings_failover_disabled ... ok
+test config::adapters_tests::test_circuit_breaker_custom_thresholds ... ok
+test config::adapters_tests::test_adapter_config_all_disabled ... ok
+test config::adapters_tests::test_circuit_breaker_disabled ... ok
+test config::adapters_tests::test_circuit_breaker_default ... ok
+test config::adapters_tests::test_circuit_breaker_timeout ... ok
+test config::adapters_tests::test_compute_adapter_config_default ... ok
+test config::adapters_tests::test_compute_adapter_config_disabled ... ok
+test config::adapters_tests::test_circuit_breaker_serialization ... ok
+test config::adapters_tests::test_compute_adapter_config_discovery_modes ... ok
+test config::adapters_tests::test_compute_provider_config_default ... ok
+test config::adapters_tests::test_compute_provider_config_with_endpoint ... ok
+test config::adapters_tests::test_full_adapter_config_integration ... ok
+test config::adapters_tests::test_security_adapter_config_custom_timeout ... ok
+test config::adapters_tests::test_security_adapter_config_default ... ok
+test config::adapters_tests::test_security_adapter_config_retry_count ... ok
+test config::adapters_tests::test_security_adapter_config_with_endpoint ... ok
+test config::adapters_tests::test_security_provider_config_default ... ok
+test config::adapters_tests::test_security_provider_config_priority ... ok
+test config::adapters_tests::test_storage_adapter_config_default ... ok
+test config::adapters_tests::test_storage_provider_config_default ... ok
+test config::adapters_tests::test_storage_adapter_config_serialization ... ok
+test config::adapters_tests::test_universal_adapter_config_clone ... ok
+test config::adapters_tests::test_universal_adapter_config_default ... ok
+test config::ai_first_tests::test_ai_first_config_all_disabled ... ok
+test config::ai_first_tests::test_ai_first_config_clone ... ok
+test config::ai_first_tests::test_ai_first_config_conservative_settings ... ok
+test config::ai_first_tests::test_ai_first_config_default ... ok
+test config::adapters_tests::test_universal_adapter_config_serialization ... ok
+test config::ai_first_tests::test_ai_first_config_full_custom ... ok
+test config::ai_first_tests::test_workload_classification_custom_interval ... ok
+test config::ai_first_tests::test_streaming_interface_heartbeat ... ok
+test config::ai_first_tests::test_workload_classification_default ... ok
+test config::ai_first_tests::test_ai_first_config_serialization ... ok
+test config::ai_first_tests::test_workload_classification_multiple_strategies ... ok
+test config::environment_tests::test_environment_config_production_preset ... ok
+test config::ai_first_tests::test_classification_strategy_serialization ... ok
+test config::environment_tests::test_environment_config_clone ... ok
+test config::environment_tests::test_environment_security_config_audit_path ... ok
+test config::environment_tests::test_environment_security_config_auth_disabled ... ok
+test config::ai_first_tests::test_classification_strategy_variants ... ok
+test config::environment_tests::test_environment_security_config_auth_methods ... ok
+test config::ai_first_tests::test_confidence_scoring_custom_thresholds ... ok
+test config::ai_first_tests::test_confidence_scoring_default ... ok
+test config::ai_first_tests::test_confidence_scoring_ml_disabled ... ok
+test config::environment_tests::test_environment_config_serialization ... ok
+test config::ai_first_tests::test_confidence_scoring_disabled ... ok
+test config::environment_tests::test_environment_config_default ... ok
+test config::ai_first_tests::test_human_collaboration_custom_escalation ... ok
+test config::ai_first_tests::test_human_collaboration_default ... ok
+test config::ai_first_tests::test_human_collaboration_response_timeout ... ok
+test config::ai_first_tests::test_human_collaboration_with_approval ... ok
+test config::ai_first_tests::test_streaming_interface_buffer_size ... ok
+test config::ai_first_tests::test_streaming_interface_custom_streams ... ok
+test config::environment_tests::test_environment_config_development_preset ... ok
+test config::environment_tests::test_network_config_timeouts ... ok
+test config::environment_tests::test_environment_security_config_cors_origins ... ok
+test config::environment_tests::test_network_config_with_tls ... ok
+test config::environment_tests::test_environment_security_config_default ... ok
+test config::environment_tests::test_environment_serialization ... ok
+test config::environment_tests::test_observability_config_custom_intervals ... ok
+test config::environment_tests::test_environment_variants ... ok
+test config::environment_tests::test_observability_config_custom_tags ... ok
+test config::environment_tests::test_logging_config_default ... ok
+test config::environment_tests::test_observability_config_default ... ok
+test config::environment_tests::test_logging_config_file_limits ... ok
+test config::environment_tests::test_logging_config_file_rotation ... ok
+test config::environment_tests::test_observability_config_metrics_disabled ... ok
+test config::environment_tests::test_logging_config_formats ... ok
+test config::environment_tests::test_logging_config_log_levels ... ok
+test config::environment_tests::test_observability_config_sampling_rate ... ok
+test config::environment_tests::test_network_config_default ... ok
+test config::environment_tests::test_port_config_custom_ports ... ok
+test config::environment_tests::test_network_config_max_connections ... ok
+test config::environment_tests::test_port_config_default ... ok
+test config::environment_tests::test_port_config_dynamic_range ... ok
+test config::orchestration_tests::test_scaling_config_enabled ... ok
+test config::orchestration_tests::test_service_discovery_config_custom ... ok
+test config::orchestration_tests::test_health_config_custom_intervals ... ok
+test config::orchestration_tests::test_health_config_custom_thresholds ... ok
+test config::orchestration_tests::test_health_config_default ... ok
+test config::orchestration_tests::test_health_config_disabled ... ok
+test config::orchestration_tests::test_load_balancing_config_custom_retries ... ok
+test config::orchestration_tests::test_load_balancing_config_default ... ok
+test config::orchestration_tests::test_load_balancing_config_strategies ... ok
+test config::orchestration_tests::test_load_balancing_strategy_serialization ... ok
+test config::orchestration_tests::test_load_balancing_strategy_variants ... ok
+test config::orchestration_tests::test_orchestration_config_clone ... ok
+test config::orchestration_tests::test_orchestration_config_default ... ok
+test config::orchestration_tests::test_orchestration_config_minimal ... ok
+test config::orchestration_tests::test_orchestration_config_production_preset ... ok
+test config::orchestration_tests::test_scaling_config_check_interval ... ok
+test config::orchestration_tests::test_scaling_config_custom_thresholds ... ok
+test config::orchestration_tests::test_scaling_config_custom_instances ... ok
+test config::ai_first_tests::test_streaming_interface_default ... ok
+test config::orchestration_tests::test_scaling_config_default ... ok
+test config::orchestration_tests::test_service_discovery_config_default ... ok
+test config::orchestration_tests::test_orchestration_config_serialization ... ok
+test config::orchestration_tests::test_service_discovery_config_disabled ... ok
+test config::performance_tests::test_latency_config_caching_disabled ... ok
+test config::performance_tests::test_latency_config_connection_pooling_disabled ... ok
+test config::performance_tests::test_latency_config_custom_cache_ttl ... ok
+test config::performance_tests::test_latency_config_custom_keep_alive ... ok
+test config::performance_tests::test_latency_config_custom_pool_size ... ok
+test config::performance_tests::test_latency_config_default ... ok
+test config::performance_tests::test_latency_config_pipelining_disabled ... ok
+test config::performance_tests::test_memory_config_custom_limit ... ok
+test config::performance_tests::test_memory_config_zero_copy_disabled ... ok
+test config::performance_tests::test_performance_config_balanced_preset ... ok
+test config::performance_tests::test_performance_config_clone ... ok
+test config::performance_tests::test_performance_config_conservative_preset ... ok
+test config::performance_tests::test_performance_config_default ... ok
+test config::performance_tests::test_performance_config_high_performance_preset ... ok
+test config::performance_tests::test_memory_config_custom_pool_size ... ok
+test config::performance_tests::test_performance_config_zero_cost_disabled ... ok
+test config::performance_tests::test_throughput_config_async_disabled ... ok
+test config::performance_tests::test_performance_config_serialization ... ok
+test config::performance_tests::test_throughput_config_batching_disabled ... ok
+test config::performance_tests::test_throughput_config_custom_batch_size ... ok
+test config::performance_tests::test_memory_config_default ... ok
+test config::performance_tests::test_throughput_config_custom_queue_capacity ... ok
+test config::performance_tests::test_throughput_config_custom_workers ... ok
+test config::performance_tests::test_throughput_config_default ... ok
+test config::performance_tests::test_memory_config_no_limit ... ok
+test config::performance_tests::test_memory_config_pooling_disabled ... ok
+test discovery_tests::test_service_info_clone ... ok
+test discovery_tests::test_service_info_debug_format ... ok
+test discovery_tests::test_service_info_different_ports ... ok
+test discovery_tests::test_service_info_empty_metadata_initially ... ok
+test config::performance_tests::test_memory_config_profiling_enabled ... ok
+test discovery_tests::test_service_info_localhost_variations ... ok
+test discovery_tests::test_service_info_equality ... ok
+test discovery_tests::test_service_info_metadata_override ... ok
+test discovery_tests::test_service_info_high_port_numbers ... ok
+test discovery_tests::test_service_info_new ... ok
+test discovery_tests::test_service_info_multiple_metadata ... ok
+test discovery_tests::test_service_info_with_metadata ... ok
+test errors::errors_tests::tests::test_error_context_builder_pattern ... ok
+test errors::errors_tests::tests::test_error_context_clone ... ok
+test errors::errors_tests::tests::test_error_context_combined_operations ... ok
+test errors::errors_tests::tests::test_error_context_context_getter ... ok
+test errors::errors_tests::tests::test_error_context_creation ... ok
+test errors::errors_tests::tests::test_error_context_debug ... ok
+test errors::errors_tests::tests::test_error_context_display ... ok
+test errors::errors_tests::tests::test_error_context_display_no_suggestions ... ok
+test errors::errors_tests::tests::test_error_context_empty_strings ... ok
+test errors::errors_tests::tests::test_error_context_long_message ... ok
+test errors::errors_tests::tests::test_error_context_many_suggestions ... ok
+test errors::errors_tests::tests::test_error_context_message_getter ... ok
+test errors::errors_tests::tests::test_error_context_special_characters ... ok
+test errors::errors_tests::tests::test_error_context_suggestions_getter ... ok
+test discovery_tests::test_service_info_serialization ... ok
+test errors::errors_tests::tests::test_error_context_unicode ... ok
+test errors::errors_tests::tests::test_error_context_with_multiple_suggestions ... ok
+test errors::errors_tests::tests::test_error_context_with_suggestion ... ok
+test errors::errors_tests::tests::test_success_result ... ok
+test errors::errors_tests::tests::test_success_result_complex_type ... ok
+test errors::errors_tests::tests::test_success_result_string ... ok
+test errors::errors_tests::tests::test_unit_success ... ok
+test errors::errors_tests::tests::test_unit_success_multiple_calls ... ok
+test metadata_tests::test_ai_response_metadata_clone ... ok
+test metadata_tests::test_ai_response_metadata_default ... ok
+test metadata_tests::test_ai_response_metadata_with_automation_capability ... ok
+test metadata_tests::test_ai_response_metadata_with_custom_field ... ok
+test metadata_tests::test_ai_response_metadata_serialization ... ok
+test metadata_tests::test_ai_response_metadata_with_multiple_capabilities ... ok
+test metadata_tests::test_automation_capability_confidence_clamping ... ok
+test metadata_tests::test_automation_capability_equality ... ok
+test metadata_tests::test_automation_capability_new ... ok
+test metadata_tests::test_automation_capability_serialization ... ok
+test metadata_tests::test_automation_capability_with_prerequisite ... ok
+test metadata_tests::test_decision_context_default ... ok
+test metadata_tests::test_decision_context_risk_levels ... ok
+test metadata_tests::test_decision_context_serialization ... ok
+test metadata_tests::test_decision_context_with_alternatives ... ok
+test metadata_tests::test_decision_context_with_factors ... ok
+test metadata_tests::test_decision_context_with_reasoning ... ok
+test metadata_tests::test_full_ai_response_metadata_integration ... ok
+test metadata_tests::test_high_risk_decision_context ... ok
+test metadata_tests::test_low_confidence_automation_capability ... ok
+test metadata_tests::test_quality_metrics_calculate_overall_manual ... ok
+test metadata_tests::test_quality_metrics_clamping ... ok
+test metadata_tests::test_quality_metrics_default ... ok
+test metadata_tests::test_quality_metrics_overall_calculation ... ok
+test metadata_tests::test_quality_metrics_partial_calculation ... ok
+test metadata_tests::test_quality_metrics_with_accuracy ... ok
+test metadata_tests::test_quality_metrics_serialization ... ok
+test metadata_tests::test_quality_metrics_with_completeness ... ok
+test metadata_tests::test_quality_metrics_with_relevance ... ok
+test metadata_tests::test_quality_metrics_with_timeliness ... ok
+test metadata_tests::test_risk_level_equality ... ok
+test metadata_tests::test_risk_level_serialization ... ok
+test metadata_tests::test_risk_level_variants ... ok
+test migration_tests::test_analyze_codebase ... ok
+test migration_tests::test_canonical_migrator_default ... ok
+test migration_tests::test_change_type_equality ... ok
+test migration_tests::test_canonical_migrator_new ... ok
+test migration_tests::test_change_type_variants ... ok
+test migration_tests::test_compilation_status_equality ... ok
+test migration_tests::test_compilation_status_variants ... ok
+test migration_tests::test_complex_config_migration ... ok
+test migration_tests::test_full_migration_workflow ... ok
+test migration_tests::test_migrate_file_config_field_changes ... ok
+test migration_tests::test_migrate_file_error_pattern_change ... ok
+test migration_tests::test_migrate_file_multiple_changes ... ok
+test migration_tests::test_migrate_file_ok_unit_change ... ok
+test migration_tests::test_migrate_file_no_changes ... ok
+test migration_tests::test_migration_change_creation ... ok
+test migration_tests::test_migration_change_without_line_number ... ok
+test migration_tests::test_migrate_file_return_type_change ... ok
+test migration_tests::test_migration_report_complete_workflow ... ok
+test migration_tests::test_migration_report_creation ... ok
+test migration_tests::test_migration_report_with_patterns ... ok
+test migration_tests::test_migration_report_with_suggestions ... ok
+test migration_tests::test_migration_result_creation ... ok
+test migration_tests::test_migration_result_with_changes ... ok
+test migration_tests::test_suggested_change_creation ... ok
+test migration_tests::test_suggested_change_priority_ranges ... ok
+test migration_tests::test_suggested_change_without_replacement ... ok
+test performance_tests::test_initialize_performance_monitoring ... ok
+test performance_tests::test_initialize_performance_monitoring_idempotent ... ok
+test performance_tests::test_initialize_performance_monitoring_multiple_calls ... ok
+test providers_tests::test_provider_factory_default ... ok
+test providers_tests::test_provider_factory_multiple_instances ... ok
+test providers_tests::test_provider_factory_new ... ok
+test providers_tests::test_provider_traits_available ... ok
+test responses::responses_tests::tests::test_response_performance_default ... ok
+test responses::responses_tests::tests::test_songbird_response_clone ... ok
+test responses::responses_tests::tests::test_songbird_response_success ... ok
+test responses::responses_tests::tests::test_songbird_response_with_confidence ... ok
+test responses::responses_tests::tests::test_songbird_response_with_human_context ... ok
+test types::types_tests::tests::test_endpoint_clone ... ok
+test types::types_tests::tests::test_endpoint_creation ... ok
+test types::types_tests::tests::test_endpoint_equality ... ok
+test types::types_tests::tests::test_endpoint_to_url_with_path ... ok
+test types::types_tests::tests::test_endpoint_to_url_without_path ... ok
+test types::types_tests::tests::test_endpoint_with_path ... ok
+test types::types_tests::tests::test_service_id_clone ... ok
+test types::types_tests::tests::test_service_id_creation ... ok
+test types::types_tests::tests::test_service_id_equality ... ok
+test types::types_tests::tests::test_service_id_from_str ... ok
+test types::types_tests::tests::test_service_id_from_string ... ok
+test validation::validation_tests::tests::test_validation_result_clone ... ok
+test validation::validation_tests::tests::test_validation_result_debug ... ok
+test validation::validation_tests::tests::test_validation_result_deserialization ... ok
+test validation::validation_tests::tests::test_validation_result_empty_errors ... ok
+test validation::validation_tests::tests::test_validation_result_empty_string_error ... ok
+test validation::validation_tests::tests::test_validation_result_failure ... ok
+test validation::validation_tests::tests::test_validation_result_large_error_list ... ok
+test validation::validation_tests::tests::test_validation_result_multiple_errors ... ok
+test validation::validation_tests::tests::test_validation_result_serialization ... ok
+test validation::validation_tests::tests::test_validation_result_special_characters ... ok
+test validation::validation_tests::tests::test_validation_result_success ... ok
+test validation::validation_tests::tests::test_validation_result_unicode_errors ... ok
+test validation::validation_tests::tests::test_validation_result_very_long_error ... ok
+test validation::validation_tests::tests::test_validation_result_with_both_errors_and_warnings ... ok
+test validation::validation_tests::tests::test_validation_result_with_warnings ... ok
+
+test result: ok. 260 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/llvm-cov-target/debug/deps/songbird_cli-6b23f1c4dd815a20)
+
+running 53 tests
+test cli::core::cli::tests::test_output_format_default ... ok
+test cli::core::types::tests::test_cli_config_clone ... ok
+test cli::core::types::tests::test_cli_config_default_values ... ok
+test cli::core::types::tests::test_cli_config_with_values ... ok
+test cli::core::types::tests::test_cli_config_debug ... ok
+test cli::core::types::tests::test_cli_result_clone ... ok
+test cli::core::types::tests::test_cli_config_serialization ... ok
+test cli::core::types::tests::test_cli_result_error ... ok
+test cli::core::types::tests::test_cli_result_debug ... ok
+test cli::core::types::tests::test_cli_result_serialization ... ok
+test cli::core::types::tests::test_cli_result_success ... ok
+test cli::core::types::tests::test_cli_result_with_different_types ... ok
+test cli::core::types::tests::test_command_context_clone ... ok
+test cli::core::types::tests::test_command_context_creation ... ok
+test cli::core::types::tests::test_progress_indicator_boundary_values ... ok
+test cli::core::types::tests::test_progress_indicator_clone ... ok
+test cli::core::types::tests::test_progress_indicator_creation ... ok
+test cli::core::types::tests::test_progress_indicator_no_eta ... ok
+test cli::types::tests::test_cli_args_clone ... ok
+test cli::types::tests::test_cli_args_parse_from_env_with_config ... ok
+test cli::types::tests::test_cli_args_parse_from_env_with_quiet ... ok
+test cli::types::tests::test_cli_args_parse_from_env_defaults ... FAILED
+test cli::types::tests::test_cli_args_parse_from_env_with_verbose ... ok
+test cli::types::tests::test_config_action_edit ... ok
+test cli::types::tests::test_config_action_export ... ok
+test cli::types::tests::test_config_action_reset ... ok
+test cli::types::tests::test_config_action_show ... ok
+test cli::types::tests::test_config_action_validate ... ok
+test cli::types::tests::test_deployment_type_all_variants ... ok
+test cli::types::tests::test_deployment_type_debug ... ok
+test cli::types::tests::test_deployment_type_default ... ok
+test cli::types::tests::test_deployment_type_equality ... ok
+test cli::types::tests::test_export_format_default ... ok
+test cli::types::tests::test_export_format_variants ... ok
+test cli::types::tests::test_output_format_all_variants ... ok
+test cli::types::tests::test_output_format_debug ... ok
+test cli::types::tests::test_output_format_default ... ok
+test cli::types::tests::test_output_format_equality ... ok
+test cli::types::tests::test_output_format_serialization ... ok
+test errors::tests::test_cli_error_command_display ... ok
+test errors::tests::test_cli_error_config_display ... ok
+test errors::tests::test_cli_error_config_with_all_fields ... ok
+test errors::tests::test_cli_error_from_io_error ... ok
+test errors::tests::test_cli_error_from_serde_error ... ok
+test errors::tests::test_cli_error_network_with_interface ... ok
+test errors::tests::test_cli_error_network_display ... ok
+test cli::core::cli::tests::test_cli_parsing ... ok
+test errors::tests::test_cli_error_to_songbird_error_network ... ok
+test errors::tests::test_cli_error_to_songbird_error_command ... ok
+test errors::tests::test_cli_error_to_songbird_error_config ... ok
+test cli::types::tests::test_deployment_type_serialization ... ok
+test errors::tests::test_cli_error_to_songbird_error_user_cancelled ... ok
+test errors::tests::test_cli_error_user_cancelled ... ok
+
+failures:
+
+---- cli::types::tests::test_cli_args_parse_from_env_defaults stdout ----
+
+thread 'cli::types::tests::test_cli_args_parse_from_env_defaults' panicked at crates/songbird-cli/src/cli/types.rs:263:9:
+assertion failed: args.config.is_none()
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    cli::types::tests::test_cli_args_parse_from_env_defaults
+
+test result: FAILED. 52 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p songbird-cli --lib`
+error: process didn't exit successfully: `/home/eastgate/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo test --manifest-path /home/eastgate/Development/ecoPrimals/songbird/Cargo.toml --target-dir /home/eastgate/Development/ecoPrimals/songbird/target/llvm-cov-target --workspace --lib` (exit status: 101)

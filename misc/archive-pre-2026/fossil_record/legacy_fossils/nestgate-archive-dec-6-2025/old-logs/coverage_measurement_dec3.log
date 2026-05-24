@@ -1,0 +1,4542 @@
+info: cargo-llvm-cov currently setting cfg(coverage); you can opt-out it by passing --no-cfg-coverage
+   Compiling nestgate-core v0.1.0 (/home/eastgate/Development/ecoPrimals/nestgate/code/crates/nestgate-core)
+warning: unused import: `SecurityCapability`
+  --> code/crates/nestgate-core/src/capabilities/discovery/resolver.rs:15:66
+   |
+15 |     AICapability, NetworkingCapability, OrchestrationCapability, SecurityCapability,
+   |                                                                  ^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `crate::Result`
+ --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:8:5
+  |
+8 | use crate::Result;
+  |     ^^^^^^^^^^^^^
+
+warning: unused import: `std::env`
+  --> code/crates/nestgate-core/src/services/native_async/mod.rs:46:9
+   |
+46 |     use std::env;
+   |         ^^^^^^^^
+
+error[E0599]: no function or associated item named `default` found for struct `production_discovery::ServiceDiscoveryConfig` in the current scope
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:15:42
+    |
+ 15 |     let config = ServiceDiscoveryConfig::default();
+    |                                          ^^^^^^^ function or associated item not found in `production_discovery::ServiceDiscoveryConfig`
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:39:1
+    |
+ 39 | pub struct ServiceDiscoveryConfig {
+    | --------------------------------- function or associated item `default` not found for this struct
+    |
+note: if you're trying to build a new `production_discovery::ServiceDiscoveryConfig`, consider using `production_discovery::ServiceDiscoveryConfig::from_environment` which returns `std::result::Result<production_discovery::ServiceDiscoveryConfig, core_errors::NestGateUnifiedError>`
+   --> code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:107:5
+    |
+107 |     pub fn from_environment(config: &NestGateCanonicalConfig) -> Result<Self> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: items from traits can only be used if the trait is implemented and in scope
+    = note: the following trait defines an item `default`, perhaps you need to implement it:
+            candidate #1: `Default`
+
+error[E0624]: associated function `default_port_for_service` is private
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:50:40
+    |
+ 50 |     let port = ServiceDiscoveryConfig::default_port_for_service("api");
+    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^ private associated function
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:243:5
+    |
+243 |     fn default_port_for_service(service_name: &str) -> u16 {
+    |     ------------------------------------------------------ private associated function defined here
+
+error[E0624]: associated function `default_port_for_service` is private
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:57:40
+    |
+ 57 |     let port = ServiceDiscoveryConfig::default_port_for_service("metrics");
+    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^ private associated function
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:243:5
+    |
+243 |     fn default_port_for_service(service_name: &str) -> u16 {
+    |     ------------------------------------------------------ private associated function defined here
+
+error[E0624]: associated function `default_port_for_service` is private
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:64:40
+    |
+ 64 |     let port = ServiceDiscoveryConfig::default_port_for_service("unknown_service");
+    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^ private associated function
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:243:5
+    |
+243 |     fn default_port_for_service(service_name: &str) -> u16 {
+    |     ------------------------------------------------------ private associated function defined here
+
+error[E0624]: associated function `default_bind_for_service` is private
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:70:40
+    |
+ 70 |     let bind = ServiceDiscoveryConfig::default_bind_for_service("api");
+    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^ private associated function
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:255:5
+    |
+255 |     fn default_bind_for_service(service_name: &str) -> IpAddr {
+    |     --------------------------------------------------------- private associated function defined here
+
+error[E0624]: associated function `default_bind_for_service` is private
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:76:40
+    |
+ 76 |     let bind = ServiceDiscoveryConfig::default_bind_for_service("internal");
+    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^ private associated function
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:255:5
+    |
+255 |     fn default_bind_for_service(service_name: &str) -> IpAddr {
+    |     --------------------------------------------------------- private associated function defined here
+
+error[E0599]: no function or associated item named `default` found for struct `production_discovery::ServiceDiscoveryConfig` in the current scope
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:107:42
+    |
+107 |     let config = ServiceDiscoveryConfig::default();
+    |                                          ^^^^^^^ function or associated item not found in `production_discovery::ServiceDiscoveryConfig`
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:39:1
+    |
+ 39 | pub struct ServiceDiscoveryConfig {
+    | --------------------------------- function or associated item `default` not found for this struct
+    |
+note: if you're trying to build a new `production_discovery::ServiceDiscoveryConfig`, consider using `production_discovery::ServiceDiscoveryConfig::from_environment` which returns `std::result::Result<production_discovery::ServiceDiscoveryConfig, core_errors::NestGateUnifiedError>`
+   --> code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:107:5
+    |
+107 |     pub fn from_environment(config: &NestGateCanonicalConfig) -> Result<Self> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: items from traits can only be used if the trait is implemented and in scope
+    = note: the following trait defines an item `default`, perhaps you need to implement it:
+            candidate #1: `Default`
+
+error[E0599]: no function or associated item named `default` found for struct `production_discovery::ServiceDiscoveryConfig` in the current scope
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:118:42
+    |
+118 |     let config = ServiceDiscoveryConfig::default();
+    |                                          ^^^^^^^ function or associated item not found in `production_discovery::ServiceDiscoveryConfig`
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:39:1
+    |
+ 39 | pub struct ServiceDiscoveryConfig {
+    | --------------------------------- function or associated item `default` not found for this struct
+    |
+note: if you're trying to build a new `production_discovery::ServiceDiscoveryConfig`, consider using `production_discovery::ServiceDiscoveryConfig::from_environment` which returns `std::result::Result<production_discovery::ServiceDiscoveryConfig, core_errors::NestGateUnifiedError>`
+   --> code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:107:5
+    |
+107 |     pub fn from_environment(config: &NestGateCanonicalConfig) -> Result<Self> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: items from traits can only be used if the trait is implemented and in scope
+    = note: the following trait defines an item `default`, perhaps you need to implement it:
+            candidate #1: `Default`
+
+error[E0599]: no function or associated item named `default` found for struct `production_discovery::ServiceDiscoveryConfig` in the current scope
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:135:46
+    |
+135 |     let mut config = ServiceDiscoveryConfig::default();
+    |                                              ^^^^^^^ function or associated item not found in `production_discovery::ServiceDiscoveryConfig`
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:39:1
+    |
+ 39 | pub struct ServiceDiscoveryConfig {
+    | --------------------------------- function or associated item `default` not found for this struct
+    |
+note: if you're trying to build a new `production_discovery::ServiceDiscoveryConfig`, consider using `production_discovery::ServiceDiscoveryConfig::from_environment` which returns `std::result::Result<production_discovery::ServiceDiscoveryConfig, core_errors::NestGateUnifiedError>`
+   --> code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:107:5
+    |
+107 |     pub fn from_environment(config: &NestGateCanonicalConfig) -> Result<Self> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: items from traits can only be used if the trait is implemented and in scope
+    = note: the following trait defines an item `default`, perhaps you need to implement it:
+            candidate #1: `Default`
+
+error[E0599]: no function or associated item named `default` found for struct `production_discovery::ServiceDiscoveryConfig` in the current scope
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:155:43
+    |
+155 |     let config1 = ServiceDiscoveryConfig::default();
+    |                                           ^^^^^^^ function or associated item not found in `production_discovery::ServiceDiscoveryConfig`
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:39:1
+    |
+ 39 | pub struct ServiceDiscoveryConfig {
+    | --------------------------------- function or associated item `default` not found for this struct
+    |
+note: if you're trying to build a new `production_discovery::ServiceDiscoveryConfig`, consider using `production_discovery::ServiceDiscoveryConfig::from_environment` which returns `std::result::Result<production_discovery::ServiceDiscoveryConfig, core_errors::NestGateUnifiedError>`
+   --> code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:107:5
+    |
+107 |     pub fn from_environment(config: &NestGateCanonicalConfig) -> Result<Self> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: items from traits can only be used if the trait is implemented and in scope
+    = note: the following trait defines an item `default`, perhaps you need to implement it:
+            candidate #1: `Default`
+
+error[E0624]: associated function `default_port_for_service` is private
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:194:44
+    |
+194 |     let api_port = ServiceDiscoveryConfig::default_port_for_service("api");
+    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^ private associated function
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:243:5
+    |
+243 |     fn default_port_for_service(service_name: &str) -> u16 {
+    |     ------------------------------------------------------ private associated function defined here
+
+error[E0624]: associated function `default_port_for_service` is private
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:195:48
+    |
+195 |     let metrics_port = ServiceDiscoveryConfig::default_port_for_service("metrics");
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^^ private associated function
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:243:5
+    |
+243 |     fn default_port_for_service(service_name: &str) -> u16 {
+    |     ------------------------------------------------------ private associated function defined here
+
+error[E0624]: associated function `default_port_for_service` is private
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:262:44
+    |
+262 |         let port = ServiceDiscoveryConfig::default_port_for_service(service);
+    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^ private associated function
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:243:5
+    |
+243 |     fn default_port_for_service(service_name: &str) -> u16 {
+    |     ------------------------------------------------------ private associated function defined here
+
+error[E0624]: associated function `default_bind_for_service` is private
+   --> code/crates/nestgate-core/src/universal_primal_discovery/error_path_tests.rs:265:44
+    |
+265 |         let bind = ServiceDiscoveryConfig::default_bind_for_service(service);
+    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^ private associated function
+    |
+   ::: code/crates/nestgate-core/src/universal_primal_discovery/production_discovery.rs:255:5
+    |
+255 |     fn default_bind_for_service(service_name: &str) -> IpAddr {
+    |     --------------------------------------------------------- private associated function defined here
+
+warning: missing documentation for a constant
+   --> code/crates/nestgate-core/src/constants/canonical_defaults.rs:233:5
+    |
+233 |     pub const CONNECTION_TIMEOUT_MS: u64 = 3000;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the lint level is defined here
+   --> code/crates/nestgate-core/src/lib.rs:9:9
+    |
+  9 | #![warn(missing_docs)]
+    |         ^^^^^^^^^^^^
+
+warning: missing documentation for a constant
+   --> code/crates/nestgate-core/src/constants/canonical_defaults.rs:235:5
+    |
+235 |     pub const REQUEST_TIMEOUT_MS: u64 = 10000;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a constant
+  --> code/crates/nestgate-core/src/constants/hardcoding.rs:85:5
+   |
+85 |     pub const DISCOVERY_SERVICE: u16 = 3010;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a constant
+  --> code/crates/nestgate-core/src/constants/hardcoding.rs:90:5
+   |
+90 |     pub const METRICS_PROMETHEUS: u16 = 9090;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a constant
+  --> code/crates/nestgate-core/src/constants/hardcoding.rs:92:5
+   |
+92 |     pub const HEALTH_DEFAULT: u16 = 8081;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a constant
+   --> code/crates/nestgate-core/src/constants/hardcoding.rs:237:5
+    |
+237 |     pub const BUFFER_SIZE_MAX: usize = 1_048_576;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a constant
+   --> code/crates/nestgate-core/src/constants/hardcoding.rs:242:5
+    |
+242 |     pub const MAX_CONNECTIONS: usize = 1000;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a constant
+   --> code/crates/nestgate-core/src/constants/hardcoding.rs:247:5
+    |
+247 |     pub const MAX_RETRIES: u32 = 3;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:105:5
+    |
+105 |     pub fn api_host(&self) -> &str {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:122:5
+    |
+122 |     pub fn api_port(&self) -> u16 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:159:5
+    |
+159 |     pub fn bind_address(&self) -> &str {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:180:5
+    |
+180 |     pub fn api_url(&self) -> String {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:273:5
+    |
+273 |     pub fn postgres_host(&self) -> &str {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:297:5
+    |
+297 |     pub fn redis_host(&self) -> &str {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:314:5
+    |
+314 |     pub fn zfs_pool_name(&self) -> &str {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:331:5
+    |
+331 |     pub fn data_dir(&self) -> &str {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:416:5
+    |
+416 |     pub fn max_connections(&self) -> usize {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:425:5
+    |
+425 |     pub fn connection_timeout(&self) -> std::time::Duration {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:442:5
+    |
+442 |     pub fn max_retry_attempts(&self) -> u32 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:455:5
+    |
+455 |     pub fn network_buffer_size(&self) -> usize {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:468:5
+    |
+468 |     pub fn worker_threads(&self) -> usize {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:539:5
+    |
+539 |     pub fn jwt_secret(&self) -> &str {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:552:5
+    |
+552 |     pub fn encryption_algorithm(&self) -> &str {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:561:5
+    |
+561 |     pub fn tls_enabled(&self) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/constants/consolidated.rs:578:5
+    |
+578 |     pub fn rate_limit_requests_per_minute(&self) -> u32 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/ecosystem_integration/mod.rs:34:1
+   |
+34 | pub mod fallback_providers {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/ecosystem_integration/capability_router.rs:68:5
+   |
+68 |     NoFallbackAvailable(String),
+   |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/ecosystem_integration/capability_router.rs:70:5
+   |
+70 |     AdapterError(String),
+   |     ^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/ecosystem_integration/capability_router.rs:72:5
+   |
+72 |     FallbackError(String),
+   |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/ecosystem_integration/capability_router.rs:74:5
+   |
+74 |     SerializationError(String),
+   |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/ecosystem_integration/capability_router.rs:102:5
+    |
+102 |     Security(crate::ecosystem_integration::fallback_providers::security::SecurityFallbackProvider),
+    |     ^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/ecosystem_integration/capability_router.rs:103:5
+    |
+103 |     Ai(crate::ecosystem_integration::fallback_providers::ai::AiFallbackProvider),
+    |     ^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/ecosystem_integration/capability_router.rs:104:5
+    |
+104 |     Orchestration(crate::ecosystem_integration::fallback_providers::orchestration::OrchestrationFallbackProvider),
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/ecosystem_integration/capability_router.rs:105:5
+    |
+105 |     Zfs(crate::ecosystem_integration::fallback_providers::zfs::ZfsFallbackProvider),
+    |     ^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/ecosystem_integration/capability_router.rs:128:5
+    |
+128 |     pub fn supported_operations(&self) -> Vec<String> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/ecosystem_integration/capability_router.rs:138:5
+    |
+138 |     pub fn metadata(&self) -> HashMap<String, String> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/ecosystem_integration/real_adapter_router.rs:79:9
+   |
+79 |         initial_delay: Duration,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/ecosystem_integration/real_adapter_router.rs:80:9
+   |
+80 |         max_delay: Duration,
+   |         ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/ecosystem_integration/real_adapter_router.rs:81:9
+   |
+81 |         multiplier: f64,
+   |         ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/ecosystem_integration/real_adapter_router.rs:87:9
+   |
+87 |         queue_size: usize,
+   |         ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/ecosystem_integration/real_adapter_router.rs:88:9
+   |
+88 |         retry_interval: Duration,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/ecosystem_integration/mod.rs:39:5
+   |
+39 |     pub mod security {
+   |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+   --> code/crates/nestgate-core/src/ecosystem_integration/mod.rs:119:5
+    |
+119 |     pub mod ai {
+    |     ^^^^^^^^^^
+
+warning: missing documentation for a module
+   --> code/crates/nestgate-core/src/ecosystem_integration/mod.rs:210:5
+    |
+210 |     pub mod orchestration {
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+   --> code/crates/nestgate-core/src/ecosystem_integration/mod.rs:293:5
+    |
+293 |     pub mod compute {
+    |     ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+   --> code/crates/nestgate-core/src/ecosystem_integration/mod.rs:323:5
+    |
+323 |     pub mod zfs {
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/ecosystem_integration/mod.rs:62:13
+   |
+62 |             pub fn new(mode: SecurityFallbackMode) -> Self {
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/ecosystem_integration/mod.rs:142:13
+    |
+142 |             pub fn new(mode: AiFallbackMode) -> Self {
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/ecosystem_integration/mod.rs:227:13
+    |
+227 |             pub fn new() -> Self {
+    |             ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/ecosystem_integration/mod.rs:308:13
+    |
+308 |             pub fn new() -> Self {
+    |             ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/ecosystem_integration/mod.rs:340:13
+    |
+340 |             pub fn new() -> Self {
+    |             ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a type alias
+  --> code/crates/nestgate-core/src/error/mod.rs:37:1
+   |
+37 | pub type NestGateError = NestGateUnifiedError;
+   | ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a type alias
+  --> code/crates/nestgate-core/src/error/variants/mod.rs:22:1
+   |
+22 | pub type NestGateError = NestGateUnifiedError;
+   | ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/infant_discovery/mod.rs:61:5
+   |
+61 |     pub endpoint: Option<String>,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+  --> code/crates/nestgate-core/src/infant_discovery/mod.rs:85:1
+   |
+85 | pub struct DiscoveryStats {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/infant_discovery/mod.rs:88:5
+   |
+88 |     pub discovery_attempts: u64,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/infant_discovery/mod.rs:91:5
+   |
+91 |     pub connection_complexity: f64,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+  --> code/crates/nestgate-core/src/infant_discovery/mod.rs:94:1
+   |
+94 | pub struct ConnectionComplexityTracker {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+   --> code/crates/nestgate-core/src/infant_discovery/mod.rs:347:1
+    |
+347 | pub struct Connection {
+    | ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/infant_discovery/mod.rs:348:5
+    |
+348 |     pub id: String,
+    |     ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/infant_discovery/mod.rs:351:5
+    |
+351 |     pub established_at: std::time::SystemTime,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/recovery/graceful_degradation.rs:36:19
+   |
+36 |     Alternative { endpoint: String },
+   |                   ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/service_discovery/mod.rs:10:1
+   |
+10 | pub mod registry;
+   | ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/service_discovery/mod.rs:11:1
+   |
+11 | pub mod types;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a type alias
+  --> code/crates/nestgate-core/src/service_discovery/mod.rs:27:1
+   |
+27 | pub type ServiceDiscovery = dyn UniversalServiceRegistry;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a function
+  --> code/crates/nestgate-core/src/service_discovery/mod.rs:33:1
+   |
+33 | pub fn create_service_registry() -> InMemoryServiceRegistry {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a function
+  --> code/crates/nestgate-core/src/service_discovery/mod.rs:38:1
+   |
+38 | / pub fn create_service_registration(
+39 | |     name: String,
+40 | |     _category: ServiceCategory,
+41 | |     capabilities: Vec<ServiceCapability>,
+42 | | ) -> UniversalServiceRegistration {
+   | |_________________________________^
+
+warning: missing documentation for a function
+  --> code/crates/nestgate-core/src/service_discovery/mod.rs:60:1
+   |
+60 | pub fn create_storage_role() -> ServiceRole {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a function
+  --> code/crates/nestgate-core/src/service_discovery/mod.rs:75:1
+   |
+75 | pub fn create_ai_role() -> ServiceRole {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a function
+   --> code/crates/nestgate-core/src/service_discovery/mod.rs:111:1
+    |
+111 | pub fn create_security_role() -> ServiceRole {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/service_discovery/types.rs:88:9
+   |
+88 |         namespace: String,
+   |         ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/service_discovery/types.rs:89:9
+   |
+89 |         capability: String,
+   |         ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/service_discovery/types.rs:90:9
+   |
+90 |         version: String,
+   |         ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a function
+   --> code/crates/nestgate-core/src/traits/mod.rs:158:1
+    |
+158 | / pub fn validate_canonical_service<S>(_service: &S) -> bool
+159 | | where
+160 | |     S: CanonicalService,
+    | |________________________^
+
+warning: missing documentation for a function
+   --> code/crates/nestgate-core/src/traits/mod.rs:167:1
+    |
+167 | / pub fn validate_canonical_provider<T, P>(_provider: &P) -> bool
+168 | | where
+169 | |     P: CanonicalProvider<T>,
+    | |____________________________^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/traits/load_balancing/algorithms.rs:21:5
+   |
+21 |     pub fn new() -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/traits/load_balancing/algorithms.rs:108:5
+    |
+108 |     pub fn new() -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/traits/load_balancing/algorithms.rs:220:5
+    |
+220 |     pub fn new() -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/traits/load_balancing/health_aware.rs:19:5
+   |
+19 |     pub fn new(inner: L) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/traits/load_balancing/weighted.rs:22:5
+   |
+22 |     pub fn new() -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/traits/load_balancing/weighted.rs:160:5
+    |
+160 |     pub fn new() -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/traits/service_discovery.rs:29:5
+   |
+29 |     pub fn new() -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+  --> code/crates/nestgate-core/src/traits/service_discovery.rs:57:5
+   |
+57 |     pub fn include_unhealthy(mut self) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/traits/service_discovery.rs:126:9
+    |
+126 |         service_id: String,
+    |         ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/traits/service_discovery.rs:127:9
+    |
+127 |         old_info: Box<ServiceInfo>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/traits/service_discovery.rs:128:9
+    |
+128 |         new_info: Box<ServiceInfo>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/traits/service_discovery.rs:133:9
+    |
+133 |         service_id: String,
+    |         ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/traits/service_discovery.rs:134:9
+    |
+134 |         old_status: HealthStatus,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/traits/service_discovery.rs:135:9
+    |
+135 |         new_status: HealthStatus,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/traits/canonical_provider_unification.rs:615:5
+    |
+615 |     Error(String),
+    |     ^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/traits/canonical/types.rs:87:5
+   |
+87 |     Error(String),
+   |     ^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_adapter/mod.rs:19:1
+   |
+19 | pub mod capability_endpoints_config;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_adapter/mod.rs:20:1
+   |
+20 | pub mod config;
+   | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_adapter/mod.rs:21:1
+   |
+21 | pub mod discovery;
+   | ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_adapter/mod.rs:22:1
+   |
+22 | pub mod discovery_config;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_adapter/mod.rs:57:1
+   |
+57 | pub mod types {
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+   --> code/crates/nestgate-core/src/universal_adapter/mod.rs:103:1
+    |
+103 | pub mod canonical {
+    | ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+   --> code/crates/nestgate-core/src/universal_adapter/mod.rs:108:1
+    |
+108 | pub mod stats;
+    | ^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+   --> code/crates/nestgate-core/src/universal_adapter/mod.rs:110:1
+    |
+110 | pub mod consolidated_canonical {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/universal_adapter/mod.rs:76:9
+   |
+76 |         pub fn new(capability_type: impl Into<String>) -> Self {
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+  --> code/crates/nestgate-core/src/universal_adapter/mod.rs:90:9
+   |
+90 |         pub fn with_operation(mut self, operation: impl Into<String>) -> Self {
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+  --> code/crates/nestgate-core/src/universal_adapter/mod.rs:96:9
+   |
+96 |         pub fn with_filter(mut self, filter: impl Into<String>) -> Self {
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/universal_primal_discovery/mod.rs:3:1
+  |
+3 | pub mod cache;
+  | ^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_primal_discovery/mod.rs:15:1
+   |
+15 | pub mod core;
+   | ^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_primal_discovery/mod.rs:18:1
+   |
+18 | pub mod fallbacks;
+   | ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_primal_discovery/mod.rs:19:1
+   |
+19 | pub mod introspection;
+   | ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_primal_discovery/mod.rs:20:1
+   |
+20 | pub mod introspection_config;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_primal_discovery/mod.rs:21:1
+   |
+21 | pub mod network;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_primal_discovery/mod.rs:23:1
+   |
+23 | pub mod performance;
+   | ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_primal_discovery/mod.rs:25:1
+   |
+25 | pub mod production_discovery_config;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_primal_discovery/mod.rs:26:1
+   |
+26 | pub mod registry;
+   | ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_primal_discovery/mod.rs:27:1
+   |
+27 | pub mod registry_config;
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_primal_discovery/mod.rs:29:1
+   |
+29 | pub mod stubs;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/universal_primal_discovery/cache.rs:26:5
+   |
+26 |     pub fn new(value: String, ttl: Duration) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+  --> code/crates/nestgate-core/src/universal_primal_discovery/cache.rs:38:5
+   |
+38 |     pub fn is_expired(&self) -> bool {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/universal_primal_discovery/stubs.rs:151:5
+    |
+151 |     pub fn new(service_name: String) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/universal_primal_discovery/stubs.rs:171:5
+    |
+171 |     pub fn config(&self) -> &UnifiedNetworkConfig {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/universal_primal_discovery/stubs.rs:190:5
+    |
+190 |     pub fn new(service_name: String) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/universal_primal_discovery/stubs.rs:217:5
+    |
+217 |     pub fn all_endpoints(&self) -> HashMap<String, SocketAddr> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/universal_primal_discovery/stubs.rs:222:5
+    |
+222 |     pub fn is_standalone(&self) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_storage/mod.rs:53:1
+   |
+53 | pub mod zero_cost_storage_traits;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_storage/mod.rs:55:1
+   |
+55 | pub mod consolidated_types;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/universal_storage/zero_cost_storage_backend.rs:64:5
+   |
+64 |     fn max_file_size_bytes() -> usize {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/universal_storage/zero_cost_storage_backend.rs:68:5
+   |
+68 |     fn operation_timeout() -> Duration {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/universal_storage/zero_cost_storage_traits.rs:81:5
+   |
+81 |     fn max_concurrent_operations() -> usize {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/universal_storage/zero_cost_storage_traits.rs:86:5
+   |
+86 |     fn timeout_milliseconds() -> u64 {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+  --> code/crates/nestgate-core/src/universal_storage/zero_cost_storage_traits.rs:96:5
+   |
+96 | /     fn health_check(
+97 | |         &self,
+98 | |     ) -> impl Future<Output = std::result::Result<ZeroCostStorageHealth, Self::Error>> + Send;
+   | |______________________________________________________________________________________________^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/zero_cost_storage_traits.rs:111:5
+    |
+111 |     ReadResult(Vec<u8>),
+    |     ^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/zero_cost_storage_traits.rs:116:5
+    |
+116 |     ListResult(Vec<String>),
+    |     ^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/zero_cost_storage_traits.rs:117:5
+    |
+117 |     MetadataResult(Box<StorageMetadata>),
+    |     ^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/zero_cost_storage_traits.rs:118:5
+    |
+118 |     Error(String),
+    |     ^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/zero_cost_storage_traits.rs:124:5
+    |
+124 |     pub healthy: bool,
+    |     ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/universal_storage/zero_cost_storage_traits.rs:170:5
+    |
+170 |     fn max_backends() -> usize {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:30:11
+   |
+30 |     Nfs { version: NfsVersion },
+   |           ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:32:11
+   |
+32 |     Smb { version: SmbVersion },
+   |           ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:46:13
+   |
+46 |     Cloud { provider: CloudProvider },
+   |             ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:81:11
+   |
+81 |     AWS { region: String },
+   |           ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:83:13
+   |
+83 |     Azure { subscription_id: String },
+   |             ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:85:11
+   |
+85 |     GCP { project_id: String },
+   |           ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:87:14
+   |
+87 |     Custom { endpoint: String },
+   |              ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:174:5
+    |
+174 |     Restore,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:175:5
+    |
+175 |     Monitoring,
+    |     ^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:176:5
+    |
+176 |     Custom(String),
+    |     ^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:256:9
+    |
+256 |         range: Option<std::ops::Range<u64>>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:260:9
+    |
+260 |         data: Vec<u8>,
+    |         ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:261:9
+    |
+261 |         overwrite: bool,
+    |         ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:265:9
+    |
+265 |         recursive: bool,
+    |         ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:267:5
+    |
+267 |     List {
+    |     ^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:268:9
+    |
+268 |         recursive: bool,
+    |         ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:269:9
+    |
+269 |         filter: Option<String>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:271:5
+    |
+271 |     CreateResource {
+    |     ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:273:9
+    |
+273 |         config: Box<StorageResourceConfig>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:275:5
+    |
+275 |     GetMetadata {},
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:276:5
+    |
+276 |     SetMetadata {
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:277:9
+    |
+277 |         metadata: HashMap<String, serde_json::Value>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:279:5
+    |
+279 |     Snapshot {
+    |     ^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:280:9
+    |
+280 |         name: String,
+    |         ^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:282:5
+    |
+282 |     Restore {},
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:283:5
+    |
+283 |     Stream {
+    |     ^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:284:9
+    |
+284 |         range: Option<std::ops::Range<u64>>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:286:5
+    |
+286 |     Monitor {
+    |     ^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:287:9
+    |
+287 |         events: Vec<StorageEventType>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:296:9
+    |
+296 |         data: Vec<u8>,
+    |         ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:297:9
+    |
+297 |         metadata: Option<StorageMetadata>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:301:9
+    |
+301 |         bytes_written: u64,
+    |         ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:302:9
+    |
+302 |         checksum: Option<String>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:306:9
+    |
+306 |         deleted_items: u64,
+    |         ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:308:5
+    |
+308 |     ListResponse {
+    |     ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:309:9
+    |
+309 |         items: Vec<StorageItem>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:311:5
+    |
+311 |     CreateResponse {},
+    |     ^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:312:5
+    |
+312 |     MetadataResponse {
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:313:9
+    |
+313 |         metadata: StorageMetadata,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:315:5
+    |
+315 |     SnapshotResponse {
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:316:9
+    |
+316 |         snapshot_id: String,
+    |         ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:317:9
+    |
+317 |         created_at: DateTime<Utc>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:319:5
+    |
+319 |     RestoreResponse {
+    |     ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:320:9
+    |
+320 |         restored_bytes: u64,
+    |         ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:321:9
+    |
+321 |         restored_items: u64,
+    |         ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:323:5
+    |
+323 |     StreamResponse {
+    |     ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:324:9
+    |
+324 |         stream_id: String,
+    |         ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:325:9
+    |
+325 |         chunk_size: usize,
+    |         ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:327:5
+    |
+327 |     MonitorResponse {
+    |     ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:328:9
+    |
+328 |         monitor_id: String,
+    |         ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:329:9
+    |
+329 |         events: Vec<StorageEvent>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:331:5
+    |
+331 |     Error {
+    |     ^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:332:9
+    |
+332 |         error: String,
+    |         ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_storage/consolidated_types.rs:333:9
+    |
+333 |         error_code: String,
+    |         ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_storage/auto_configurator.rs:795:5
+    |
+795 |     Custom(String),
+    |     ^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_storage/storage_detector/mod.rs:23:1
+   |
+23 | pub mod config;
+   | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_storage/storage_detector/mod.rs:24:1
+   |
+24 | pub mod core;
+   | ^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/universal_storage/storage_detector/mod.rs:27:1
+   |
+27 | pub mod types;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+  --> code/crates/nestgate-core/src/universal_storage/storage_detector/mod.rs:39:1
+   |
+39 | pub struct StorageDetector {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+   --> code/crates/nestgate-core/src/uuid_cache.rs:191:1
+    |
+191 | / lazy_static::lazy_static! {
+192 | |     // Global UUID cache accessible throughout the application
+193 | |     pub static ref GLOBAL_UUID_CACHE: UuidCache = UuidCache::new();
+194 | | }
+    | |_^
+    |
+    = note: this warning originates in the macro `lazy_static::lazy_static` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/ai_first_refactored.rs:213:21
+    |
+213 |     LinearBackoff { interval_ms: u64, max_attempts: u32 },
+    |                     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/ai_first_refactored.rs:213:39
+    |
+213 |     LinearBackoff { interval_ms: u64, max_attempts: u32 },
+    |                                       ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/ai_first_refactored.rs:215:26
+    |
+215 |     ExponentialBackoff { base_ms: u64, max_attempts: u32 },
+    |                          ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/ai_first_refactored.rs:215:40
+    |
+215 |     ExponentialBackoff { base_ms: u64, max_attempts: u32 },
+    |                                        ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/ai_first_refactored.rs:217:21
+    |
+217 |     CustomBackoff { intervals_ms: Vec<u64> },
+    |                     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/ai_first_refactored.rs:252:5
+    |
+252 |     Custom(String),
+    |     ^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/ai_first_refactored.rs:331:5
+    |
+331 |     pub fn new(data: T) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/ai_first_refactored.rs:343:5
+    |
+343 |     pub fn with_error(mut self, error: AIFirstError) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/ai_first_refactored.rs:350:5
+    |
+350 |     pub fn with_confidence(mut self, score: f64) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/ai_first_refactored.rs:356:5
+    |
+356 |     pub fn add_suggestion(mut self, action: SuggestedAction) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/ai_first_refactored.rs:362:5
+    |
+362 |     pub fn with_metadata(mut self, metadata: AIResponseMetadata) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/cache/mod.rs:45:1
+   |
+45 | pub mod types;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+   --> code/crates/nestgate-core/src/cache/mod.rs:225:1
+    |
+225 | pub struct CacheBuilder {
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/cache/manager.rs:74:5
+   |
+74 |     pub fn new(data: Vec<u8>) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+  --> code/crates/nestgate-core/src/cache/manager.rs:85:5
+   |
+85 |     pub fn is_expired(&self, ttl: Duration) -> bool {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/cache/manager.rs:111:5
+    |
+111 |     pub fn hit_rate(&self) -> f64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a type alias
+  --> code/crates/nestgate-core/src/cache/multi_tier.rs:10:1
+   |
+10 | pub type CacheProviderBox = Box<dyn CacheProvider<String, Vec<u8>>>;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/cert/mod.rs:48:1
+   |
+48 | pub mod manager;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/cert/mod.rs:49:1
+   |
+49 | pub mod types;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/cert/mod.rs:50:1
+   |
+50 | pub mod utils;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/cert/mod.rs:51:1
+   |
+51 | pub mod validator;
+   | ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+   --> code/crates/nestgate-core/src/cert/utils.rs:252:1
+    |
+252 | pub mod modern {
+    | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/diagnostics/mod.rs:8:1
+  |
+8 | pub mod diagnostic;
+  | ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/diagnostics/mod.rs:9:1
+  |
+9 | pub mod manager;
+  | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/diagnostics/mod.rs:10:1
+   |
+10 | pub mod metrics;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/diagnostics/mod.rs:11:1
+   |
+11 | pub mod types;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/observability/mod.rs:10:1
+   |
+10 | pub mod metrics;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/observability/mod.rs:11:1
+   |
+11 | pub mod tracing_config;
+   | ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+  --> code/crates/nestgate-core/src/observability/mod.rs:28:1
+   |
+28 | pub struct ObservabilityManager {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a function
+   --> code/crates/nestgate-core/src/observability/mod.rs:206:1
+    |
+206 | pub fn init_observability(config: ObservabilityConfig) -> Result<()> {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a function
+   --> code/crates/nestgate-core/src/observability/mod.rs:224:1
+    |
+224 | pub fn get_observability() -> Option<Arc<ObservabilityManager>> {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a function
+   --> code/crates/nestgate-core/src/observability/mod.rs:228:1
+    |
+228 | pub async fn record_metric(name: &str, value: f64) -> Result<()> {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a function
+   --> code/crates/nestgate-core/src/observability/mod.rs:240:1
+    |
+240 | pub async fn get_system_health() -> Result<SystemHealth> {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/observability/metrics.rs:14:5
+   |
+14 |     Gauge(f64),
+   |     ^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/observability/metrics.rs:15:5
+   |
+15 |     Counter(u64),
+   |     ^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/observability/metrics.rs:16:5
+   |
+16 |     Histogram(Vec<f64>),
+   |     ^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/observability/metrics.rs:19:9
+   |
+19 |         sum: f64,
+   |         ^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/observability/metrics.rs:20:9
+   |
+20 |         count: u64,
+   |         ^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/observability/metrics.rs:22:5
+   |
+22 |     String(String),
+   |     ^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/response/mod.rs:6:1
+  |
+6 | pub mod ai_first_response;
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/response/mod.rs:7:1
+  |
+7 | pub mod api_response;
+  | ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/response/mod.rs:8:1
+  |
+8 | pub mod error_response;
+  | ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/response/mod.rs:11:1
+   |
+11 | pub mod traits;
+   | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/response/mod.rs:30:1
+   |
+30 | pub mod utils {
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+   --> code/crates/nestgate-core/src/response/mod.rs:155:1
+    |
+155 | pub mod middleware {
+    | ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+   --> code/crates/nestgate-core/src/response/mod.rs:231:1
+    |
+231 | pub mod validation {
+    | ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/response/ai_first_response.rs:166:9
+    |
+166 |         base_delay_ms: u64,
+    |         ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/response/ai_first_response.rs:167:9
+    |
+167 |         max_retries: u32,
+    |         ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/response/ai_first_response.rs:170:21
+    |
+170 |     FixedInterval { interval_ms: u64, max_retries: u32 },
+    |                     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/response/ai_first_response.rs:170:39
+    |
+170 |     FixedInterval { interval_ms: u64, max_retries: u32 },
+    |                                       ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/response/ai_first_response.rs:173:9
+    |
+173 |         strategy_id: String,
+    |         ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/response/ai_first_response.rs:174:9
+    |
+174 |         parameters: HashMap<String, serde_json::Value>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/return_builders/mod.rs:16:1
+   |
+16 | pub mod config_builders;
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/return_builders/mod.rs:18:1
+   |
+18 | pub mod json_builders;
+   | ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/return_builders/mod.rs:20:1
+   |
+20 | pub mod tests;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:10:1
+   |
+10 | pub mod async_ops;
+   | ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:11:1
+   |
+11 | pub mod collections;
+   | ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:13:1
+   |
+13 | pub mod macros;
+   | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:14:1
+   |
+14 | pub mod memory;
+   | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:15:1
+   |
+15 | pub mod mutexes;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:16:1
+   |
+16 | pub mod network;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:17:1
+   |
+17 | pub mod options;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:18:1
+   |
+18 | pub mod results;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:19:1
+   |
+19 | pub mod serialization;
+   | ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:20:1
+   |
+20 | pub mod services;
+   | ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:21:1
+   |
+21 | pub mod testing;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:22:1
+   |
+22 | pub mod threading;
+   | ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a function
+  --> code/crates/nestgate-core/src/safe_operations/mod.rs:40:1
+   |
+40 | pub fn safe_adapter_init<T>(init_result: Result<T>, adapter_name: &str) -> Result<Option<T>> {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/dev_stubs/primal_discovery.rs:141:5
+    |
+141 |     pub fn new(service_name: String) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/dev_stubs/primal_discovery.rs:161:5
+    |
+161 |     pub fn config(&self) -> &UnifiedNetworkConfig {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/dev_stubs/primal_discovery.rs:180:5
+    |
+180 |     pub fn new(service_name: String) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/dev_stubs/primal_discovery.rs:207:5
+    |
+207 |     pub fn all_endpoints(&self) -> HashMap<String, SocketAddr> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/dev_stubs/primal_discovery.rs:212:5
+    |
+212 |     pub fn is_standalone(&self) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/jwt_validation.rs:26:5
+   |
+26 |     pub message: String,
+   |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:137:5
+    |
+137 |     Error(String),
+    |     ^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:163:5
+    |
+163 |     Genome,
+    |     ^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:171:5
+    |
+171 |     Model(ModelType),
+    |     ^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:172:5
+    |
+172 |     Dataset(DatasetType),
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:179:5
+    |
+179 |     LegacyFiles,
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:180:5
+    |
+180 |     SystemImages,
+    |     ^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:181:5
+    |
+181 |     Applications,
+    |     ^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:184:5
+    |
+184 |     Publications,
+    |     ^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:185:5
+    |
+185 |     ExperimentalData,
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:186:5
+    |
+186 |     Simulations,
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:189:5
+    |
+189 |     Documents,
+    |     ^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:190:5
+    |
+190 |     Media,
+    |     ^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:191:5
+    |
+191 |     Archives,
+    |     ^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:192:5
+    |
+192 |     Unknown,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:209:5
+    |
+209 |     Custom(String),
+    |     ^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:245:5
+    |
+245 |     APIKey(String),
+    |     ^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:248:9
+    |
+248 |         client_id: String,
+    |         ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:249:9
+    |
+249 |         scope: Vec<String>,
+    |         ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:253:9
+    |
+253 |         username: String,
+    |         ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:254:9
+    |
+254 |         password: String,
+    |         ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:258:5
+    |
+258 |     None,
+    |     ^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:305:5
+    |
+305 |     Invalid(String),
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:308:5
+    |
+308 |     PartiallyValid(Vec<String>),
+    |     ^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:407:5
+    |
+407 |     Specialized(String),
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:445:9
+    |
+445 |         api_type: APIType,
+    |         ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:446:9
+    |
+446 |         endpoint: String,
+    |         ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:450:9
+    |
+450 |         capability_type: String,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:451:9
+    |
+451 |         provider_metadata: HashMap<String, String>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:455:9
+    |
+455 |         provider: CloudProvider,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:457:5
+    |
+457 |     LegacyMedia {
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:458:9
+    |
+458 |         media_type: LegacyMediaType,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:460:5
+    |
+460 |     FutureStorage {
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:461:9
+    |
+461 |         technology: FutureTechnology,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:476:5
+    |
+476 |     Custom(String),
+    |     ^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:483:18
+    |
+483 |     GenomeData { organism_filter: Option<String> },
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:485:17
+    |
+485 |     ModelData { model_type_filter: Option<String> },
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:487:20
+    |
+487 |     ResearchData { domain_filter: Option<String> },
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:489:22
+    |
+489 |     TimeSeriesData { frequency: Option<String> },
+    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:491:17
+    |
+491 |     ImageData { format_filter: Option<String> },
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/temporal_storage.rs:493:14
+    |
+493 |     Custom { capability_name: String },
+    |              ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:523:5
+    |
+523 |     Dna(String),
+    |     ^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:524:5
+    |
+524 |     Quantum(String),
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:525:5
+    |
+525 |     Crystalline(String),
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:526:5
+    |
+526 |     Holographic(String),
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:527:5
+    |
+527 |     Neural(String),
+    |     ^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/temporal_storage.rs:528:5
+    |
+528 |     Unknown(String),
+    |     ^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/zero_cost/providers.rs:29:5
+   |
+29 |     pub fn new() -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+  --> code/crates/nestgate-core/src/zero_cost/providers.rs:37:5
+   |
+37 |     pub fn capacity(&self) -> usize {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/zero_cost/providers.rs:72:5
+   |
+72 |     pub fn new(secret: [u8; 32]) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/zero_cost/providers.rs:123:5
+    |
+123 |     pub fn new(base_path: String) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/zero_cost/system.rs:157:5
+    |
+157 |     pub fn timeout_ms() -> u64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a function
+  --> code/crates/nestgate-core/src/zero_cost_architecture.rs:45:1
+   |
+45 | pub fn benchmark_traditional_vs_zero_cost() -> ZeroCostBenchmarkResults {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated constant
+  --> code/crates/nestgate-core/src/zero_cost_evolution.rs:36:5
+   |
+36 |     const BUFFER_SIZE: usize;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated constant
+  --> code/crates/nestgate-core/src/zero_cost_evolution.rs:37:5
+   |
+37 |     const MAX_CONNECTIONS: usize;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated constant
+  --> code/crates/nestgate-core/src/zero_cost_evolution.rs:39:5
+   |
+39 |     const TIMEOUT_MS: u64;
+   |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/zero_cost_security_provider/mod.rs:5:1
+  |
+5 | pub mod traits;
+  | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/zero_cost_security_provider/mod.rs:30:1
+   |
+30 | pub mod config;
+   | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/zero_cost_security_provider/mod.rs:31:1
+   |
+31 | pub mod metadata;
+   | ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+  --> code/crates/nestgate-core/src/zero_cost_security_provider/mod.rs:74:1
+   |
+74 | pub struct SecurityModularizationComplete;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/zero_cost_security_provider/authentication.rs:433:5
+    |
+433 |     pub fn new(signing_key: String) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/zero_cost_security_provider/authentication.rs:438:5
+    |
+438 | /     pub fn create_token(
+439 | |         &self,
+440 | |         user_id: &str,
+441 | |         permissions: Vec<String>,
+442 | |         expiry: Duration,
+443 | |     ) -> ZeroCostAuthToken {
+    | |__________________________^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/zero_cost_security_provider/authentication.rs:453:5
+    |
+453 |     pub fn validate_token_signature(&self, _token: &str) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/canonical/types/mod.rs:8:1
+  |
+8 | pub mod core_types;
+  | ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/performance/connection_pool.rs:373:5
+    |
+373 |     pub fn new() -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated constant
+   --> code/crates/nestgate-core/src/performance/advanced_optimizations.rs:522:5
+    |
+522 |     pub const MAX_SIMD_WIDTH: usize = 32; // AVX2
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated constant
+   --> code/crates/nestgate-core/src/performance/safe_optimizations.rs:428:5
+    |
+428 |     pub const MAX_SIMD_WIDTH: usize = 32; // AVX2
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a type alias
+  --> code/crates/nestgate-core/src/simd/mod.rs:38:1
+   |
+38 | pub type StandardBatchProcessor = SimdBatchProcessor<32>;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a constant
+  --> code/crates/nestgate-core/src/simd/mod.rs:45:1
+   |
+45 | pub const DEFAULT_BATCH_SIZE: usize = 32;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a constant
+  --> code/crates/nestgate-core/src/simd/mod.rs:46:1
+   |
+46 | pub const MAX_BATCH_SIZE: usize = 1024;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/unified_enums/mod.rs:3:1
+  |
+3 | pub mod data_types;
+  | ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/unified_enums/mod.rs:4:1
+  |
+4 | pub mod message_event_types;
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/unified_enums/mod.rs:5:1
+  |
+5 | pub mod network_types;
+  | ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/unified_enums/mod.rs:6:1
+  |
+6 | pub mod storage_types;
+  | ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/unified_enums/mod.rs:14:1
+   |
+14 | pub mod service_types;
+   | ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/unified_enums/mod.rs:15:1
+   |
+15 | pub mod storage_access_types;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/unified_enums/mod.rs:16:1
+   |
+16 | pub mod system_health_types;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a trait
+  --> code/crates/nestgate-core/src/unified_enums/mod.rs:51:1
+   |
+51 | pub trait UnifiedEnum: Clone + PartialEq + Eq + std::fmt::Debug {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_providers_zero_cost.rs:54:9
+   |
+54 |         reason: String,
+   |         ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_providers_zero_cost.rs:55:9
+   |
+55 |         enhanced_by_security_provider: bool,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_providers_zero_cost.rs:59:9
+   |
+59 |         reason: String,
+   |         ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_providers_zero_cost.rs:60:9
+   |
+60 |         remediation: Option<String>,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_providers_zero_cost.rs:63:22
+   |
+63 |     RequireLicense { terms: String, contact: String },
+   |                      ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-core/src/universal_providers_zero_cost.rs:63:37
+   |
+63 |     RequireLicense { terms: String, contact: String },
+   |                                     ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/universal_providers_zero_cost.rs:136:5
+    |
+136 |     fn health_check(&self) -> impl Future<Output = std::result::Result<bool, Self::Error>> + Send;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/universal_providers_zero_cost.rs:292:5
+    |
+292 |     fn health_check(&self) -> impl Future<Output = std::result::Result<bool, Self::Error>> + Send;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/universal_providers_zero_cost.rs:335:5
+    |
+335 |     fn health_check(&self) -> impl Future<Output = std::result::Result<bool, Self::Error>> + Send;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+   --> code/crates/nestgate-core/src/universal_providers_zero_cost.rs:341:1
+    |
+341 | pub struct ServiceStatus {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_providers_zero_cost.rs:346:5
+    |
+346 |     pub health: String,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_traits/security.rs:121:17
+    |
+121 |     RateLimit { retry_after: u64 },
+    |                 ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_traits/compute.rs:165:9
+    |
+165 |         min_instances: u32,
+    |         ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_traits/compute.rs:166:9
+    |
+166 |         max_instances: u32,
+    |         ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/universal_traits/compute.rs:169:17
+    |
+169 |     LoadBased { target_utilization: f64 },
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/universal_traits/ecosystem.rs:110:5
+    |
+110 |     Custom(String),
+    |     ^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/universal_traits/types.rs:65:5
+   |
+65 |     Custom(String),
+   |     ^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/universal_traits/types.rs:71:5
+   |
+71 |     Required(String),
+   |     ^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/universal_traits/types.rs:72:5
+   |
+72 |     Optional(String),
+   |     ^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/universal_traits/types.rs:73:5
+   |
+73 |     Preferred(String),
+   |     ^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/network/mod.rs:5:1
+  |
+5 | pub mod native_async_network;
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an enum
+   --> code/crates/nestgate-core/src/network/client.rs:332:1
+    |
+332 | pub enum RequestBody<'a> {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/network/client.rs:335:5
+    |
+335 |     Bytes(&'a [u8]),
+    |     ^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/network/client.rs:336:5
+    |
+336 |     String(&'a str),
+    |     ^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/network/client.rs:398:5
+    |
+398 |     pub timeout: TimeoutMs,
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+   --> code/crates/nestgate-core/src/network/client.rs:431:1
+    |
+431 | pub struct ConnectionPool {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+   --> code/crates/nestgate-core/src/network/client.rs:592:1
+    |
+592 | pub struct ConnectionStats {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/network/client.rs:716:5
+    |
+716 |     ConnectionFailed { message: String },
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/network/client.rs:716:24
+    |
+716 |     ConnectionFailed { message: String },
+    |                        ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/network/client.rs:719:5
+    |
+719 |     Timeout { timeout: Duration },
+    |     ^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/network/client.rs:719:15
+    |
+719 |     Timeout { timeout: Duration },
+    |               ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/network/client.rs:722:5
+    |
+722 |     InvalidResponse { message: String },
+    |     ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/network/client.rs:722:23
+    |
+722 |     InvalidResponse { message: String },
+    |                       ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/network/client.rs:725:5
+    |
+725 |     TooManyRedirects { count: usize },
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-core/src/network/client.rs:725:24
+    |
+725 |     TooManyRedirects { count: usize },
+    |                        ^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/network/native_async/mod.rs:3:1
+  |
+3 | pub mod config;
+  | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/network/native_async/mod.rs:4:1
+  |
+4 | pub mod development;
+  | ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-core/src/network/native_async/mod.rs:5:1
+  |
+5 | pub mod production;
+  | ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/network/native_async/mod.rs:11:1
+   |
+11 | pub mod traits;
+   | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/network/native_async/mod.rs:12:1
+   |
+12 | pub mod types;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a type alias
+  --> code/crates/nestgate-core/src/network/native_async/mod.rs:39:1
+   |
+39 | pub type ProductionNetworkServiceDiscovery = production::ProductionServiceDiscovery;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/network/native_async/service.rs:95:5
+   |
+95 |     pub fn new(config: NetworkServiceConfig) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+  --> code/crates/nestgate-core/src/network/native_async/traits.rs:37:5
+   |
+37 |     fn watch(&self) -> impl Future<Output = Result<Vec<Self::ServiceEvent>>> + Send;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/network/native_async/traits.rs:72:5
+   |
+72 |     fn max_services() -> usize {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/network/native_async/traits.rs:77:5
+   |
+77 |     fn discovery_timeout_seconds() -> u64 {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/network/native_async/traits.rs:82:5
+   |
+82 |     fn watch_buffer_size() -> usize {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/network/native_async/traits.rs:142:5
+    |
+142 |     fn connection_timeout_seconds() -> u64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/network/native_async/traits.rs:206:5
+    |
+206 |     fn health_check_interval_seconds() -> u64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/network/native_async/traits.rs:261:5
+    |
+261 |     fn health_check_interval_seconds() -> u64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/network/native_async/types.rs:80:5
+   |
+80 |     Error(String),
+   |     ^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/services/native_async/production.rs:59:5
+   |
+59 |     Error(String),
+   |     ^^^^^
+
+warning: missing documentation for a method
+  --> code/crates/nestgate-core/src/services/native_async/traits.rs:38:5
+   |
+38 |     fn health_check_all(&self) -> impl std::future::Future<Output = Result<Vec<(String, bool)>>> + Send;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/services/native_async/traits.rs:54:17
+   |
+54 |     #[must_use] fn max_concurrent_requests() -> usize { MAX_CONCURRENT_REQUESTS }
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/services/native_async/traits.rs:55:17
+   |
+55 |     #[must_use] fn stats_retention_seconds() -> u64 { STATS_RETENTION_SECS }
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-core/src/services/native_async/traits.rs:56:17
+   |
+56 |     #[must_use] fn health_check_interval_seconds() -> u64 { HEALTH_CHECK_INTERVAL_SECS }
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:124:5
+    |
+124 |     fn max_message_size() -> usize {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:128:5
+    |
+128 |     fn connection_timeout_seconds() -> u64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:132:5
+    |
+132 |     fn message_retry_attempts() -> u32 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:202:5
+    |
+202 |     fn session_timeout_seconds() -> u64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:206:5
+    |
+206 |     fn max_message_size() -> usize {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:210:5
+    |
+210 |     fn protocol_version() -> u32 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:271:5
+    |
+271 |     fn max_concurrent_executions() -> usize {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:275:5
+    |
+275 |     fn execution_timeout_seconds() -> u64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:279:5
+    |
+279 |     fn max_workflow_steps() -> usize {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:323:5
+    |
+323 |     fn service_timeout_seconds() -> u64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:360:5
+    |
+360 |     fn session_duration_seconds() -> u64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:381:5
+    |
+381 |     fn health_check(&self) -> impl std::future::Future<Output = Result<bool>> + Send;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:389:5
+    |
+389 |     fn request_timeout_seconds() -> u64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-core/src/services/native_async/traits.rs:422:5
+    |
+422 |     fn execution_timeout_seconds() -> u64 {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/services/native_async/types.rs:172:5
+    |
+172 |     Error(String),
+    |     ^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-core/src/services/native_async/types.rs:259:5
+    |
+259 |     Failed(String),
+    |     ^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-core/src/services/storage/mod.rs:10:1
+   |
+10 | pub mod service;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/services/storage/config.rs:57:5
+   |
+57 |     Lru, // Least Recently Used
+   |     ^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/services/storage/config.rs:58:5
+   |
+58 |     Lfu, // Least Frequently Used
+   |     ^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-core/src/services/storage/config.rs:59:5
+   |
+59 |     Arc, // ZFS Adaptive Replacement Cache
+   |     ^^^
+
+   Compiling nestgate-network v0.1.0 (/home/eastgate/Development/ecoPrimals/nestgate/code/crates/nestgate-network)
+   Compiling nestgate-mcp v0.1.0 (/home/eastgate/Development/ecoPrimals/nestgate/code/crates/nestgate-mcp)
+   Compiling nestgate-automation v0.1.0 (/home/eastgate/Development/ecoPrimals/nestgate/code/crates/nestgate-automation)
+   Compiling nestgate-performance v0.1.0 (/home/eastgate/Development/ecoPrimals/nestgate/code/crates/nestgate-performance)
+   Compiling nestgate-canonical v0.1.0 (/home/eastgate/Development/ecoPrimals/nestgate/code/crates/nestgate-canonical)
+warning: use of deprecated function `nestgate_core::ports::api_server_port`: Use EnvironmentConfig::from_env()?.network.port instead
+   --> code/crates/nestgate-performance/src/zero_copy_networking.rs:804:20
+    |
+804 |             ports::api_server_port()
+    |                    ^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: `nestgate-performance` (lib) generated 1 warning
+   Compiling nestgate-zfs v0.1.0 (/home/eastgate/Development/ecoPrimals/nestgate/code/crates/nestgate-zfs)
+   Compiling nestgate-nas v0.9.2 (/home/eastgate/Development/ecoPrimals/nestgate/code/crates/nestgate-nas)
+Some errors have detailed explanations: E0599, E0624.
+For more information about an error, try `rustc --explain E0599`.
+warning: `nestgate-core` (lib test) generated 3 warnings
+error: could not compile `nestgate-core` (lib test) due to 14 previous errors; 3 warnings emitted
+warning: build failed, waiting for other jobs to finish...
+warning: `nestgate-core` (lib) generated 419 warnings
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/lib.rs:13:1
+   |
+13 | pub mod command;
+   | ^^^^^^^^^^^^^^^
+   |
+note: the lint level is defined here
+  --> code/crates/nestgate-zfs/src/lib.rs:7:9
+   |
+ 7 | #![warn(missing_docs)]
+   |         ^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/lib.rs:15:1
+   |
+15 | pub mod error;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/lib.rs:18:1
+   |
+18 | pub mod types;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/lib.rs:32:1
+   |
+32 | pub mod metrics;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/lib.rs:33:1
+   |
+33 | pub mod production_readiness;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/lib.rs:38:1
+   |
+38 | pub mod real_zfs_operations {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/lib.rs:65:1
+   |
+65 | pub mod dev_environment;
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-zfs/src/command.rs:41:5
+   |
+41 |     pub fn new() -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+  --> code/crates/nestgate-zfs/src/command.rs:46:5
+   |
+46 |     pub fn with_dry_run(mut self, dry_run: bool) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+  --> code/crates/nestgate-zfs/src/command.rs:52:5
+   |
+52 |     pub fn with_timeout(mut self, timeout_seconds: u64) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-zfs/src/command.rs:241:5
+    |
+241 |     pub fn new() -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-zfs/src/command.rs:248:5
+    |
+248 |     pub fn with_dry_run(mut self, dry_run: bool) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/error.rs:168:5
+    |
+168 |     Command,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/error.rs:169:5
+    |
+169 |     SystemCheck,
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/error.rs:170:5
+    |
+170 |     Configuration,
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a type alias
+   --> code/crates/nestgate-zfs/src/error.rs:530:1
+    |
+530 | pub type ZfsResult<T> = Result<T>;
+    | ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:21:5
+   |
+21 |     pub dataset: String,
+   |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:22:5
+   |
+22 |     pub bottleneck_type: String,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:23:5
+   |
+23 |     pub severity: String,
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:24:5
+   |
+24 |     pub recommendations: Vec<String>,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:29:5
+   |
+29 |     pub dataset: String,
+   |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:30:5
+   |
+30 |     pub current_usage: u64,
+   |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:31:5
+   |
+31 |     pub projected_usage: u64,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:32:5
+   |
+32 |     pub recommendations: Vec<String>,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:37:5
+   |
+37 |     pub dataset: String,
+   |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:38:5
+   |
+38 |     pub next_maintenance: SystemTime,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:39:5
+   |
+39 |     pub tasks: Vec<String>,
+   |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:44:5
+   |
+44 |     pub timestamp: SystemTime,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:45:5
+   |
+45 |     pub cpu_usage: f64,
+   |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:46:5
+   |
+46 |     pub memory_usage: f64,
+   |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:47:5
+   |
+47 |     pub disk_usage: f64,
+   |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:52:5
+   |
+52 |     pub source_dataset: String,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:53:5
+   |
+53 |     pub target_dataset: String,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:54:5
+   |
+54 |     pub transfer_rate: f64,
+   |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:55:5
+   |
+55 |     pub compression_ratio: f64,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:56:5
+   |
+56 |     pub estimated_completion: SystemTime,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:61:5
+   |
+61 |     pub name: String,
+   |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:62:5
+   |
+62 |     pub keep_hourly: u32,
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:63:5
+   |
+63 |     pub keep_daily: u32,
+   |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:64:5
+   |
+64 |     pub keep_weekly: u32,
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:65:5
+   |
+65 |     pub keep_monthly: u32,
+   |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/types.rs:84:5
+   |
+84 |     PoolError { message: String },
+   |     ^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:84:17
+   |
+84 |     PoolError { message: String },
+   |                 ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/types.rs:86:5
+   |
+86 |     DatasetError { message: String },
+   |     ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:86:20
+   |
+86 |     DatasetError { message: String },
+   |                    ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/types.rs:88:5
+   |
+88 |     SnapshotError { message: String },
+   |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:88:21
+   |
+88 |     SnapshotError { message: String },
+   |                     ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/types.rs:90:5
+   |
+90 |     CommandError { message: String },
+   |     ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:90:20
+   |
+90 |     CommandError { message: String },
+   |                    ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/types.rs:92:5
+   |
+92 |     ConfigError { message: String },
+   |     ^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/types.rs:92:19
+   |
+92 |     ConfigError { message: String },
+   |                   ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/types.rs:94:5
+   |
+94 |     Io(#[from] std::io::Error),
+   |     ^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:101:5
+    |
+101 |     pub name: String,
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:102:5
+    |
+102 |     pub size: u64,
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:103:5
+    |
+103 |     pub used: u64,
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:104:5
+    |
+104 |     pub available: u64,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:105:5
+    |
+105 |     pub health: PoolHealth,
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:106:5
+    |
+106 |     pub state: PoolState,
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:107:5
+    |
+107 |     pub capacity: PoolCapacity,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:108:5
+    |
+108 |     pub properties: HashMap<String, String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:109:5
+    |
+109 |     pub created_at: SystemTime,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:114:5
+    |
+114 |     Healthy,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:115:5
+    |
+115 |     Warning,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:116:5
+    |
+116 |     Critical,
+    |     ^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:117:5
+    |
+117 |     Unknown,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:122:5
+    |
+122 |     Online,
+    |     ^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:123:5
+    |
+123 |     Offline,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:124:5
+    |
+124 |     Degraded,
+    |     ^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:125:5
+    |
+125 |     Faulted,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:126:5
+    |
+126 |     Removed,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:127:5
+    |
+127 |     Unavailable,
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:132:5
+    |
+132 |     pub total_bytes: u64,
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:133:5
+    |
+133 |     pub used_bytes: u64,
+    |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:134:5
+    |
+134 |     pub available_bytes: u64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:135:5
+    |
+135 |     pub fragmentation_percent: f64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:136:5
+    |
+136 |     pub deduplication_ratio: f64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:143:5
+    |
+143 |     pub name: String,
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:144:5
+    |
+144 |     pub full_name: String,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:145:5
+    |
+145 |     pub pool: String,
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:146:5
+    |
+146 |     pub size: u64,
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:147:5
+    |
+147 |     pub used: u64,
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:148:5
+    |
+148 |     pub available: u64,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:149:5
+    |
+149 |     pub mount_point: Option<PathBuf>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:150:5
+    |
+150 |     pub compression: String,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:151:5
+    |
+151 |     pub checksum: String,
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:152:5
+    |
+152 |     pub tier: StorageTier,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:153:5
+    |
+153 |     pub properties: HashMap<String, String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:154:5
+    |
+154 |     pub created_at: SystemTime,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:161:5
+    |
+161 |     pub name: String,
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:162:5
+    |
+162 |     pub dataset: String,
+    |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:163:5
+    |
+163 |     pub size: u64,
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:164:5
+    |
+164 |     pub properties: HashMap<String, String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:165:5
+    |
+165 |     pub created_at: SystemTime,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:172:5
+    |
+172 |     pub name: String,
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:173:5
+    |
+173 |     pub size: u64,
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:174:5
+    |
+174 |     pub used: u64,
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:175:5
+    |
+175 |     pub available: u64,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:176:5
+    |
+176 |     pub health: String,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:177:5
+    |
+177 |     pub properties: HashMap<String, String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:178:5
+    |
+178 |     pub created_at: SystemTime,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:183:5
+    |
+183 |     pub name: String,
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:184:5
+    |
+184 |     pub full_name: String,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:185:5
+    |
+185 |     pub pool: String,
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:186:5
+    |
+186 |     pub size: u64,
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:187:5
+    |
+187 |     pub used: u64,
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:188:5
+    |
+188 |     pub available: u64,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:189:5
+    |
+189 |     pub mount_point: Option<PathBuf>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:190:5
+    |
+190 |     pub tier: StorageTier,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:191:5
+    |
+191 |     pub properties: HashMap<String, String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:192:5
+    |
+192 |     pub created_at: SystemTime,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:197:5
+    |
+197 |     pub name: String,
+    |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:198:5
+    |
+198 |     pub dataset: String,
+    |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:199:5
+    |
+199 |     pub size: u64,
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:200:5
+    |
+200 |     pub properties: HashMap<String, String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:201:5
+    |
+201 |     pub created_at: SystemTime,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:208:5
+    |
+208 |     pub success: bool,
+    |     ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:209:5
+    |
+209 |     pub stdout: String,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:210:5
+    |
+210 |     pub stderr: String,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:211:5
+    |
+211 |     pub exit_code: Option<i32>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:216:5
+    |
+216 |     CreatePool {
+    |     ^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:217:9
+    |
+217 |         name: String,
+    |         ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:218:9
+    |
+218 |         devices: Vec<String>,
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:220:5
+    |
+220 |     CreateDataset {
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:221:9
+    |
+221 |         name: String,
+    |         ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:222:9
+    |
+222 |         properties: HashMap<String, String>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:224:5
+    |
+224 |     CreateSnapshot {
+    |     ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:225:9
+    |
+225 |         dataset: String,
+    |         ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:226:9
+    |
+226 |         name: String,
+    |         ^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:228:5
+    |
+228 |     ListPools,
+    |     ^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:229:5
+    |
+229 |     ListDatasets {
+    |     ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:230:9
+    |
+230 |         pool: Option<String>,
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:232:5
+    |
+232 |     ListSnapshots {
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:233:9
+    |
+233 |         dataset: Option<String>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:235:5
+    |
+235 |     GetProperties {
+    |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:236:9
+    |
+236 |         target: String,
+    |         ^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:238:5
+    |
+238 |     SetProperty {
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:239:9
+    |
+239 |         target: String,
+    |         ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:240:9
+    |
+240 |         property: String,
+    |         ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/types.rs:241:9
+    |
+241 |         value: String,
+    |         ^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:249:5
+    |
+249 |     Online,
+    |     ^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:250:5
+    |
+250 |     Degraded,
+    |     ^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:251:5
+    |
+251 |     Faulted,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:252:5
+    |
+252 |     Offline,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:253:5
+    |
+253 |     Removed,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/types.rs:254:5
+    |
+254 |     Unavailable,
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/performance/monitor/mod.rs:20:1
+   |
+20 | pub mod analysis;
+   | ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/performance/monitor/mod.rs:21:1
+   |
+21 | pub mod metrics;
+   | ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/performance/monitor/mod.rs:23:1
+   |
+23 | pub mod reporting;
+   | ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a type alias
+  --> code/crates/nestgate-zfs/src/performance/types.rs:13:1
+   |
+13 | pub type TierMetricsMap = Arc<RwLock<HashMap<StorageTier, TierPerformanceData>>>;
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance/types.rs:150:5
+    |
+150 |     pub pool_manager: Arc<ZfsPoolManager>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a type alias
+  --> code/crates/nestgate-zfs/src/zero_cost_zfs_operations/types.rs:12:1
+   |
+12 | pub type PoolInfoMap = Arc<RwLock<HashMap<String, ZeroCostPoolInfo>>>;
+   | ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-zfs/src/health.rs:103:5
+    |
+103 |     pub fn is_critical(&self) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-zfs/src/health.rs:108:5
+    |
+108 |     pub fn is_healthy(&self) -> bool {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-zfs/src/advanced_features/mod.rs:7:1
+  |
+7 | pub mod cache;
+  | ^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-zfs/src/advanced_features/mod.rs:8:1
+  |
+8 | pub mod capacity;
+  | ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-zfs/src/advanced_features/mod.rs:9:1
+  |
+9 | pub mod compression;
+  | ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/advanced_features/mod.rs:10:1
+   |
+10 | pub mod replication;
+   | ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/advanced_features/mod.rs:11:1
+   |
+11 | pub mod snapshots;
+   | ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/automation/mod.rs:19:1
+   |
+19 | pub mod policies;
+   | ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/automation/mod.rs:20:1
+   |
+20 | pub mod tests;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for a struct
+  --> code/crates/nestgate-zfs/src/automation/integration.rs:12:1
+   |
+12 | pub struct IntelligentDatasetManager;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/snapshot/policy.rs:55:14
+   |
+55 |     Weekly { day: u8, hour: u8 },
+   |              ^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/snapshot/policy.rs:55:23
+   |
+55 |     Weekly { day: u8, hour: u8 },
+   |                       ^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/snapshot/policy.rs:57:15
+   |
+57 |     Monthly { day: u8, hour: u8 },
+   |               ^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/snapshot/policy.rs:57:24
+   |
+57 |     Monthly { day: u8, hour: u8 },
+   |                        ^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/mcp_integration.rs:54:5
+   |
+54 |     Error(String),
+   |     ^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/mcp_integration.rs:64:5
+   |
+64 |     Error(String),
+   |     ^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-zfs/src/pool_setup/mod.rs:8:1
+  |
+8 | pub mod config;
+  | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-zfs/src/pool_setup/mod.rs:9:1
+  |
+9 | pub mod creation;
+  | ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/pool_setup/mod.rs:64:5
+   |
+64 |     DeviceValidation(String),
+   |     ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/pool_setup/mod.rs:66:5
+   |
+66 |     PoolCreation(String),
+   |     ^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/pool_setup/mod.rs:69:5
+   |
+69 |     Configuration(String),
+   |     ^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/pool_setup/mod.rs:72:5
+   |
+72 |     DeviceScanning(String),
+   |     ^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/pool_setup/mod.rs:75:5
+   |
+75 |     InsufficientDevices(String),
+   |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/pool_setup/mod.rs:78:5
+   |
+78 |     ZfsCommand(String),
+   |     ^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/pool_setup/mod.rs:81:5
+   |
+81 |     Core(#[from] NestGateError),
+   |     ^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/pool_setup/device_detection.rs:56:5
+   |
+56 |     UltraFast, // NVMe Gen4, Optane
+   |     ^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/pool_setup/device_detection.rs:57:5
+   |
+57 |     Fast,      // NVMe Gen3, High-end SATA SSD
+   |     ^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/pool_setup/device_detection.rs:58:5
+   |
+58 |     Medium,    // Standard SATA SSD
+   |     ^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/pool_setup/device_detection.rs:59:5
+   |
+59 |     Slow,      // HDD
+   |     ^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-zfs/src/pool_setup/device_detection.rs:67:5
+   |
+67 |     pub fn new(config: DeviceDetectionConfig) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-zfs/src/pool_setup/validation.rs:27:5
+   |
+27 |     pub fn new() -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-zfs/src/pool_setup/validation.rs:62:5
+   |
+62 |     pub fn new(config: PoolSetupConfig) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:42:5
+   |
+42 |     Active,   // Currently imported and active
+   |     ^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:43:5
+   |
+43 |     Orphaned, // Available for import (original owner failed)
+   |     ^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:44:5
+   |
+44 |     Failed,   // Pool is in a failed state
+   |     ^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:45:5
+   |
+45 |     Unknown,  // State cannot be determined
+   |     ^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:52:5
+   |
+52 |     Online,   // Pool is healthy and accessible
+   |     ^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:53:5
+   |
+53 |     Degraded, // Pool has issues but is still functional
+   |     ^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:54:5
+   |
+54 |     Offline,  // Pool is not accessible
+   |     ^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:55:5
+   |
+55 |     Faulted,  // Pool has critical errors
+   |     ^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:56:5
+   |
+56 |     Removed,  // Pool has been removed from configuration
+   |     ^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:57:5
+   |
+57 |     Unavail,  // Pool is temporarily unavailable
+   |     ^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:58:5
+   |
+58 |     Orphaned, // Available for import (original owner failed)
+   |     ^^^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:59:5
+   |
+59 |     Failed,   // Pool is in a failed state
+   |     ^^^^^^
+
+warning: missing documentation for a variant
+  --> code/crates/nestgate-zfs/src/failover.rs:60:5
+   |
+60 |     Unknown,  // State cannot be determined
+   |     ^^^^^^^
+
+warning: missing documentation for an associated function
+   --> code/crates/nestgate-zfs/src/failover.rs:441:5
+    |
+441 |     pub fn new(config: CanonicalFailoverConfig) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/handlers.rs:86:9
+   |
+86 |         name: String,
+   |         ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/handlers.rs:87:9
+   |
+87 |         devices: Vec<String>,
+   |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/handlers.rs:91:9
+   |
+91 |         name: String,
+   |         ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/handlers.rs:95:9
+   |
+95 |         name: Option<String>,
+   |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> code/crates/nestgate-zfs/src/handlers.rs:99:9
+   |
+99 |         name: String,
+   |         ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:100:9
+    |
+100 |         properties: HashMap<String, String>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/handlers.rs:102:5
+    |
+102 |     DatasetDestroy {
+    |     ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:103:9
+    |
+103 |         name: String,
+    |         ^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/handlers.rs:105:5
+    |
+105 |     DatasetList {
+    |     ^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:106:9
+    |
+106 |         pool: Option<String>,
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:111:9
+    |
+111 |         dataset: String,
+    |         ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:112:9
+    |
+112 |         name: String,
+    |         ^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/handlers.rs:114:5
+    |
+114 |     SnapshotDestroy {
+    |     ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:115:9
+    |
+115 |         name: String,
+    |         ^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/handlers.rs:117:5
+    |
+117 |     SnapshotList {
+    |     ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:118:9
+    |
+118 |         dataset: Option<String>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:130:18
+    |
+130 |     PoolStatus { pools: Vec<PoolInfo> },
+    |                  ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:132:19
+    |
+132 |     DatasetList { datasets: Vec<DatasetInfo> },
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:134:20
+    |
+134 |     SnapshotList { snapshots: Vec<SnapshotInfo> },
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:136:15
+    |
+136 |     Success { message: String },
+    |               ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:139:9
+    |
+139 |         status: String,
+    |         ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/handlers.rs:140:9
+    |
+140 |         details: HashMap<String, String>,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/manager/mod.rs:25:1
+   |
+25 | pub mod ai_tier_optimization;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/manager/mod.rs:31:1
+   |
+31 | pub mod types;
+   | ^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-zfs/src/manager/dataset_operations.rs:24:5
+   |
+24 |     pub fn new() -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/config/mod.rs:16:1
+   |
+16 | pub mod automation;
+   | ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/config/mod.rs:17:1
+   |
+17 | pub mod health;
+   | ^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/config/mod.rs:20:1
+   |
+20 | pub mod pool;
+   | ^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/config/mod.rs:21:1
+   |
+21 | pub mod security;
+   | ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-zfs/src/config/tiers.rs:27:5
+   |
+27 |     pub fn hot_tier_defaults() -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-zfs/src/config/tiers.rs:39:5
+   |
+39 |     pub fn warm_tier_defaults() -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-zfs/src/config/tiers.rs:51:5
+   |
+51 |     pub fn cold_tier_defaults() -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/config/tiers.rs:157:5
+    |
+157 |     HighPerformance, // Hot tier - optimized for speed
+    |     ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/config/tiers.rs:158:5
+    |
+158 |     Balanced,        // Warm tier - balance of speed and compression
+    |     ^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/config/tiers.rs:159:5
+    |
+159 |     HighCompression, // Cold tier - optimized for space efficiency
+    |     ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+  --> code/crates/nestgate-zfs/src/dev_environment/mod.rs:18:1
+   |
+18 | pub mod hardware_detector;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a module
+ --> code/crates/nestgate-zfs/src/performance_engine/mod.rs:9:1
+  |
+9 | pub mod types;
+  | ^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-zfs/src/performance_engine/engine.rs:62:5
+   |
+62 | /     pub fn new(
+63 | |         config: ZfsConfig,
+64 | |         pool_manager: Arc<ZfsPoolManager>,
+65 | |         dataset_manager: Arc<ZfsDatasetManager>,
+...  |
+71 | |     ) -> Self {
+   | |_____________^
+
+warning: missing documentation for an associated function
+  --> code/crates/nestgate-zfs/src/performance_engine/monitoring.rs:69:5
+   |
+69 |     pub fn new() -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:214:5
+    |
+214 |     pub fn merge_with(&mut self, other: PerformanceOptimizationResult) {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:272:5
+    |
+272 |     PerformanceDegradation,
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:273:5
+    |
+273 |     BottleneckDetected,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:274:5
+    |
+274 |     ThresholdExceeded,
+    |     ^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:275:5
+    |
+275 |     OptimizationFailed,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:280:5
+    |
+280 |     Info,
+    |     ^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:281:5
+    |
+281 |     Warning,
+    |     ^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:282:5
+    |
+282 |     Error,
+    |     ^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:283:5
+    |
+283 |     Critical,
+    |     ^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:288:5
+    |
+288 |     pub mitigation_applied: bool,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:289:5
+    |
+289 |     pub optimization_result: Option<PerformanceOptimizationResult>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:290:5
+    |
+290 |     pub follow_up_required: bool,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:295:5
+    |
+295 |     pub access_pattern: AccessPattern,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:296:5
+    |
+296 |     pub io_size_distribution: HashMap<String, f64>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:297:5
+    |
+297 |     pub read_write_ratio: f64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:298:5
+    |
+298 |     pub temporal_locality: f64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:303:5
+    |
+303 |     pub pool_name: String,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:304:5
+    |
+304 |     pub dataset_name: Option<String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:305:5
+    |
+305 |     pub current_configuration: HashMap<String, String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:306:5
+    |
+306 |     pub workload_pattern: WorkloadPattern,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:307:5
+    |
+307 |     pub system_capabilities: SystemCapabilities,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:312:5
+    |
+312 |     pub storage_tier: StorageTier,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:313:5
+    |
+313 |     pub access_patterns: Vec<AccessPattern>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:314:5
+    |
+314 |     pub current_performance: ZfsPerformanceMetrics,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:315:5
+    |
+315 |     pub identified_bottlenecks: Vec<ZfsBottleneck>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:320:5
+    |
+320 |     pub cpu_cores: u32,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:321:5
+    |
+321 |     pub memory_gb: u32,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:322:5
+    |
+322 |     pub storage_type: String,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:323:5
+    |
+323 |     pub network_bandwidth_gbps: f64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:328:5
+    |
+328 |     pub tuning_applied: bool,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:329:5
+    |
+329 |     pub parameter_changes: HashMap<String, String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:330:5
+    |
+330 |     pub expected_improvement: f64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:331:5
+    |
+331 |     pub validation_required: bool,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:336:5
+    |
+336 |     pub pool_name: String,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:337:5
+    |
+337 |     pub dataset_name: Option<String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:338:5
+    |
+338 |     pub optimization_strategy: EcosystemOptimizationStrategy,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:339:5
+    |
+339 |     pub current_metrics: ZfsPerformanceMetrics,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:340:5
+    |
+340 |     pub configuration_context: ZfsConfigurationContext,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:345:5
+    |
+345 |     LatencyOptimization,
+    |     ^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:346:5
+    |
+346 |     ThroughputOptimization,
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:347:5
+    |
+347 |     BalancedOptimization,
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a variant
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:348:5
+    |
+348 |     CustomStrategy(String),
+    |     ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:353:5
+    |
+353 |     pub strategy: EcosystemOptimizationStrategy,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:354:5
+    |
+354 |     pub confidence_score: f64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:355:5
+    |
+355 |     pub expected_improvement: f64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:356:5
+    |
+356 |     pub parameter_recommendations: HashMap<String, String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:357:5
+    |
+357 |     pub risk_assessment: String,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:362:5
+    |
+362 |     pub pool_name: String,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:363:5
+    |
+363 |     pub dataset_name: Option<String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:364:5
+    |
+364 |     pub workload_pattern: WorkloadPattern,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:365:5
+    |
+365 |     pub current_configuration: HashMap<String, String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:366:5
+    |
+366 |     pub performance_goals: Vec<String>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:367:5
+    |
+367 |     pub system_capabilities: SystemCapabilities,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:368:5
+    |
+368 |     pub configuration_context: ZfsConfigurationContext,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+   --> code/crates/nestgate-zfs/src/performance_engine/types.rs:369:5
+    |
+369 |     pub expertise_context: ZfsExpertiseContext,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `nestgate-zfs` (lib) generated 291 warnings
+error: process didn't exit successfully: `/home/eastgate/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo test --manifest-path /home/eastgate/Development/ecoPrimals/nestgate/Cargo.toml --target-dir /home/eastgate/Development/ecoPrimals/nestgate/target/llvm-cov-target --lib --all-features --workspace` (exit status: 101)

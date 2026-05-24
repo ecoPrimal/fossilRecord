@@ -1,0 +1,2372 @@
+info: cargo-llvm-cov currently setting cfg(coverage); you can opt-out it by passing --no-cfg-coverage
+   Compiling songbird-types v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types)
+   Compiling songbird-remote-deploy v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-remote-deploy)
+   Compiling songbird-compute-bridge v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-compute-bridge)
+   Compiling songbird-squirrel-service v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-squirrel-service)
+   Compiling songbird-config v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-config)
+   Compiling songbird-execution-agent v0.2.1 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-execution-agent)
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:207:9
+    |
+207 |         self.primal_registry
+    |         ^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:219:9
+    |
+219 |         self.primal_registry.as_ref().and_then(|registry| registry.get_primal(primal_name))
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:224:38
+    |
+224 |         if let Some(registry) = &mut self.primal_registry {
+    |                                      ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:234:9
+    |
+234 |         self.primal_registry
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+   Compiling songbird-universal v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-universal)
+   Compiling songbird-canonical v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-canonical)
+   Compiling songbird-observability v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-observability)
+warning: `songbird-config` (lib) generated 4 warnings
+warning: unused import: `songbird_types::SongbirdResult`
+  --> crates/songbird-observability/tests/health_status_comprehensive_tests.rs:10:5
+   |
+10 | use songbird_types::SongbirdResult;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: `songbird-observability` (test "health_status_comprehensive_tests") generated 1 warning (run `cargo fix --test "health_status_comprehensive_tests"` to apply 1 suggestion)
+   Compiling songbird-test-utils v0.2.1 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-test-utils)
+   Compiling songbird-discovery v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-discovery)
+error[E0252]: the name `SongbirdError` is defined multiple times
+  --> crates/songbird-types/tests/config_canonical_environment_tests.rs:17:22
+   |
+16 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                      ------------- previous import of the type `SongbirdError` here
+17 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                      ^^^^^^^^^^^^^--
+   |                      |
+   |                      `SongbirdError` reimported here
+   |                      help: remove unnecessary import
+   |
+   = note: `SongbirdError` must be defined only once in the type namespace of this module
+
+error[E0252]: the name `SongbirdResult` is defined multiple times
+  --> crates/songbird-types/tests/config_canonical_environment_tests.rs:17:37
+   |
+16 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                                     -------------- previous import of the type `SongbirdResult` here
+17 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                                     ^^^^^^^^^^^^^^ `SongbirdResult` reimported here
+   |
+   = note: `SongbirdResult` must be defined only once in the type namespace of this module
+
+warning: unused imports: `SongbirdError` and `SongbirdResult`
+  --> crates/songbird-types/tests/config_canonical_environment_tests.rs:17:22
+   |
+17 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                      ^^^^^^^^^^^^^  ^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `SongbirdError`
+ --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:8:22
+  |
+8 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                      ^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused imports: `SongbirdError` and `SongbirdResult`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:178:26
+    |
+178 |     use songbird_types::{SongbirdError, SongbirdResult};
+    |                          ^^^^^^^^^^^^^  ^^^^^^^^^^^^^^
+
+error[E0252]: the name `SongbirdResult` is defined multiple times
+ --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:9:37
+  |
+8 | use songbird_types::SongbirdResult;
+  |     ------------------------------ previous import of the type `SongbirdResult` here
+9 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                                     ^^^^^^^^^^^^^^ `SongbirdResult` reimported here
+  |
+  = note: `SongbirdResult` must be defined only once in the type namespace of this module
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+ --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:7:22
+  |
+7 | use songbird_config::NetworkConfig;
+  |                      ^^^^^^^^^^^^^
+  |
+  = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:12:18
+   |
+12 |     let config = NetworkConfig::default();
+   |                  ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:21:18
+   |
+21 |     let config = NetworkConfig {
+   |                  ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:32:19
+   |
+32 |     let config1 = NetworkConfig::default();
+   |                   ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:41:18
+   |
+41 |     let config = NetworkConfig::default();
+   |                  ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:50:18
+   |
+50 |     let config = NetworkConfig {
+   |                  ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:60:18
+   |
+60 |     let config = NetworkConfig {
+   |                  ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:70:22
+   |
+70 |     let mut config = NetworkConfig::default();
+   |                      ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:79:22
+   |
+79 |     let mut config = NetworkConfig::default();
+   |                      ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:89:19
+   |
+89 |     let config1 = NetworkConfig {
+   |                   ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:94:19
+   |
+94 |     let config2 = NetworkConfig {
+   |                   ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:104:19
+    |
+104 |     let config1 = NetworkConfig {
+    |                   ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:109:19
+    |
+109 |     let config2 = NetworkConfig {
+    |                   ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:119:22
+    |
+119 |     let mut config = NetworkConfig::default();
+    |                      ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:133:18
+    |
+133 |     let config = NetworkConfig::default();
+    |                  ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:141:22
+    |
+141 |     let mut config = NetworkConfig::default();
+    |                      ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:158:22
+    |
+158 |     let mut config = NetworkConfig::default();
+    |                      ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:161:14
+    |
+161 |     config = NetworkConfig::default();
+    |              ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:168:20
+    |
+168 |     let _config1 = NetworkConfig::default();
+    |                    ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:169:20
+    |
+169 |     let _config2 = NetworkConfig::default();
+    |                    ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:170:20
+    |
+170 |     let _config3 = NetworkConfig::default();
+    |                    ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:181:26
+    |
+181 |     let size = size_of::<NetworkConfig>();
+    |                          ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:215:18
+    |
+215 |     let config = NetworkConfig {
+    |                  ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:225:22
+    |
+225 |     let mut config = NetworkConfig::default();
+    |                      ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:233:18
+    |
+233 |     let config = NetworkConfig::default();
+    |                  ^^^^^^^^^^^^^
+
+error[E0252]: the name `SongbirdError` is defined multiple times
+ --> crates/songbird-config/tests/config_validation_tests.rs:7:22
+  |
+6 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                      ------------- previous import of the type `SongbirdError` here
+7 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                      ^^^^^^^^^^^^^--
+  |                      |
+  |                      `SongbirdError` reimported here
+  |                      help: remove unnecessary import
+  |
+  = note: `SongbirdError` must be defined only once in the type namespace of this module
+
+error[E0252]: the name `SongbirdResult` is defined multiple times
+ --> crates/songbird-config/tests/config_validation_tests.rs:7:37
+  |
+6 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                                     -------------- previous import of the type `SongbirdResult` here
+7 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                                     ^^^^^^^^^^^^^^ `SongbirdResult` reimported here
+  |
+  = note: `SongbirdResult` must be defined only once in the type namespace of this module
+
+warning: unused import: `SongbirdError`
+ --> crates/songbird-config/tests/config_validation_tests.rs:6:22
+  |
+6 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                      ^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused imports: `SongbirdError` and `SongbirdResult`
+ --> crates/songbird-config/tests/config_validation_tests.rs:7:22
+  |
+7 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                      ^^^^^^^^^^^^^  ^^^^^^^^^^^^^^
+
+error[E0252]: the name `SongbirdError` is defined multiple times
+  --> crates/songbird-universal/tests/capability_system_comprehensive_tests.rs:23:22
+   |
+22 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                      ------------- previous import of the type `SongbirdError` here
+23 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                      ^^^^^^^^^^^^^--
+   |                      |
+   |                      `SongbirdError` reimported here
+   |                      help: remove unnecessary import
+   |
+   = note: `SongbirdError` must be defined only once in the type namespace of this module
+
+error[E0252]: the name `SongbirdResult` is defined multiple times
+  --> crates/songbird-universal/tests/capability_system_comprehensive_tests.rs:23:37
+   |
+22 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                                     -------------- previous import of the type `SongbirdResult` here
+23 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                                     ^^^^^^^^^^^^^^ `SongbirdResult` reimported here
+   |
+   = note: `SongbirdResult` must be defined only once in the type namespace of this module
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:15:13
+   |
+15 |     assert!(config.connection_timeout_ms > 0);
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:22:9
+   |
+22 |         connection_timeout_ms: 30000,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:26:16
+   |
+26 |     assert_eq!(config.connection_timeout_ms, 30000);
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+ --> crates/songbird-config/tests/config_validation_tests.rs:5:23
+  |
+5 | use songbird_config::{NetworkConfig, SecurityConfig, SongbirdConfig};
+  |                       ^^^^^^^^^^^^^
+  |
+  = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated struct `songbird_config::SecurityConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+ --> crates/songbird-config/tests/config_validation_tests.rs:5:38
+  |
+5 | use songbird_config::{NetworkConfig, SecurityConfig, SongbirdConfig};
+  |                                      ^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+ --> crates/songbird-config/tests/config_validation_tests.rs:5:54
+  |
+5 | use songbird_config::{NetworkConfig, SecurityConfig, SongbirdConfig};
+  |                                                      ^^^^^^^^^^^^^^
+
+warning: unused import: `SongbirdResult`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:378:41
+    |
+378 |     use songbird_types::{SongbirdError, SongbirdResult};
+    |                                         ^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+  --> crates/songbird-config/tests/config_validation_tests.rs:11:18
+   |
+11 |     let config = SongbirdConfig::default();
+   |                  ^^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:19:19
+   |
+19 |     let network = NetworkConfig::default();
+   |                   ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::SecurityConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:28:20
+   |
+28 |     let security = SecurityConfig::default();
+   |                    ^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+  --> crates/songbird-config/tests/config_validation_tests.rs:37:19
+   |
+37 |     let config1 = SongbirdConfig::default();
+   |                   ^^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:46:18
+   |
+46 |     let config = NetworkConfig {
+   |                  ^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+  --> crates/songbird-config/tests/config_validation_tests.rs:58:18
+   |
+58 |     let config = SongbirdConfig::default();
+   |                  ^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+  --> crates/songbird-config/tests/config_validation_tests.rs:65:34
+   |
+65 |         let deserialized: Result<SongbirdConfig, _> = serde_json::from_str(&json);
+   |                                  ^^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:72:22
+   |
+72 |     let mut config = NetworkConfig {
+   |                      ^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+  --> crates/songbird-config/tests/config_validation_tests.rs:87:18
+   |
+87 |     let config = SongbirdConfig::default();
+   |                  ^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+   --> crates/songbird-config/tests/config_validation_tests.rs:100:19
+    |
+100 |     let config1 = SongbirdConfig::default();
+    |                   ^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+   --> crates/songbird-config/tests/config_validation_tests.rs:101:19
+    |
+101 |     let config2 = SongbirdConfig::default();
+    |                   ^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+   --> crates/songbird-config/tests/config_validation_tests.rs:109:18
+    |
+109 |     let config = SongbirdConfig::default();
+    |                  ^^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/config_validation_tests.rs:119:18
+    |
+119 |     let config = NetworkConfig {
+    |                  ^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::NetworkConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/config_validation_tests.rs:126:19
+    |
+126 |     let config2 = NetworkConfig {
+    |                   ^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+   --> crates/songbird-config/tests/config_validation_tests.rs:135:22
+    |
+135 |     let mut config = SongbirdConfig::default();
+    |                      ^^^^^^^^^^^^^^
+
+warning: use of deprecated struct `songbird_config::SecurityConfig`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/config_validation_tests.rs:147:24
+    |
+147 |     let mut security = SecurityConfig {
+    |                        ^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+   --> crates/songbird-config/tests/config_validation_tests.rs:160:22
+    |
+160 |     let mut config = SongbirdConfig::default();
+    |                      ^^^^^^^^^^^^^^
+
+warning: use of deprecated type alias `songbird_config::SongbirdConfig`: Use songbird_types::config::CanonicalSongbirdConfig instead
+   --> crates/songbird-config/tests/config_validation_tests.rs:170:19
+    |
+170 |     let config1 = SongbirdConfig::default();
+    |                   ^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:35:16
+   |
+35 |     assert_eq!(config1.connection_timeout_ms, config2.connection_timeout_ms);
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:35:47
+   |
+35 |     assert_eq!(config1.connection_timeout_ms, config2.connection_timeout_ms);
+   |                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:51:9
+   |
+51 |         connection_timeout_ms: 100,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:55:16
+   |
+55 |     assert_eq!(config.connection_timeout_ms, 100);
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0252]: the name `SongbirdError` is defined multiple times
+ --> crates/songbird-config/tests/canonical_service_tests.rs:8:22
+  |
+7 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                      ------------- previous import of the type `SongbirdError` here
+8 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                      ^^^^^^^^^^^^^--
+  |                      |
+  |                      `SongbirdError` reimported here
+  |                      help: remove unnecessary import
+  |
+  = note: `SongbirdError` must be defined only once in the type namespace of this module
+
+error[E0252]: the name `SongbirdResult` is defined multiple times
+ --> crates/songbird-config/tests/canonical_service_tests.rs:8:37
+  |
+7 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                                     -------------- previous import of the type `SongbirdResult` here
+8 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                                     ^^^^^^^^^^^^^^ `SongbirdResult` reimported here
+  |
+  = note: `SongbirdResult` must be defined only once in the type namespace of this module
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:61:9
+   |
+61 |         connection_timeout_ms: 300_000,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:65:16
+   |
+65 |     assert_eq!(config.connection_timeout_ms, 300_000);
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:71:5
+   |
+71 |     config.connection_timeout_ms = 0;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:74:16
+   |
+74 |     assert_eq!(config.connection_timeout_ms, 0);
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:80:20
+   |
+80 |     let original = config.connection_timeout_ms;
+   |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:82:5
+   |
+82 |     config.connection_timeout_ms = 60000;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:84:16
+   |
+84 |     assert_ne!(config.connection_timeout_ms, original);
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:90:9
+   |
+90 |         connection_timeout_ms: 30000,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:95:9
+   |
+95 |         connection_timeout_ms: 30000,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:99:16
+   |
+99 |     assert_eq!(config1.connection_timeout_ms, config2.connection_timeout_ms);
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:99:47
+   |
+99 |     assert_eq!(config1.connection_timeout_ms, config2.connection_timeout_ms);
+   |                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:105:9
+    |
+105 |         connection_timeout_ms: 30000,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:110:9
+    |
+110 |         connection_timeout_ms: 60000,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:114:16
+    |
+114 |     assert_ne!(config1.connection_timeout_ms, config2.connection_timeout_ms);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:114:47
+    |
+114 |     assert_ne!(config1.connection_timeout_ms, config2.connection_timeout_ms);
+    |                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:121:5
+    |
+121 |     config.connection_timeout_ms = 10000;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:122:16
+    |
+122 |     assert_eq!(config.connection_timeout_ms, 10000);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:124:5
+    |
+124 |     config.connection_timeout_ms = 20000;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:125:16
+    |
+125 |     assert_eq!(config.connection_timeout_ms, 20000);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:127:5
+    |
+127 |     config.connection_timeout_ms = 30000;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:128:16
+    |
+128 |     assert_eq!(config.connection_timeout_ms, 30000);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:142:5
+    |
+142 |     config.connection_timeout_ms = 1;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:144:16
+    |
+144 |     assert_eq!(config.connection_timeout_ms, 1);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:159:5
+    |
+159 |     config.connection_timeout_ms = 999_000;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0609]: no field `max_connections` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/config_validation_tests.rs:13:28
+   |
+13 |     assert!(config.network.max_connections > 0, "Default max_connections should be positive");
+   |                            ^^^^^^^^^^^^^^^ unknown field
+   |
+help: one of the expressions' fields has a field of the same name
+   |
+13 |     assert!(config.network.client.max_connections > 0, "Default max_connections should be positive");
+   |                            +++++++
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:163:16
+    |
+163 |     assert_ne!(config.connection_timeout_ms, 999_000);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0609]: no field `bind_address` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/config_validation_tests.rs:14:29
+   |
+14 |     assert!(!config.network.bind_address.is_empty(), "Default bind address should not be empty");
+   |                             ^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+warning: use of deprecated field `songbird_config::NetworkConfig::max_connections`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:21:13
+   |
+21 |     assert!(network.max_connections > 0);
+   |             ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:22:13
+   |
+22 |     assert!(network.connection_timeout_ms > 0);
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::bind_address`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:23:14
+   |
+23 |     assert!(!network.bind_address.is_empty());
+   |              ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::SecurityConfig::enabled`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:32:13
+   |
+32 |     let _ = security.enabled; // Access to verify field exists
+   |             ^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:216:9
+    |
+216 |         connection_timeout_ms: 30000,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0609]: no field `bind_address` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/config_validation_tests.rs:40:32
+   |
+40 |     assert_eq!(config1.network.bind_address, config2.network.bind_address);
+   |                                ^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0609]: no field `bind_address` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/config_validation_tests.rs:40:62
+   |
+40 |     assert_eq!(config1.network.bind_address, config2.network.bind_address);
+   |                                                              ^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0609]: no field `max_connections` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/config_validation_tests.rs:41:32
+   |
+41 |     assert_eq!(config1.network.max_connections, config2.network.max_connections);
+   |                                ^^^^^^^^^^^^^^^ unknown field
+   |
+help: one of the expressions' fields has a field of the same name
+   |
+41 |     assert_eq!(config1.network.client.max_connections, config2.network.max_connections);
+   |                                +++++++
+
+error[E0609]: no field `max_connections` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/config_validation_tests.rs:41:65
+   |
+41 |     assert_eq!(config1.network.max_connections, config2.network.max_connections);
+   |                                                                 ^^^^^^^^^^^^^^^ unknown field
+   |
+help: one of the expressions' fields has a field of the same name
+   |
+41 |     assert_eq!(config1.network.max_connections, config2.network.client.max_connections);
+   |                                                                 +++++++
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:220:16
+    |
+220 |     assert_eq!(config.connection_timeout_ms, 30000);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::max_connections`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:226:5
+    |
+226 |     config.max_connections = 1000;
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::max_connections`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:228:16
+    |
+228 |     assert_eq!(config.max_connections, 1000);
+    |                ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `SongbirdError` and `SongbirdResult`
+ --> crates/songbird-config/tests/canonical_service_tests.rs:8:22
+  |
+8 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                      ^^^^^^^^^^^^^  ^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: use of deprecated field `songbird_config::NetworkConfig::bind_address`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/network_config_comprehensive_tests.rs:236:14
+    |
+236 |     assert!(!config.bind_address.is_empty());
+    |              ^^^^^^^^^^^^^^^^^^^
+
+error[E0433]: failed to resolve: use of unresolved module or unlinked crate `wiremock`
+ --> crates/songbird-universal/tests/security_adapter_integration_tests.rs:9:5
+  |
+9 | use wiremock::{
+  |     ^^^^^^^^ use of unresolved module or unlinked crate `wiremock`
+  |
+  = help: if you wanted to use a crate named `wiremock`, use `cargo add wiremock` to add it to your `Cargo.toml`
+
+warning: use of deprecated field `songbird_config::NetworkConfig::max_connections`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:47:9
+   |
+47 |         max_connections: 1000,
+   |         ^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::bind_address`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:48:9
+   |
+48 |         bind_address: "0.0.0.0:9000".to_string(),
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::env`
+ --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:6:5
+  |
+6 | use std::env;
+  |     ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: use of deprecated field `songbird_config::NetworkConfig::max_connections`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:52:16
+   |
+52 |     assert_eq!(config.max_connections, 1000);
+   |                ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::bind_address`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:53:16
+   |
+53 |     assert_eq!(config.bind_address, "0.0.0.0:9000");
+   |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0432]: unresolved import `wiremock`
+ --> crates/songbird-universal/tests/security_adapter_integration_tests.rs:9:5
+  |
+9 | use wiremock::{
+  |     ^^^^^^^^ use of unresolved module or unlinked crate `wiremock`
+  |
+  = help: if you wanted to use a crate named `wiremock`, use `cargo add wiremock` to add it to your `Cargo.toml`
+
+warning: use of deprecated field `songbird_config::NetworkConfig::max_connections`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:73:9
+   |
+73 |         max_connections: 100,
+   |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::max_connections`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:78:16
+   |
+78 |     assert_eq!(config.max_connections, 100);
+   |                ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::max_connections`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:80:5
+   |
+80 |     config.max_connections = 0;
+   |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::max_connections`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+  --> crates/songbird-config/tests/config_validation_tests.rs:81:16
+   |
+81 |     assert_eq!(config.max_connections, 0, "Should allow zero connections (for validation testing)");
+   |                ^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0609]: no field `bind_address` on type `CanonicalNetworkConfigNew`
+   --> crates/songbird-config/tests/config_validation_tests.rs:104:32
+    |
+104 |     assert_eq!(config1.network.bind_address, config2.network.bind_address);
+    |                                ^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0609]: no field `bind_address` on type `CanonicalNetworkConfigNew`
+   --> crates/songbird-config/tests/config_validation_tests.rs:104:62
+    |
+104 |     assert_eq!(config1.network.bind_address, config2.network.bind_address);
+    |                                                              ^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0425]: cannot find value `e` in this scope
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:500:80
+    |
+500 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+    |                                                                                ^ not found in this scope
+
+error[E0425]: cannot find value `e` in this scope
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:538:80
+    |
+538 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+    |                                                                                ^ not found in this scope
+
+error[E0425]: cannot find value `e` in this scope
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:576:80
+    |
+576 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+    |                                                                                ^ not found in this scope
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/config_validation_tests.rs:120:9
+    |
+120 |         connection_timeout_ms: 30000,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/config_validation_tests.rs:124:16
+    |
+124 |     assert_eq!(config.connection_timeout_ms, 30000);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/config_validation_tests.rs:127:9
+    |
+127 |         connection_timeout_ms: 60000,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::NetworkConfig::connection_timeout_ms`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/config_validation_tests.rs:130:16
+    |
+130 |     assert_eq!(config2.connection_timeout_ms, 60000);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0609]: no field `max_connections` on type `CanonicalNetworkConfigNew`
+   --> crates/songbird-config/tests/config_validation_tests.rs:136:44
+    |
+136 |     let original_max_conn = config.network.max_connections;
+    |                                            ^^^^^^^^^^^^^^^ unknown field
+    |
+help: one of the expressions' fields has a field of the same name
+    |
+136 |     let original_max_conn = config.network.client.max_connections;
+    |                                            +++++++
+
+error[E0609]: no field `bind_address` on type `CanonicalNetworkConfigNew`
+   --> crates/songbird-config/tests/config_validation_tests.rs:139:20
+    |
+139 |     config.network.bind_address = "127.0.0.1:8080".to_string();
+    |                    ^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0609]: no field `max_connections` on type `CanonicalNetworkConfigNew`
+   --> crates/songbird-config/tests/config_validation_tests.rs:142:31
+    |
+142 |     assert_eq!(config.network.max_connections, original_max_conn);
+    |                               ^^^^^^^^^^^^^^^ unknown field
+    |
+help: one of the expressions' fields has a field of the same name
+    |
+142 |     assert_eq!(config.network.client.max_connections, original_max_conn);
+    |                               +++++++
+
+warning: use of deprecated field `songbird_config::SecurityConfig::enabled`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/config_validation_tests.rs:148:9
+    |
+148 |         enabled: true,
+    |         ^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::SecurityConfig::enabled`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/config_validation_tests.rs:152:13
+    |
+152 |     assert!(security.enabled);
+    |             ^^^^^^^^^^^^^^^^
+
+warning: use of deprecated field `songbird_config::SecurityConfig::enabled`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/config_validation_tests.rs:154:5
+    |
+154 |     security.enabled = false;
+    |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `SongbirdResult`
+ --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:9:37
+  |
+9 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                                     ^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: use of deprecated field `songbird_config::SecurityConfig::enabled`: Use `canonical::` module instead. This module is being phased out. Migration: `config::NetworkConfig` → `canonical::NetworkConfig`
+   --> crates/songbird-config/tests/config_validation_tests.rs:155:14
+    |
+155 |     assert!(!security.enabled);
+    |              ^^^^^^^^^^^^^^^^
+
+error[E0609]: no field `max_connections` on type `CanonicalNetworkConfigNew`
+   --> crates/songbird-config/tests/config_validation_tests.rs:161:20
+    |
+161 |     config.network.max_connections = 500;
+    |                    ^^^^^^^^^^^^^^^ unknown field
+    |
+help: one of the expressions' fields has a field of the same name
+    |
+161 |     config.network.client.max_connections = 500;
+    |                    +++++++
+
+error[E0609]: no field `connection_timeout_ms` on type `CanonicalNetworkConfigNew`
+   --> crates/songbird-config/tests/config_validation_tests.rs:162:20
+    |
+162 |     config.network.connection_timeout_ms = 45000;
+    |                    ^^^^^^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0609]: no field `max_connections` on type `CanonicalNetworkConfigNew`
+   --> crates/songbird-config/tests/config_validation_tests.rs:164:31
+    |
+164 |     assert_eq!(config.network.max_connections, 500);
+    |                               ^^^^^^^^^^^^^^^ unknown field
+    |
+help: one of the expressions' fields has a field of the same name
+    |
+164 |     assert_eq!(config.network.client.max_connections, 500);
+    |                               +++++++
+
+error[E0609]: no field `connection_timeout_ms` on type `CanonicalNetworkConfigNew`
+   --> crates/songbird-config/tests/config_validation_tests.rs:165:31
+    |
+165 |     assert_eq!(config.network.connection_timeout_ms, 45000);
+    |                               ^^^^^^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0609]: no field `bind_address` on type `CanonicalNetworkConfigNew`
+   --> crates/songbird-config/tests/config_validation_tests.rs:173:32
+    |
+173 |     assert_eq!(config1.network.bind_address, config2.network.bind_address);
+    |                                ^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0609]: no field `bind_address` on type `CanonicalNetworkConfigNew`
+   --> crates/songbird-config/tests/config_validation_tests.rs:173:62
+    |
+173 |     assert_eq!(config1.network.bind_address, config2.network.bind_address);
+    |                                                              ^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0412]: cannot find type `SongbirdResult` in this scope
+  --> crates/songbird-canonical/tests/types_enhanced_tests.rs:76:33
+   |
+76 | fn test_version_comparison() -> SongbirdResult<()> {
+   |                                 ^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+ 9 + use songbird_canonical::SongbirdResult;
+   |
+ 9 + use songbird_types::SongbirdResult;
+   |
+ 9 + use songbird_types::response::SongbirdResult;
+   |
+
+error[E0412]: cannot find type `SongbirdResult` in this scope
+  --> crates/songbird-canonical/tests/types_enhanced_tests.rs:89:33
+   |
+89 | fn test_timestamp_creation() -> SongbirdResult<()> {
+   |                                 ^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+ 9 + use songbird_canonical::SongbirdResult;
+   |
+ 9 + use songbird_types::SongbirdResult;
+   |
+ 9 + use songbird_types::response::SongbirdResult;
+   |
+
+error[E0433]: failed to resolve: use of undeclared type `SongbirdError`
+  --> crates/songbird-canonical/tests/types_enhanced_tests.rs:94:9
+   |
+94 |         SongbirdError::configuration("Missing performance configuration".to_string())
+   |         ^^^^^^^^^^^^^ use of undeclared type `SongbirdError`
+   |
+help: consider importing one of these enums
+   |
+ 9 + use songbird_test_utils::SongbirdError;
+   |
+ 9 + use songbird_types::SongbirdError;
+   |
+
+error[E0412]: cannot find type `SongbirdResult` in this scope
+   --> crates/songbird-canonical/tests/types_enhanced_tests.rs:139:33
+    |
+139 | fn test_metadata_structure() -> SongbirdResult<()> {
+    |                                 ^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  9 + use songbird_canonical::SongbirdResult;
+    |
+  9 + use songbird_types::SongbirdResult;
+    |
+  9 + use songbird_types::response::SongbirdResult;
+    |
+
+error[E0412]: cannot find type `SongbirdResult` in this scope
+   --> crates/songbird-canonical/tests/types_enhanced_tests.rs:152:37
+    |
+152 | fn test_metadata_serialization() -> SongbirdResult<()> {
+    |                                     ^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  9 + use songbird_canonical::SongbirdResult;
+    |
+  9 + use songbird_types::SongbirdResult;
+    |
+  9 + use songbird_types::response::SongbirdResult;
+    |
+
+warning: unused import: `SongbirdResult`
+   --> crates/songbird-canonical/tests/types_enhanced_tests.rs:153:41
+    |
+153 |     use songbird_types::{SongbirdError, SongbirdResult};
+    |                                         ^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+Some errors have detailed explanations: E0252, E0609.
+For more information about an error, try `rustc --explain E0252`.
+error[E0599]: no method named `is_empty` found for struct `CanonicalEnvironmentConfigNew` in the current scope
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:13:33
+   |
+13 |     assert!(!config.environment.is_empty());
+   |                                 ^^^^^^^^ method not found in `CanonicalEnvironmentConfigNew`
+   |
+help: some of the expressions' fields have a method of the same name
+   |
+13 |     assert!(!config.environment.deployment_mode.is_empty());
+   |                                 ++++++++++++++++
+13 |     assert!(!config.environment.name.is_empty());
+   |                                 +++++
+
+error[E0252]: the name `SongbirdError` is defined multiple times
+  --> crates/songbird-universal/tests/load_balancing_comprehensive_tests.rs:22:22
+   |
+21 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                      ------------- previous import of the type `SongbirdError` here
+22 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                      ^^^^^^^^^^^^^--
+   |                      |
+   |                      `SongbirdError` reimported here
+   |                      help: remove unnecessary import
+   |
+   = note: `SongbirdError` must be defined only once in the type namespace of this module
+
+error[E0252]: the name `SongbirdResult` is defined multiple times
+  --> crates/songbird-universal/tests/load_balancing_comprehensive_tests.rs:22:37
+   |
+21 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                                     -------------- previous import of the type `SongbirdResult` here
+22 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                                     ^^^^^^^^^^^^^^ `SongbirdResult` reimported here
+   |
+   = note: `SongbirdResult` must be defined only once in the type namespace of this module
+
+error[E0609]: no field `bind_address` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:14:29
+   |
+14 |     assert!(!config.network.bind_address.is_empty());
+   |                             ^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0609]: no field `max_connections` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:15:28
+   |
+15 |     assert!(config.network.max_connections > 0);
+   |                            ^^^^^^^^^^^^^^^ unknown field
+   |
+help: one of the expressions' fields has a field of the same name
+   |
+15 |     assert!(config.network.client.max_connections > 0);
+   |                            +++++++
+
+warning: `songbird-config` (test "config_validation_tests") generated 43 warnings
+error: could not compile `songbird-config` (test "config_validation_tests") due to 19 previous errors; 43 warnings emitted
+warning: build failed, waiting for other jobs to finish...
+error[E0599]: no function or associated item named `test_defaults` found for struct `CanonicalSongbirdConfig` in the current scope
+   --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:20:43
+    |
+ 20 |     let config = CanonicalSongbirdConfig::test_defaults();
+    |                                           ^^^^^^^^^^^^^ function or associated item not found in `CanonicalSongbirdConfig`
+    |
+note: if you're trying to build a new `CanonicalSongbirdConfig`, consider using `CanonicalSongbirdConfig::from_env` which returns `Result<CanonicalSongbirdConfig, String>`
+   --> /home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types/src/config/consolidated_canonical/mod.rs:113:5
+    |
+113 |     pub fn from_env() -> Result<Self, String> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: there is an associated function `default` with a similar name
+    |
+ 20 -     let config = CanonicalSongbirdConfig::test_defaults();
+ 20 +     let config = CanonicalSongbirdConfig::default();
+    |
+
+error[E0599]: no method named `execute_capability_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:17:26
+   |
+17 |     let result = adapter.execute_capability_workflow("compute").await;
+   |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0252]: the name `SongbirdError` is defined multiple times
+ --> crates/songbird-config/tests/canonical_load_balancing_tests.rs:8:22
+  |
+7 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                      ------------- previous import of the type `SongbirdError` here
+8 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                      ^^^^^^^^^^^^^--
+  |                      |
+  |                      `SongbirdError` reimported here
+  |                      help: remove unnecessary import
+  |
+  = note: `SongbirdError` must be defined only once in the type namespace of this module
+
+error[E0252]: the name `SongbirdResult` is defined multiple times
+ --> crates/songbird-config/tests/canonical_load_balancing_tests.rs:8:37
+  |
+7 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                                     -------------- previous import of the type `SongbirdResult` here
+8 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                                     ^^^^^^^^^^^^^^ `SongbirdResult` reimported here
+  |
+  = note: `SongbirdResult` must be defined only once in the type namespace of this module
+
+error[E0609]: no field `primal_registry` on type `CanonicalSongbirdConfig`
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:39:21
+   |
+39 |     let _ = &config.primal_registry;
+   |                     ^^^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `system`, `network`, `security`, `performance`, `discovery` ... and 6 others
+
+error[E0369]: binary operation `==` cannot be applied to type `CanonicalEnvironmentConfigNew`
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:49:5
+   |
+49 |     assert_eq!(config.environment, cloned.environment);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |     |
+   |     CanonicalEnvironmentConfigNew
+   |     CanonicalEnvironmentConfigNew
+   |
+note: the foreign item type `CanonicalEnvironmentConfigNew` doesn't implement `PartialEq`
+  --> /home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types/src/config/consolidated_canonical/environment.rs:15:1
+   |
+15 | pub struct CanonicalEnvironmentConfig {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not implement `PartialEq`
+   = note: this error originates in the macro `assert_eq` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0609]: no field `bind_address` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:50:31
+   |
+50 |     assert_eq!(config.network.bind_address, cloned.network.bind_address);
+   |                               ^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0609]: no field `bind_address` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:50:60
+   |
+50 |     assert_eq!(config.network.bind_address, cloned.network.bind_address);
+   |                                                            ^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `bind_host`, `base_port`, `bind`, `client`, `tls` ... and 4 others
+
+error[E0609]: no field `max_connections` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:58:28
+   |
+58 |     assert!(config.network.max_connections > 0);
+   |                            ^^^^^^^^^^^^^^^ unknown field
+   |
+help: one of the expressions' fields has a field of the same name
+   |
+58 |     assert!(config.network.client.max_connections > 0);
+   |                            +++++++
+
+error[E0609]: no field `max_connections` on type `CanonicalNetworkConfigNew`
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:59:28
+   |
+59 |     assert!(config.network.max_connections < 1_000_000);
+   |                            ^^^^^^^^^^^^^^^ unknown field
+   |
+help: one of the expressions' fields has a field of the same name
+   |
+59 |     assert!(config.network.client.max_connections < 1_000_000);
+   |                            +++++++
+
+error[E0599]: no function or associated item named `test_defaults` found for struct `CanonicalSongbirdConfig` in the current scope
+   --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:65:48
+    |
+ 65 |     let test_config = CanonicalSongbirdConfig::test_defaults();
+    |                                                ^^^^^^^^^^^^^ function or associated item not found in `CanonicalSongbirdConfig`
+    |
+note: if you're trying to build a new `CanonicalSongbirdConfig`, consider using `CanonicalSongbirdConfig::from_env` which returns `Result<CanonicalSongbirdConfig, String>`
+   --> /home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types/src/config/consolidated_canonical/mod.rs:113:5
+    |
+113 |     pub fn from_env() -> Result<Self, String> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: there is an associated function `default` with a similar name
+    |
+ 65 -     let test_config = CanonicalSongbirdConfig::test_defaults();
+ 65 +     let test_config = CanonicalSongbirdConfig::default();
+    |
+
+warning: unused imports: `SongbirdError` and `SongbirdResult`
+ --> crates/songbird-config/tests/canonical_load_balancing_tests.rs:8:22
+  |
+8 | use songbird_types::{SongbirdError, SongbirdResult};
+  |                      ^^^^^^^^^^^^^  ^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+error[E0599]: no method named `is_empty` found for struct `CanonicalEnvironmentConfigNew` in the current scope
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:71:41
+   |
+71 |     assert!(!default_config.environment.is_empty());
+   |                                         ^^^^^^^^ method not found in `CanonicalEnvironmentConfigNew`
+   |
+help: some of the expressions' fields have a method of the same name
+   |
+71 |     assert!(!default_config.environment.deployment_mode.is_empty());
+   |                                         ++++++++++++++++
+71 |     assert!(!default_config.environment.name.is_empty());
+   |                                         +++++
+
+error[E0599]: no method named `is_ok` found for struct `Vec<String>` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:31:21
+   |
+31 |     assert!(compute.is_ok());
+   |                     ^^^^^ method not found in `Vec<String>`
+
+error[E0599]: no function or associated item named `test_defaults` found for struct `CanonicalSongbirdConfig` in the current scope
+   --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:76:43
+    |
+ 76 |     let config = CanonicalSongbirdConfig::test_defaults();
+    |                                           ^^^^^^^^^^^^^ function or associated item not found in `CanonicalSongbirdConfig`
+    |
+note: if you're trying to build a new `CanonicalSongbirdConfig`, consider using `CanonicalSongbirdConfig::from_env` which returns `Result<CanonicalSongbirdConfig, String>`
+   --> /home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types/src/config/consolidated_canonical/mod.rs:113:5
+    |
+113 |     pub fn from_env() -> Result<Self, String> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: there is an associated function `default` with a similar name
+    |
+ 76 -     let config = CanonicalSongbirdConfig::test_defaults();
+ 76 +     let config = CanonicalSongbirdConfig::default();
+    |
+
+error[E0609]: no field `primal_registry` on type `CanonicalSongbirdConfig`
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:87:20
+   |
+87 |     let _ = config.primal_registry.is_some() || config.primal_registry.is_none();
+   |                    ^^^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `system`, `network`, `security`, `performance`, `discovery` ... and 6 others
+
+error[E0609]: no field `primal_registry` on type `CanonicalSongbirdConfig`
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:87:56
+   |
+87 |     let _ = config.primal_registry.is_some() || config.primal_registry.is_none();
+   |                                                        ^^^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `system`, `network`, `security`, `performance`, `discovery` ... and 6 others
+
+error[E0599]: no method named `is_ok` found for struct `Vec<String>` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:32:21
+   |
+32 |     assert!(storage.is_ok());
+   |                     ^^^^^ method not found in `Vec<String>`
+
+error[E0252]: the name `SongbirdError` is defined multiple times
+  --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:24:22
+   |
+23 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                      ------------- previous import of the type `SongbirdError` here
+24 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                      ^^^^^^^^^^^^^--
+   |                      |
+   |                      `SongbirdError` reimported here
+   |                      help: remove unnecessary import
+   |
+   = note: `SongbirdError` must be defined only once in the type namespace of this module
+
+error[E0252]: the name `SongbirdResult` is defined multiple times
+  --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:24:37
+   |
+23 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                                     -------------- previous import of the type `SongbirdResult` here
+24 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                                     ^^^^^^^^^^^^^^ `SongbirdResult` reimported here
+   |
+   = note: `SongbirdResult` must be defined only once in the type namespace of this module
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/sovereignty_router_tests.rs:125:24
+    |
+125 |     let paths = result.ok_or_else(|| {
+    |                 -------^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+125 -     let paths = result.ok_or_else(|| {
+125 +     let paths = result.or_else(|| {
+    |
+
+error[E0593]: closure is expected to take 0 arguments, but it takes 1 argument
+   --> crates/songbird-canonical/tests/types_enhanced_tests.rs:163:29
+    |
+163 |         metadata.get("env").or_else(|_| SongbirdError::configuration(
+    |                             ^^^^^^^ --- takes 1 argument
+    |                             |
+    |                             expected closure that takes 0 arguments
+
+error[E0599]: no method named `is_some` found for struct `HashMap` in the current scope
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:95:27
+   |
+95 |     let _ = config.custom.is_some() || config.custom.is_none();
+   |                           ^^^^^^^ method not found in `HashMap<String, serde_json::value::Value>`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-config/tests/canonical_service_tests.rs:105:16
+    |
+105 |         result.ok_or_else(|| SongbirdError::configuration("Failed health check".to_string()))?;
+    |                ^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+105 -         result.ok_or_else(|| SongbirdError::configuration("Failed health check".to_string()))?;
+105 +         result.or_else(|| SongbirdError::configuration("Failed health check".to_string()))?;
+    |
+
+error[E0599]: no method named `is_none` found for struct `HashMap` in the current scope
+  --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:95:54
+   |
+95 |     let _ = config.custom.is_some() || config.custom.is_none();
+   |                                                      ^^^^^^^ method not found in `HashMap<String, serde_json::value::Value>`
+
+error[E0599]: no method named `create_capability_chain` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:41:28
+   |
+41 |     let workflow = adapter.create_capability_chain(vec!["storage", "compute", "ai"]).await;
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/sovereignty_router_tests.rs:160:25
+    |
+160 |     let _paths = result.ok_or_else(|| {
+    |                  -------^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+160 -     let _paths = result.ok_or_else(|| {
+160 +     let _paths = result.or_else(|| {
+    |
+
+error[E0599]: no method named `is_empty` found for struct `CanonicalEnvironmentConfigNew` in the current scope
+   --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:103:33
+    |
+103 |     assert!(!config.environment.is_empty());
+    |                                 ^^^^^^^^ method not found in `CanonicalEnvironmentConfigNew`
+    |
+help: some of the expressions' fields have a method of the same name
+    |
+103 |     assert!(!config.environment.deployment_mode.is_empty());
+    |                                 ++++++++++++++++
+103 |     assert!(!config.environment.name.is_empty());
+    |                                 +++++
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+  --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:37:27
+   |
+37 |     let adapter = adapter.ok_or_else(|| {
+   |                   --------^^^^^^^^^^
+   |
+help: there is a method `or_else` with a similar name
+   |
+37 -     let adapter = adapter.ok_or_else(|| {
+37 +     let adapter = adapter.or_else(|| {
+   |
+
+error[E0369]: binary operation `==` cannot be applied to type `&CanonicalEnvironmentConfigNew`
+   --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:108:13
+    |
+108 |         env == "development"
+    |         --- ^^ ------------- &str
+    |         |
+    |         &CanonicalEnvironmentConfigNew
+    |
+note: the foreign item type `CanonicalEnvironmentConfigNew` doesn't implement `PartialEq<str>`
+   --> /home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types/src/config/consolidated_canonical/environment.rs:15:1
+    |
+ 15 | pub struct CanonicalEnvironmentConfig {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not implement `PartialEq<str>`
+
+error[E0369]: binary operation `==` cannot be applied to type `&CanonicalEnvironmentConfigNew`
+   --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:109:20
+    |
+109 |             || env == "test"
+    |                --- ^^ ------ &str
+    |                |
+    |                &CanonicalEnvironmentConfigNew
+    |
+note: the foreign item type `CanonicalEnvironmentConfigNew` doesn't implement `PartialEq<str>`
+   --> /home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types/src/config/consolidated_canonical/environment.rs:15:1
+    |
+ 15 | pub struct CanonicalEnvironmentConfig {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not implement `PartialEq<str>`
+
+error[E0369]: binary operation `==` cannot be applied to type `&CanonicalEnvironmentConfigNew`
+   --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:110:20
+    |
+110 |             || env == "staging"
+    |                --- ^^ --------- &str
+    |                |
+    |                &CanonicalEnvironmentConfigNew
+    |
+note: the foreign item type `CanonicalEnvironmentConfigNew` doesn't implement `PartialEq<str>`
+   --> /home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types/src/config/consolidated_canonical/environment.rs:15:1
+    |
+ 15 | pub struct CanonicalEnvironmentConfig {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not implement `PartialEq<str>`
+
+error[E0369]: binary operation `==` cannot be applied to type `&CanonicalEnvironmentConfigNew`
+   --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:111:20
+    |
+111 |             || env == "production"
+    |                --- ^^ ------------ &str
+    |                |
+    |                &CanonicalEnvironmentConfigNew
+    |
+note: the foreign item type `CanonicalEnvironmentConfigNew` doesn't implement `PartialEq<str>`
+   --> /home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types/src/config/consolidated_canonical/environment.rs:15:1
+    |
+ 15 | pub struct CanonicalEnvironmentConfig {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not implement `PartialEq<str>`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/capability_system_comprehensive_tests.rs:494:10
+    |
+492 |       let major = parts[0]
+    |  _________________-
+493 | |         .parse::<u32>()
+494 | |         .ok_or_else(|| SongbirdError::configuration("Error occurred".to_string()))?;
+    | |_________-^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+494 -         .ok_or_else(|| SongbirdError::configuration("Error occurred".to_string()))?;
+494 +         .or_else(|| SongbirdError::configuration("Error occurred".to_string()))?;
+    |
+
+For more information about this error, try `rustc --explain E0252`.
+error[E0599]: no method named `is_empty` found for reference `&CanonicalEnvironmentConfigNew` in the current scope
+   --> crates/songbird-config/tests/unified_config_comprehensive_tests.rs:112:21
+    |
+112 |             || !env.is_empty(),
+    |                     ^^^^^^^^ method not found in `&CanonicalEnvironmentConfigNew`
+    |
+help: some of the expressions' fields have a method of the same name
+    |
+112 |             || !env.deployment_mode.is_empty(),
+    |                     ++++++++++++++++
+112 |             || !env.name.is_empty(),
+    |                     +++++
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/sovereignty_router_tests.rs:200:10
+    |
+199 |       let _paths = result
+    |  __________________-
+200 | |         .ok_or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+    | |_________-^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+200 -         .ok_or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+200 +         .or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+    |
+
+Some errors have detailed explanations: E0369, E0599, E0609.
+For more information about an error, try `rustc --explain E0369`.
+Some errors have detailed explanations: E0412, E0433, E0593.
+For more information about an error, try `rustc --explain E0412`.
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/capability_system_comprehensive_tests.rs:497:10
+    |
+495 |       let minor = parts[1]
+    |  _________________-
+496 | |         .parse::<u32>()
+497 | |         .ok_or_else(|| SongbirdError::configuration("Error occurred".to_string()))?;
+    | |_________-^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+497 -         .ok_or_else(|| SongbirdError::configuration("Error occurred".to_string()))?;
+497 +         .or_else(|| SongbirdError::configuration("Error occurred".to_string()))?;
+    |
+
+error[E0599]: no method named `resolve_capability_dependencies` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:75:26
+   |
+75 |     let result = adapter.resolve_capability_dependencies("ai", vec!["compute", "storage"]).await;
+   |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+warning: `songbird-canonical` (test "types_enhanced_tests") generated 1 warning
+error: could not compile `songbird-canonical` (test "types_enhanced_tests") due to 6 previous errors; 1 warning emitted
+warning: `songbird-types` (test "config_canonical_environment_tests") generated 1 warning
+error: could not compile `songbird-types` (test "config_canonical_environment_tests") due to 2 previous errors; 1 warning emitted
+warning: `songbird-config` (test "unified_config_comprehensive_tests") generated 1 warning
+error: could not compile `songbird-config` (test "unified_config_comprehensive_tests") due to 23 previous errors; 1 warning emitted
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/sovereignty_router_tests.rs:229:10
+    |
+228 |       let paths = result
+    |  _________________-
+229 | |         .ok_or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+    | |_________-^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+229 -         .ok_or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+229 +         .or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+    |
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/capability_system_comprehensive_tests.rs:500:10
+    |
+498 |       let patch = parts[2]
+    |  _________________-
+499 | |         .parse::<u32>()
+500 | |         .ok_or_else(|| SongbirdError::configuration("Error occurred".to_string()))?;
+    | |_________-^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+500 -         .ok_or_else(|| SongbirdError::configuration("Error occurred".to_string()))?;
+500 +         .or_else(|| SongbirdError::configuration("Error occurred".to_string()))?;
+    |
+
+error[E0599]: no method named `execute_capability_transaction` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:86:26
+   |
+86 |     let result = adapter.execute_capability_transaction(vec!["storage", "compute"]).await;
+   |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+  --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:51:27
+   |
+51 |     let adapter = adapter.ok_or_else(|| {
+   |                   --------^^^^^^^^^^
+   |
+help: there is a method `or_else` with a similar name
+   |
+51 -     let adapter = adapter.ok_or_else(|| {
+51 +     let adapter = adapter.or_else(|| {
+   |
+
+error: could not compile `songbird-universal` (test "load_balancing_comprehensive_tests") due to 2 previous errors
+error[E0425]: cannot find value `e` in this scope
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:141:80
+    |
+141 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |                                                                                ^ not found in this scope
+
+error[E0425]: cannot find value `e` in this scope
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:372:80
+    |
+372 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |                                                                                ^ not found in this scope
+
+error[E0425]: cannot find value `e` in this scope
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:430:80
+    |
+430 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |                                                                                ^ not found in this scope
+
+error[E0425]: cannot find value `e` in this scope
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:496:80
+    |
+496 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |                                                                                ^ not found in this scope
+
+warning: unused imports: `SongbirdError` and `SongbirdResult`
+  --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:24:22
+   |
+24 | use songbird_types::{SongbirdError, SongbirdResult};
+   |                      ^^^^^^^^^^^^^  ^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused variable: `e`
+   --> crates/songbird-config/tests/canonical_service_tests.rs:364:58
+    |
+364 |     let json = serde_json::to_string(&original).map_err(|e| {
+    |                                                          ^ help: if this is intentional, prefix it with an underscore: `_e`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `e`
+   --> crates/songbird-config/tests/canonical_load_balancing_tests.rs:278:58
+    |
+278 |     let json = serde_json::to_string(&original).map_err(|e| {
+    |                                                          ^ help: if this is intentional, prefix it with an underscore: `_e`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `e`
+   --> crates/songbird-config/tests/canonical_service_tests.rs:449:63
+    |
+449 |     let json = serde_json::to_string_pretty(&config).map_err(|e| {
+    |                                                               ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `e`
+   --> crates/songbird-config/tests/canonical_service_tests.rs:462:61
+    |
+462 |     let json = serde_json::to_string_pretty(&info).map_err(|e| {
+    |                                                             ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `e`
+   --> crates/songbird-config/tests/canonical_load_balancing_tests.rs:432:62
+    |
+432 |         let json = serde_json::to_string(&strategy).map_err(|e| {
+    |                                                              ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `e`
+   --> crates/songbird-config/tests/canonical_load_balancing_tests.rs:453:65
+    |
+453 |     let json = serde_json::to_string_pretty(&strategy).map_err(|e| {
+    |                                                                 ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `execute_with_rollback` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:97:26
+   |
+97 |     let result = adapter.execute_with_rollback(vec!["storage", "failing_capability"]).await;
+   |                          ^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+  --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:65:10
+   |
+64 |       let adapter = StorageAdapter::new("http://example.com".to_string())
+   |  ___________________-
+65 | |         .ok_or_else(|| {
+   | |_________-^^^^^^^^^^
+   |
+help: there is a method `or_else` with a similar name
+   |
+65 -         .ok_or_else(|| {
+65 +         .or_else(|| {
+   |
+
+Some errors have detailed explanations: E0252, E0599.
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/sovereignty_router_tests.rs:406:24
+    |
+406 |     let paths = result.ok_or_else(|| {
+    |                 -------^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+406 -     let paths = result.ok_or_else(|| {
+406 +     let paths = result.or_else(|| {
+    |
+
+error[E0599]: no method named `execute_long_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:109:26
+    |
+109 |     let result = adapter.execute_long_workflow().await;
+    |                          ^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+warning: unused variable: `e`
+  --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:80:60
+   |
+80 |         let result = lb.get_next_endpoint().await.map_err(|e| {
+   |                                                            ^ help: if this is intentional, prefix it with an underscore: `_e`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: `songbird-config` (test "canonical_load_balancing_tests") generated 4 warnings
+error: could not compile `songbird-config` (test "canonical_load_balancing_tests") due to 2 previous errors; 4 warnings emitted
+warning: unused variable: `e`
+  --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:94:60
+   |
+94 |         let result = lb.get_next_endpoint().await.map_err(|e| {
+   |                                                            ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: `songbird-config` (test "canonical_service_tests") generated 4 warnings
+error: could not compile `songbird-config` (test "canonical_service_tests") due to 3 previous errors; 4 warnings emitted
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:108:60
+    |
+108 |         let result = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                            ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/sovereignty_router_tests.rs:439:24
+    |
+439 |     let paths = result.ok_or_else(|| {
+    |                 -------^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+439 -     let paths = result.ok_or_else(|| {
+439 +     let paths = result.or_else(|| {
+    |
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:122:60
+    |
+122 |         let result = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                            ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `execute_long_workflow` found for struct `Arc<UniversalCapabilityAdapter>` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:120:58
+    |
+120 |     let handle = tokio::spawn(async move { adapter_clone.execute_long_workflow().await });
+    |                                                          ^^^^^^^^^^^^^^^^^^^^^ method not found in `Arc<UniversalCapabilityAdapter>`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:166:57
+    |
+166 |     let result1 = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                         ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:169:57
+    |
+169 |     let result2 = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                         ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:311:9
+    |
+311 |         SongbirdError::configuration("Missing performance configuration".to_string())
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Result<StorageAdapter, _>`, found `SongbirdError`
+    |
+    = note: expected enum `Result<StorageAdapter, _>`
+               found enum `SongbirdError`
+help: try wrapping the expression in `Err`
+    |
+311 |         Err(SongbirdError::configuration("Missing performance configuration".to_string()))
+    |         ++++                                                                             +
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:185:56
+    |
+185 |     let result = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                        ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:227:44
+    |
+227 |         let result = handle.await.map_err(|e| {
+    |                                            ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `execute_with_retry` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:136:26
+    |
+136 |     let result = adapter.execute_with_retry("compute", 3).await;
+    |                          ^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:254:31
+    |
+254 |         handle.await.map_err(|e| {
+    |                               ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `execute_with_timeout` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:147:26
+    |
+147 |     let result = adapter.execute_with_timeout("slow_capability", 100).await;
+    |                          ^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `songbird-universal` (test "capability_system_comprehensive_tests") due to 5 previous errors
+Some errors have detailed explanations: E0432, E0433.
+For more information about an error, try `rustc --explain E0432`.
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:356:52
+    |
+356 |     let r1 = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                    ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:359:52
+    |
+359 |     let r2 = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                    ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:362:52
+    |
+362 |     let r3 = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                    ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `execute_capability_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:158:21
+    |
+158 |     let _ = adapter.execute_capability_workflow("compute").await;
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:384:60
+    |
+384 |         let result = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                            ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:100:10
+    |
+ 99 |       let services = result
+    |  ____________________-
+100 | |         .ok_or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+    | |_________-^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+100 -         .ok_or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+100 +         .or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+    |
+
+error: could not compile `songbird-universal` (test "sovereignty_router_tests") due to 6 previous errors
+error: could not compile `songbird-universal` (test "security_adapter_integration_tests") due to 2 previous errors
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:427:56
+    |
+427 |     let result = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                        ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:320:26
+    |
+320 |     let metrics = result.ok_or_else(|| {
+    |                   -------^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+320 -     let metrics = result.ok_or_else(|| {
+320 +     let metrics = result.or_else(|| {
+    |
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:440:56
+    |
+440 |     let result = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                        ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:456:19
+    |
+456 |         .map_err(|e| SongbirdError::configuration("Failed to start orchestrator".to_string()))?;
+    |                   ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:342:9
+    |
+342 |         SongbirdError::configuration("Missing performance configuration".to_string())
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Result<StorageAdapter, _>`, found `SongbirdError`
+    |
+    = note: expected enum `Result<StorageAdapter, _>`
+               found enum `SongbirdError`
+help: try wrapping the expression in `Err`
+    |
+342 |         Err(SongbirdError::configuration("Missing performance configuration".to_string()))
+    |         ++++                                                                             +
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:468:52
+    |
+468 |     let r1 = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                    ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:474:19
+    |
+474 |         .map_err(|e| SongbirdError::configuration("Failed to start orchestrator".to_string()))?;
+    |                   ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:369:9
+    |
+369 |         SongbirdError::configuration("Missing performance configuration".to_string())
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Result<StorageAdapter, _>`, found `SongbirdError`
+    |
+    = note: expected enum `Result<StorageAdapter, _>`
+               found enum `SongbirdError`
+help: try wrapping the expression in `Err`
+    |
+369 |         Err(SongbirdError::configuration("Missing performance configuration".to_string()))
+    |         ++++                                                                             +
+
+error[E0599]: no method named `get_workflow_metrics` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:161:27
+    |
+161 |     let metrics = adapter.get_workflow_metrics().await;
+    |                           ^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `execute_conditional` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:172:17
+    |
+172 |         adapter.execute_conditional("capability_a", "capability_b", |result| result.is_ok()).await;
+    |                 ^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:552:44
+    |
+552 |         let result = handle.await.map_err(|e| {
+    |                                            ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:123:10
+    |
+122 |       let services = result
+    |  ____________________-
+123 | |         .ok_or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+    | |_________-^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+123 -         .ok_or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+123 +         .or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+    |
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:575:43
+    |
+575 |         let count = handle.await.map_err(|e| {
+    |                                           ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `start_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:183:31
+    |
+183 |     let workflow_id = adapter.start_workflow("long_workflow").await.ok();
+    |                               ^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:385:10
+    |
+384 |       let adapter = StorageAdapter::new("http://nonexistent-host-12345:9999".to_string())
+    |  ___________________-
+385 | |         .ok_or_else(|| {
+    | |_________-^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+385 -         .ok_or_else(|| {
+385 +         .or_else(|| {
+    |
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:599:44
+    |
+599 |         let result = handle.await.map_err(|e| {
+    |                                            ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `resume_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:187:31
+    |
+187 |         let resumed = adapter.resume_workflow(id).await;
+    |                               ^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:634:56
+    |
+634 |     let result = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                        ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:141:16
+    |
+141 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |                ^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+141 -         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+141 +         result.or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |
+
+error[E0599]: no method named `execute_branched_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:199:10
+    |
+198 |       let result = adapter
+    |  __________________-
+199 | |         .execute_branched_workflow(vec![vec!["storage", "compute"], vec!["network", "ai"]])
+    | |         -^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+    | |_________|
+    |
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:646:56
+    |
+646 |     let result = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                        ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:658:56
+    |
+658 |     let result = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                        ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:405:10
+    |
+404 |       let adapter = StorageAdapter::new("http://10.255.255.1:9999".to_string())
+    |  ___________________-
+405 | |         .ok_or_else(|| {
+    | |_________-^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+405 -         .ok_or_else(|| {
+405 +         .or_else(|| {
+    |
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:672:56
+    |
+672 |     let result = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                        ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:431:9
+    |
+431 |         SongbirdError::configuration("Missing performance configuration".to_string())
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Result<StorageAdapter, _>`, found `SongbirdError`
+    |
+    = note: expected enum `Result<StorageAdapter, _>`
+               found enum `SongbirdError`
+help: try wrapping the expression in `Err`
+    |
+431 |         Err(SongbirdError::configuration("Missing performance configuration".to_string()))
+    |         ++++                                                                             +
+
+warning: unused variable: `e`
+   --> crates/songbird-universal/tests/load_balancer_error_paths_tests.rs:685:56
+    |
+685 |     let result = lb.get_next_endpoint().await.map_err(|e| {
+    |                                                        ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:456:9
+    |
+456 |         SongbirdError::configuration("Missing performance configuration".to_string())
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Result<StorageAdapter, _>`, found `SongbirdError`
+    |
+    = note: expected enum `Result<StorageAdapter, _>`
+               found enum `SongbirdError`
+help: try wrapping the expression in `Err`
+    |
+456 |         Err(SongbirdError::configuration("Missing performance configuration".to_string()))
+    |         ++++                                                                             +
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:491:22
+    |
+491 |         .or_else(|_| SongbirdError::configuration("Failed health check".to_string()))?;
+    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Result<StorageAdapter, _>`, found `SongbirdError`
+    |
+    = note: expected enum `Result<StorageAdapter, _>`
+               found enum `SongbirdError`
+help: try wrapping the expression in `Err`
+    |
+491 |         .or_else(|_| Err(SongbirdError::configuration("Failed health check".to_string())))?;
+    |                      ++++                                                               +
+
+error: could not compile `songbird-universal` (test "integration_workflow_tests") due to 17 previous errors
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:285:10
+    |
+284 |       let services = result
+    |  ____________________-
+285 | |         .ok_or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+    | |_________-^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+285 -         .ok_or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+285 +         .or_else(|| SongbirdError::configuration("Failed to discover services".to_string()))?;
+    |
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:500:16
+    |
+500 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+    |                ^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+500 -         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+500 +         result.or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+    |
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:529:22
+    |
+529 |         .or_else(|_| SongbirdError::configuration("Failed health check".to_string()))?;
+    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Result<StorageAdapter, _>`, found `SongbirdError`
+    |
+    = note: expected enum `Result<StorageAdapter, _>`
+               found enum `SongbirdError`
+help: try wrapping the expression in `Err`
+    |
+529 |         .or_else(|_| Err(SongbirdError::configuration("Failed health check".to_string())))?;
+    |                      ++++                                                               +
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:372:16
+    |
+372 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |                ^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+372 -         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+372 +         result.or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:538:16
+    |
+538 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+    |                ^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+538 -         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+538 +         result.or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+    |
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:567:22
+    |
+567 |         .or_else(|_| SongbirdError::configuration("Failed health check".to_string()))?;
+    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Result<StorageAdapter, _>`, found `SongbirdError`
+    |
+    = note: expected enum `Result<StorageAdapter, _>`
+               found enum `SongbirdError`
+help: try wrapping the expression in `Err`
+    |
+567 |         .or_else(|_| Err(SongbirdError::configuration("Failed health check".to_string())))?;
+    |                      ++++                                                               +
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:576:16
+    |
+576 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+    |                ^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+576 -         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+576 +         result.or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?,
+    |
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:430:16
+    |
+430 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |                ^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+430 -         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+430 +         result.or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:645:25
+    |
+645 |     let json_str = json.ok_or_else(|| {
+    |                    -----^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+645 -     let json_str = json.ok_or_else(|| {
+645 +     let json_str = json.or_else(|| {
+    |
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:496:16
+    |
+496 |         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |                ^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+496 -         result.ok_or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+496 +         result.or_else(|| SongbirdError::configuration(format!("Error: {}", e)))?.len(),
+    |
+
+error[E0599]: no method named `ok_or_else` found for enum `Result` in the current scope
+   --> crates/songbird-universal/tests/adapter_storage_comprehensive_tests.rs:672:27
+    |
+672 |     let metrics = metrics.ok_or_else(|| {
+    |                   --------^^^^^^^^^^
+    |
+help: there is a method `or_else` with a similar name
+    |
+672 -     let metrics = metrics.ok_or_else(|| {
+672 +     let metrics = metrics.or_else(|| {
+    |
+
+Some errors have detailed explanations: E0252, E0308, E0425, E0599.
+warning: `songbird-universal` (test "adapter_storage_comprehensive_tests") generated 1 warning
+error: could not compile `songbird-universal` (test "adapter_storage_comprehensive_tests") due to 23 previous errors; 1 warning emitted
+warning: unexpected `cfg` condition value: `integration-tests-disabled`
+   --> crates/songbird-universal/src/adapters/compute/tests.rs:379:21
+    |
+379 |     #[cfg(all(test, feature = "integration-tests-disabled"))]
+    |                     ^^^^^^^^^^----------------------------
+    |                               |
+    |                               help: there is a expected value with a similar name: `"federation-tests-disabled"`
+    |
+    = note: expected values for `feature` are: `default`, `federation-tests-disabled`, and `tests-incomplete`
+    = help: consider adding `integration-tests-disabled` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+    = note: `#[warn(unexpected_cfgs)]` on by default
+
+Some errors have detailed explanations: E0252, E0425, E0599.
+warning: `songbird-universal` (test "discovery_comprehensive_tests") generated 1 warning
+error: could not compile `songbird-universal` (test "discovery_comprehensive_tests") due to 13 previous errors; 1 warning emitted
+warning: `songbird-config` (test "network_config_comprehensive_tests") generated 64 warnings (run `cargo fix --test "network_config_comprehensive_tests"` to apply 2 suggestions)
+warning: use of deprecated constant `config::constants::tests::test_get_bind_address`: Use songbird_config::canonical::constants instead
+   --> crates/songbird-config/src/config/constants.rs:731:5
+    |
+731 | /     fn test_get_bind_address() {
+732 | |         let addr = super::get_bind_address();
+733 | |         assert!(!addr.is_empty());
+734 | |     }
+    | |_____^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: `songbird-universal` (test "load_balancer_error_paths_tests") generated 27 warnings (run `cargo fix --test "load_balancer_error_paths_tests"` to apply 1 suggestion)
+warning: use of deprecated field `config::SongbirdConfig::primal_registry`: Use `canonical::primals::PrimalRegistry` instead
+   --> crates/songbird-config/src/config/mod.rs:207:9
+    |
+207 |         self.primal_registry
+    |         ^^^^^^^^^^^^^^^^^^^^
+
+warning: associated functions `create_from_environment`, `detect_kubernetes_environment`, `detect_consul_environment`, `detect_container_environment`, `create_consul_universal`, and `create_container_universal` are never used
+   --> crates/songbird-discovery/src/discovery/factory.rs:70:14
+    |
+ 38 | impl UniversalDiscoveryFactory {
+    | ------------------------------ associated functions in this implementation
+...
+ 70 |     async fn create_from_environment() -> Result<UniversalServiceDiscoveryAdapter> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^
+...
+ 97 |     async fn detect_kubernetes_environment() -> bool {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+108 |     async fn detect_consul_environment() -> bool {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+116 |     async fn detect_container_environment() -> bool {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+130 |     async fn create_consul_universal() -> Result<UniversalServiceDiscoveryAdapter> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^
+...
+137 |     async fn create_container_universal() -> Result<UniversalServiceDiscoveryAdapter> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` on by default
+
+warning: `songbird-discovery` (lib) generated 1 warning
+warning: `songbird-discovery` (lib test) generated 1 warning (1 duplicate)
+warning: comparison is useless due to type limits
+   --> crates/songbird-config/src/canonical/constants.rs:862:17
+    |
+862 |         assert!(end <= 65535);
+    |                 ^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_comparisons)]` on by default
+
+warning: `songbird-config` (lib test) generated 6 warnings (3 duplicates)
+warning: `songbird-universal` (lib test) generated 1 warning
+error: process didn't exit successfully: `/home/eastgate/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo test --tests --manifest-path /home/eastgate/Development/ecoPrimals/songbird/Cargo.toml --target-dir /home/eastgate/Development/ecoPrimals/songbird/target/llvm-cov-target --all-features --workspace` (exit status: 101)

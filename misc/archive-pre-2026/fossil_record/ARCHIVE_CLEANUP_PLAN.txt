@@ -1,0 +1,22 @@
+================================================================================
+ECOPRIMALS WORKSPACE CLEANUP - FOSSIL RECORD CONSOLIDATION
+December 12, 2025
+================================================================================
+
+GOAL: Clean workspace, consolidate archives, reduce false positives
+
+CURRENT STATE:
+- Parent has: archive/ (224 dirs), fossils/, multiple *-fossil-archive-* dirs
+- Scattered backup files and old documentation
+- Multiple archive directories per primal
+
+PLAN:
+1. Move squirrel/docs/archive → archive/fossil_record/squirrel/
+2. Move beardog/docs/archive → archive/fossil_record/beardog/
+3. Consolidate *-fossil-archive-* → archive/fossil_record/
+4. Remove backup files (*.bak, *.backup, *~, *.old)
+5. Clean old parent-level docs
+6. Update .gitignore
+
+RESULT: Clean workspace, all fossils in one place, reduced clutter
+================================================================================

@@ -1,0 +1,879 @@
+info: cargo-llvm-cov currently setting cfg(coverage); you can opt-out it by passing --no-cfg-coverage
+error: process didn't exit successfully: `/home/eastgate/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo test --no-run --tests --manifest-path /home/eastgate/Development/ecoPrimals/songbird/Cargo.toml --target-dir /home/eastgate/Development/ecoPrimals/songbird/target/llvm-cov-target --all-features --workspace` (exit status: 101)
+--- stderr
+   Compiling hardcoding-migrator v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/tools/hardcoding-migrator)
+   Compiling songbird-types v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types)
+   Compiling songbird-config v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-config)
+   Compiling songbird-canonical v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-canonical)
+   Compiling songbird-test-utils v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-test-utils)
+   Compiling songbird-universal v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-universal)
+   Compiling songbird-observability v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-observability)
+   Compiling songbird-discovery v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-discovery)
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:147:9
+    |
+147 |         format!("http://localhost:{}", test_orchestrator_port()),
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:173:42
+    |
+173 |         create_test_service("service-1", format!("http://localhost:{}", test_orchestrator_port()));
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:175:42
+    |
+175 |         create_test_service("service-2", format!("http://localhost:{}", test_discovery_port()));
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/discovery_comprehensive_tests.rs:285:9
+    |
+285 |         format!("http://localhost:{}", test_orchestrator_port()),
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:409:9
+    |
+409 |         format!("http://localhost:{}", test_orchestrator_port()),
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:433:9
+    |
+433 |         format!("http://localhost:{}", test_orchestrator_port()),
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:459:9
+    |
+459 |         format!("http://localhost:{}", test_orchestrator_port()),
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:487:42
+    |
+487 |         create_test_service("service-1", format!("http://localhost:{}", test_orchestrator_port()));
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:489:42
+    |
+489 |         create_test_service("service-2", format!("http://localhost:{}", test_discovery_port()));
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:491:42
+    |
+491 |         create_test_service("service-3", format!("http://localhost:{}", test_health_port()));
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:623:9
+    |
+623 |         format!("http://localhost:{}", test_orchestrator_port()),
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:649:42
+    |
+649 |         create_test_service("service-1", format!("http://localhost:{}", test_orchestrator_port())),
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:650:42
+    |
+650 |         create_test_service("service-2", format!("http://localhost:{}", test_discovery_port())),
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:651:42
+    |
+651 |         create_test_service("service-3", format!("http://localhost:{}", test_health_port())),
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0308]: mismatched types
+   --> crates/songbird-universal/tests/sovereignty_router_comprehensive_tests.rs:680:9
+    |
+680 |         format!("http://localhost:{}", test_orchestrator_port()),
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `&str`, found `String`
+    |
+    = note: this error originates in the macro `format` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `songbird-universal` (test "sovereignty_router_comprehensive_tests") due to 14 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `songbird-universal` (test "discovery_comprehensive_tests") due to 1 previous error
+
+info: cargo-llvm-cov currently setting cfg(coverage); you can opt-out it by passing --no-cfg-coverage
+error: process didn't exit successfully: `/home/eastgate/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo test --no-run --tests --manifest-path /home/eastgate/Development/ecoPrimals/songbird/Cargo.toml --target-dir /home/eastgate/Development/ecoPrimals/songbird/target/llvm-cov-target --all-features --workspace` (exit status: 101)
+--- stderr
+   Compiling hardcoding-migrator v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/tools/hardcoding-migrator)
+   Compiling songbird-types v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-types)
+   Compiling songbird-config v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-config)
+   Compiling songbird-canonical v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-canonical)
+   Compiling songbird-test-utils v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-test-utils)
+   Compiling songbird-universal v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-universal)
+   Compiling songbird-observability v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-observability)
+   Compiling songbird-discovery v0.1.0 (/home/eastgate/Development/ecoPrimals/songbird/crates/songbird-discovery)
+error[E0599]: no method named `execute_capability_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:17:26
+   |
+17 |     let result = adapter.execute_capability_workflow("compute").await;
+   |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `is_ok` found for struct `Vec<String>` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:31:21
+   |
+31 |     assert!(compute.is_ok());
+   |                     ^^^^^ method not found in `Vec<String>`
+
+error[E0599]: no method named `is_ok` found for struct `Vec<String>` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:32:21
+   |
+32 |     assert!(storage.is_ok());
+   |                     ^^^^^ method not found in `Vec<String>`
+
+error[E0599]: no method named `create_capability_chain` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:41:28
+   |
+41 |     let workflow = adapter.create_capability_chain(vec!["storage", "compute", "ai"]).await;
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `resolve_capability_dependencies` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:75:26
+   |
+75 |     let result = adapter.resolve_capability_dependencies("ai", vec!["compute", "storage"]).await;
+   |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `execute_capability_transaction` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:86:26
+   |
+86 |     let result = adapter.execute_capability_transaction(vec!["storage", "compute"]).await;
+   |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `execute_with_rollback` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/integration_workflow_tests.rs:97:26
+   |
+97 |     let result = adapter.execute_with_rollback(vec!["storage", "failing_capability"]).await;
+   |                          ^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `execute_long_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:109:26
+    |
+109 |     let result = adapter.execute_long_workflow().await;
+    |                          ^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `execute_long_workflow` found for struct `Arc<UniversalCapabilityAdapter>` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:120:58
+    |
+120 |     let handle = tokio::spawn(async move { adapter_clone.execute_long_workflow().await });
+    |                                                          ^^^^^^^^^^^^^^^^^^^^^ method not found in `Arc<UniversalCapabilityAdapter>`
+
+error[E0599]: no method named `execute_with_retry` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:136:26
+    |
+136 |     let result = adapter.execute_with_retry("compute", 3).await;
+    |                          ^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `execute_with_timeout` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:147:26
+    |
+147 |     let result = adapter.execute_with_timeout("slow_capability", 100).await;
+    |                          ^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `execute_capability_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:158:21
+    |
+158 |     let _ = adapter.execute_capability_workflow("compute").await;
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `get_workflow_metrics` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:161:27
+    |
+161 |     let metrics = adapter.get_workflow_metrics().await;
+    |                           ^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `execute_conditional` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:172:17
+    |
+172 |         adapter.execute_conditional("capability_a", "capability_b", |result| result.is_ok()).await;
+    |                 ^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `start_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:183:31
+    |
+183 |     let workflow_id = adapter.start_workflow("long_workflow").await.ok();
+    |                               ^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `resume_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:187:31
+    |
+187 |         let resumed = adapter.resume_workflow(id).await;
+    |                               ^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `execute_branched_workflow` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/integration_workflow_tests.rs:199:10
+    |
+198 |       let result = adapter
+    |  __________________-
+199 | |         .execute_branched_workflow(vec![vec!["storage", "compute"], vec!["network", "ai"]])
+    | |         -^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+    | |_________|
+    |
+
+error[E0599]: no method named `is_err` found for struct `Vec<std::string::String>` in the current scope
+  --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:20:20
+   |
+20 |     assert!(result.is_err());
+   |                    ^^^^^^
+   |
+help: there is a method `iter` with a similar name
+   |
+20 -     assert!(result.is_err());
+20 +     assert!(result.iter());
+   |
+
+error[E0308]: mismatched types
+  --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:22:12
+   |
+22 |     if let Err(err) = result {
+   |            ^^^^^^^^   ------ this expression has type `Vec<std::string::String>`
+   |            |
+   |            expected `Vec<String>`, found `Result<_, _>`
+   |
+   = note: expected struct `Vec<std::string::String>`
+                found enum `Result<_, _>`
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `songbird-universal` (test "integration_workflow_tests") due to 17 previous errors
+warning: build failed, waiting for other jobs to finish...
+error[E0599]: no method named `connect_to_endpoint` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:33:26
+    |
+ 33 |     let result = adapter.connect_to_endpoint("http://10.255.255.1:9999").await;
+    |                          ^^^^^^^^^^^^^^^^^^^
+    |
+help: there is a method `connect_to_primal` with a similar name, but with different arguments
+   --> /home/eastgate/Development/ecoPrimals/songbird/crates/songbird-universal/src/capabilities/adapter.rs:490:5
+    |
+490 | /     pub async fn connect_to_primal(
+491 | |         &self,
+492 | |         name: &str,
+493 | |         endpoint: &str,
+494 | |     ) -> Result<(), CapabilityError> {
+    | |____________________________________^
+
+error[E0599]: no method named `connect_to_endpoint` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:45:26
+    |
+ 45 |     let result = adapter.connect_to_endpoint("not-a-valid-url").await;
+    |                          ^^^^^^^^^^^^^^^^^^^
+    |
+help: there is a method `connect_to_primal` with a similar name, but with different arguments
+   --> /home/eastgate/Development/ecoPrimals/songbird/crates/songbird-universal/src/capabilities/adapter.rs:490:5
+    |
+490 | /     pub async fn connect_to_primal(
+491 | |         &self,
+492 | |         name: &str,
+493 | |         endpoint: &str,
+494 | |     ) -> Result<(), CapabilityError> {
+    | |____________________________________^
+
+error[E0599]: no method named `request_capability` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:58:26
+   |
+58 |     let result = adapter.request_capability("super_rare_capability").await;
+   |                          ^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0308]: mismatched types
+  --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:73:12
+   |
+73 |     if let Err(err) = result {
+   |            ^^^^^^^^   ------ this expression has type `Vec<std::string::String>`
+   |            |
+   |            expected `Vec<String>`, found `Result<_, _>`
+   |
+   = note: expected struct `Vec<std::string::String>`
+                found enum `Result<_, _>`
+
+error[E0599]: no method named `source` found for enum `SongbirdError` in the current scope
+  --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:87:21
+   |
+87 |     assert!(wrapped.source().is_some());
+   |                     ^^^^^^ method not found in `SongbirdError`
+  --> /rustc/1159e78c4747b02ef996e55082b704c09b970588/library/core/src/error.rs:105:8
+   |
+   = note: the method is available for `SongbirdError` here
+   |
+   = help: items from traits can only be used if the trait is in scope
+help: trait `Error` which provides `source` is implemented but not in scope; perhaps you want to import it
+   |
+ 8 + use std::error::Error;
+   |
+
+error[E0599]: no method named `discover_with_retry` found for struct `UniversalCapabilityAdapter` in the current scope
+  --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:96:26
+   |
+96 |     let result = adapter.discover_with_retry("compute", 3).await;
+   |                          ^^^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0599]: no method named `connect_to_endpoint` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:110:14
+    |
+109 |           let _ = adapter
+    |  _________________-
+110 | |             .connect_to_endpoint(format!("http://failing-service:{}", test_orchestrator_port()))
+    | |_____________-^^^^^^^^^^^^^^^^^^^
+    |
+help: there is a method `connect_to_primal` with a similar name, but with different arguments
+   --> /home/eastgate/Development/ecoPrimals/songbird/crates/songbird-universal/src/capabilities/adapter.rs:490:5
+    |
+490 | /     pub async fn connect_to_primal(
+491 | |         &self,
+492 | |         name: &str,
+493 | |         endpoint: &str,
+494 | |     ) -> Result<(), CapabilityError> {
+    | |____________________________________^
+
+error[E0599]: no method named `is_circuit_open` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:115:27
+    |
+115 |     let is_open = adapter.is_circuit_open("failing-service").await;
+    |                           ^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:25:44
+   |
+25 |             format!("http://localhost:{}", test_orchestrator_port()).to_string(),
+   |                                            ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_orchestrator_port;
+   |
+
+error[E0425]: cannot find function `test_discovery_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:29:65
+   |
+29 |             SecurityAdapter::new(format!("http://localhost:{}", test_discovery_port()).to_string())
+   |                                                                 ^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_discovery_port;
+   |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:32:64
+   |
+32 |             StorageAdapter::new(format!("http://localhost:{}", test_health_port()).to_string())
+   |                                                                ^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_health_port;
+   |
+
+error[E0425]: cannot find function `test_federation_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:34:64
+   |
+34 |         let ai = AIAdapter::new(format!("http://localhost:{}", test_federation_port()).to_string())
+   |                                                                ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_federation_port;
+   |
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:38:71
+   |
+38 |         assert_eq!(compute.endpoint(), format!("http://localhost:{}", test_orchestrator_port()));
+   |                                                                       ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_orchestrator_port;
+   |
+
+error[E0425]: cannot find function `test_discovery_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:39:72
+   |
+39 |         assert_eq!(security.endpoint(), format!("http://localhost:{}", test_discovery_port()));
+   |                                                                        ^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_discovery_port;
+   |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:40:71
+   |
+40 |         assert_eq!(storage.endpoint(), format!("http://localhost:{}", test_health_port()));
+   |                                                                       ^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_health_port;
+   |
+
+error[E0425]: cannot find function `test_federation_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:41:66
+   |
+41 |         assert_eq!(ai.endpoint(), format!("http://localhost:{}", test_federation_port()));
+   |                                                                  ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_federation_port;
+   |
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:49:44
+   |
+49 |             format!("http://localhost:{}", test_orchestrator_port()).to_string(),
+   |                                            ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_orchestrator_port;
+   |
+
+error[E0425]: cannot find function `test_discovery_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:55:65
+   |
+55 |             SecurityAdapter::new(format!("http://localhost:{}", test_discovery_port()).to_string())
+   |                                                                 ^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_discovery_port;
+   |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:60:64
+   |
+60 |             StorageAdapter::new(format!("http://localhost:{}", test_health_port()).to_string())
+   |                                                                ^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_health_port;
+   |
+
+error[E0425]: cannot find function `test_federation_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:64:64
+   |
+64 |         let ai = AIAdapter::new(format!("http://localhost:{}", test_federation_port()).to_string())
+   |                                                                ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_federation_port;
+   |
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:69:71
+   |
+69 |         assert_eq!(compute.endpoint(), format!("http://localhost:{}", test_orchestrator_port()));
+   |                                                                       ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_orchestrator_port;
+   |
+
+error[E0425]: cannot find function `test_discovery_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:70:72
+   |
+70 |         assert_eq!(security.endpoint(), format!("http://localhost:{}", test_discovery_port()));
+   |                                                                        ^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_discovery_port;
+   |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:71:71
+   |
+71 |         assert_eq!(storage.endpoint(), format!("http://localhost:{}", test_health_port()));
+   |                                                                       ^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_health_port;
+   |
+
+error[E0425]: cannot find function `test_federation_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:72:66
+   |
+72 |         assert_eq!(ai.endpoint(), format!("http://localhost:{}", test_federation_port()));
+   |                                                                  ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_federation_port;
+   |
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:80:45
+   |
+80 |             format!("http://provider-a:{}", test_orchestrator_port()).to_string(),
+   |                                             ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_orchestrator_port;
+   |
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:84:45
+   |
+84 |             format!("http://provider-b:{}", test_orchestrator_port()).to_string(),
+   |                                             ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_orchestrator_port;
+   |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:89:65
+   |
+89 |             StorageAdapter::new(format!("http://provider-a:{}", test_health_port()).to_string())
+   |                                                                 ^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_health_port;
+   |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:92:65
+   |
+92 |             StorageAdapter::new(format!("http://provider-b:{}", test_health_port()).to_string())
+   |                                                                 ^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_health_port;
+   |
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+  --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:98:45
+   |
+98 |             format!("http://provider-a:{}", test_orchestrator_port())
+   |                                             ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this function
+   |
+18 +     use songbird_test_utils::test_orchestrator_port;
+   |
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:102:45
+    |
+102 |             format!("http://provider-b:{}", test_orchestrator_port())
+    |                                             ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_orchestrator_port;
+    |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:106:45
+    |
+106 |             format!("http://provider-a:{}", test_health_port())
+    |                                             ^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_health_port;
+    |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:110:45
+    |
+110 |             format!("http://provider-b:{}", test_health_port())
+    |                                             ^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_health_port;
+    |
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:550:56
+    |
+550 |             format!("http://capability-provider-1:{}", test_orchestrator_port()).to_string(),
+    |                                                        ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_orchestrator_port;
+    |
+
+error[E0425]: cannot find function `test_discovery_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:553:56
+    |
+553 |             format!("http://capability-provider-2:{}", test_discovery_port()).to_string(),
+    |                                                        ^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_discovery_port;
+    |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:556:56
+    |
+556 |             format!("http://capability-provider-3:{}", test_health_port()).to_string(),
+    |                                                        ^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_health_port;
+    |
+
+error[E0425]: cannot find function `test_federation_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:559:56
+    |
+559 |             format!("http://capability-provider-4:{}", test_federation_port()).to_string(),
+    |                                                        ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_federation_port;
+    |
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:572:56
+    |
+572 |             format!("http://capability-provider-1:{}", test_orchestrator_port())
+    |                                                        ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_orchestrator_port;
+    |
+
+error[E0425]: cannot find function `test_discovery_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:576:56
+    |
+576 |             format!("http://capability-provider-2:{}", test_discovery_port())
+    |                                                        ^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_discovery_port;
+    |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:580:56
+    |
+580 |             format!("http://capability-provider-3:{}", test_health_port())
+    |                                                        ^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_health_port;
+    |
+
+error[E0425]: cannot find function `test_federation_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:584:56
+    |
+584 |             format!("http://capability-provider-4:{}", test_federation_port())
+    |                                                        ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_federation_port;
+    |
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:631:53
+    |
+631 |             format!("http://unknown-provider-a:{}", test_orchestrator_port()).to_string(),
+    |                                                     ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_orchestrator_port;
+    |
+
+error[E0599]: no method named `find_capability_providers_with_fallback` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:125:26
+    |
+125 |     let result = adapter.find_capability_providers_with_fallback("compute").await;
+    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+help: there is a method `find_capability_providers` with a similar name
+    |
+125 -     let result = adapter.find_capability_providers_with_fallback("compute").await;
+125 +     let result = adapter.find_capability_providers("compute").await;
+    |
+
+error[E0425]: cannot find function `test_discovery_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:634:53
+    |
+634 |             format!("http://unknown-provider-b:{}", test_discovery_port()).to_string(),
+    |                                                     ^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_discovery_port;
+    |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:637:53
+    |
+637 |             format!("http://unknown-provider-c:{}", test_health_port()).to_string(),
+    |                                                     ^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_health_port;
+    |
+
+error[E0425]: cannot find function `test_federation_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:640:53
+    |
+640 |             format!("http://unknown-provider-d:{}", test_federation_port()).to_string(),
+    |                                                     ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_federation_port;
+    |
+
+error[E0425]: cannot find function `test_orchestrator_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:655:53
+    |
+655 |             format!("http://unknown-provider-a:{}", test_orchestrator_port())
+    |                                                     ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_orchestrator_port;
+    |
+
+error[E0425]: cannot find function `test_discovery_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:659:53
+    |
+659 |             format!("http://unknown-provider-b:{}", test_discovery_port())
+    |                                                     ^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_discovery_port;
+    |
+
+error[E0425]: cannot find function `test_health_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:663:53
+    |
+663 |             format!("http://unknown-provider-c:{}", test_health_port())
+    |                                                     ^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_health_port;
+    |
+
+error[E0425]: cannot find function `test_federation_port` in this scope
+   --> crates/songbird-universal/tests/adapter_multi_capability_integration_tests.rs:667:53
+    |
+667 |             format!("http://unknown-provider-d:{}", test_federation_port())
+    |                                                     ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+ 18 +     use songbird_test_utils::test_federation_port;
+    |
+
+error[E0599]: no method named `is_err` found for struct `Vec<std::string::String>` in the current scope
+   --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:148:19
+    |
+148 |     assert!(first.is_err());
+    |                   ^^^^^^
+    |
+help: there is a method `iter` with a similar name
+    |
+148 -     assert!(first.is_err());
+148 +     assert!(first.iter());
+    |
+
+error[E0599]: no method named `is_ok` found for struct `Vec<std::string::String>` in the current scope
+   --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:155:20
+    |
+155 |     assert!(second.is_ok() || second.is_err());
+    |                    ^^^^^ method not found in `Vec<std::string::String>`
+
+error[E0599]: no method named `is_err` found for struct `Vec<std::string::String>` in the current scope
+   --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:155:38
+    |
+155 |     assert!(second.is_ok() || second.is_err());
+    |                                      ^^^^^^
+    |
+help: there is a method `iter` with a similar name
+    |
+155 -     assert!(second.is_ok() || second.is_err());
+155 +     assert!(second.is_ok() || second.iter());
+    |
+
+error[E0599]: no method named `discover_capability_providers_partial` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:188:26
+    |
+188 |     let result = adapter.discover_capability_providers_partial("compute").await;
+    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+help: there is a method `find_capability_providers` with a similar name
+    |
+188 -     let result = adapter.discover_capability_providers_partial("compute").await;
+188 +     let result = adapter.find_capability_providers("compute").await;
+    |
+
+For more information about this error, try `rustc --explain E0425`.
+error[E0599]: no method named `get_error_metrics` found for struct `UniversalCapabilityAdapter` in the current scope
+   --> crates/songbird-universal/tests/error_handling_comprehensive_tests.rs:208:27
+    |
+208 |     let metrics = adapter.get_error_metrics().await;
+    |                           ^^^^^^^^^^^^^^^^^ method not found in `UniversalCapabilityAdapter`
+
+error: could not compile `songbird-universal` (test "adapter_multi_capability_integration_tests") due to 40 previous errors
+Some errors have detailed explanations: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: could not compile `songbird-universal` (test "error_handling_comprehensive_tests") due to 16 previous errors
+

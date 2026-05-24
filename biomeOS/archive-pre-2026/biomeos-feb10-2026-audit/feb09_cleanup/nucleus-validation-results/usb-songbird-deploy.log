@@ -1,0 +1,19 @@
+╔══════════════════════════════════════════════════════╗
+║  🐦 songbird genomeBin v0.1.0
+╚══════════════════════════════════════════════════════╝
+[INFO] Songbird Discovery & Federation Orchestrator
+[INFO] Supported Architectures: x86_64 aarch64
+
+[INFO] Detected architecture: x86_64
+[SUCCESS] Architecture mapped: x86_64
+[INFO] Detected platform: Linux
+[INFO] Installation directory: /home/eastgate/.local/songbird
+[INFO] Existing installation detected: songbird 0.1.0
+[INFO] Backing up existing installation...
+[SUCCESS] Backup created: /home/eastgate/.local/songbird.backup
+[SUCCESS] Installation directory ready
+[INFO] Using temporary directory: /tmp/tmp.B1mC9QMuLi
+[INFO] Extracting x86_64 binaries...
+[ERROR] Failed to extract archive
+[INFO] Rolling back to previous installation...
+[SUCCESS] Rollback complete

@@ -1,0 +1,138 @@
+crates/universal-constants/src/network.rs:317:        /// **DYNAMIC**: Loads from SQUIRREL_PORT_BEARDOG environment variable
+crates/universal-constants/src/network.rs:324:        /// **DYNAMIC**: Loads from SQUIRREL_PORT_TOADSTOOL environment variable
+crates/universal-constants/src/network.rs:331:        /// **DYNAMIC**: Loads from SQUIRREL_PORT_NESTGATE environment variable
+crates/universal-constants/src/network.rs:338:        /// **DYNAMIC**: Loads from SQUIRREL_PORT_SONGBIRD environment variable
+crates/universal-constants/src/network.rs:345:        /// **DYNAMIC**: Loads from SQUIRREL_PORT_BIOMEOS environment variable
+crates/universal-constants/src/tests.rs:567:    env::remove_var("BEARDOG_PORT");
+crates/universal-constants/src/tests.rs:568:    env::remove_var("TOADSTOOL_PORT");
+crates/universal-constants/src/tests.rs:569:    env::remove_var("NESTGATE_PORT");
+crates/universal-constants/src/tests.rs:570:    env::remove_var("SONGBIRD_PORT");
+crates/universal-constants/src/tests.rs:571:    env::remove_var("BIOMEOS_PORT");
+crates/universal-constants/src/tests.rs:572:    env::remove_var("SQUIRREL_PORT_BEARDOG");
+crates/universal-constants/src/tests.rs:573:    env::remove_var("SQUIRREL_PORT_TOADSTOOL");
+crates/universal-constants/src/tests.rs:574:    env::remove_var("SQUIRREL_PORT_NESTGATE");
+crates/universal-constants/src/tests.rs:575:    env::remove_var("SQUIRREL_PORT_SONGBIRD");
+crates/universal-constants/src/tests.rs:576:    env::remove_var("SQUIRREL_PORT_BIOMEOS");
+crates/universal-constants/src/tests.rs:589:    env::set_var("SQUIRREL_PORT_BEARDOG", "9000");
+crates/universal-constants/src/tests.rs:590:    env::set_var("SQUIRREL_PORT_TOADSTOOL", "6000");
+crates/universal-constants/src/tests.rs:591:    env::set_var("SQUIRREL_PORT_NESTGATE", "7000");
+crates/universal-constants/src/tests.rs:592:    env::set_var("SQUIRREL_PORT_SONGBIRD", "8000");
+crates/universal-constants/src/tests.rs:593:    env::set_var("SQUIRREL_PORT_BIOMEOS", "9001");
+crates/universal-constants/src/tests.rs:601:    env::remove_var("SQUIRREL_PORT_BEARDOG");
+crates/universal-constants/src/tests.rs:602:    env::remove_var("SQUIRREL_PORT_TOADSTOOL");
+crates/universal-constants/src/tests.rs:603:    env::remove_var("SQUIRREL_PORT_NESTGATE");
+crates/universal-constants/src/tests.rs:604:    env::remove_var("SQUIRREL_PORT_SONGBIRD");
+crates/universal-constants/src/tests.rs:605:    env::remove_var("SQUIRREL_PORT_BIOMEOS");
+crates/universal-constants/src/port_config.rs:127:        let beardog_port = parse_port_from_env("SQUIRREL_PORT_BEARDOG", 8443);
+crates/universal-constants/src/port_config.rs:128:        let toadstool_port = parse_port_from_env("SQUIRREL_PORT_TOADSTOOL", 5432);
+crates/universal-constants/src/port_config.rs:129:        let nestgate_port = parse_port_from_env("SQUIRREL_PORT_NESTGATE", 8000);
+crates/universal-constants/src/port_config.rs:130:        let songbird_port = parse_port_from_env("SQUIRREL_PORT_SONGBIRD", 7000);
+crates/universal-constants/src/port_config.rs:131:        let biomeos_port = parse_port_from_env("SQUIRREL_PORT_BIOMEOS", 6000);
+crates/universal-constants/src/port_config.rs:579:        env::remove_var("SQUIRREL_PORT_BEARDOG");
+crates/universal-constants/src/port_config.rs:580:        env::remove_var("SQUIRREL_PORT_TOADSTOOL");
+crates/universal-constants/src/port_config.rs:581:        env::remove_var("SQUIRREL_PORT_NESTGATE");
+crates/universal-constants/src/port_config.rs:582:        env::remove_var("SQUIRREL_PORT_SONGBIRD");
+crates/universal-constants/src/port_config.rs:583:        env::remove_var("SQUIRREL_PORT_BIOMEOS");
+crates/universal-constants/src/port_config.rs:621:        env::set_var("SQUIRREL_PORT_BEARDOG", "9000");
+crates/universal-constants/src/port_config.rs:729:        env::set_var("SQUIRREL_PORT_BEARDOG", "9443");
+crates/universal-constants/src/port_config.rs:730:        env::set_var("SQUIRREL_PORT_TOADSTOOL", "9432");
+crates/universal-constants/src/port_config.rs:731:        env::set_var("SQUIRREL_PORT_NESTGATE", "9000");
+crates/universal-constants/src/port_config.rs:732:        env::set_var("SQUIRREL_PORT_SONGBIRD", "9700");
+crates/universal-constants/src/port_config.rs:733:        env::set_var("SQUIRREL_PORT_BIOMEOS", "9600");
+crates/universal-constants/src/host_config.rs:100:            env::var("SQUIRREL_HOST_BEARDOG").unwrap_or_else(|_| "localhost".to_string());
+crates/universal-constants/src/host_config.rs:102:            env::var("SQUIRREL_HOST_SONGBIRD").unwrap_or_else(|_| "localhost".to_string());
+crates/universal-constants/src/host_config.rs:104:            env::var("SQUIRREL_HOST_NESTGATE").unwrap_or_else(|_| "localhost".to_string());
+crates/universal-constants/src/host_config.rs:106:            env::var("SQUIRREL_HOST_TOADSTOOL").unwrap_or_else(|_| "localhost".to_string());
+crates/universal-constants/src/host_config.rs:108:            env::var("SQUIRREL_HOST_BIOMEOS").unwrap_or_else(|_| "localhost".to_string());
+crates/universal-constants/src/host_config.rs:256:        env::remove_var("SQUIRREL_HOST_BEARDOG");
+crates/universal-constants/src/host_config.rs:257:        env::remove_var("SQUIRREL_HOST_SONGBIRD");
+crates/universal-constants/src/host_config.rs:258:        env::remove_var("SQUIRREL_HOST_NESTGATE");
+crates/universal-constants/src/host_config.rs:259:        env::remove_var("SQUIRREL_HOST_TOADSTOOL");
+crates/universal-constants/src/host_config.rs:260:        env::remove_var("SQUIRREL_HOST_BIOMEOS");
+crates/universal-constants/src/host_config.rs:282:        env::set_var("SQUIRREL_HOST_BEARDOG", "beardog.example.com");
+crates/universal-constants/src/host_config.rs:342:        env::set_var("SQUIRREL_HOST_BEARDOG", "beardog.prod.example.com");
+crates/universal-constants/src/host_config.rs:343:        env::set_var("SQUIRREL_HOST_SONGBIRD", "songbird.prod.example.com");
+crates/integration/toadstool/src/lib.rs:40:            endpoint: std::env::var("TOADSTOOL_ENDPOINT")
+crates/integration/toadstool/src/errors.rs:12:/// **TOADSTOOL ERROR HELPER FUNCTIONS**
+crates/integration/api-clients/src/local.rs:158:// let endpoint = std::env::var("TOADSTOOL_ENDPOINT")?; // ❌ DEPRECATED
+crates/integration/api-clients/src/capability_ai_client.rs:717:// let endpoint = std::env::var("TOADSTOOL_ENDPOINT")?; // ❌ DEPRECATED
+crates/canonical-config/src/biomeos.rs:92:            name: std::env::var("BIOMEOS_SERVICE_NAME").unwrap_or_else(|_| "squirrel".to_string()),
+crates/canonical-config/src/biomeos.rs:93:            version: std::env::var("BIOMEOS_SERVICE_VERSION")
+crates/canonical-config/src/biomeos.rs:131:            cpu_limit: std::env::var("BIOMEOS_CPU_LIMIT").ok(),
+crates/canonical-config/src/biomeos.rs:132:            memory_limit: std::env::var("BIOMEOS_MEMORY_LIMIT").ok(),
+crates/canonical-config/src/biomeos.rs:133:            cpu_request: std::env::var("BIOMEOS_CPU_REQUEST").ok(),
+crates/canonical-config/src/biomeos.rs:134:            memory_request: std::env::var("BIOMEOS_MEMORY_REQUEST").ok(),
+crates/canonical-config/src/biomeos.rs:160:            lb_type: std::env::var("BIOMEOS_LB_TYPE").unwrap_or_else(|_| "round_robin".to_string()),
+crates/canonical-config/src/biomeos.rs:161:            algorithm: std::env::var("BIOMEOS_LB_ALGORITHM")
+crates/canonical-config/src/biomeos.rs:163:            health_check_path: std::env::var("BIOMEOS_HEALTH_PATH")
+crates/canonical-config/src/biomeos.rs:165:            health_check_interval: std::env::var("BIOMEOS_HEALTH_INTERVAL")
+crates/canonical-config/src/biomeos.rs:203:            enabled: std::env::var("BIOMEOS_HEALTH_ENABLED")
+crates/canonical-config/src/biomeos.rs:207:            path: std::env::var("BIOMEOS_HEALTH_PATH").unwrap_or_else(|_| "/health".to_string()),
+crates/canonical-config/src/biomeos.rs:208:            interval: std::env::var("BIOMEOS_HEALTH_INTERVAL")
+crates/canonical-config/src/biomeos.rs:212:            timeout: std::env::var("BIOMEOS_HEALTH_TIMEOUT")
+crates/canonical-config/src/biomeos.rs:216:            retries: std::env::var("BIOMEOS_HEALTH_RETRIES")
+crates/core/mcp/src/monitoring/mod.rs:65:    note = "Use orchestration_client instead - eliminates hardcoded 'songbird' references. See MIGRATION_EXAMPLE_SONGBIRD.md"
+crates/core/mcp/src/monitoring/mod.rs:111:        let test_port = std::env::var("SONGBIRD_TEST_PORT").unwrap_or_else(|_| "18900".to_string());
+crates/core/mcp/src/monitoring/songbird_client.rs:48:        let collection_interval = std::env::var("SONGBIRD_COLLECTION_INTERVAL")
+crates/core/mcp/src/monitoring/songbird_client.rs:53:        let batch_size = std::env::var("SONGBIRD_BATCH_SIZE")
+crates/core/mcp/src/monitoring/songbird_client.rs:58:        let timeout_ms = std::env::var("SONGBIRD_TIMEOUT_MS")
+crates/core/mcp/src/monitoring/songbird_client.rs:63:        let enable_tracing = std::env::var("SONGBIRD_ENABLE_TRACING")
+crates/core/core/src/bin/squirrel-mcp-server.rs:183:                .or_else(|_| std::env::var("SONGBIRD_ENDPOINT"))
+crates/core/core/src/bin/squirrel-mcp-server.rs:190:                    .or_else(|_| std::env::var("SONGBIRD_AUTH_TOKEN"))
+crates/core/core/src/bin/squirrel-mcp-server.rs:193:                    .or_else(|_| std::env::var("SONGBIRD_BATCH_SIZE")) // fallback
+crates/core/core/src/bin/squirrel-mcp-server.rs:199:                        .or_else(|_| std::env::var("SONGBIRD_FLUSH_INTERVAL")) // fallback
+crates/core/core/src/routing/config.rs:303:            .or_else(|_| std::env::var("MCP_NESTGATE_ENDPOINT"))
+crates/core/core/src/routing/config.rs:307:            .or_else(|_| std::env::var("MCP_TOADSTOOL_ENDPOINT"))
+crates/core/core/src/routing/config.rs:311:            .or_else(|_| std::env::var("MCP_BEARDOG_ENDPOINT"))
+crates/core/core/src/routing/config.rs:315:            .or_else(|_| std::env::var("MCP_BIOMEOS_ENDPOINT"))
+crates/core/core/src/config.rs:43:            songbird_endpoint: std::env::var("SONGBIRD_ENDPOINT").ok(),
+crates/core/auth/src/providers.rs:517:        let api_key = std::env::var("BEARDOG_API_KEY").unwrap_or_else(|_| String::new());
+crates/core/auth/src/providers.rs:662:        let api_key = std::env::var("BEARDOG_API_KEY").unwrap_or_else(|_| String::new());
+crates/main/src/toadstool/config.rs:40:            auth_token: std::env::var("TOADSTOOL_AUTH_TOKEN").ok(),
+crates/main/src/toadstool/config.rs:50:        std::env::var("TOADSTOOL_ENDPOINT")
+crates/main/src/config/defaults.rs:188:    pub const SONGBIRD_ENDPOINT: &str = "SONGBIRD_ENDPOINT";
+crates/main/src/config/defaults.rs:189:    pub const NESTGATE_ENDPOINT: &str = "NESTGATE_ENDPOINT";
+crates/main/src/ecosystem/discovery.rs:489:// let endpoint = std::env::var("TOADSTOOL_ENDPOINT")?; // ❌ DEPRECATED
+crates/main/src/songbird/mod.rs:526:        let heartbeat_interval_secs = std::env::var("SONGBIRD_HEARTBEAT_INTERVAL_SECS")
+crates/main/src/songbird/mod.rs:531:        let coordination_timeout_secs = std::env::var("SONGBIRD_COORDINATION_TIMEOUT_SECS")
+crates/main/src/songbird/mod.rs:536:        let _max_retries = std::env::var("SONGBIRD_MAX_RETRIES")
+crates/main/src/songbird/mod.rs:542:            songbird_endpoint: std::env::var("SONGBIRD_ENDPOINT")
+crates/main/src/production/mod.rs:631:// let endpoint = std::env::var("TOADSTOOL_ENDPOINT")?; // ❌ DEPRECATED
+crates/main/src/ai_integration/security.rs:326:        let auth_token = std::env::var("BEARDOG_AUTH_TOKEN").ok();
+crates/main/src/ai_integration/security.rs:384:// let endpoint = std::env::var("TOADSTOOL_ENDPOINT")?; // ❌ DEPRECATED
+crates/main/src/biomeos_integration/mod.rs:669:            ai_api: std::env::var("BIOMEOS_AI_API")
+crates/main/src/biomeos_integration/mod.rs:671:            mcp_api: std::env::var("BIOMEOS_MCP_API")
+crates/main/src/biomeos_integration/mod.rs:673:            context_api: std::env::var("BIOMEOS_CONTEXT_API")
+crates/main/src/biomeos_integration/mod.rs:675:            health: std::env::var("BIOMEOS_HEALTH_API")
+crates/main/src/biomeos_integration/mod.rs:677:            metrics: std::env::var("BIOMEOS_METRICS_API")
+crates/main/src/biomeos_integration/mod.rs:679:            websocket: std::env::var("BIOMEOS_WEBSOCKET_URL")
+crates/main/src/biomeos_integration/ecosystem_client.rs:153:            std::env::var("SONGBIRD_URL").unwrap_or_else(|_| configurable::http_endpoint());
+crates/main/src/biomeos_integration/ecosystem_client.rs:170:            std::env::var("SONGBIRD_URL").unwrap_or_else(|_| configurable::http_endpoint());
+crates/universal-patterns/src/security/beardog_provider.rs:101:            auth_token: std::env::var("BEARDOG_AUTH_TOKEN").ok(),
+crates/universal-patterns/src/security/beardog_provider.rs:212:            .or_else(|_| std::env::var("BEARDOG_URL"))
+crates/universal-patterns/src/security/beardog_provider.rs:381:// let endpoint = std::env::var("TOADSTOOL_ENDPOINT")?; // ❌ DEPRECATED
+crates/universal-patterns/src/orchestration/songbird_provider.rs:106:            auth_token: std::env::var("SONGBIRD_AUTH_TOKEN").ok(),
+crates/universal-patterns/src/orchestration/songbird_provider.rs:267:            .or_else(|_| std::env::var("SONGBIRD_URL"))
+crates/universal-patterns/src/orchestration/songbird_provider.rs:352:// let endpoint = std::env::var("TOADSTOOL_ENDPOINT")?; // ❌ DEPRECATED
+crates/universal-patterns/src/capability_discovery.rs:294:            ("SONGBIRD_ENDPOINT", vec!["orchestration", "service-mesh"]),
+crates/universal-patterns/src/capability_discovery.rs:295:            ("BEARDOG_ENDPOINT", vec!["security", "authentication"]),
+crates/universal-patterns/src/capability_discovery.rs:296:            ("TOADSTOOL_ENDPOINT", vec!["compute", "ai-processing"]),
+crates/universal-patterns/src/capability_discovery.rs:297:            ("NESTGATE_ENDPOINT", vec!["storage", "data-management"]),
+crates/ecosystem-api/src/defaults.rs:21:        std::env::var("SONGBIRD_ENDPOINT")
+crates/ecosystem-api/src/defaults.rs:37:        std::env::var("TOADSTOOL_ENDPOINT")
+crates/ecosystem-api/src/defaults.rs:44:        std::env::var("NESTGATE_ENDPOINT")
+crates/ecosystem-api/src/defaults.rs:53:            .or_else(|_| std::env::var("BEARDOG_ENDPOINT"))
+crates/ecosystem-api/src/universal_adapter/config.rs:68:        if let Ok(beardog_endpoint) = std::env::var("BEARDOG_ENDPOINT") {
+crates/ecosystem-api/src/universal_adapter/config.rs:72:        if let Ok(songbird_endpoint) = std::env::var("SONGBIRD_ENDPOINT") {
+crates/ecosystem-api/src/universal_adapter/config.rs:76:        if let Ok(nestgate_endpoint) = std::env::var("NESTGATE_ENDPOINT") {
+crates/ecosystem-api/src/universal_adapter/config.rs:80:        if let Ok(toadstool_endpoint) = std::env::var("TOADSTOOL_ENDPOINT") {
+crates/ecosystem-api/src/universal_adapter/nestgate.rs:134:            endpoint: std::env::var("NESTGATE_ENDPOINT")
+crates/ecosystem-api/src/universal_adapter/nestgate.rs:136:            auth_token: std::env::var("NESTGATE_AUTH_TOKEN").ok(),
+crates/ecosystem-api/src/universal_adapter/nestgate.rs:386:        let nestgate_endpoint = std::env::var("NESTGATE_ENDPOINT")
+crates/ecosystem-api/src/universal_adapter/nestgate.rs:444:        let nestgate_endpoint = std::env::var("NESTGATE_ENDPOINT")
+crates/tools/ai-tools/src/config/defaults.rs:155:        std::env::var("SONGBIRD_ENDPOINT").unwrap_or_else(|_| {
+crates/tools/ai-tools/src/config/defaults.rs:171:        std::env::var("TOADSTOOL_ENDPOINT").unwrap_or_else(|_| {
+crates/tools/ai-tools/src/config/defaults.rs:237:- SONGBIRD_ENDPOINT: Songbird orchestration service (default: http://localhost:8080)
+crates/tools/ai-tools/src/config/defaults.rs:238:- TOADSTOOL_ENDPOINT: ToadStool compute service (default: http://localhost:9001)
+crates/tools/ai-tools/src/common/clients/production.rs:610:// let endpoint = std::env::var("TOADSTOOL_ENDPOINT")?; // ❌ DEPRECATED
+crates/tools/ai-tools/src/common/clients/toadstool.rs:46:            auth_token: std::env::var("TOADSTOOL_AUTH_TOKEN").ok(),

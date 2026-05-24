@@ -1,0 +1,19 @@
+╔══════════════════════════════════════════════════════╗
+║  🐦 songbird genomeBin v0.1.0
+╚══════════════════════════════════════════════════════╝
+[INFO] Songbird Discovery & Federation Orchestrator
+[INFO] Supported Architectures: x86_64 aarch64
+
+[INFO] Detected architecture: aarch64
+[SUCCESS] Architecture mapped: aarch64
+[INFO] Detected platform: Android (mDNS + BirdSong)
+[INFO] Installation directory: /data/local/tmp/songbird
+[INFO] Existing installation detected: songbird 0.1.0
+[INFO] Backing up existing installation...
+[SUCCESS] Backup created: /data/local/tmp/songbird.backup
+[SUCCESS] Installation directory ready
+[INFO] Using temporary directory: /data/local/tmp/tmp.Wj9YD17sbe
+[INFO] Extracting aarch64 binaries...
+[ERROR] Failed to extract archive
+[INFO] Rolling back to previous installation...
+[SUCCESS] Rollback complete

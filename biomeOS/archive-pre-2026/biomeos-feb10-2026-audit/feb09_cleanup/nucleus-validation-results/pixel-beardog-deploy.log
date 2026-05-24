@@ -1,0 +1,20 @@
+╔══════════════════════════════════════════════════════╗
+║  🐻 beardog genomeBin v0.9.0
+╚══════════════════════════════════════════════════════╝
+[INFO] BearDog Sovereign Crypto Orchestrator
+[INFO] Supported Architectures: x86_64 aarch64
+
+[INFO] Detected architecture: aarch64
+[SUCCESS] Architecture mapped: aarch64
+[INFO] Detected platform: Android
+[INFO] Android HSM (StrongBox) support enabled
+[INFO] Installation directory: /data/local/tmp/beardog
+[INFO] Existing installation detected: beardog 0.9.0
+[INFO] Backing up existing installation...
+[SUCCESS] Backup created: /data/local/tmp/beardog.backup
+[SUCCESS] Installation directory ready
+[INFO] Using temporary directory: /data/local/tmp/tmp.iHYa6sDNUx
+[INFO] Extracting aarch64 binaries...
+[ERROR] Failed to extract archive
+[INFO] Rolling back to previous installation...
+[SUCCESS] Rollback complete

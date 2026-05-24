@@ -1,0 +1,15 @@
+╔══════════════════════════════════════════════════════╗
+║  🦀 biomeos genomeBin v5.1.0
+╚══════════════════════════════════════════════════════╝
+[INFO] Biomeos Discovery & Federation Orchestrator
+[INFO] Supported Architectures: x86_64 aarch64
+
+[INFO] Detected architecture: x86_64
+[SUCCESS] Architecture mapped: x86_64
+[INFO] Detected platform: Linux
+[INFO] Installation directory: /home/eastgate/.local/biomeos
+[SUCCESS] Installation directory ready
+[INFO] Using temporary directory: /tmp/tmp.F3S2JWDAAH
+[INFO] Extracting x86_64 binaries...
+[ERROR] Failed to extract archive
+[WARN] Partial installation may exist at: /home/eastgate/.local/biomeos

@@ -1,0 +1,19 @@
+╔══════════════════════════════════════════════════════╗
+║  🐿️ squirrel genomeBin v0.9.0
+╚══════════════════════════════════════════════════════╝
+[INFO] Squirrel Discovery & Federation Orchestrator
+[INFO] Supported Architectures: x86_64 aarch64
+
+[INFO] Detected architecture: aarch64
+[SUCCESS] Architecture mapped: aarch64
+[INFO] Detected platform: Android (mDNS + BirdSong)
+[INFO] Installation directory: /data/local/tmp/squirrel
+[INFO] Existing installation detected: 
+[INFO] Backing up existing installation...
+[SUCCESS] Backup created: /data/local/tmp/squirrel.backup
+[SUCCESS] Installation directory ready
+[INFO] Using temporary directory: /data/local/tmp/tmp.pjKtqcOjNo
+[INFO] Extracting aarch64 binaries...
+[ERROR] Failed to extract archive
+[INFO] Rolling back to previous installation...
+[SUCCESS] Rollback complete
