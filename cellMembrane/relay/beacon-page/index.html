@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>relay.primals.eco — Commensal Relay</title>
+<style>
+:root { --bg: #0a0e14; --fg: #e0e0e0; --accent: #4fc3f7; --dim: #666; --border: #1e2530; --green: #81c784; --amber: #c0c060; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "JetBrains Mono", "Fira Code", monospace; background: var(--bg); color: var(--fg); min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 2rem; }
+.container { max-width: 640px; width: 100%; }
+h1 { color: var(--accent); font-size: 1.4rem; margin-bottom: 0.5rem; }
+.subtitle { color: var(--dim); font-size: 0.85rem; margin-bottom: 2rem; }
+.section { background: #111620; border: 1px solid var(--border); border-radius: 6px; padding: 1.2rem; margin-bottom: 1.2rem; }
+.section h2 { color: var(--accent); font-size: 1rem; margin-bottom: 0.8rem; }
+.key-box { background: #0d1117; border: 1px solid var(--border); border-radius: 4px; padding: 0.8rem; font-family: monospace; font-size: 0.8rem; word-break: break-all; color: var(--green); cursor: pointer; position: relative; }
+.key-box:hover { border-color: var(--accent); }
+.key-box::after { content: "click to copy"; position: absolute; right: 8px; top: 8px; font-size: 0.65rem; color: var(--dim); }
+.config { background: #0d1117; border: 1px solid var(--border); border-radius: 4px; padding: 0.8rem; font-size: 0.75rem; line-height: 1.5; color: #b0bec5; white-space: pre; overflow-x: auto; }
+.config .c { color: var(--dim); }
+.config .k { color: var(--accent); }
+.config .v { color: var(--green); }
+.steps { list-style: none; counter-reset: step; }
+.steps li { counter-increment: step; padding: 0.4rem 0; padding-left: 2rem; position: relative; font-size: 0.85rem; color: #b0bec5; }
+.steps li::before { content: counter(step); position: absolute; left: 0; width: 1.4rem; height: 1.4rem; background: var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--accent); }
+.footer { margin-top: 2rem; text-align: center; font-size: 0.7rem; color: var(--dim); line-height: 1.8; }
+.footer a { color: var(--accent); text-decoration: none; }
+.notice { background: #1a1a0d; border: 1px solid #3d3d0a; border-radius: 4px; padding: 0.8rem; font-size: 0.75rem; color: var(--amber); margin-bottom: 1.2rem; }
+.tier { display: flex; gap: 0.5rem; align-items: baseline; margin-bottom: 0.6rem; }
+.tier-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.65rem; font-weight: bold; text-transform: uppercase; }
+.tier-1 { background: #1a2a1a; color: var(--green); border: 1px solid #2a3a2a; }
+.tier-2 { background: #1a1a2a; color: var(--accent); border: 1px solid #2a2a3a; }
+.tier-3 { background: #2a1a1a; color: #e57373; border: 1px solid #3a2a2a; }
+.tier-desc { font-size: 0.8rem; color: #b0bec5; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>&#x1F4E1; relay.primals.eco</h1>
+<p class="subtitle">Commensal Relay &mdash; free sovereign RustDesk relay for good-faith humans</p>
+
+<div class="notice">
+<strong>What this is:</strong> A free RustDesk relay server. Your traffic is end-to-end encrypted &mdash; the relay sees only ciphertext. No analytics, no tracking, no cookies. Use it in peace.
+</div>
+
+<div class="section">
+<h2>Quick Setup (2 steps)</h2>
+<ol class="steps">
+<li>Open RustDesk &rarr; Settings &rarr; Network &rarr; set <strong>ID/Relay Server</strong> to <code>relay.primals.eco</code></li>
+<li>Set a <strong>permanent password</strong> on your machine (Settings &rarr; Security)</li>
+</ol>
+<p style="margin-top:0.8rem; font-size:0.75rem; color:var(--dim);">That is it. You are connected. No key needed, no account needed.</p>
+</div>
+
+<div class="section">
+<h2>Config File (Advanced)</h2>
+<div class="config"><span class="c"># ~/.config/rustdesk/RustDesk2.toml [options]</span>
+<span class="k">custom-rendezvous-server</span> = <span class="v">'relay.primals.eco'</span>
+<span class="k">relay-server</span> = <span class="v">'relay.primals.eco'</span>
+<span class="k">verification-method</span> = <span class="v">'use-permanent-password'</span></div>
+</div>
+
+<div class="section">
+<h2>Server Key (optional hardening)</h2>
+<p style="font-size:0.75rem; color:#b0bec5; margin-bottom:0.6rem;">The key verifies you are talking to this relay, not an impersonator. It is optional &mdash; your session is end-to-end encrypted regardless.</p>
+<div class="key-box" onclick="navigator.clipboard.writeText(this.textContent.trim().replace(/click to copy/,''));">utlNOAWUDdV+Q+ifG3zHrQ5HU0FtQnOTHiAnu6prV7Q=</div>
+</div>
+
+<div class="section">
+<h2>Privacy Model</h2>
+<div class="tier"><span class="tier-badge tier-1">Tier 1</span><span class="tier-desc"><strong>Beacon</strong> &mdash; you are here. Open relay, E2E encrypted, no registration.</span></div>
+<div class="tier"><span class="tier-badge tier-2">Tier 2</span><span class="tier-desc"><strong>Family</strong> &mdash; seed-gated access to sovereign mesh services.</span></div>
+<div class="tier"><span class="tier-badge tier-3">Tier 3</span><span class="tier-desc"><strong>Sovereign</strong> &mdash; lineage-verified access to the inner membrane.</span></div>
+<p style="font-size:0.7rem; color:var(--dim); margin-top:0.6rem;">Each tier is nested inside the previous one. The relay does not know which tier you belong to. Trust is earned, not granted.</p>
+</div>
+
+<div class="section">
+<h2>Trust Model</h2>
+<ol class="steps">
+<li><strong>Your password</strong> &mdash; only you can accept incoming connections to your machine</li>
+<li><strong>End-to-end encryption</strong> &mdash; the relay cannot inspect your sessions</li>
+<li><strong>Rate limits</strong> &mdash; NAT-aware firewall protects the relay from abuse</li>
+<li><strong>Zero knowledge</strong> &mdash; the relay cannot map your ID to anyone else's</li>
+</ol>
+</div>
+
+<div class="footer">
+<p>Operated by <a href="https://sporeprint.primals.eco">ecoPrimal</a> &mdash; sovereign infrastructure</p>
+<p>No tracking. No cookies. No analytics. Log-based observation only.</p>
+<p style="margin-top: 0.5rem; font-size: 0.6rem;">The gut doesn't fight the bacteria. It feeds them.</p>
+</div>
+
+</div>
+<script>
+document.querySelector(".key-box").addEventListener("click", function() {
+  const orig = this.style.borderColor;
+  this.style.borderColor = "#81c784";
+  setTimeout(() => { this.style.borderColor = orig; }, 1500);
+});
+</script>
+</body>
+</html>

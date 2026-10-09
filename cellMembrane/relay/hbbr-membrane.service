@@ -1,0 +1,24 @@
+# RustDesk Relay — Commensal Relay Traffic (outer membrane)
+# Deployed to /etc/systemd/system/hbbr-membrane.service on any golgi body
+#
+# hbbr handles: encrypted traffic relay between peers (port 21117)
+# The relay sees only ciphertext — E2E encryption is between peers.
+#
+# After install: systemctl daemon-reload && systemctl enable --now hbbr-membrane
+
+[Unit]
+Description=RustDesk Relay — Commensal Relay Traffic (outer membrane)
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/membrane
+ExecStart=/opt/membrane/hbbr
+Restart=always
+RestartSec=5
+Environment=HOME=/opt/membrane
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,25 @@
+# RustDesk Rendezvous — Commensal Relay Beacon (outer membrane)
+# Deployed to /etc/systemd/system/hbbs-membrane.service on any golgi body
+#
+# hbbs handles: peer registration, discovery, NAT traversal (ports 21115, 21116, 21118)
+# No -k flag: keyless Tier 1. Clients CAN verify the key (optional hardening).
+# The key still exists at /opt/membrane/id_ed25519 for clients that want it.
+#
+# After install: systemctl daemon-reload && systemctl enable --now hbbs-membrane
+
+[Unit]
+Description=RustDesk Rendezvous — Commensal Relay Beacon (outer membrane)
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/membrane
+ExecStart=/opt/membrane/hbbs -r relay.primals.eco
+Restart=always
+RestartSec=5
+Environment=HOME=/opt/membrane
+
+[Install]
+WantedBy=multi-user.target
