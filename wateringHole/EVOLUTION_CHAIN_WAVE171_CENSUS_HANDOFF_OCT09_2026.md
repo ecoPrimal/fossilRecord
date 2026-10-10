@@ -206,5 +206,67 @@ Panel 21 builds a 5×5 flow matrix (Tier 1-5) from edge weights and sends it as 
 
 ---
 
-*Committed: `3e8b5f9` (rustscript), `081e7ad4` (relay kit), `7c6d7c15` (renderer wiring), `ba09c2f` (detroit-pt panels)*
+---
+
+## Wave 171c — Dead File Kill + Signal Page Absorption
+
+### What happened
+
+Third pass through the jellystein surface. Killed dead files and wired petalTongue panels to the detroit signal page.
+
+### Dead files deleted (–822 lines)
+
+| File | Lines | Status |
+|------|------:|--------|
+| `geo-extraction.js` | 474 | **DELETED** — already wired to detroit-pt.js geo flow heatmap (Wave 171) |
+| `lattice-graph.js` | 348 | **DELETED** — already wired to petalTongue panels in anderson-localization.md (Wave 171) |
+
+Both files and their `public/` copies deleted. No references remain in any content template.
+
+### Signal page petalTongue panels (+134 lines)
+
+Added 4 server-rendered petalTongue panels to detroit's `/signal/` page alongside existing `signal-exploration.js`:
+
+| Panel | Channel Type | Replaces |
+|-------|-------------|----------|
+| Traffic Composition | `donut` | 123 lines of hand-rolled SVG arc math |
+| Page Popularity | `bar` | New (tabular data upgraded to visual) |
+| Navigation Hops | `force_graph` | 240 lines of hand-rolled force sim + SVG |
+| Bot Ecosystem | `donut` | 46 lines of HTML grid |
+
+### What was NOT touched and why
+
+| File | Lines | Reason |
+|------|------:|--------|
+| `investigation-game.js` | 423 | Canvas game with synchronous force sim tied to interaction loop. Can't async to petalTongue |
+| `network-graph.js` | 1,226 | Complex SVG interaction (hover, click, filter, toggle, hull). ForceGraph panel provides parallel rendering |
+| `timeline-graph.js` | 273 | Pure DOM interaction (era filter + actor chips). No petalTongue equivalent |
+| `book-network.js` | 481 | Data file → TOML migration. Build tooling, not JS kill |
+| `hud-widget.js` | 168 | Embeddable bar. Thin, self-contained infra glue |
+| `hud-core.js` | 162 | Billboard + geo. All other panels in hud-pt.js. 40 lines of geo rendering |
+| `viz-hydrate.js` | 293 | IS petalTongue infrastructure (WASM hydration) |
+| `signal-data.js` | 157 | Generated data. Not computation |
+| `*-pt.js` bridges | ~1,300 | ARE petalTongue integration. Leave |
+
+### Jellystein surface summary after Wave 171c
+
+| Category | Files | Lines | Status |
+|----------|------:|------:|--------|
+| **Killed this wave** | 2 | –822 | geo-extraction, lattice-graph |
+| **Absorbed (parallel render)** | 1 page | ~409 lines replaced by 4 panels | signal page donut + force graph |
+| **Remaining evolution targets** | 3 | 2,237 | network-graph, investigation-game, signal-exploration |
+| **Infrastructure (leave)** | ~12 | ~3,600 | bridges, hydration, widgets, generated data |
+| **Total jellystein** | ~15 | ~5,837 | Down from ~11,901 at census start (–6,064 / –51%) |
+
+### The η boundary
+
+The remaining 5,837 lines of JS divide into:
+- **~3,600 lines of infrastructure** (bridges, WASM glue, generated data) — these ARE the primal stack's browser surface
+- **~2,237 lines of hand-rolled rendering** — these have Rust replacements but need interaction-layer refactoring to die
+
+The jellystein-to-primal boundary is now at the **interaction layer**: hover, click, canvas, localStorage, DOM filtering. These are the 3 constraints that η=0.85 cannot cross (browser DOM, event loop, synchronous interaction). They die when petalTongue ships its own interaction layer (WASM + egui or similar).
+
+---
+
+*Committed: `3e8b5f9` (rustscript), `081e7ad4` (relay kit), `7c6d7c15` (renderer wiring), `ba09c2f` (detroit-pt panels), `20cbf2e` (dead files), `86410d4` (signal panels)*
 *ecoPrimal · Wave 171 · October 9, 2026*
