@@ -1,0 +1,11 @@
+# FOSSILIZED Wave 171 — replaced by inflammatory.rs in skunky-ingest
+[Unit]
+Description=Membrane inflammatory response watchdog timer
+
+[Timer]
+OnBootSec=60
+OnUnitActiveSec=120
+AccuracySec=10
+
+[Install]
+WantedBy=timers.target
